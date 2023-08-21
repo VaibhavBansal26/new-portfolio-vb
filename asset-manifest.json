@@ -1,6 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.cdb2697f.js",
+    "main.css": "/static/css/main.ca927a03.css",
+    "main.js": "/static/js/main.1cca4cb5.js",
     "static/js/787.8dc771c0.chunk.js": "/static/js/787.8dc771c0.chunk.js",
     "static/media/netflix.PNG": "/static/media/netflix.a1cafc60cc5f89053d49.PNG",
     "static/media/movie.png": "/static/media/movie.638d969dc262511d3b3b.png",
@@ -39,10 +40,12 @@
     "static/media/game-dev.svg": "/static/media/game-dev.20147858b407ad93903c5454f0631b6f.svg",
     "static/media/design.svg": "/static/media/design.8ecb3043cd761000705693c804edfb76.svg",
     "index.html": "/index.html",
-    "main.cdb2697f.js.map": "/static/js/main.cdb2697f.js.map",
+    "main.ca927a03.css.map": "/static/css/main.ca927a03.css.map",
+    "main.1cca4cb5.js.map": "/static/js/main.1cca4cb5.js.map",
     "787.8dc771c0.chunk.js.map": "/static/js/787.8dc771c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.cdb2697f.js"
+    "static/css/main.ca927a03.css",
+    "static/js/main.1cca4cb5.js"
   ]
 }

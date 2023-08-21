@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.ca927a03.css","mappings":"AAAA,qBACI,QAAS,CACT,eACF,CACF,UAEI,YAAa,CADb,WAEF","sources":["Components/styles.css"],"sourcesContent":["#mainSphereContainer {\n    margin: 0;\n    overflow: hidden;\n  }\n#myCanvas {\n    width: 100vw;\n    height: 100vh;\n  }\n  "],"names":[],"sourceRoot":""}
