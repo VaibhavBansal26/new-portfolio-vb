@@ -11,11 +11,12 @@ function ImageSection() {
             </div>
             <div className="right-content">
                 <h4>I am <span>Vaibhav Bansal</span></h4>
+                <h2>Front-End Developer | 3+ Years of Experience</h2>
                 <p className="paragraph">
-                I am currently working as Project Engineer in Wipro Ltd. I have completed my B.Tech in Computer Science
-                from Vellore Institute of Technology India. I am extremely motivated to constantly develop my skills and grow professionally. I am confident
-                in my ability to come up with interesting ideas so to contribute significantly in organization’s
-                growth. I like adventrous sports,lawn Tennis and reading latest tech blogs.</p>       
+                    I am currently working as a Front-end Developer at Dashclicks India Ltd. With 3+ years of experience, I am motivated to constantly develop my skills and grow professionally.
+                    Confident in my ability to come up with interesting ideas to contribute significantly to the organization’s growth.
+                    I'm also interested in adventurous sports, lawn tennis, and reading the latest tech blogs.
+                </p>
                 
                 <div className="about-info">
                     <div className="info-title">
@@ -24,15 +25,15 @@ function ImageSection() {
                         <p>Nationality </p>
                         <p>Languages </p>
                         <p>Location</p>
-                        <p>Service</p>
+                        <p>Profile</p>
                     </div>
                     <div className="info">
                         <p>: Vaibhav Bansal</p>
-                        <p>: 24</p>
+                        <p>: 26</p>
                         <p>: Indian </p>
                         <p>: English, Hindi, French </p>
                         <p>: Gwalior, Madhya Pradesh, India</p>
-                        <p>: Software Development</p>
+                        <p>: Software Developer</p>
                     </div>
                 </div>
                 <PrimaryButton title={'Download Cv'} />

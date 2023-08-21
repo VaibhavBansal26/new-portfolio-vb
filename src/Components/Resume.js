@@ -19,9 +19,22 @@ function Resume() {
                 </div>
                 <div className="resume-content">
                     <ResumeItem 
-                        year={'2020 - Present'} 
+                        year={'Sep 2021 - Present'} 
+                        title={'Front-end Developer'}
+                        subTitle={'Dashclicks India Ltd.'}
+                        text={`I am an experienced web developer who has undertaken a multitude of significant projects. One noteworthy achievement is the development of a dynamic website builder utilizing the power of Grapes.js and React.js. I spearheaded a dedicated team of three talented individuals, and together, we meticulously crafted over 200,000 lines of code in just two months.
+                        One of our crowning achievements during this period was the creation of a public npm package called "grapesjs-advance-components." This package empowers users to effortlessly construct their own websites using drag-and-drop functionality combined with a collection of advanced components. For added customization, users have the ability to tailor blocks and even introduce new ones, enabling them to craft stunning websites or even design sales promotion funnels.
+                        Furthermore, I took the initiative to develop a dedicated payment widget for our company, seamlessly integrating it as a customizable block for users aiming to incorporate payment options into their websites.
+                        My expertise also extends to Formio.js, where I have made meaningful modifications to the core formio.min.js file. By customizing and introducing novel features, I have elevated the capabilities of the form builder, enhancing its utility and versatility.
+                        Additionally, my contributions to our company's private UI kit have been instrumental in enhancing our overall UI components. This collaborative effort has not only streamlined our internal processes but has also led to a more polished user experience.
+                        Lastly, I've also embraced the capabilities of Draft.js, utilizing it to develop a robust fallback feature within our platform's editor. This forward-thinking approach ensures a seamless experience for users, even in situations where connectivity may be limited.
+                        In summary, my diverse skill set, collaborative spirit, and dedication to innovation have been pivotal in driving impactful projects and advancing the technological landscape.               
+                        `} 
+                    />
+                    <ResumeItem 
+                        year={'Aug 2020 - Sep 2021'} 
                         title={'Project Engineer'}
-                        subTitle={'Wipro Tech India Ltd.'}
+                        subTitle={'Wipro Technologies India Ltd.'}
                         text={'I have developed Vantiv  parser, EMV parser, JIRA Worklog Application using python and Flask and is currently working with MX Payment Terminals. I have done training in Python, C++ and AWS'} 
                     />
                     <ResumeItem 

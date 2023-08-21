@@ -3,10 +3,10 @@ import Skills from '../Components/Skills';
 import { MainLayout} from '../styles/Layouts';
 import Resume from '../Components/Resume';
 
-function ResumePage() {
+function ResumePage({theme}) {
     return (
         <MainLayout>
-            <Skills />
+            <Skills theme={theme} />
             <Resume />
         </MainLayout>
     )

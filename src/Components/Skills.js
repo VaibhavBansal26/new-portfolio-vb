@@ -3,12 +3,16 @@ import styled from 'styled-components';
 import {InnerLayout} from '../styles/Layouts';
 import Title from '../Components/Title';
 import ProgressBar from './ProgressBar';
+import SkillSphere from './SkillSphere';
 
-function Skills() {
+function Skills({theme}) {
     return (
         <SkillsStyled>
             
                 <Title title={'My Skills'} span={'my skills'} />
+                <div style={{marginTop:'50px'}}>
+                    <SkillSphere theme={theme}/>
+                </div>
                 <InnerLayout>
                     <div className="skills">
                         <ProgressBar 
