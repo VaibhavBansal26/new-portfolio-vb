@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ca927a03.css",
-    "main.js": "/static/js/main.1cca4cb5.js",
+    "main.css": "/static/css/main.093c108c.css",
+    "main.js": "/static/js/main.1a7e7462.js",
     "static/js/787.8dc771c0.chunk.js": "/static/js/787.8dc771c0.chunk.js",
     "static/media/netflix.PNG": "/static/media/netflix.a1cafc60cc5f89053d49.PNG",
     "static/media/movie.png": "/static/media/movie.638d969dc262511d3b3b.png",
@@ -22,9 +22,11 @@
     "static/media/tinder.png": "/static/media/tinder.c3c2e94fd057a28f7f46.png",
     "static/media/facebook.PNG": "/static/media/facebook.6c5810bda5d75e4ac5a8.PNG",
     "static/media/mern-yt-2.PNG": "/static/media/mern-yt-2.77e2521a4f6983e4c173.PNG",
+    "static/media/appliedDataScience.png": "/static/media/appliedDataScience.f08b74a3413ad380f941.png",
+    "static/media/introDataScience.png": "/static/media/introDataScience.f53444eebdf486d3b5c0.png",
     "static/media/tour.png": "/static/media/tour.e7acf68fd88f189dc329.png",
+    "static/media/parallelConcurrentProg.png": "/static/media/parallelConcurrentProg.52bdfa911661d17ed829.png",
     "static/media/twitter.png": "/static/media/twitter.83e0f7828ac68e53bb70.png",
-    "static/media/avatar.jpg": "/static/media/avatar.09b3af6a23e9f4a222ec.jpg",
     "static/media/zoom.png": "/static/media/zoom.10c008e7a6c21bd911f5.png",
     "static/media/spotify.png": "/static/media/spotify.86f30026b21b96fea0de.png",
     "static/media/linkedin.PNG": "/static/media/linkedin.13ff70b87e5a7af24016.PNG",
@@ -34,18 +36,21 @@
     "static/media/instagram.png": "/static/media/instagram.44b69746e5ac7f376337.png",
     "static/media/chat.png": "/static/media/chat.69e84cd49eae8bef1ec7.png",
     "static/media/blog1.svg": "/static/media/blog1.7ecbb78c2c6c6c0b932e117f71187572.svg",
+    "static/media/avatar-light3.jpeg": "/static/media/avatar-light3.996c28c6435b1cce0fac.jpeg",
     "static/media/slack.png": "/static/media/slack.1742674a89004c11455c.png",
+    "static/media/avatar-dark3.jpeg": "/static/media/avatar-dark3.52be73940e3d75f32cbc.jpeg",
     "static/media/trello.PNG": "/static/media/trello.8fa2a4ef37d6c6ef2275.PNG",
     "static/media/intelligence.svg": "/static/media/intelligence.11bd2ab25b415eeb093876127c8d6654.svg",
     "static/media/game-dev.svg": "/static/media/game-dev.20147858b407ad93903c5454f0631b6f.svg",
+    "static/media/icons8-researchgate.svg": "/static/media/icons8-researchgate.cda82ba5dc806a62eec8ffcbf1dd2dab.svg",
     "static/media/design.svg": "/static/media/design.8ecb3043cd761000705693c804edfb76.svg",
     "index.html": "/index.html",
-    "main.ca927a03.css.map": "/static/css/main.ca927a03.css.map",
-    "main.1cca4cb5.js.map": "/static/js/main.1cca4cb5.js.map",
+    "main.093c108c.css.map": "/static/css/main.093c108c.css.map",
+    "main.1a7e7462.js.map": "/static/js/main.1a7e7462.js.map",
     "787.8dc771c0.chunk.js.map": "/static/js/787.8dc771c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca927a03.css",
-    "static/js/main.1cca4cb5.js"
+    "static/css/main.093c108c.css",
+    "static/js/main.1a7e7462.js"
   ]
 }
