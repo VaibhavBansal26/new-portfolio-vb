@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
-import avatar from '../img/avatar.jpg';
+import avatar from '../img/avatar-light3.jpeg';
+import avatarDark from '../img/avatar-dark3.jpeg';
 
-function Navigation() {
+function Navigation({theme}) {
     return (
         <NavigationStyled>
             <div className="avatar">
-                <img src={avatar} alt="" style={{height:"200px"}}/>
+                <img src={theme === 'light-theme' ? avatarDark : avatar} alt="" style={{height:"200px"}}/>
             </div>
             <ul className="nav-items">
                 <li className="nav-item">
@@ -33,7 +34,7 @@ function Navigation() {
                 </li>
             </ul>
             <footer className="footer">
-                <p>&copy;2023 <b>Vaibhav Bansal</b></p>
+                <p><b>&copy; 2023 Vaibhav Bansal</b></p>
             </footer>
         </NavigationStyled>
     )

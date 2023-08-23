@@ -45,6 +45,11 @@ const ResumeItemStyled = styled.div`
             display: inline-block;
         }
     }
+    @media screen and (max-width: 421px){
+        .left-content{
+            display: none;
+        }
+    }
     .right-content{
         padding-left: 5rem;
         position: relative;
@@ -65,6 +70,20 @@ const ResumeItemStyled = styled.div`
         h6{
             padding-bottom: .6rem;
             font-size: 1.5rem;
+        }
+    }
+    @media screen and (max-width: 421px){
+        .right-content{
+            padding:1rem 1rem;
+            &::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 15px;
+                height: 2px;
+                width: 0rem;
+                background-color: var(--border-color);
+            }
         }
     }
 `;

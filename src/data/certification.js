@@ -1,4 +1,6 @@
-import blog1 from  '../img/blogs/blog1.svg';
+import blog1 from  '../img/certification/appliedDataScience.png';
+import blog2 from  '../img/certification/parallelConcurrentProg.png';
+import blog3 from  '../img/certification/introDataScience.png';
 
 const certificates = [
     {
@@ -16,7 +18,7 @@ const certificates = [
         by:'Coursera - Rice University',
         date: '01',
         month: 'April',
-        image: blog1,
+        image: blog2,
         link:"https://coursera.org/share/7041d6d1ac45efef3fd38eb621a68677"
     },
     {
@@ -25,7 +27,7 @@ const certificates = [
         by:'Coursera - University of Michigan',
         date: '01',
         month: 'April',
-        image: blog1,
+        image: blog3,
         link:"https://coursera.org/share/28afd76f8c09e46057897a118f3d4c23"
     }
 ]

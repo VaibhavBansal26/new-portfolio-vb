@@ -4,6 +4,35 @@
   }
 #myCanvas {
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
+  }
+  @media screen and (max-width: 700px) {
+    .skillMain {
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+    .skillText {
+        width: 100% !important;
+    }
+    #mainSphereContainer {
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 400px) {
+    .skillMain {
+        margin-top: -80px;
+    }
+}
+.seo-heading {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .seo-link {
+    color: #a4acc4;
+  }
+  
+  .seo-note {
+    font-size: 14px;
   }
   

@@ -44,8 +44,8 @@ function ContactPage() {
                     </form>
                 </div>
                 <div className="right-content">
-                    <ContactItem title={'Phone'} icon={phone} cont1={'+91-9165375933'} cont2={'+91 7000049629'} />
-                    <ContactItem title={'Email'} icon={email} cont1={'vaibhav.bansal945@gmail.com.com'} cont2={'vaibhav.bansal4@wipro.com'} />
+                    <ContactItem title={'Phone'} icon={phone} cont1={'+91-9165375933'} cont2={'+91-7000049629'} />
+                    <ContactItem title={'Email'} icon={email} cont1={'vaibhav.bansal945@gmail.com'} cont2={'vbansal@dashclicks.com'} />
                     <ContactItem title={'Address'} icon={location} cont1={'21 Madhuvan Colony, Thatipur, Gwalior, Madhya Pradesh'} cont2={'India'} />
                     
                 </div>

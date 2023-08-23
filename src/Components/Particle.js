@@ -107,9 +107,11 @@ function Particle({theme})  {
               particles: {
                   color: {
                       value: `${theme === 'light-theme' ? '#55efc4' : '#ffffff'}`,
+                    //   value: `${theme === 'light-theme' ? '#3498db' : '#1abc9c'}`,
                   },
                   links: {
                       color: `${theme === 'light-theme' ? '#55efc4' : '#ffffff'}`,
+                    //   color: `${theme === 'light-theme' ? '#3498db' : '#1abc9c'}`,
                       distance: 150,
                       enable: true,
                       opacity: 0.5,
