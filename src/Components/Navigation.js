@@ -8,7 +8,7 @@ function Navigation({theme}) {
     return (
         <NavigationStyled>
             <div className="avatar">
-                <img src={theme === 'light-theme' ? avatarDark : avatar} alt="" style={{height:"200px"}}/>
+                <img src={theme === 'light-theme' ? avatarDark : avatar} alt="image_avatar" style={{height:"200px"}}/>
             </div>
             <ul className="nav-items">
                 <li className="nav-item">

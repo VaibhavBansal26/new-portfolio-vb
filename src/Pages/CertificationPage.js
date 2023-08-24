@@ -15,7 +15,7 @@ function CertificationPage() {
                         certificates.map((cert)=>{
                             return <div key={cert.id} className={'cert-item'}>
                                 <div className="image">
-                                    <img src={cert.image} alt=""/>
+                                    <img src={cert.image} alt={`certification_image_${cert.id}`}/>
                                 </div>
                                 <div className="title">
                                     <a href={cert.link} target="_blank" rel="noreferrer">

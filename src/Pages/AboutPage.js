@@ -6,12 +6,12 @@ import {MainLayout} from '../styles/Layouts';
 import ServiceSection from '../Components/ServiceSection';
 import ReviewSection from '../Components/ReviewSection';
 
-function AboutPage() {
+function AboutPage({theme}) {
     return (
         <MainLayout>
             <AboutStyled >
                 <Title title={'About Me'} span={'About Me'} />
-                <ImageSection />
+                <ImageSection theme={theme}/>
                 <ServiceSection />
                 <ReviewSection />
             </AboutStyled >

@@ -71,23 +71,35 @@ function Skills({theme}) {
                     <div>
                         <br/> <br/>
                         <div>
-                            <span style={{ color: '#fff', fontWeight: 'bold' }}>Other Skills:</span><br/>
-                            <span style={{ color: '#a4acc4' }}><br/>
+                            <span className="seo-heading">Other Skills:</span><br/>
+                            <p className="seo-link"><br/>
                                 MongoDB, Docker, Artificial Intelligence / Machine Learning, MySQL, JAVA, C++, Adobe Photoshop, Firebase, NPM, Git
-                            </span><br/><br/>
-                            <span style={{ color: '#fff', fontWeight: 'bold' }}>Third Party Libraries:</span><br/><br/>
-                            <span style={{ color: '#a4acc4' }}>
+                            </p><br/>
+                            <span className="seo-heading">Third Party Libraries:</span><br/><br/>
+                            <p className="seo-link">
                                 React-Bootstrap, Material UI, Styled Components, Tailwind CSS, Grapes JS, Formio JS
-                            </span><br/><br/>
-                            <span style={{ color: '#fff', fontWeight: 'bold' }}>Published NPM Package:</span><br/><br/>
-                            <span style={{ color: '#a4acc4' }}>
-                               <a href='https://www.npmjs.com/package/grapesjs-advance-components' target='_blank' rel="noreferrer">Grapesjs Advance Components</a>
-                            </span><br/><br/>
-                            <span style={{ color: '#fff', fontWeight: 'bold' }}>Published Research Paper:</span><br/><br/>
-                            <span style={{ color: '#a4acc4' }}>
-                               <a href='https://link.springer.com/article/10.1007/s42452-020-2815-z' target='_blank' rel="noreferrer">Obstacle avoidance using stereo vision and depth maps for visual aid devices</a><br/>
-                               <i style={{ fontSize: '14px' }}>Springer Natural Applied Sciences, Switzerland AG 2020 | https://doi.org/10.1007/s42452-020-2815-z</i>
-                            </span><br/>
+                            </p><br/>
+                            <div>
+                            <p className="seo-heading">Published NPM Package:</p><br/>
+                            <p>
+                                <a href="https://www.npmjs.com/package/grapesjs-advance-components" className="seo-link">
+                                Grapesjs Advance Components
+                                </a>
+                            </p><br/>
+                            <p className="seo-heading">Published Research Paper:</p><br/>
+                            <p>
+                                <a href="https://link.springer.com/article/10.1007/s42452-020-2815-z" className="seo-link">
+                                Obstacle Avoidance Using Stereo Vision and Depth Maps for Visual Aid Devices
+                                </a>
+                                <br />
+                                <i className="seo-note seo-link">
+                                Springer Natural Applied Sciences, Switzerland AG 2020 |{' '}
+                                <a href="https://doi.org/10.1007/s42452-020-2815-z" className="seo-note seo-link">
+                                    https://doi.org/10.1007/s42452-020-2815-z
+                                </a>
+                                </i>
+                            </p>
+                            </div>
                         </div>
                     </div>
                 </InnerLayout>

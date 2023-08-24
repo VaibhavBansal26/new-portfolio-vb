@@ -12,7 +12,7 @@ function Menu({menuItem}) {
                     return <div className="grid-item" key={item.id}>
                         <div className="portfolio-content">
                             <div className="portfolio-image">
-                                <img src={item.image} alt=""/>
+                                <img src={item.image} alt={`menu${item.id}`}/>
                                 <ul>
                                 {item.link1 ?
                                     <li>

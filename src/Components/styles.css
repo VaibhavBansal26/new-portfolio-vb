@@ -24,13 +24,13 @@
     }
 }
 .seo-heading {
-    color: #fff;
+    color: var(--white-color);
     font-weight: bold;
   }
   
-  .seo-link {
-    color: #a4acc4;
-  }
+  /* .seo-link {
+    color:  var(--primary-color);
+  } */
   
   .seo-note {
     font-size: 14px;

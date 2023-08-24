@@ -1,21 +1,20 @@
 import React from 'react'
 import styled from 'styled-components';
 import resume from '../img/resume.jpg';
+import resumeLight from '../img/vaibhavphoto.png';
 import PrimaryButton from './PrimaryButton';
 
-function ImageSection() {
+function ImageSection({theme}) {
     return (
         <ImageSectionStyled>
             <div className="left-content">
-                <img src={resume} alt=""/>
+                <img src={theme === 'light-theme' ? resumeLight : resume} alt="profile_photo"/>
             </div>
             <div className="right-content">
                 <h4>I am <span>Vaibhav Bansal</span></h4>
                 <h2>Front-End Developer | 3+ Years of Experience</h2>
                 <p className="paragraph">
-                    I am currently working as a Front-end Developer at Dashclicks India Ltd. With 3+ years of experience, I am motivated to constantly develop my skills and grow professionally.
-                    Confident in my ability to come up with interesting ideas to contribute significantly to the organization’s growth.
-                    I'm also interested in adventurous sports, lawn tennis, and reading the latest tech blogs.
+                    I am Vaibhav Bansal, a dedicated Software Developer with over 3 years of valuable experience. Presently, I'm actively contributing my expertise as a Front-end Developer at Dashclicks India Ltd. Throughout my journey, I've remained committed to continuous skill enhancement and professional growth. My confidence stems from the ability to generate innovative ideas that drive substantial organizational advancement. Beyond coding, I'm passionate about adventure sports, lawn tennis, and staying updated with the latest technology blogs.
                 </p>
                 
                 <div className="about-info">

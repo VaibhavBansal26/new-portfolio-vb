@@ -7,6 +7,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Particle from '../Components/Particle';
 import iconRS from '../img/icons8-researchgate.svg';
+// import carbon from '../img/carbon.svg';
 
 function HomePage(props) {
     const {theme} = props;
@@ -39,7 +40,10 @@ function HomePage(props) {
                     <a href="https://www.researchgate.net/profile/Vaibhav-Bansal-6" className="icon i-researchgate">
                     <img src={iconRS} alt='reasearch gate' title='reasearch gate'/>
                     </a>
-                </div>
+                </div><br/><br/>
+                {/* <div>
+                <img src={carbon} width="70%" height="40%" alt='reasearch gate' title='reasearch gate'/>
+                </div> */}
             </div>
         </HomePageStyled>
     )

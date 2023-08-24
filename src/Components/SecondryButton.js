@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function PrimaryButton({title}) {
+function SecondaryButton({title,onClick}) {
     return (
-        <PrimaryButtonStyled>
-            <a href="https://drive.google.com/file/d/1pleTfS196yrsBEnuSop9AezweEVvI6ih/view?usp=sharing" download="VaibhavBansal_Resume.pdf">{title}</a>
+        <PrimaryButtonStyled onClick={onClick}>
+            {title}
         </PrimaryButtonStyled>
     )
 }
 
-const PrimaryButtonStyled = styled.a`
+const PrimaryButtonStyled = styled.button`
     background-color: var(--primary-color);
     padding: .8rem 2.5rem;
     color: white;
@@ -34,4 +34,4 @@ const PrimaryButtonStyled = styled.a`
         background-color: var(--white-color);
     }
 `;
-export default PrimaryButton;
+export default SecondaryButton;

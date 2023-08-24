@@ -69,7 +69,7 @@ function App() {
 
       <Routes>
         <Route path="/" exact element={<HomePage theme={theme}/>}/>
-        <Route path="/about" exact element={<AboutPage/>}/>
+        <Route path="/about" exact element={<AboutPage theme={theme}/>}/>
         <Route path="/resume" exact element={<ResumePage theme={theme}/>}/>
         <Route path="/portfolios" exact element={<PortfolioPage/>}/>
         <Route path="/blogs" exact element={<BlogsPage/>}/>

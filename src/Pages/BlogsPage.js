@@ -14,7 +14,7 @@ function BlogsPage() {
                         blogs.map((blog)=>{
                             return <div key={blog.id} className={'blog-item'}>
                                 <div className="image">
-                                    <img src={blog.image} alt=""/>
+                                    <img src={blog.image} alt={'blog'}/>
                                 </div>
                                 <div className="title">
                                     <a href={blog.link} target="_blank" rel="noreferrer">

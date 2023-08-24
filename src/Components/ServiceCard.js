@@ -5,7 +5,7 @@ function ServiceCard({image, title, paragraph}) {
     return (
         <ServiceCardStyled >
             <div className="container">
-                <img src={image} alt=""/>
+                <img src={image} alt="image_name"/>
                 <h4>{title}</h4>
                 <p>{paragraph}</p>
             </div>

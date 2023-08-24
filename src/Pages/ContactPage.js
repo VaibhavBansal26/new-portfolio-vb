@@ -1,17 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import {MainLayout, InnerLayout} from '../styles/Layouts';
 import Title from '../Components/Title';
-import PrimaryButton from '../Components/PrimaryButton';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ContactItem from '../Components/ContactItem';
+import SecondaryButton from '../Components/SecondryButton';
 
 function ContactPage() {
     const phone = <PhoneIcon />
     const email = <EmailIcon />
     const location = <LocationOnIcon />
+
+    const [name, setName] = useState('');
+    const [recemail, setRecEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+
+
+    const sendEmail = () => {
+        const subject = 'Regarding your inquiry';
+        const body = `Hello,\n\nI am ${name}.\n ${message} \n\n From: ${name || email} `;
+    
+        const mailtoUrl = `mailto:vaibhav.bansal945@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        window.open(mailtoUrl);
+      };
     return (
         <MainLayout>
             <Title title={'Contact'} span={'Contact'} />
@@ -24,22 +39,22 @@ function ContactPage() {
                     <form  className="form">
                         <div className="form-field">
                             <label htmlFor="name"  >Enter your name*</label>
-                            <input type="text" id="name" />
+                            <input type="text" id="name" value={name} onChange={e => setName(e.target.value)} required/>
                         </div>
                         <div className="form-field">
                             <label htmlFor="email"  >Enter your email*</label>
-                            <input type="email" id="email" />
+                            <input type="email" id="email" value={recemail} onChange={e => setRecEmail(e.target.value)} required/>
                         </div>
                         <div className="form-field">
                             <label htmlFor="subject"  >Enter your subject</label>
-                            <input type="text" id="subject" />
+                            <input type="text" id="subject" value={subject} onChange={e => setSubject(e.target.value)}/>
                         </div>
                         <div className="form-field">
                             <label htmlFor="text-area">Enter your Message*</label>
-                            <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                            <textarea name="textarea" id="textarea" cols="30" rows="10" value={message}  onChange={e => setMessage(e.target.value)}></textarea>
                         </div>
                         <div className="form-field f-button">
-                            <PrimaryButton title={'Send Email'} />
+                            <SecondaryButton title={'Send Email'} onClick={sendEmail}/>
                         </div>
                     </form>
                 </div>
