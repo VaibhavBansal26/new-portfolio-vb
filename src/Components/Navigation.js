@@ -8,7 +8,7 @@ function Navigation({theme}) {
     return (
         <NavigationStyled>
             <div className="avatar">
-                <img src={theme === 'light-theme' ? avatarDark : avatar} alt="image_avatar" style={{height:"200px"}}/>
+                <img src={theme === 'light-theme' ? avatarDark : avatar} alt="light-theme" style={{height:"180px"}}/>
             </div>
             <ul className="nav-items">
                 <li className="nav-item">
@@ -21,7 +21,7 @@ function Navigation({theme}) {
                     <NavLink to="/resume" activeClassName="active-class" exact>Resume</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/portfolios" activeClassName="active-class" exact>Portfolios</NavLink>
+                    <NavLink to="/portfolios" activeClassName="active-class" exact>Portfolio</NavLink>
                 </li>
                 <li className="nav-item">
                     <NavLink to="/blogs" activeClassName="active-class" exact>Blogs</NavLink>

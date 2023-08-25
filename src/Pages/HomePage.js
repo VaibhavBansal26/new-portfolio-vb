@@ -7,6 +7,9 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Particle from '../Components/Particle';
 import iconRS from '../img/icons8-researchgate.svg';
+import CodeTheme from '../Components/codeTheme';
+import CodeThemeSec from '../Components/codeThemeSec';
+import './styles.css';
 // import carbon from '../img/carbon.svg';
 
 function HomePage(props) {
@@ -15,6 +18,12 @@ function HomePage(props) {
         <HomePageStyled>
             <div className="particle-con">
                 <Particle theme={theme}/>
+            </div>
+            <div className="codeThemeSec">
+                <CodeThemeSec/>
+            </div>
+            <div className="codeTheme">
+                <CodeTheme/>
             </div>
             <div className="typography">
                 <h1>Hi, I'm <span>Vaibhav Bansal</span></h1>

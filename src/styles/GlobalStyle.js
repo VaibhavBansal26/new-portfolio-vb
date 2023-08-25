@@ -19,7 +19,11 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
-
+    --primary-code-color-property: #e3244c;
+    --primary-code-color-keyword: #5918df;
+    --primary-code-color-function: #eeff31;
+    --primary-code-color-string: #24e33a;
+    --primary-code-color-bracket: #ffffff;
 } */
 
 .light-theme{
@@ -39,6 +43,11 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
+    --primary-code-color-property: #007bff;
+    --primary-code-color-keyword: #007bff;
+    --primary-code-color-function: #007bff;
+    --primary-code-color-string: #007bff;
+    --primary-code-color-bracket: #000000;
 }
 .dark-theme{
     --primary-color: #007bff;
@@ -57,6 +66,11 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
+    --primary-code-color-property: #007bff;
+    --primary-code-color-keyword: #007bff;
+    --primary-code-color-function: #eeff31;
+    --primary-code-color-string: #24e33a;
+    --primary-code-color-bracket: #ffffff;
 }
 
 *{
