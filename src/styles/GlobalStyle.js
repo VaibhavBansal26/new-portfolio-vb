@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     --primary-code-color-function: #eeff31;
     --primary-code-color-string: #24e33a;
     --primary-code-color-bracket: #ffffff;
+    --underlay-text-color:#191d2b70;
 } */
 
 .light-theme{
@@ -48,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
     --primary-code-color-function: #007bff;
     --primary-code-color-string: #007bff;
     --primary-code-color-bracket: #000000;
+    --underlay-text-color:#e3e5eb70;
 }
 .dark-theme{
     --primary-color: #007bff;
@@ -71,6 +73,7 @@ const GlobalStyle = createGlobalStyle`
     --primary-code-color-function: #eeff31;
     --primary-code-color-string: #24e33a;
     --primary-code-color-bracket: #ffffff;
+    --underlay-text-color:#191d2b70;
 }
 
 *{

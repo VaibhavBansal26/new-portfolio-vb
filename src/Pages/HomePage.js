@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GithubIcon from '@mui/icons-material/GitHub';
@@ -14,6 +14,37 @@ import './styles.css';
 
 function HomePage(props) {
     const {theme} = props;
+
+    const displayText = (text) => {
+        let typewriterContainer = document.querySelector("#typewriter-effect");
+        if (typewriterContainer) typewriterContainer.innerHTML = text;
+      }
+    useEffect(() => {
+    let messages = [
+        "Developer",
+        "Designer",
+        "Coffee addict ☕",
+        "Vaibhav Bansal"
+      ]
+      
+      var textIndex = 0;
+      var lettersToShow = 0;
+      let text_m;
+      setInterval(() => {
+        text_m = messages?.[textIndex]
+        if(lettersToShow <= text_m?.length){
+          lettersToShow++
+          displayText(text_m?.substring(0, lettersToShow))
+        }
+        else{
+          textIndex++;
+          lettersToShow = 0;
+        }
+      }, 300)
+      
+      displayText(text_m);
+
+    },[])
     return (
         <HomePageStyled>
             <div className="particle-con">
@@ -25,8 +56,11 @@ function HomePage(props) {
             <div className="codeTheme">
                 <CodeTheme/>
             </div>
+            <div className='underlayText'>
+                VAIBHAV BANSAL
+            </div>
             <div className="typography">
-                <h1>Hi, I'm <span>Vaibhav Bansal</span></h1>
+                <h1>Hi, I'm <span className='myname'  data-value="" id="typewriter-effect"></span></h1>
                 <p>
                     I am an India based Software developer and Data Science enthusiast. Currently working as Front-end Developer @ Dashclicks India Ltd.
                 </p>

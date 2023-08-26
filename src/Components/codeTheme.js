@@ -27,14 +27,15 @@ const CodeTheme = () => {
             '  }',
             '  skills() {',
             '    return [',
-            '       "HTML/CSS/JS", "React", "Node.js", "AWS", "Next.js", "Python", "Docker", "Github"',
-            '       "PHP", "Tailwind CSS", "Styled Components", "Grapesjs", "Formio.js", "C", "JAVA"',
+            '       "HTML/CSS/JS", "React", "Node.js", "AWS", "Next.js", "Python",',
+            '       ,"Github","PHP", "Tailwind CSS", "Styled Components", "Grapesjs"',
             '   ];',
             '  }',
             '}'
           ];
           
           const codeContainer = document.getElementById('code-container');
+          const codeContainer2 = document.getElementById('code-container2');
           let lineIndex = 0;
 
           function fadeOut() {
@@ -43,9 +44,11 @@ const CodeTheme = () => {
               if (opacity > 0) {
                 opacity -= 0.05; // Adjust the opacity decrement rate
                 codeContainer.style.opacity = opacity;
+                codeContainer2.style.opacity = opacity;
               } else {
                 clearInterval(fadeInterval);
                 codeContainer.style.display = 'none'; // Hide the code container
+                codeContainer2.style.display = 'none';
               }
             }, 1000); // Adjust the fade speed (in milliseconds)
           }
@@ -58,14 +61,14 @@ const CodeTheme = () => {
             div.classList.add('typewriter', 'code-line'); // Add common classes
 
             if (line.includes('return')) {
-                div.classList.add('return-keyword');
-            } else if (line.includes('workExperience()') || line.includes('education()')) {
+                div.classList.add('keyword');
+            } else if (line.includes('workExperience()') || line.includes('education()') || line.includes('skills()')) {
                 div.classList.add('function', 'opacity-50');
             } else if (line.includes('this.')) {
                 if (line.includes('=')) {
                 div.classList.add('property');
                 } else {
-                div.classList.add('this-keyword');
+                div.classList.add('keyword');
                 }
             } else if (line.includes('"') && !line.includes('return [')) {
                 div.classList.add('string');
