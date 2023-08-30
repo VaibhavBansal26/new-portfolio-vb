@@ -62,7 +62,7 @@ function HomePage(props) {
             <div className="typography">
                 <h1>Hi, I'm <span className='myname'  data-value="" id="typewriter-effect"></span></h1>
                 <p>
-                    I am an India based Software developer and Data Science enthusiast. Currently working as Front-end Developer @ Dashclicks India Ltd.
+                    I am an India based Software developer and Data Science enthusiast. Currently working as Frontend Developer @ Dashclicks India Ltd.
                 </p>
                 <div className="icons">
                     <a href="https://www.facebook.com/vaibhavcoo" className="icon i-facebook">
