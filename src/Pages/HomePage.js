@@ -17,7 +17,7 @@ function HomePage(props) {
 
     const displayText = (text) => {
         let typewriterContainer = document.querySelector("#typewriter-effect");
-        if (typewriterContainer) typewriterContainer.innerHTML = text;
+        if (typewriterContainer) typewriterContainer.innerHTML = text || '';
       }
     useEffect(() => {
     let messages = [

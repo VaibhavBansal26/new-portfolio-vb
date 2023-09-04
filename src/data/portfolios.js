@@ -184,6 +184,16 @@ const portfolios = [
         text: 'React, Redux, Styled Components, Rapid API, Firebase'
     },
     {
+        id: 12,
+        category: 'MERN',
+        image: instagram,
+        link1: 'https://github.com/VaibhavBansal26/MERN-INSTAGRAM-VB',
+        link2: '',
+        link3: 'https://gleeful-chaja-8dcc5b.netlify.app',
+        title: 'MERN Instagram Application (Photo Sharing App)',
+        text: 'Mongo DB, Express JS, React JS, Node JS '
+    },
+    {
         id: 20,
         category: 'React',
         image: linkedin,
@@ -272,16 +282,6 @@ const portfolios = [
         link3: 'https://mern-youtube-vb.herokuapp.com/',
         title: 'MERN Youtube Application',
         text: 'Mongo DB, Express JS, React JS, Node JS - Register & Login to use Features '
-    },
-    {
-        id: 12,
-        category: 'MERN',
-        image: instagram,
-        link1: 'https://github.com/VaibhavBansal26/MERN-INSTAGRAM-VB',
-        link2: '',
-        link3: 'https://gleeful-chaja-8dcc5b.netlify.app',
-        title: 'MERN Instagram Application (Photo Sharing App)',
-        text: 'Mongo DB, Express JS, React JS, Node JS '
     },
     {
         id: 13,
