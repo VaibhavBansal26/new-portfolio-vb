@@ -63,7 +63,7 @@ function Skills({theme}) {
                             text={'70%'}
                         />
                         <ProgressBar 
-                            title={'Next JS'}
+                            title={'AI/ML'}
                             width={'70%'}
                             text={'70%'}
                         />
