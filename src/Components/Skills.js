@@ -17,8 +17,8 @@ function Skills({theme}) {
                         <div className='skillsSingle'>
                             <ProgressBar 
                                 title={'React JS'}
-                                width={'75%'}
-                                text={'75%'}
+                                width={'80%'}
+                                text={'80%'}
                             />
                             <ProgressBar 
                                 title={'PYTHON'}
@@ -37,8 +37,8 @@ function Skills({theme}) {
                             />
                               <ProgressBar 
                                 title={'Next JS'}
-                                width={'70%'}
-                                text={'70%'}
+                                width={'75%'}
+                                text={'75%'}
                             />
                             </div>
                         </InnerLayoutSingle>
