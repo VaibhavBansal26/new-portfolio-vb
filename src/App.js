@@ -11,7 +11,7 @@ import BlogsPage from './Pages/BlogsPage';
 import ContactPage from './Pages/ContactPage';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Route, Routes } from "react-router";
+import { Route, Routes } from "react-router-dom";
 import { IconButton, Switch } from "@mui/material";
 import CertificationPage from "./Pages/CertificationPage";
 function App() {
@@ -69,13 +69,13 @@ function App() {
       </div>
 
       <Routes>
-        <Route path="/" exact element={<HomePage theme={theme}/>}/>
-        <Route path="/about" exact element={<AboutPage theme={theme}/>}/>
-        <Route path="/resume" exact element={<ResumePage theme={theme}/>}/>
-        <Route path="/portfolios" exact element={<PortfolioPage/>}/>
-        <Route path="/blogs" exact element={<BlogsPage/>}/>
-        <Route path="/certification" exact element={<CertificationPage/>}/>
-        <Route path="/contact" exact element={<ContactPage />}/>
+        <Route path="/"  element={<HomePage theme={theme}/>}/>
+        <Route path="/about" element={<AboutPage theme={theme}/>}/>
+        <Route path="/resume"  element={<ResumePage theme={theme}/>}/>
+        <Route path="/portfolios"  element={<PortfolioPage/>}/>
+        <Route path="/blogs"  element={<BlogsPage/>}/>
+        <Route path="/certification"  element={<CertificationPage/>}/>
+        <Route path="/contact"  element={<ContactPage />}/>
       </Routes>
 
     </MainContentStyled>

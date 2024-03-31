@@ -1,20 +1,22 @@
 import React from 'react'
 import styled from 'styled-components';
-import resume from '../img/resume.jpg';
-import resumeLight from '../img/vaibhavphoto.png';
+// import resume from '../img/resume.jpg';
+// import resumeLight from '../img/vaibhavphoto.png';
+import resumeSvg from '../img/vb.svg';
+import resumeSvgDark from '../img/vb-main2.svg';
 import PrimaryButton from './PrimaryButton';
 
 function ImageSection({theme}) {
     return (
         <ImageSectionStyled>
             <div className="left-content">
-                <img src={theme === 'light-theme' ? resumeLight : resume} alt="profile_photo"/>
+                <img height="60%" width="100%" src={theme === 'light-theme' ? resumeSvg : resumeSvgDark} alt="profile_photo"/>
             </div>
             <div className="right-content">
                 <h4>I am <span>Vaibhav Bansal</span></h4>
                 <h2>Front-End Developer | 3+ Years of Experience</h2>
                 <p className="paragraph">
-                    I am Vaibhav Bansal, a dedicated Software Developer with over 3 years of valuable experience. Presently, I'm actively contributing my expertise as a Front-end Developer at Dashclicks India Ltd. Throughout my journey, I've remained committed to continuous skill enhancement and professional growth. My confidence stems from the ability to generate innovative ideas that drive substantial organizational advancement. Beyond coding, I'm passionate about adventure sports, lawn tennis, and staying updated with the latest technology blogs.
+                    I am Vaibhav Bansal, a dedicated Software Developer with over 3 years of valuable experience. Currently, pursuing Master's in Engineering Science in Data Science in State UniversIty New York (SUNY) at Buffalo.   My professional journey includes significant experience at leading organizations like Dashclicks India Ltd , Wipro, JK Tyre, Smart Controls India, where I developed my expertise in software development. Throughout my journey, I've remained committed to continuous skill enhancement and professional growth. My confidence stems from the ability to generate innovative ideas that drive substantial organizational advancement. Beyond coding, I'm passionate about adventure sports, lawn tennis, and staying updated with the latest technology blogs.
                 </p>
                 
                 <div className="about-info">
@@ -28,11 +30,11 @@ function ImageSection({theme}) {
                     </div>
                     <div className="info">
                         <p>: Vaibhav Bansal</p>
-                        <p>: 26</p>
+                        <p>: 27</p>
                         <p>: Indian </p>
                         <p>: English, Hindi, French </p>
-                        <p>: Gwalior, Madhya Pradesh, India</p>
-                        <p>: Software Developer</p>
+                        <p>: Buffalo, New York, United States</p>
+                        <p>: Aspiring Data Scientist | Software Developer</p>
                     </div>
                 </div>
                 <PrimaryButton title={'Download Cv'} />
@@ -60,7 +62,7 @@ const ImageSectionStyled = styled.div`
         width: 100%;
         img{
             width: 95%;
-            object-fit: cover;
+            
         }
     }
     .right-content{

@@ -1,68 +1,70 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import GithubIcon from '@mui/icons-material/GitHub';
-import YoutubeIcon from '@mui/icons-material/YouTube';
+// import YoutubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Particle from '../Components/Particle';
 import iconRS from '../img/icons8-researchgate.svg';
-import CodeTheme from '../Components/codeTheme';
-import CodeThemeSec from '../Components/codeThemeSec';
+// import CodeTheme from '../Components/codeTheme';
+// import CodeThemeSec from '../Components/codeThemeSec';
 import './styles.css';
 // import carbon from '../img/carbon.svg';
 
 function HomePage(props) {
     const {theme} = props;
 
-    const displayText = (text) => {
-        let typewriterContainer = document.querySelector("#typewriter-effect");
-        if (typewriterContainer) typewriterContainer.innerHTML = text || '';
-      }
-    useEffect(() => {
-    let messages = [
-        "Developer",
-        "Designer",
-        "Coffee addict ☕",
-        "Vaibhav Bansal"
-      ]
+    // const displayText = (text) => {
+    //     let typewriterContainer = document.querySelector("#typewriter-effect");
+    //     if (typewriterContainer) typewriterContainer.innerHTML = text || '';
+    //   }
+    // useEffect(() => {
+    // let messages = [
+    //     "Developer",
+    //     "Designer",
+    //     "Coffee addict ☕",
+    //     "Vaibhav Bansal"
+    //   ]
       
-      var textIndex = 0;
-      var lettersToShow = 0;
-      let text_m;
-      setInterval(() => {
-        text_m = messages?.[textIndex]
-        if(lettersToShow <= text_m?.length){
-          lettersToShow++
-          displayText(text_m?.substring(0, lettersToShow))
-        }
-        else{
-          textIndex++;
-          lettersToShow = 0;
-        }
-      }, 300)
+    //   var textIndex = 0;
+    //   var lettersToShow = 0;
+    //   let text_m;
+    //   setInterval(() => {
+    //     text_m = messages?.[textIndex]
+    //     if(lettersToShow <= text_m?.length){
+    //       lettersToShow++
+    //       displayText(text_m?.substring(0, lettersToShow))
+    //     }
+    //     else{
+    //       textIndex++;
+    //       lettersToShow = 0;
+    //     }
+    //   }, 300)
       
-      displayText(text_m);
+    //   displayText(text_m);
 
-    },[])
+    // },[])
     return (
         <HomePageStyled>
             <div className="particle-con">
                 <Particle theme={theme}/>
             </div>
-            <div className="codeThemeSec">
+            {/* <div className="codeThemeSec">
                 <CodeThemeSec/>
-            </div>
-            <div className="codeTheme">
+            </div> */}
+            {/* <div className="codeTheme">
                 <CodeTheme/>
-            </div>
+            </div> */}
             <div className='underlayText'>
                 VAIBHAV BANSAL
             </div>
             <div className="typography">
-                <h1>Hi, I'm <span className='myname'  data-value="" id="typewriter-effect"></span></h1>
+                {/* <h1>Hi, I'm <span className='myname'  data-value="" id="typewriter-effect"></span></h1> */}
+                <h1>Hi, I'm <span className='myname'  data-value="">Vaibhav Bansal</span></h1>
                 <p>
-                    I am an India based Software developer and Data Science enthusiast. Currently working as Frontend Developer @ Dashclicks India Ltd.
+                    I am an India based Software developer and Data Science enthusiast. I am currently advancing my expertise through a Master's program in Data Science at the State University of New York (SUNY) at Buffalo.
+                    My professional journey includes significant experience at leading organizations like Dashclicks India Ltd and Wipro, where I developed my expertise in software development. 
                 </p>
                 <div className="icons">
                     <a href="https://www.facebook.com/vaibhavcoo" className="icon i-facebook">
@@ -71,10 +73,10 @@ function HomePage(props) {
                     <a href="https://github.com/VaibhavBansal26" className="icon i-github">
                         <GithubIcon />
                     </a>
-                    <a href="https://www.youtube.com/channel/UCj5oKvqzKkYzPbXYbodKetQ" className="icon i-youtube">
+                    {/* <a href="https://www.youtube.com/channel/UCj5oKvqzKkYzPbXYbodKetQ" className="icon i-youtube">
                         <YoutubeIcon />
-                    </a>
-                    <a href="https://www.linkedin.com/in/vaibhav-bansal-1a41bab1/" className="icon i-linkedin">
+                    </a> */}
+                    <a href="https://www.linkedin.com/in/vaibhavbansal-profile/" className="icon i-linkedin">
                         <LinkedInIcon />
                     </a>
                     <a href="https://www.instagram.com/vaibhav.bansal945/" className="icon i-instagram">

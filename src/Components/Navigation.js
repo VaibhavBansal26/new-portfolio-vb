@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
-import avatar from '../img/avatar-light3.jpeg';
-import avatarDark from '../img/avatar-dark3.jpeg';
+import avatar from '../img/avatar-light3-white.jpeg';
+import avatarDark from '../img/avatar-light3-white.jpeg';
 
 function Navigation({theme}) {
     return (
@@ -34,7 +34,7 @@ function Navigation({theme}) {
                 </li>
             </ul>
             <footer className="footer">
-                <p><b>&copy; 2023 Vaibhav Bansal</b></p>
+                <p><b>&copy; 2024 Vaibhav Bansal</b></p>
             </footer>
         </NavigationStyled>
     )

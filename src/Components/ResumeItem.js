@@ -53,15 +53,7 @@ const ResumeItemStyled = styled.div`
     .right-content{
         padding-left: 5rem;
         position: relative;
-        &::before{
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 15px;
-            height: 2px;
-            width: 3rem;
-            background-color: var(--border-color);
-        }
+       
         h5{
             color: var(--primary-color);
             font-size: 2rem;

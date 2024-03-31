@@ -73,6 +73,13 @@ function Resume() {
                     <SmallTitle icon={school} title={'Educational Qualifications'} />
                 </div>
                 <div className="resume-content ">
+                <ResumeItem 
+                        year={'2024 - 2025'} 
+                        title={'M.S in Data Science     '}
+                        subTitle={'State University New York Buffalo'}
+                        link={'https://www.buffalo.edu/'}
+                        text={"Currently Pursuing Master's in Data Science program"} 
+                    />
                     <ResumeItem 
                         year={'2016 - 2020'} 
                         title={'B.Tech in Computer Science'}
