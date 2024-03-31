@@ -173,6 +173,7 @@ h6{
       z-index: 15;
       svg{
           font-size: 3rem;
+          color:var(--primary-color);
       }
     }
 

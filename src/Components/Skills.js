@@ -98,6 +98,13 @@ function Skills({theme}) {
                                     https://doi.org/10.1007/s42452-020-2815-z
                                 </a>
                                 </i>
+                            </p><br/>
+                            <p className="seo-heading">LeetCode Profile:</p><br/>
+                            <p>
+                                <a href="https://leetcode.com/vaibhav_bansal26/" className="seo-link">
+                                <img src={`https://leetcard.jacoblin.cool/vaibhav_bansal26?theme=${theme === 'light-theme' ? 'light' : 'dark'}&font=Gowun%20Batang&ext=heatmap&border=0`} alt="leetcode"/>
+                                </a>
+                                <br />
                             </p>
                             </div>
                         </div>
