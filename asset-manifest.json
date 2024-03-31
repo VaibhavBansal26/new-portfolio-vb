@@ -1,14 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.91bd268e.css",
-    "main.js": "/static/js/main.74cea60f.js",
+    "main.css": "/static/css/main.b363abd3.css",
+    "main.js": "/static/js/main.93242098.js",
     "static/js/787.8dc771c0.chunk.js": "/static/js/787.8dc771c0.chunk.js",
     "static/media/netflix.PNG": "/static/media/netflix.a1cafc60cc5f89053d49.PNG",
     "static/media/movie.png": "/static/media/movie.638d969dc262511d3b3b.png",
     "static/media/martist.PNG": "/static/media/martist.f50f58c0ff07f7e8ace7.PNG",
-    "static/media/vaibhavphoto.png": "/static/media/vaibhavphoto.5017239ad46c4aa663b5.png",
     "static/media/disney.PNG": "/static/media/disney.594aa93177c9749ec005.PNG",
-    "static/media/resume.jpg": "/static/media/resume.40b3db3ca1724baab1d8.jpg",
     "static/media/prime1.PNG": "/static/media/prime1.726fc619c352b9f8cf3c.PNG",
     "static/media/airbnb.PNG": "/static/media/airbnb.29398772e8596258f7ac.PNG",
     "static/media/news.PNG": "/static/media/news.4fb7681960d1de5235ee.PNG",
@@ -59,22 +57,20 @@
     "static/media/natural-disaster.png": "/static/media/natural-disaster.72df236cd6476f5346a0.png",
     "static/media/instagram.png": "/static/media/instagram.44b69746e5ac7f376337.png",
     "static/media/chat.png": "/static/media/chat.69e84cd49eae8bef1ec7.png",
-    "static/media/avatar-light3.jpeg": "/static/media/avatar-light3.996c28c6435b1cce0fac.jpeg",
     "static/media/slack.png": "/static/media/slack.1742674a89004c11455c.png",
-    "static/media/avatar-dark3.jpeg": "/static/media/avatar-dark3.52be73940e3d75f32cbc.jpeg",
     "static/media/blog1.png": "/static/media/blog1.61be6a884c127d1cc714.png",
     "static/media/trello.PNG": "/static/media/trello.8fa2a4ef37d6c6ef2275.PNG",
+    "static/media/avatar-light3-white.jpeg": "/static/media/avatar-light3-white.22720208fe8eb2c68691.jpeg",
+    "static/media/vb-main2.svg": "/static/media/vb-main2.03cbd9bb1b3ea9b5a59b6aa92de010d9.svg",
+    "static/media/vb.svg": "/static/media/vb.2abe036e7444d8471d5e063eb8d041f8.svg",
     "index.html": "/index.html",
-    "static/media/intelligence.svg": "/static/media/intelligence.11bd2ab25b415eeb093876127c8d6654.svg",
-    "static/media/game-dev.svg": "/static/media/game-dev.20147858b407ad93903c5454f0631b6f.svg",
     "static/media/icons8-researchgate.svg": "/static/media/icons8-researchgate.cda82ba5dc806a62eec8ffcbf1dd2dab.svg",
-    "static/media/design.svg": "/static/media/design.8ecb3043cd761000705693c804edfb76.svg",
-    "main.91bd268e.css.map": "/static/css/main.91bd268e.css.map",
-    "main.74cea60f.js.map": "/static/js/main.74cea60f.js.map",
+    "main.b363abd3.css.map": "/static/css/main.b363abd3.css.map",
+    "main.93242098.js.map": "/static/js/main.93242098.js.map",
     "787.8dc771c0.chunk.js.map": "/static/js/787.8dc771c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.91bd268e.css",
-    "static/js/main.74cea60f.js"
+    "static/css/main.b363abd3.css",
+    "static/js/main.93242098.js"
   ]
 }
