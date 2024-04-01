@@ -26,8 +26,9 @@ function PortfoliosPage() {
         <MainLayout>
             <Title title={'Portfolio'} span={'portfolio'} />
             <InnerLayout>
-
-                <Button filter={filter} button={button} />
+                <div className={window.innerWidth <= 768 ? "hide-on-mobile" : ""}>
+                    <Button filter={filter} button={button} />
+                </div>
                 <Menu menuItem={menuItem} />
             </InnerLayout>
         </MainLayout>
