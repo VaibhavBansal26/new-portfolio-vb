@@ -62,7 +62,7 @@ const CertStyled = styled.div`
 
         .title{
             a{
-                font-size: 1.8rem;
+                font-size: 1rem;
                 padding: 2rem 0;
                 color: var(--white-color);
                 cursor: pointer;

@@ -1,3 +1,4 @@
+import blog0 from  '../img/certification/hicounselor.png';
 import blog1 from  '../img/certification/appliedDataScience.png';
 import blog2 from  '../img/certification/parallelConcurrentProg.png';
 import blog3 from  '../img/certification/introDataScience.png';
@@ -25,6 +26,15 @@ import blog24 from  '../img/certification/dpInJava.png';
 
 
 const certificates = [
+    {
+        id: 0,
+        title: 'Netflix Originals Analysis: Exploring Cinematic Trends with Python and SQL.',
+        by:'HiCounselor',
+        date: '01',
+        month: 'March',
+        image: blog0,
+        link:"https://hicounselor.com/certificate/verify/OTYzMzMyNzY="
+    },
     {
         id: 1,
         title: 'Specialization - Applied Data Science with Python',
