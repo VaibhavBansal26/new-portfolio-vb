@@ -63,8 +63,8 @@ const NavigationStyled = styled.nav`
         text-align: center;
         padding: 1.5rem 0;
         img{
-            width: 50%;
-            height:130px;
+            width: 60%;
+            height:150px;
             border-radius: 50%;
             border: 4px solid var(--border-color);
         }
