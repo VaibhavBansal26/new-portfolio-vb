@@ -19,12 +19,13 @@ const ButtonStyled = styled.button`
     outline: none;
     border: none;
     background-color: var(--background-light-color-2);
-    padding: .4rem 2rem;
+    padding: .4rem 1rem;
     font-size: inherit;
     color: var(--white-color);
     cursor: pointer;
     transition: all .4s ease-in-out;
     margin-bottom: .6rem;
+    border-radius:5px;
     &:active ,&:focus{
         background-color: var(--primary-color);
     }
@@ -41,7 +42,7 @@ const ButtonsStyled = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 70%;
+    width: 80%;
     margin: 2.4rem auto;
 `;
 export default Button;

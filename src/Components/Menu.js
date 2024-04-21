@@ -1,165 +1,126 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 import GitHub from '@mui/icons-material/GitHub';
 import YouTube from '@mui/icons-material/YouTube';
 import Play from '@mui/icons-material/PlayArrowOutlined';
 
-const getRandomColor = () => {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  };
+// const getRandomColor = () => {
+//     const letters = '0123456789ABCDEF';
+//     let color = '#';
+//     for (let i = 0; i < 6; i++) {
+//       color += letters[Math.floor(Math.random() * 16)];
+//     }
+//     return color;
+//   };
 
-function Menu({menuItem}) {
-    return (
-        <MenuItemStyled >
-            {
-                menuItem.map((item)=>{
-                    return <div className="grid-item" key={item.id}>
-                        <div className="portfolio-content">
-                            <div className="portfolio-image">
-                                <img src={item.image} alt={`menu${item.id}`}/>
-                                <ul>
-                                {item.link1 ?
-                                    <li>
-                                        <a href={item.link1} target="_blank" rel="noreferrer">
-                                            {item.link1 ? <GitHub />:""}
-                                        </a>
-                                    </li>:""}
-                                    {item.link2 ?
-                                    <li>
-                                        <a href={item.link2} target="_blank" rel="noreferrer">
-                                            {item.link2 ? <YouTube />: ""}
-                                        </a>
-                                    </li>:""}
-                                    {item.link3 ?
-                                    <li>
-                                        <a href={item.link3} target="_blank" rel="noreferrer">
-                                            {item.link3 ? <Play />:""}
-                                        </a>
-                                    </li>:""}
-                                </ul>
-                            </div>
-                            <h6>{item.title}</h6>
-                            <p>{item.text}</p>
-                        </div>
-                    </div>
-                })
-            }
-        </MenuItemStyled>
-    )
-}
+const Menu = ({ menuItem }) => {
+  return (
+    <MenuItemStyled>
+      {menuItem.map((item) => (
+        <div className="grid-item" key={item.id}>
+          <div className="portfolio-content">
+            <div className="portfolio-image">
+              <img src={item.image} alt={item.title} />
+              <div className="overlay">
+                {item.link1 && (
+                  <a href={item.link1} target="_blank" rel="noreferrer">
+                    <GitHub />
+                  </a>
+                )}
+                {item.link2 && (
+                  <a href={item.link2} target="_blank" rel="noreferrer">
+                    <YouTube />
+                  </a>
+                )}
+                {item.link3 && (
+                  <a href={item.link3} target="_blank" rel="noreferrer">
+                    <Play />
+                  </a>
+                )}
+              </div>
+            </div>
+            <h6>{item.title}</h6>
+            <p>{item.text}</p>
+          </div>
+        </div>
+      ))}
+    </MenuItemStyled>
+  );
+};
 
 const MenuItemStyled = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    @media screen and (max-width:920px){
-        grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 2rem;
+  @media screen and (max-width: 920px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 670px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .grid-item {
+    background-color:  var(--background-dark-grey);;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    &:hover {
+        transform: scale(1.03);
     }
-    @media screen and (max-width:670px){
-        grid-template-columns: repeat(1, 1fr);
+    &:hover .overlay {
+      opacity: 0.8;
+      transform: scale(1.03);
     }
-    .grid-item{
-        .portfolio-content{
-            display: block;
-            position: relative;
-            overflow: hidden;
-            h6{
-                font-size: 1.5rem;
-            }
-            img{
-                width: 100%;
-                height: 30vh;
-                object-fit: cover;
-            }
-            ul{
-                transform: translateY(-600px);
-                transition: all .4s ease-in-out;
-                position: absolute;
-                left: 50%;
-                top: 40%;
-                opacity: 0;
-                li{
-                        background-color: var(--border-color);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        padding: 1rem;
-                        border-radius: 50%;
-                        width: 3rem;
-                        height: 3rem;
-                        margin: 0 .5rem;
-                        transition: all .4s ease-in-out;
-                        &:hover{
-                            background-color: var(--primary-color);
-                        }
-                        a{
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            transition: all .4s ease-in-out;
-                        }
-                    }
-            }
-
-            .portfolio-image{
-                &::before{
-                    content: "";
-                    position: absolute;
-                    left: 2%;
-                    top: 4%;
-                    height: 0;
-                    width: 0;
-                    transition: all .4s ease-in-out;
-                }
-            }
-            .portfolio-image:hover{
-                ul{
-                    transform: translateY(0);
-                    transform: translate(-50%, -50%);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: all .4s ease-in-out;
-                    opacity: 1;
-                    li{
-                        transition: all .4s ease-in-out;
-                        &:hover{
-                            background-color: var(--primary-color);
-                        }
-                        a{
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            transition: all .4s ease-in-out;
-                        }
-                    }
-
-                    li:hover{
-                        svg{
-                            color: var(--white-color);
-                        }
-                    }
-                    svg{
-                        font-size: 2rem;
-                    }
-                }
-                &::before{
-                    height: calc(100% - 32%) ;
-                    width: calc(100% - 4%);
-                    background-color: ${getRandomColor};
-                    opacity: 0.9;
-                    transform-origin: left;
-                    
-                    transition: all .4s ease-in-out;
-                }
-            }
+    .portfolio-content {
+      h6, p {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+      }
+      h6 {
+        font-weight: bold;
+        color: var(--primary-color)
+      }
+      .portfolio-image {
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
         }
+      }
     }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgb(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      a {
+        display: inline-flex;
+        margin: 0 10px;
+        color: white;
+        font-size: 2rem;
+        transition: transform 0.3s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+        svg {
+          transition: color 0.3s ease;
+          &:hover {
+            color: #6cc644; /* Or any color you prefer */
+            transform: scale(1.03)
+          }
+        }
+      }
+    }
+  }
 `;
 
 export default Menu;

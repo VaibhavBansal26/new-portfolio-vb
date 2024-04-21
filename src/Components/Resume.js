@@ -76,7 +76,7 @@ function Resume() {
                 <ResumeItem 
                         year={'2024 - 2025'} 
                         title={'M.S in Data Science     '}
-                        subTitle={'State University New York Buffalo'}
+                        subTitle={'State University New York, Buffalo'}
                         link={'https://www.buffalo.edu/'}
                         text={"Currently Pursuing Master's in Data Science program"} 
                     />
@@ -87,7 +87,7 @@ function Resume() {
                         link={'https://vit.ac.in/'}
                         text={'I had completed my B.Tech degree with CGPA - 8.62.'} 
                     />
-                    <ResumeItem 
+                    {/* <ResumeItem 
                         year={'2013 - 2015'} 
                         title={'Senior High School'}
                         subTitle={'Pragati Vidya Peeth'}
@@ -107,7 +107,7 @@ function Resume() {
                         subTitle={'Wendy School Junior College'}
                         link={'https://www.wendyeducation.org/'}
                         text={'I had consistently performed well in my academics.'} 
-                    />
+                    /> */}
                 </div>
             </InnerLayout>
         </ResumeStyled>    

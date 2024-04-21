@@ -3,12 +3,21 @@ import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
 import avatar from '../img/avatar-light3-white.jpeg';
 import avatarDark from '../img/avatar-light3-white.jpeg';
+import avatarNew from '../img/avatar-new.png';
 
 function Navigation({theme}) {
+    const handleHover = () => {
+        let nav_image = document.querySelector('.avatar img')
+        nav_image.src = avatarNew
+    }
+    const handleChangeImage = () => {
+        let nav_image = document.querySelector('.avatar img')
+        nav_image.src = theme === 'light-theme' ? avatarDark : avatar
+    }
     return (
         <NavigationStyled>
             <div className="avatar">
-                <img src={theme === 'light-theme' ? avatarDark : avatar} alt="light-theme" style={{height:"180px"}}/>
+                <img src={theme === 'light-theme' ? avatarDark : avatar} alt="light-theme" onMouseOver={handleHover} onMouseOut={handleChangeImage}/>
             </div>
             <ul className="nav-items">
                 <li className="nav-item">
@@ -52,11 +61,12 @@ const NavigationStyled = styled.nav`
         width: 100%;
         border-bottom: 1px solid var(--border-color);
         text-align: center;
-        padding: 1rem 0;
+        padding: 1.5rem 0;
         img{
-            width: 70%;
+            width: 50%;
+            height:130px;
             border-radius: 50%;
-            border: 8px solid var(--border-color);
+            border: 4px solid var(--border-color);
         }
     }
 

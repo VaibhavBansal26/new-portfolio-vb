@@ -10,7 +10,7 @@ function ImageSection({theme}) {
     return (
         <ImageSectionStyled>
             <div className="left-content">
-                <img height="60%" width="100%" src={theme === 'light-theme' ? resumeSvg : resumeSvgDark} alt="profile_photo"/>
+                <img height="60%" width="100%" src={theme === 'light-theme' ? resumeSvg : resumeSvgDark} alt="profile_photo" id='yourSvgPath'/>
             </div>
             <div className="right-content">
                 <h4>I am <span>Vaibhav Bansal</span></h4>
@@ -58,6 +58,18 @@ const ImageSectionStyled = styled.div`
             }
         }
     }
+    #yourSvgPath {
+        stroke: #ffffff;
+        stroke-width: 1;
+        stroke-dasharray: 1000; /* The value here should be the length of the SVG path */
+        stroke-dashoffset: 1000; /* Same as stroke-dasharray to initially hide the path */
+        transition: stroke-dashoffset 2s; /* Adjust time as needed */
+      }
+      
+      #yourSvgPath:hover {
+        stroke-dashoffset: 0; /* The path will be "drawn" on hover */
+      }
+      
     .left-content{
         width: 100%;
         img{
