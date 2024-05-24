@@ -44,6 +44,26 @@ import gpac from '../img/portImages/gpac.png';
 
 const portfolios = [
     {
+        id: 34,
+        category: 'Machine Learning',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1716567573/Screenshot_2024-05-24_at_12.18.33_PM_j1beti.png',
+        link1: 'https://github.com/VaibhavBansal26/heart_disease_prediction_version2',
+        link2: '',
+        link3: 'https://heart-disease-prediction-grp-14.streamlit.app/',
+        title: 'Heart Disease Prediction',
+        text: 'Python, Mlflow, DagsHub Integration, Streamlit, Digital Ocean, Machine Learning, Docker, SQLite3'
+    },
+    {
+        id: 35,
+        category: 'Machine Learning',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1716567905/Screenshot_2024-05-24_at_12.24.44_PM_l2zamc.png',
+        link1: 'https://github.com/VaibhavBansal26/sdm-project',
+        link2: 'https://youtu.be/Q2NP7hlKeo0',
+        link3: 'https://vaibhavbansal.shinyapps.io/sdmproject/',
+        title: 'Customer Segmentation And Sales Analysis with Product Recommendation',
+        text: 'R, ShinyR, SQLite3, Machine Learning'
+    },
+    {
         id: 31,
         category: 'Package & Extension',
         image: gpac,
@@ -226,7 +246,7 @@ const portfolios = [
     {
         id: 6,
         category: 'React',
-        image: zoom,
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1714012147/zoom_v0gjul.png' || zoom,
         link1: 'https://github.com/VaibhavBansal26/Nodejs-Video-Conferencing',
         link2: '',
         link3: 'https://video-conferencing-app-vb.onrender.com/',

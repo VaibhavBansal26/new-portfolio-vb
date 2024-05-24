@@ -74,6 +74,7 @@ function Skills({theme}) {
                             <span className="seo-heading">Other Skills:</span><br/>
                             <p className="seo-link"><br/>
                                 MongoDB, Docker, Artificial Intelligence / Machine Learning, MySQL, JAVA, C++, Adobe Photoshop, Firebase, NPM, Git
+                                SQLite3, Streamlit, Mlflow, DagsHub
                             </p><br/>
                             <span className="seo-heading">Third Party Libraries:</span><br/><br/>
                             <p className="seo-link">

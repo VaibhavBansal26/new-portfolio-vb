@@ -78,14 +78,16 @@ function Resume() {
                         title={'M.S in Data Science     '}
                         subTitle={'State University New York, Buffalo'}
                         link={'https://www.buffalo.edu/'}
-                        text={"Currently Pursuing Master's in Data Science program"} 
+                        text={"Pursuing Master's in Data Science program with GPA - 3.667 out of 4 ."}
+                        css={0}
                     />
                     <ResumeItem 
                         year={'2016 - 2020'} 
                         title={'B.Tech in Computer Science'}
                         subTitle={'VIT University India'}
                         link={'https://vit.ac.in/'}
-                        text={'I had completed my B.Tech degree with CGPA - 8.62.'} 
+                        text={'I had completed my B.Tech degree with CGPA - 8.62 out of 10 .'} 
+                        css={0}
                     />
                     {/* <ResumeItem 
                         year={'2013 - 2015'} 

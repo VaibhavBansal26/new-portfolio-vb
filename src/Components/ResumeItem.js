@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function ResumeItem({year, title, subTitle, text, link}) {
+function ResumeItem({year, title, subTitle, text, link,css}) {
     return (
         <ResumeItemStyled>
-            <div className="left-content">
+            <div className="left-content left">
                 <p>{year}</p>
             </div>
-            <div className="right-content">
+            <div className={`right-content right${css}`}>
                 <h5>{title}</h5>
                 <a href={link} target='_blank' rel='noreferrer'><h6>{subTitle}</h6></a>
                 <p>{text}</p>
@@ -49,6 +49,9 @@ const ResumeItemStyled = styled.div`
         .left-content{
             display: none;
         }
+    }
+    .right0 {
+        flex:1;
     }
     .right-content{
         padding-left: 5rem;
