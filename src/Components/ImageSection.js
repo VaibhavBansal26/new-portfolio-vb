@@ -8,6 +8,7 @@ import PrimaryButton from './PrimaryButton';
 
 function ImageSection({theme}) {
     return (
+        <>
         <ImageSectionStyled>
             <div className="left-content">
                 <img height="60%" width="100%" src={theme === 'light-theme' ? resumeSvg : resumeSvgDark} alt="profile_photo" id='yourSvgPath'/>
@@ -37,9 +38,23 @@ function ImageSection({theme}) {
                         <p>: Aspiring Data Scientist | Software Developer</p>
                     </div>
                 </div>
-                <PrimaryButton title={'Download Cv'} />
+                <PrimaryButton title={'Download Resume'} />
             </div>
         </ImageSectionStyled>
+         <ImageSectionStyled>
+         <div  className="mid-sec" style={{display:'flex'}}>
+            <div className="left-con"> 
+                <h1>Featured on a Billboard in <span>New York's Times Square!</span></h1>
+                <p className="paragraph">
+                    Achieved the top spot in a Machine Learning project for Hospital Efficiency:  Cleaning, XGBoost, Predictions , and as a testament to this success, I got featured in New York Times Square!
+                </p>
+            </div>
+            <div className="right-con" style={{borderRadius:"5px"}}>
+                <video src='https://res.cloudinary.com/vaibhav-codexpress/video/upload/v1717225096/VaibhavBansal_TimeSquare_h3gbbc.mp4' autoPlay muted controls loop style={{height: "65%",marginTop: "15px",borderRadius: "5px"}}></video>
+            </div>
+        </div>
+     </ImageSectionStyled>
+     </>
     )
 }
 
@@ -57,6 +72,37 @@ const ImageSectionStyled = styled.div`
                 text-align:left;
             }
         }
+    }
+    @media screen and (max-width:1000px){
+        .mid-sec {
+            flex-direction: column;
+            .left-con{
+                margin-bottom: 2rem;
+            }
+            .right-con{
+                .paragraph{
+                    text-align:left;
+                }
+            }
+        }
+        
+    }
+    @media screen and (max-width:520px){
+        .mid-sec {
+            flex-direction: column;
+            .left-con{
+                margin-bottom: 2rem;
+            }
+            .right-con{
+                .paragraph{
+                    text-align:left;
+                }
+                video {
+                    width:70%
+                }
+            }
+        }
+        
     }
     #yourSvgPath {
         stroke: #ffffff;
