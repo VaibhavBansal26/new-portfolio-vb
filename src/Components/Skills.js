@@ -73,8 +73,8 @@ function Skills({theme}) {
                         <div>
                             <span className="seo-heading">Other Skills:</span><br/>
                             <p className="seo-link"><br/>
-                                MongoDB, Docker, Artificial Intelligence / Machine Learning, MySQL, JAVA, C++, Adobe Photoshop, Firebase, NPM, Git
-                                SQLite3, Streamlit, Mlflow, DagsHub
+                                MongoDB, Docker, Artificial Intelligence / Machine Learning, MySQL, PostgreSQL JAVA, C++, Adobe Photoshop, Firebase, NPM, Git
+                                SQLite3, Streamlit, Mlflow, DagsHub, Apache Cassandra, Airflow, ETL Pipelines, System Design, AWS Athena, AWS Glue, S3, AWS Redshift, JIRA
                             </p><br/>
                             <span className="seo-heading">Third Party Libraries:</span><br/><br/>
                             <p className="seo-link">

@@ -27,7 +27,7 @@ import blog24 from  '../img/certification/dpInJava.png';
 
 const certificates = [
     {
-        id: 0,
+        id: 1,
         title: 'Microsoft Certified: Azure Fundamentals (AZ-900)',
         by:'Microsoft',
         date: '26',
@@ -36,7 +36,17 @@ const certificates = [
         link:"https://learn.microsoft.com/api/credentials/share/en-us/VaibhavBansal-0793/23D71052C3D2AA2D?sharingId=D072CB1AD317D54C"
     },
     {
-        id: 1,
+        id: 2,
+        title: 'Data Engineering With AWS',
+        by:'Udacity - Part of Accenture',
+        date: '16',
+        month: 'July',
+        image: "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1721089749/de_aws_kz4rum.png",
+        link:"https://www.udacity.com/certificate/e/2c5a529e-235b-11ef-8e1c-0f6d66a3153c"
+    },
+
+    {
+        id: 3,
         title: 'Netflix Originals Analysis: Exploring Cinematic Trends with Python and SQL.',
         by:'HiCounselor',
         date: '01',
@@ -45,7 +55,7 @@ const certificates = [
         link:"https://hicounselor.com/certificate/verify/OTYzMzMyNzY="
     },
     {
-        id: 2,
+        id: 4,
         title: 'Specialization - Applied Data Science with Python',
         by:'Coursera - University of Michigan',
         date: '01',
@@ -54,7 +64,7 @@ const certificates = [
         link:"https://coursera.org/share/8da73c7cd3ed8e301cd063cd24cb3a0f"
     },
     {
-        id: 3,
+        id: 5,
         title: 'Specialization - Parallel, Concurrent & Distributed Programming in JAVA',
         by:'Coursera - Rice University',
         date: '01',
@@ -63,7 +73,7 @@ const certificates = [
         link:"https://coursera.org/share/7041d6d1ac45efef3fd38eb621a68677"
     },
     {
-        id: 4,
+        id: 6,
         title: 'Introduction To Data Science in Python',
         by:'Coursera - University of Michigan',
         date: '01',
@@ -72,7 +82,7 @@ const certificates = [
         link:"https://coursera.org/share/28afd76f8c09e46057897a118f3d4c23"
     },
     {
-        id: 5,
+        id: 7,
         title: 'Object Oriented Programming in Java',
         by:'University of California San Diego',
         date: '01',
@@ -81,7 +91,7 @@ const certificates = [
         link:"https://coursera.org/share/feca64b21c34785ed83a838a455c4009"
     },
     {
-        id: 6,
+        id: 8,
         title: 'Econometrics: Methods and Applications',
         by:'Erasmus University Rotterdam',
         date: '01',
@@ -90,7 +100,7 @@ const certificates = [
         link:"https://coursera.org/share/3aea806d34ef6fa035e7bb3b03f661a4"
     },
     {
-        id: 7,
+        id: 9,
         title: 'Fundamentals of Digital Image and Video Processing',
         by:'Northwestern University',
         date: '01',
@@ -99,7 +109,7 @@ const certificates = [
         link:"https://coursera.org/share/d0801e16376f95297118dd57d4afad7d"
     },
     {
-        id: 8,
+        id: 10,
         title: 'Introduction to Data Science in Python',
         by:'University of Michigan',
         date: '01',
@@ -108,7 +118,7 @@ const certificates = [
         link:"https://coursera.org/share/5f348a862ee93b2041e56138f8b256e0"
     },
     {
-        id: 9,
+        id: 11,
         title: 'Introduction to Game Development',
         by:'Michigan State University',
         date: '01',
@@ -117,7 +127,7 @@ const certificates = [
         link:"https://coursera.org/share/4d87d4de05314b7ff8ef7acbb35ce2c7"
     },
     {
-        id: 10,
+        id: 12,
         title: 'Interactivity with JavaScript',
         by:'University of Michigan',
         date: '01',
@@ -126,7 +136,7 @@ const certificates = [
         link:"https://coursera.org/share/9dd788d1e7c3751e21806ed5fc682609"
     },
     {
-        id: 11,
+        id: 13,
         title: 'Cluster Analysis in Data Mining',
         by:'University of Illinois at Urbana-Champaign',
         date: '01',
@@ -135,7 +145,7 @@ const certificates = [
         link:"https://coursera.org/share/93a7513d0b1c9fee432bcb22f88fc850"
     },
     {
-        id: 12,
+        id: 14,
         title: 'Introduction to CSS3',
         by:'University of Michigan',
         date: '01',
@@ -144,7 +154,7 @@ const certificates = [
         link:"https://coursera.org/share/d139575733f15fe01919c447b22915b0"
     },
     {
-        id: 13,
+        id: 15,
         title: 'Machine Learning with Python',
         by:'IBM',
         date: '01',
@@ -153,7 +163,7 @@ const certificates = [
         link:"https://coursera.org/share/54f77edfa77876a1cc867544743eb1cf"
     },
     {
-        id: 14,
+        id: 16,
         title: 'Python Data Structures',
         by:'University of Michigan',
         date: '01',
@@ -162,7 +172,7 @@ const certificates = [
         link:"https://coursera.org/share/ad49e3d24650f35b371389866288745c"
     },
     {
-        id: 15,
+        id: 17,
         title: 'Java for Android',
         by:'Vanderbilt University',
         date: '01',
@@ -171,7 +181,7 @@ const certificates = [
         link:"https://coursera.org/share/7c1dd4577827062612e8253fbe98053e"
     },
     {
-        id: 16,
+        id: 18,
         title: 'Applied Plotting, Charting & Data Representation in Python',
         by:'University of Michigan',
         date: '01',
@@ -180,7 +190,7 @@ const certificates = [
         link:"https://coursera.org/share/013032798583ffddbc1df80d0e88efd5"
     },
     {
-        id: 17,
+        id: 19,
         title: 'Programming for Everybody (Getting Started with Python)',
         by:'University of Michigan',
         date: '01',
@@ -189,7 +199,7 @@ const certificates = [
         link:"https://coursera.org/share/e85543c2065bfac44a00d661f4aea38d"
     },
     {
-        id: 18,
+        id: 20,
         title: 'Applied Social Network Analysis in Python',
         by:'University of Michigan',
         date: '01',
@@ -198,7 +208,7 @@ const certificates = [
         link:"https://coursera.org/share/0cab15bfefe4cb84358458d7a2a73e2e"
     },
     {
-        id: 19,
+        id: 21,
         title: 'Concurrent Programming in Java',
         by:'Rice University',
         date: '01',
@@ -207,7 +217,7 @@ const certificates = [
         link:"https://coursera.org/share/ea932f506eb9d8ec902f1aa8034f786d"
     },
     {
-        id: 20,
+        id: 22,
         title: 'Advanced Styling with Responsive Design',
         by:'University of Michigan',
         date: '01',
@@ -216,7 +226,7 @@ const certificates = [
         link:"https://coursera.org/share/66151baea000a04381d536a501afcf25"
     },
     {
-        id: 21,
+        id: 23,
         title: 'Applied Machine Learning in Python',
         by:'University of Michigan',
         date: '01',
@@ -225,7 +235,7 @@ const certificates = [
         link:"https://coursera.org/share/33ea740b9f612c19546392824176b381"
     },
     {
-        id: 22,
+        id: 24,
         title: 'Introduction to HTML5',
         by:'University of Michigan',
         date: '01',
@@ -234,7 +244,7 @@ const certificates = [
         link:"https://coursera.org/share/ca9b1f7f8dafdb9a25e42eed6a9ab4fb"
     },
     {
-        id: 23,
+        id: 25,
         title: 'Parallel Programming in Java',
         by:'Rice University',
         date: '01',
@@ -243,7 +253,7 @@ const certificates = [
         link:"https://coursera.org/share/6a736b26fd69e6a2f2ef27320d4030a1"
     },
     {
-        id: 24,
+        id: 26,
         title: 'Applied Text Mining in Python',
         by:'University of Michigan',
         date: '01',
@@ -252,7 +262,7 @@ const certificates = [
         link:"https://coursera.org/share/346a81a2fec959bff47e82ee4eb7e704"
     },
     {
-        id: 25,
+        id: 27,
         title: 'Distributed Programming in Java',
         by:'Rice University',
         date: '01',
