@@ -15,7 +15,7 @@ function Resume() {
             <Title title={'Resume'} span={'resume'} />
             <InnerLayout>
                 <div className="small-title">
-                    <SmallTitle icon={briefcase} title={'Working Experience'} />
+                    <SmallTitle icon={briefcase} title={'Professional Experience'} />
                 </div>
                 <div className="resume-content">
                     <ResumeItem 
