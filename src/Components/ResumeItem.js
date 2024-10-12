@@ -67,6 +67,9 @@ const ResumeItemStyled = styled.div`
             font-size: 1.5rem;
         }
     }
+    .right1 {
+        padding-left:0rem;
+    }
     @media screen and (max-width: 421px){
         .right-content{
             padding:1rem 1rem;

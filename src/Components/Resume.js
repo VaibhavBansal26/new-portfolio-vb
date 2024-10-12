@@ -15,11 +15,28 @@ function Resume() {
             <Title title={'Resume'} span={'resume'} />
             <InnerLayout>
                 <div className="small-title">
-                    <SmallTitle icon={briefcase} title={'Professional Experience'} />
+                    <SmallTitle icon={school} title={'Academic Work Experience'} />
                 </div>
                 <div className="resume-content">
                     <ResumeItem 
-                        year={'Sep 2021 - Today'} 
+                        year={'Sep 2021 - Jan 2024'} 
+                        title={'Graduate Teaching Assistant at SUNY Buffalo'}
+                        subTitle={'State University New York, Buffalo'}
+                        link={'https://www.buffalo.edu/'}
+                        text={`Graduate Teaching Assistant for Python Course (EAS503) at University at Buffalo.
+                            Supported a cohort of 130+ students in Python for Data Science (EAS503) 
+                            as a teaching assistant. Delivered 20+ lab sessions covering Python, SQL, and machine learning concepts. 
+                            Coursework: Python, SQL, ML, Docker`}
+                        css={1}
+                        />
+                        
+                </div>
+                <div className="small-title u-small-title-margin">
+                    <SmallTitle icon={briefcase} title={'Professional Work Experience'} />
+                </div>
+                <div className="resume-content">
+                    <ResumeItem 
+                        year={'Sep 2021 - Jan 2024'} 
                         title={'Front-end Developer'}
                         subTitle={'Dashclicks India Ltd.'}
                         link={'https://www.dashclicks.com/'}
@@ -122,6 +139,9 @@ const ResumeStyled = styled.section`
     }
     .u-small-title-margin{
         margin-top: 4rem;
+    }
+    .u-small-title-no-pad{
+        padding-left: 0rem;
     }
 
     .resume-content{
