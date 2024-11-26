@@ -44,6 +44,16 @@ import gpac from '../img/portImages/gpac.png';
 
 const portfolios = [
     {
+        id: 35,
+        category: 'Machine Learning',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1732640790/Screenshot_2024-11-26_at_11.58.05_AM_wvwita.png',
+        link1: 'https://github.com/VaibhavBansal26/data_science_salary_prediction_v2',
+        link2: 'https://youtu.be/1Ca0Y4s37ls',
+        link3: 'https://datascience-salary-vb.web.app/',
+        title: 'Data Science Salary Prediction',
+        text: 'Python, Snowflake, Pyspark, React.js, Apache Kafka, Redis, Flask, Airflow, Zookeeper, AWS EC2, AWS S3, Machine Learning, Docker, PostgreSQL, Firebase'
+    },
+    {
         id: 34,
         category: 'Machine Learning',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1716567573/Screenshot_2024-05-24_at_12.18.33_PM_j1beti.png',
