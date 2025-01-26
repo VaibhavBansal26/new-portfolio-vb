@@ -18,6 +18,17 @@ function Resume() {
                     <SmallTitle icon={school} title={'Academic Work Experience'} />
                 </div>
                 <div className="resume-content">
+                    {/* <ResumeItem 
+                        year={'Jan 2025 - Present'} 
+                        title={'Graduate Student Assistant at SUNY Buffalo'}
+                        subTitle={'State University New York, Buffalo'}
+                        link={'https://www.buffalo.edu/'}
+                        text={`Graduate Student Assistant for Applied Machine Learning At Scale Course (CDA500LEC MK1) at University at Buffalo.
+                            Supported a cohort of 100+ students Applied Machine Learning At Scale Course (CDA500LEC MK1) 
+                            as a student assistant. Delivered sessions covering Python, SQL, MLOPS, and machine learning concepts. 
+                            Coursework: Python, SQL, ML, Docker, Apache Spark, Apache Kafka, AWS, MLOPS`}
+                        css={1}
+                        /> */}
                     <ResumeItem 
                         year={'Aug 2024 - Jan 2025'} 
                         title={'Graduate Teaching Assistant at SUNY Buffalo'}
