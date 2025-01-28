@@ -43,7 +43,7 @@ function Navigation({theme}) {
                 </li>
             </ul>
             <footer className="footer">
-                <p><b>&copy; 2024 Vaibhav Bansal</b></p>
+                <p><b>&copy; 2025 Vaibhav Bansal</b></p>
             </footer>
         </NavigationStyled>
     )
