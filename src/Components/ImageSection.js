@@ -31,7 +31,7 @@ function ImageSection({theme}) {
                     </div>
                     <div className="info">
                         <p>: Vaibhav Bansal</p>
-                        <p>: 27</p>
+                        <p>: 28</p>
                         <p>: Indian </p>
                         <p>: English, Hindi, French </p>
                         <p>: Buffalo, New York, United States</p>
