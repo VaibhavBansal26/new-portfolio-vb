@@ -3,15 +3,16 @@ import styled from 'styled-components';
 // import resume from '../img/resume.jpg';
 // import resumeLight from '../img/vaibhavphoto.png';
 import resumeSvg from '../img/vb.svg';
-import resumeSvgDark from '../img/vb-main2.svg';
+// import resumeSvgDark from '../img/vb-main2.svg';
 import PrimaryButton from './PrimaryButton';
+
 
 function ImageSection({theme}) {
     return (
         <>
         <ImageSectionStyled>
             <div className="left-content">
-                <img height="60%" width="100%" src={theme === 'light-theme' ? resumeSvg : resumeSvgDark} alt="profile_photo" id='yourSvgPath'/>
+                <img height="60%" width="100%" src={theme === 'light-theme' ? resumeSvg : 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1738526645/vb_skeleton_jgrpqr.svg'} alt="profile_photo" id='yourSvgPath'/>
             </div>
             <div className="right-content">
                 <h4>I am <span>Vaibhav Bansal</span></h4>

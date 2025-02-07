@@ -53,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
     --underlay-text-color:#e3e5eb70;
 }
 .dark-theme{
-    --primary-color: #079992;
+    --primary-color: #1cd760;
     --primary-color-light: #057FFF;
     --secondary-color: #6c757d;
     --background-dark-color: #000;
@@ -193,5 +193,5 @@ h6{
 
 
 `;
-
+// --primary-color: #079992;
 export default GlobalStyle;

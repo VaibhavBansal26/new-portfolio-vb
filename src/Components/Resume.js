@@ -19,7 +19,7 @@ function Resume() {
                 </div>
                 <div className="resume-content">
                     <ResumeItem 
-                        year={'Jan 2025 - Present'} 
+                        year={'Jan 2025  -  Present'} 
                         title={'Graduate Teaching Assistant at SUNY Buffalo'}
                         subTitle={'State University New York, Buffalo'}
                         link={'https://www.buffalo.edu/'}
@@ -30,14 +30,15 @@ function Resume() {
                         css={1}
                         />
                     <ResumeItem 
-                        year={'Aug 2024 - Jan 2025'} 
+                        year={'Aug 2024  -  Jan 2025'} 
                         title={'Graduate Teaching Assistant at SUNY Buffalo'}
                         subTitle={'State University New York, Buffalo'}
                         link={'https://www.buffalo.edu/'}
                         text={`Graduate Teaching Assistant for Python Course (EAS503) at University at Buffalo.
                             Supported a cohort of 130+ students in Python for Data Science (EAS503) 
                             as a teaching assistant. Delivered 20+ lab sessions covering Python, SQL, and machine learning concepts. 
-                            Coursework: Python, SQL, ML, Docker`}
+                            Coursework: Python, SQL, ML, Docker
+                            `}
                         css={1}
                         />
                         
