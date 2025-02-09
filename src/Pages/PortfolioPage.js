@@ -26,6 +26,7 @@ function PortfoliosPage() {
         <MainLayout>
             <Title title={'Portfolio'} span={'portfolio'} />
             <InnerLayout>
+                Project Count : {menuItem ? menuItem.length : 0}
                 <div className={"hide-on-mobile"}>
                     <Button filter={filter} button={button} />
                 </div>

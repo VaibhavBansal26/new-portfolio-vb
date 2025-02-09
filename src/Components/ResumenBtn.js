@@ -2,29 +2,35 @@ import React from 'react'
 import styled from 'styled-components';
 import DownloadIcon from '@mui/icons-material/Download';
 
-function PrimaryButton({title}) {
+function ResumeBtn({title}) {
     return (
-        <PrimaryButtonStyled>
+        <ResumeButtonStyled>
             <DownloadIcon />
             <a href="https://drive.google.com/file/d/1GRLusNCO6zSjeTl8pa6DwW0hCjy1czQl/view?usp=sharing" download="VaibhavBansal_Resume.pdf">{title}</a>
-        </PrimaryButtonStyled>
+        </ResumeButtonStyled>
     )
 }
 
-const PrimaryButtonStyled = styled.div`
-    background-color: var(--primary-color);
-    padding: .8rem 2.5rem;
-    color: white;
+const ResumeButtonStyled = styled.div`
+    background-color: var(--primary-btn-color);
+    padding: .8rem 3rem;
+    color: var(--white-color);
+    border: 2px solid var(--primary-btn-border-color);
     cursor: pointer;
     display: inline-block;
     border-radius: 4px;
-    justify-content: center;
+    justify-content: space-between;
     font-size: inherit;
+    font-weight: 900;
     text-transform: uppercase;
     position: relative;
     transition: all .4s ease-in-out;
     svg {
         vertical-align: middle;
+        margin-right: 0 0.15rem;
+    }
+    a{
+        font-weight: 900;
     }
     &::after{
         content: "";
@@ -41,4 +47,4 @@ const PrimaryButtonStyled = styled.div`
         background-color: var(--white-color);
     }
 `;
-export default PrimaryButton;
+export default ResumeBtn;
