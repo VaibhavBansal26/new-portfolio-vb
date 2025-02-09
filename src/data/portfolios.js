@@ -199,7 +199,7 @@ const portfolios = [
         image: clothing,
         link1: 'https://github.com/VaibhavBansal26/react_ecommerce_app',
         link2: '',
-        link3: 'https://bansal-clothing-live.herokuapp.com/',
+        link3: 'https://vb-clothing-store.web.app/',
         title: 'React Ecommerce Clothing App',
         text: 'React, Redux, Hooks, Firebase & Stripe Payment'
     },
