@@ -289,7 +289,7 @@ const portfolios = [
         image: whatsapp,
         link1: 'https://github.com/VaibhavBansal26/React-Whatsapp-UI',
         link2: '',
-        link3: 'https://react-whatsapp-vaibhav.web.app/',
+        link3: 'https://vb-whatsapp-2e8e7.web.app/',
         title: 'React Whatsapp UI & Messaging',
         text: 'React and Firebase'
     },
