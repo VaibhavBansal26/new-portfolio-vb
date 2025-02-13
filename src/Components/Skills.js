@@ -46,7 +46,7 @@ function Skills({theme}) {
                     <SkillSphere theme={theme}/>
                 </div>
                 <InnerLayout>
-                    <div className="skills">
+                    {/* <div className="skills">
                         <ProgressBar 
                             title={'HTML5'}
                             width={'90%'}
@@ -67,9 +67,9 @@ function Skills({theme}) {
                             width={'70%'}
                             text={'70%'}
                         />
-                    </div>
+                    </div> */}
                     <div>
-                        <br/> <br/>
+                        {/* <br/> <br/> */}
                         <div>
                             <span className="seo-heading">Other Skills:</span><br/>
                             <p className="seo-link"><br/>
@@ -87,6 +87,11 @@ function Skills({theme}) {
                                 <a href="https://www.npmjs.com/package/grapesjs-advance-components" className="seo-link">
                                 Grapesjs Advance Components
                                 </a>
+                                <br/>
+                                {/* <br/>
+                                <i className="seo-note seo-link" style={{fontSize:'12px',border:'1px solid white',padding:'10px',marginTop:'10px'}}>
+                                npm install grapesjs-advance-components
+                                </i> */}
                             </p><br/>
                             <p className="seo-heading">Published Research Paper:</p><br/>
                             <p>
@@ -100,6 +105,9 @@ function Skills({theme}) {
                                     https://doi.org/10.1007/s42452-020-2815-z
                                 </a>
                                 </i>
+                                {/* <br/>
+                                <br/> */}
+                                {/* <PrimaryButton title={'Download Paper'} /> */}
                             </p><br/>
                             <p className="seo-heading">LeetCode Profile:</p><br/>
                             <p>

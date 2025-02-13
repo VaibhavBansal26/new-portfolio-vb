@@ -14,13 +14,13 @@ export const MainLayout = styled.div`
     }
 `;
 export const InnerLayout = styled.div`
-    padding: 5rem 0;
+    padding-top: 2rem;
     @media screen and (max-width: 571px){
         padding: 1rem .4rem;
     }
 `;
 export const InnerLayoutSingle = styled.div`
-    padding: 5rem 0;
+    padding-top: 2rem;
     @media screen and (max-width: 571px){
         padding: 1rem .4rem;
     }
