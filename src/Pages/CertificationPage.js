@@ -46,12 +46,13 @@ const CertStyled = styled.div`
         }
         .image{
             width: 100%;
+            height: 90%;
             overflow: hidden;
             padding-bottom: .5rem;
             img{
                 width: 100%;
                 height: 90%;
-                object-fit: cover;
+                object-fit: inherit;
                 transition: all .4s ease-in-out;
                 &:hover{
                     cursor: pointer;

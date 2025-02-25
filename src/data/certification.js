@@ -27,6 +27,15 @@ import blog24 from  '../img/certification/dpInJava.png';
 
 const certificates = [
     {
+        id: 28,
+        title: 'AWS Certified Data Engineer – Associate (DEA C01)',
+        by:'Amazon Web Services',
+        date: '28',
+        month: 'February',
+        image: "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1740459297/Screenshot_2025-02-24_at_11.54.44_PM_gz4ivu.png",
+        link:"https://www.credly.com/badges/ba888409-2a37-4ab2-8f6e-80bf139a742f/public_url"
+    },
+    {
         id: 1,
         title: 'Microsoft Certified: Azure Fundamentals (AZ-900)',
         by:'Microsoft',
