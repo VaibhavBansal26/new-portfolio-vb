@@ -49,7 +49,7 @@ const portfolios = [
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1740811379/Screenshot_2025-03-01_at_1.42.19_AM_ogxwt9.png',
         link1: 'https://github.com/VaibhavBansal26/Nyc-Taxi-Ride-TimeSeries-Prediction',
         // link2: 'https://youtu.be/1Ca0Y4s37ls',
-        link3: 'https://taxi-ride-prediction-v2-vb.streamlit.app/',
+        link3: 'https://nyc-taxi-ride-timeseries-prediction-vb.streamlit.app/',
         title: 'NYC Taxi Ride Time Series Prediction',
         text: 'Python, Hopsworks, DagsHub Integration, MLflow, Batch Processing, Machine Learning, Time Series, Streamlit'
     },
