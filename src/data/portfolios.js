@@ -44,6 +44,16 @@ import gpac from '../img/portImages/gpac.png';
 
 const portfolios = [
     {
+        id: 38,
+        category: 'DevOps',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741897056/diagram-export-13-03-2025-16_15_50_nrr0sx.png',
+        link1: 'https://github.com/VaibhavBansal26/DevSecOps-FoodApp',
+        // link2: 'https://youtu.be/1Ca0Y4s37ls',
+        // link3: 'https://nyc-taxi-ride-v3-sdzj76dkug3gzjic6obgul.streamlit.app/',
+        title: 'DevSecOps - App Deployment Full Pipeline',
+        text: 'Jenkins, Docker, Terraform, AWS, DevSecOps, SonarQube, Owasp, Trivy, AWS EC2'
+    },
+    {
         id: 37,
         category: 'DevOps',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741824030/Screenshot_2025-03-12_at_7.57.18_PM_uiktvg.png',
