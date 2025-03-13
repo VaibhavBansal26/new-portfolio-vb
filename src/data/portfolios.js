@@ -44,6 +44,16 @@ import gpac from '../img/portImages/gpac.png';
 
 const portfolios = [
     {
+        id: 37,
+        category: 'DevOps',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741824030/Screenshot_2025-03-12_at_7.57.18_PM_uiktvg.png',
+        link1: 'https://github.com/VaibhavBansal26/DevSecOps-Bms',
+        // link2: 'https://youtu.be/1Ca0Y4s37ls',
+        // link3: 'https://nyc-taxi-ride-v3-sdzj76dkug3gzjic6obgul.streamlit.app/',
+        title: 'DevSecOps - App Deployment Full Pipeline',
+        text: 'Amazon EKS,Prometheus, Grafana, Helm, Jenkins, Docker, Kubernetes, AWS, DevSecOps, SonarQube, Owasp, Trivy'
+    },
+    {
         id: 36,
         category: 'Machine Learning',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1740811379/Screenshot_2025-03-01_at_1.42.19_AM_ogxwt9.png',
