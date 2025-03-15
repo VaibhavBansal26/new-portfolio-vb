@@ -46,7 +46,7 @@ const portfolios = [
     {
         id: 39,
         category: 'DevOps',
-        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742054867/diagram-export-15-03-2025-12_06_19_lsrg6d.png',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742064387/diagram-export-15-03-2025-14_45_57_sfuk8k.png',
         link1: 'https://github.com/VaibhavBansal26/DevSecOps-MovieBooking',
         // link2: 'https://youtu.be/1Ca0Y4s37ls',
         // link3: 'https://nyc-taxi-ride-v3-sdzj76dkug3gzjic6obgul.streamlit.app/',
