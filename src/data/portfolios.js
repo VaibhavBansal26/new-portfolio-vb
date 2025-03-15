@@ -44,6 +44,16 @@ import gpac from '../img/portImages/gpac.png';
 
 const portfolios = [
     {
+        id: 39,
+        category: 'DevOps',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742054867/diagram-export-15-03-2025-12_06_19_lsrg6d.png',
+        link1: 'https://github.com/VaibhavBansal26/DevSecOps-MovieBooking',
+        // link2: 'https://youtu.be/1Ca0Y4s37ls',
+        // link3: 'https://nyc-taxi-ride-v3-sdzj76dkug3gzjic6obgul.streamlit.app/',
+        title: 'DevSecOps - Movie Booking 2 Stage Deplyement Pipeline using Terraform, Jenkins & Kubernetes',
+        text: 'Jenkins, Docker, Terraform, AWS, DevSecOps, SonarQube, Owasp, Trivy, AWS EC2, Amazon EKS, Kubernetes, Prometheus, Grafana, Helm, Email Notification'
+    },
+    {
         id: 38,
         category: 'DevOps',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741898583/diagram-export-13-03-2025-16_42_45_gap2r8.png',
