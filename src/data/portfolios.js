@@ -48,9 +48,9 @@ const portfolios = [
         category: 'Machine Learning',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742221900/diagram-export-17-03-2025-10_31_09_elljhp.png',
         link1: 'https://github.com/VaibhavBansal26/Design-Medallion-Architecture-Azure#',
-        // link2: 'https://youtu.be/1Ca0Y4s37ls',
+        link2: 'https://www.youtube.com/watch?v=VKSf1NfdjTU',
         // link3: 'https://nyc-taxi-ride-v3-sdzj76dkug3gzjic6obgul.streamlit.app/',
-        title: 'Medallion Architecture Design using Azure',
+        title: 'Medallion Architecture Design using Azure (Data Engineering)',
         text: 'Azure, Azure Databricks, DBT, Azure SQL Database, Azure Data Factory, Azure DataLake Gen 2'
     },
     {
