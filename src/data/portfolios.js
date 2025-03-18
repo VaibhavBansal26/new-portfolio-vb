@@ -44,7 +44,17 @@ import gpac from '../img/portImages/gpac.png';
 
 const portfolios = [
     {
-        id: 39,
+        id: 41,
+        category: 'Machine Learning',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742321625/diagram-export-18-03-2025-14_13_16_ktxi6h.png',
+        link1: 'https://github.com/VaibhavBansal26/Realtime-Logs-Processing',
+        link2: 'https://www.youtube.com/watch?v=ZcIbqeIAC0Y',
+        // link3: 'https://nyc-taxi-ride-v3-sdzj76dkug3gzjic6obgul.streamlit.app/',
+        title: 'Realtime Logs Processing using Apache Airflow, Kafka & Elatisearch (Data Engineering)',
+        text: 'Elastisearch, Apache Airflow, Kafka, Python, Data Engineering'
+    },
+    {
+        id: 40,
         category: 'Machine Learning',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742221900/diagram-export-17-03-2025-10_31_09_elljhp.png',
         link1: 'https://github.com/VaibhavBansal26/Design-Medallion-Architecture-Azure#',
