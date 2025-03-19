@@ -44,6 +44,16 @@ import gpac from '../img/portImages/gpac.png';
 
 const portfolios = [
     {
+        id: 42,
+        category: 'Machine Learning',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742416573/Screenshot_2025-03-19_at_4.35.52_PM_jwcpzu.png',
+        link1: 'https://github.com/VaibhavBansal26/Movie-Recommendation-Project',
+        // link2: 'https://www.youtube.com/watch?v=ZcIbqeIAC0Y',
+        link3: 'http://54.211.221.57:8501/',
+        title: 'Movie Recommendation using Cosine Similarity & Collaborative Filtering',
+        text: 'AWS EC2, AWS S3, Python, Flask, Machine Learning, Collaborative Filtering, Cosine Similarity, Streamlit'
+    },
+    {
         id: 41,
         category: 'Machine Learning',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742321625/diagram-export-18-03-2025-14_13_16_ktxi6h.png',
