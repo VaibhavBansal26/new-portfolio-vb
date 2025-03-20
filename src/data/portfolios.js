@@ -194,16 +194,6 @@ const portfolios = [
         text: 'React'
     },
     {
-        id: 26,
-        category: 'React',
-        image: facebook,
-        link1: 'https://github.com/VaibhavBansal26/next-facebook-vb',
-        link2: '',
-        link3: 'https://facebook-vb-dmhdz9rxy-vaibhavbansal26.vercel.app/',
-        title: 'React Facebook UI',
-        text: 'React, Next JS, Tailwind CSS'
-    },
-    {
         id: 27,
         category: 'React',
         image: airbnb,
@@ -229,7 +219,7 @@ const portfolios = [
         image: pizzaDev,
         link1: 'https://github.com/VaibhavBansal26/Realtime-pizza-order',
         link2: '',
-        link3: 'https://pizza-vb.herokuapp.com',
+        // link3: 'https://pizza-vb.herokuapp.com',
         title: 'Pizza Delivery & Realtime Order Tracking',
         text: 'Node JS, Socket IO, Stripe Payment, EJS Template'
     },
@@ -359,7 +349,7 @@ const portfolios = [
         image: whatsapp,
         link1: 'https://github.com/VaibhavBansal26/React-Whatsapp-UI',
         link2: '',
-        link3: 'https://vb-whatsapp-2e8e7.web.app/',
+        // link3: 'https://vb-whatsapp-2e8e7.web.app/',
         title: 'React Whatsapp UI & Messaging',
         text: 'React and Firebase'
     },
@@ -374,12 +364,22 @@ const portfolios = [
         text: 'React and Firebase'
     },
     {
+        id: 23,
+        category: 'React',
+        image: covid,
+        link1: 'https://github.com/VaibhavBansal26/React-Covid-Tracker',
+        link2: '',
+        link3: 'https://react-covid-vb.web.app/',
+        title: 'React Covid 19 Tracker',
+        text: 'React, Context API'
+    },
+    {
         id: 11,
         category: 'MERN',
         image: yt1,
         link1: 'https://github.com/VaibhavBansal26/React-Mern-Youtube',
         link2: '',
-        link3: 'https://mern-youtube-vb.herokuapp.com/',
+        // link3: 'https://mern-youtube-vb.herokuapp.com/',
         title: 'MERN Youtube Application',
         text: 'Mongo DB, Express JS, React JS, Node JS - Register & Login to use Features '
     },
@@ -389,7 +389,7 @@ const portfolios = [
         image: tour,
         link1: 'https://github.com/VaibhavBansal26/node-natours-travel-app',
         link2: '',
-        link3: 'https://natours-booking-app-vaibhav.herokuapp.com/',
+        // link3: 'https://natours-booking-app-vaibhav.herokuapp.com/',
         title: 'Travelling and Adventrous Tour App with Stripe',
         text: 'Server Side Rendering - Node JS, PUG Templates, Stripe Integration'
     },
@@ -414,37 +414,6 @@ const portfolios = [
         text: 'React'
     },
     {
-        id: 16,
-        category: 'React',
-        image: news,
-        link1: 'https://github.com/VaibhavBansal26/React-news-app-ui',
-        link2: '',
-        link3: 'https://daily-newz.web.app/',
-        title: 'React NEWZ App',
-        text: 'React and API'
-    },
-    {
-        id: 17,
-        category: 'React',
-        image: nba,
-        link1: 'https://github.com/VaibhavBansal26/React-Nba-app',
-        link2: '',
-        link3: 'https://react-nba-vaibhav.web.app/',
-        title: 'React NBA App',
-        text: 'React'
-    },
-    {
-        id: 18,
-        category: 'React',
-        image: artist,
-        link1: 'https://github.com/VaibhavBansal26/React-Artist-vb',
-        link2: '',
-        link3: 'https://react-artist-a0b21.web.app/',
-        title: 'React Music Artist App',
-        text: 'React'
-    },
-   
-    {
         id: 21,
         category: 'React',
         image: trello,
@@ -460,20 +429,52 @@ const portfolios = [
         image: tiktok,
         link1: 'https://github.com/VaibhavBansal26/React-tiktok-UI',
         link2: '',
-        link3: 'https://mern-tiktok-vb.web.app/',
+        // link3: 'https://mern-tiktok-vb.web.app/',
         title: 'React Tiktok UI',
         text: 'React'
     },
     {
-        id: 23,
+        id: 16,
         category: 'React',
-        image: covid,
-        link1: 'https://github.com/VaibhavBansal26/React-Covid-Tracker',
+        image: news,
+        link1: 'https://github.com/VaibhavBansal26/React-news-app-ui',
         link2: '',
-        link3: 'https://react-covid-vb.web.app/',
-        title: 'React Covid 19 Tracker',
-        text: 'React, Context API'
+        // link3: 'https://daily-newz.web.app/',
+        title: 'React NEWZ App',
+        text: 'React and API'
     },
+    {
+        id: 17,
+        category: 'React',
+        image: nba,
+        link1: 'https://github.com/VaibhavBansal26/React-Nba-app',
+        link2: '',
+        // link3: 'https://react-nba-vaibhav.web.app/',
+        title: 'React NBA App',
+        text: 'React'
+    },
+    {
+        id: 26,
+        category: 'React',
+        image: facebook,
+        link1: 'https://github.com/VaibhavBansal26/next-facebook-vb',
+        link2: '',
+        // link3: 'https://facebook-vb-dmhdz9rxy-vaibhavbansal26.vercel.app/',
+        title: 'React Facebook UI',
+        text: 'React, Next JS, Tailwind CSS'
+    },
+    {
+        id: 18,
+        category: 'React',
+        image: artist,
+        link1: 'https://github.com/VaibhavBansal26/React-Artist-vb',
+        link2: '',
+        // link3: 'https://react-artist-a0b21.web.app/',
+        title: 'React Music Artist App',
+        text: 'React'
+    },
+   
+    
     
     
 ]
