@@ -6,7 +6,7 @@ function Button({filter, button}) {
         <ButtonsStyled>
             {
                 button.map((but, i) =>{
-                    return <ButtonStyled key={i} onClick={() => filter(but)}>
+                    return <ButtonStyled key={`${i}-${but}`} onClick={() => filter(but)}>
                         {but}
                     </ButtonStyled>
                 })

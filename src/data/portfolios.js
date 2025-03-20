@@ -44,7 +44,7 @@ import gpac from '../img/portImages/gpac.png';
 
 const portfolios = [
     {
-        id: 42,
+        id: 1,
         category: 'Machine Learning',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742416573/Screenshot_2025-03-19_at_4.35.52_PM_jwcpzu.png',
         link1: 'https://github.com/VaibhavBansal26/Movie-Recommendation-Project',
@@ -54,8 +54,8 @@ const portfolios = [
         text: 'AWS EC2, AWS S3, Python, Flask, Machine Learning, Collaborative Filtering, Cosine Similarity, Streamlit'
     },
     {
-        id: 41,
-        category: 'Machine Learning',
+        id: 2,
+        category: 'Data Engineering',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742321625/diagram-export-18-03-2025-14_13_16_ktxi6h.png',
         link1: 'https://github.com/VaibhavBansal26/Realtime-Logs-Processing',
         link2: 'https://www.youtube.com/watch?v=ZcIbqeIAC0Y',
@@ -64,8 +64,8 @@ const portfolios = [
         text: 'Elastisearch, Apache Airflow, Kafka, Python, Data Engineering'
     },
     {
-        id: 40,
-        category: 'Machine Learning',
+        id: 3,
+        category: 'Data Engineering',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742221900/diagram-export-17-03-2025-10_31_09_elljhp.png',
         link1: 'https://github.com/VaibhavBansal26/Design-Medallion-Architecture-Azure#',
         link2: 'https://www.youtube.com/watch?v=VKSf1NfdjTU',
@@ -74,7 +74,7 @@ const portfolios = [
         text: 'Azure, Azure Databricks, DBT, Azure SQL Database, Azure Data Factory, Azure DataLake Gen 2'
     },
     {
-        id: 39,
+        id: 4,
         category: 'DevOps',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742064387/diagram-export-15-03-2025-14_45_57_sfuk8k.png',
         link1: 'https://github.com/VaibhavBansal26/DevSecOps-MovieBooking',
@@ -84,7 +84,7 @@ const portfolios = [
         text: 'Jenkins, Docker, Terraform, AWS, DevSecOps, SonarQube, Owasp, Trivy, AWS EC2, Amazon EKS, Kubernetes, Prometheus, Grafana, Helm, Email Notification'
     },
     {
-        id: 38,
+        id: 5,
         category: 'DevOps',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741898583/diagram-export-13-03-2025-16_42_45_gap2r8.png',
         link1: 'https://github.com/VaibhavBansal26/DevSecOps-FoodApp',
@@ -94,7 +94,7 @@ const portfolios = [
         text: 'Jenkins, Docker, Terraform, AWS, DevSecOps, SonarQube, Owasp, Trivy, AWS EC2'
     },
     {
-        id: 37,
+        id: 6,
         category: 'DevOps',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741824030/Screenshot_2025-03-12_at_7.57.18_PM_uiktvg.png',
         link1: 'https://github.com/VaibhavBansal26/DevSecOps-Bms',
@@ -104,7 +104,7 @@ const portfolios = [
         text: 'Amazon EKS,Prometheus, Grafana, Helm, Jenkins, Docker, Kubernetes, AWS, DevSecOps, SonarQube, Owasp, Trivy'
     },
     {
-        id: 36,
+        id: 7,
         category: 'Machine Learning',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1740811379/Screenshot_2025-03-01_at_1.42.19_AM_ogxwt9.png',
         link1: 'https://github.com/VaibhavBansal26/Nyc-Taxi-Ride-TimeSeries-Prediction',
@@ -114,7 +114,7 @@ const portfolios = [
         text: 'Python, Hopsworks, DagsHub Integration, MLflow, Batch Processing, Machine Learning, Time Series, Streamlit'
     },
     {
-        id: 35,
+        id: 8,
         category: 'Machine Learning',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1732640790/Screenshot_2024-11-26_at_11.58.05_AM_wvwita.png',
         link1: 'https://github.com/VaibhavBansal26/data_science_salary_prediction_v2',
@@ -124,7 +124,7 @@ const portfolios = [
         text: 'Python, Snowflake, Pyspark, React.js, Apache Kafka, Redis, Flask, Airflow, Zookeeper, AWS EC2, AWS S3, Machine Learning, Docker, PostgreSQL, Firebase'
     },
     {
-        id: 34,
+        id: 9,
         category: 'Machine Learning',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1716567573/Screenshot_2024-05-24_at_12.18.33_PM_j1beti.png',
         link1: 'https://github.com/VaibhavBansal26/heart_disease_prediction_version2',
@@ -134,7 +134,7 @@ const portfolios = [
         text: 'Python, Mlflow, DagsHub Integration, Streamlit, Digital Ocean, Machine Learning, Docker, SQLite3'
     },
     {
-        id: 35,
+        id: 10,
         category: 'Machine Learning',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1716567905/Screenshot_2024-05-24_at_12.24.44_PM_l2zamc.png',
         link1: 'https://github.com/VaibhavBansal26/sdm-project',
@@ -144,7 +144,7 @@ const portfolios = [
         text: 'R, ShinyR, SQLite3, Machine Learning'
     },
     {
-        id: 31,
+        id: 11,
         category: 'Package & Extension',
         image: gpac,
         link1: 'https://github.com/VaibhavBansal26/grapesjs-advance-components',
@@ -154,7 +154,7 @@ const portfolios = [
         text: 'Npm package using react js , grapesjs'
     },
     {
-        id: 32,
+        id: 12,
         category: 'Package & Extension',
         image: vbSearchBlog,
         link1: 'https://github.com/VaibhavBansal26/search-blog-vscode-extension',
@@ -164,7 +164,7 @@ const portfolios = [
         text: 'VSCode extension to search blogs'
     },
     {
-        id: 33,
+        id: 13,
         category: 'React',
         image: "https://i.ytimg.com/vi/ckAm_f78Byc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB01sBwBL4fTNCXsTJ2kGF0pY7MFw",
         link1: '',
@@ -174,7 +174,7 @@ const portfolios = [
         text: 'Funnel/Website Builder using React, Grapesjs'
     },
     {
-        id: 24,
+        id: 14,
         category: 'React',
         image: disney,
         link1: 'https://github.com/VaibhavBansal26/React-Disney-Plus-UI',
@@ -184,7 +184,7 @@ const portfolios = [
         text: 'React, Redux, Styled Components, Firebase'
     },
     {
-        id: 25,
+        id: 15,
         category: 'React',
         image: youtube,
         link1: 'https://github.com/VaibhavBansal26/React-Youtube-UI',
@@ -194,7 +194,7 @@ const portfolios = [
         text: 'React'
     },
     {
-        id: 27,
+        id: 16,
         category: 'React',
         image: airbnb,
         link1: 'https://github.com/VaibhavBansal26/React-Airbnb-vb',
@@ -204,7 +204,7 @@ const portfolios = [
         text: 'React'
     },
     {
-        id: 28,
+        id: 17,
         category: 'React',
         image: netflix,
         link1: 'https://github.com/VaibhavBansal26/React-Netflix-App',
@@ -214,7 +214,7 @@ const portfolios = [
         text: 'React, Firebase, Stripe Payment'
     },
     {
-        id: 29,
+        id: 18,
         category: 'Node JS',
         image: pizzaDev,
         link1: 'https://github.com/VaibhavBansal26/Realtime-pizza-order',
@@ -224,7 +224,7 @@ const portfolios = [
         text: 'Node JS, Socket IO, Stripe Payment, EJS Template'
     },
     {
-        id: 30,
+        id: 19,
         category: 'React',
         image: amazon,
         link1: 'https://github.com/VaibhavBansal26/amazon-clone-stripe',
@@ -234,7 +234,7 @@ const portfolios = [
         text: 'React, NEXT JS, Redux, Tailwind CSS, Firebase, Stripe Payment'
     },
     {
-        id: 1,
+        id: 20,
         category: 'React',
         image: pizza,
         link1: 'https://github.com/VaibhavBansal26/Sliceline-pizza-order',
@@ -244,7 +244,7 @@ const portfolios = [
         text: 'React, Styled Components'
     },
     {
-        id: 2,
+        id: 21,
         category: 'React',
         image: chat,
         link1: 'https://github.com/VaibhavBansal26/React-Chat-App',
@@ -254,7 +254,7 @@ const portfolios = [
         text: 'React, Redux and Firebase'
     },
     {
-        id: 3,
+        id: 22,
         category: 'React',
         image: clothing,
         link1: 'https://github.com/VaibhavBansal26/react_ecommerce_app',
@@ -264,7 +264,7 @@ const portfolios = [
         text: 'React, Redux, Hooks, Firebase & Stripe Payment'
     },
     {
-        id: 19,
+        id: 23,
         category: 'React',
         image: prime,
         link1: 'https://github.com/VaibhavBansal26/React-Amazon-Prime',
@@ -274,7 +274,7 @@ const portfolios = [
         text: 'React, Redux, Styled Components, Rapid API, Firebase'
     },
     {
-        id: 12,
+        id: 24,
         category: 'MERN',
         image: instagram,
         link1: 'https://github.com/VaibhavBansal26/MERN-INSTAGRAM-VB',
@@ -284,7 +284,7 @@ const portfolios = [
         text: 'Mongo DB, Express JS, React JS, Node JS '
     },
     {
-        id: 20,
+        id: 25,
         category: 'React',
         image: linkedin,
         link1: 'https://github.com/VaibhavBansal26/Reacrt-linkedin-vb',
@@ -294,7 +294,7 @@ const portfolios = [
         text: 'React, Redux, Styled Components, Firebase'
     },
     {
-        id: 4,
+        id: 26,
         category: 'React',
         image: movie,
         link1: 'https://github.com/VaibhavBansal26/react-movie-app',
@@ -304,7 +304,7 @@ const portfolios = [
         text: 'React and Tmdb API'
     },
     {
-        id: 5,
+        id: 27,
         category: 'React',
         image: tinder,
         link1: 'https://github.com/VaibhavBansal26/React-tinder-UI',
@@ -314,7 +314,7 @@ const portfolios = [
         text: 'React with Swipe Functionality'
     },
     {
-        id: 6,
+        id: 28,
         category: 'React',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1714012147/zoom_v0gjul.png' || zoom,
         link1: 'https://github.com/VaibhavBansal26/Nodejs-Video-Conferencing',
@@ -324,7 +324,7 @@ const portfolios = [
         text: 'React, Node JS and Socket IO'
     },
     {
-        id: 7,
+        id: 29,
         category: 'React',
         image: twitter,
         link1: 'https://github.com/VaibhavBansal26/React-Twitter-vb',
@@ -334,7 +334,7 @@ const portfolios = [
         text: 'React and Firebase'
     },
     {
-        id: 8,
+        id: 30,
         category: 'React',
         image: slack,
         link1: 'https://github.com/VaibhavBansal26/React-Slack-vb',
@@ -344,7 +344,7 @@ const portfolios = [
         text: 'React and Firebase'
     },
     {
-        id: 9,
+        id: 31,
         category: 'React',
         image: whatsapp,
         link1: 'https://github.com/VaibhavBansal26/React-Whatsapp-UI',
@@ -354,7 +354,7 @@ const portfolios = [
         text: 'React and Firebase'
     },
     {
-        id: 10,
+        id: 32,
         category: 'React',
         image: spotify,
         link1: 'https://github.com/VaibhavBansal26/React-spotify-vb',
@@ -364,7 +364,7 @@ const portfolios = [
         text: 'React and Firebase'
     },
     {
-        id: 23,
+        id: 33,
         category: 'React',
         image: covid,
         link1: 'https://github.com/VaibhavBansal26/React-Covid-Tracker',
@@ -374,7 +374,7 @@ const portfolios = [
         text: 'React, Context API'
     },
     {
-        id: 11,
+        id: 34,
         category: 'MERN',
         image: yt1,
         link1: 'https://github.com/VaibhavBansal26/React-Mern-Youtube',
@@ -384,7 +384,7 @@ const portfolios = [
         text: 'Mongo DB, Express JS, React JS, Node JS - Register & Login to use Features '
     },
     {
-        id: 13,
+        id:35,
         category: 'Node JS',
         image: tour,
         link1: 'https://github.com/VaibhavBansal26/node-natours-travel-app',
@@ -394,7 +394,7 @@ const portfolios = [
         text: 'Server Side Rendering - Node JS, PUG Templates, Stripe Integration'
     },
     {
-        id: 14,
+        id: 36,
         category: 'Machine Learning',
         image: natural,
         link1: 'https://github.com/VaibhavBansal26/Capstone-2020-Natural-Disaster-Prediction',
@@ -404,7 +404,7 @@ const portfolios = [
         text: 'Python, Flask, Google API,Machine Learning Algorithms, Deep Learning Methods'
     },
     {
-        id: 15,
+        id: 37,
         category: 'React',
         image: hulu,
         link1: 'https://github.com/VaibhavBansal26/React-Hulu',
@@ -414,7 +414,7 @@ const portfolios = [
         text: 'React'
     },
     {
-        id: 21,
+        id: 38,
         category: 'React',
         image: trello,
         link1: 'https://github.com/VaibhavBansal26/React-trello',
@@ -424,7 +424,7 @@ const portfolios = [
         text: 'React'
     },
     {
-        id: 22,
+        id: 39,
         category: 'React',
         image: tiktok,
         link1: 'https://github.com/VaibhavBansal26/React-tiktok-UI',
@@ -434,7 +434,7 @@ const portfolios = [
         text: 'React'
     },
     {
-        id: 16,
+        id: 40,
         category: 'React',
         image: news,
         link1: 'https://github.com/VaibhavBansal26/React-news-app-ui',
@@ -444,7 +444,7 @@ const portfolios = [
         text: 'React and API'
     },
     {
-        id: 17,
+        id: 41,
         category: 'React',
         image: nba,
         link1: 'https://github.com/VaibhavBansal26/React-Nba-app',
@@ -454,7 +454,7 @@ const portfolios = [
         text: 'React'
     },
     {
-        id: 26,
+        id: 42,
         category: 'React',
         image: facebook,
         link1: 'https://github.com/VaibhavBansal26/next-facebook-vb',
@@ -464,7 +464,7 @@ const portfolios = [
         text: 'React, Next JS, Tailwind CSS'
     },
     {
-        id: 18,
+        id: 43,
         category: 'React',
         image: artist,
         link1: 'https://github.com/VaibhavBansal26/React-Artist-vb',
