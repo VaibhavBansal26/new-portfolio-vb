@@ -84,6 +84,16 @@ const portfolios = [
         text: 'Jenkins, Docker, Terraform, AWS, DevSecOps, SonarQube, Owasp, Trivy, AWS EC2, Amazon EKS, Kubernetes, Prometheus, Grafana, Helm, Email Notification'
     },
     {
+        id: 44,
+        category: 'Data Analytics',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742764375/Screenshot_2025-03-23_at_3.34.57_AM_cap5b4.png',
+        link1: 'https://github.com/VaibhavBansal26/Taxi-Data-PowerBi-Project',
+        // link2: 'https://youtu.be/1Ca0Y4s37ls',
+        link3: 'https://drive.google.com/file/d/1TrdBe-yA4fHNoq0-Y8MU3AYU6vMaHnRc/view?usp=sharing',
+        title: 'NYC Taxi Ride Data Engineering , Data Analysis & Visualization using Power BI',
+        text: 'AWS Glue, AWS Event Bridge, AWS S3, AWS Athena, AWS Quicksight, Power BI'
+    },
+    {
         id: 5,
         category: 'DevOps',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741898583/diagram-export-13-03-2025-16_42_45_gap2r8.png',
