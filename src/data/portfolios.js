@@ -54,16 +54,6 @@ const portfolios = [
         text: 'AWS EC2, AWS S3, Python, Flask, Machine Learning, Collaborative Filtering, Cosine Similarity, Streamlit'
     },
     {
-        id: 111,
-        category: 'MERN',
-        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743290088/Screenshot_2025-03-29_at_6.14.21_PM_v0nh0i.png',
-        link1: 'https://github.com/VaibhavBansal26/Music-Streaming-Appl',
-        // link2: 'https://www.youtube.com/watch?v=ZcIbqeIAC0Y',
-        link3: 'http://54.211.221.57:8501/',
-        title: 'Music Streaming 3-Tier Application with React, Node JS, MongoDB, AWS EKS, PostgresQL, Docker, Jenkins',
-        text: 'AWS EC2, AWS S3, React, Node Js, Express, MongoDB, PostgreSQL, Docker, Nginx, Redis, Kubernetes, AWS EKS, Docker, Docker Compose, Jenkins, Sonarqube, Neon db'
-    },
-    {
         id: 2,
         category: 'Data Engineering',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742321625/diagram-export-18-03-2025-14_13_16_ktxi6h.png',
@@ -92,6 +82,16 @@ const portfolios = [
         // link3: 'https://nyc-taxi-ride-v3-sdzj76dkug3gzjic6obgul.streamlit.app/',
         title: 'DevSecOps - Movie Booking 2 Stage Deplyement Pipeline using Terraform, Jenkins & Kubernetes',
         text: 'Jenkins, Docker, Terraform, AWS, DevSecOps, SonarQube, Owasp, Trivy, AWS EC2, Amazon EKS, Kubernetes, Prometheus, Grafana, Helm, Email Notification'
+    },
+    {
+        id: 111,
+        category: 'MERN',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743290088/Screenshot_2025-03-29_at_6.14.21_PM_v0nh0i.png',
+        link1: 'https://github.com/VaibhavBansal26/Music-Streaming-Appl',
+        // link2: 'https://www.youtube.com/watch?v=ZcIbqeIAC0Y',
+        // link3: 'http://54.211.221.57:8501/',
+        title: 'Music Streaming 3-Tier Application with React, Node JS, MongoDB, AWS EKS, PostgresQL, Docker, Jenkins',
+        text: 'AWS EC2, AWS S3, React, Node Js, Express, MongoDB, PostgreSQL, Docker, Nginx, Redis, Kubernetes, AWS EKS, Docker, Docker Compose, Jenkins, Sonarqube, Neon db'
     },
     {
         id: 44,
