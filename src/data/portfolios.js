@@ -226,7 +226,7 @@ const portfolios = [
     {
         id: 161,
         category: 'React Native',
-        image: airbnb,
+        image: "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743745205/IMG_0653_oxbatd.png",
         link1: 'https://github.com/VaibhavBansal26/Real-Estate-App',
         // link2: '',
         // link3: 'https://react-airbnb-vb.web.app/',
