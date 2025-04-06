@@ -88,7 +88,7 @@ const portfolios = [
         category: 'MERN',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743290088/Screenshot_2025-03-29_at_6.14.21_PM_v0nh0i.png',
         link1: 'https://github.com/VaibhavBansal26/Music-Streaming-Appl',
-        // link2: 'https://www.youtube.com/watch?v=ZcIbqeIAC0Y',
+        link2: 'https://youtu.be/Z1XzofG0cNE',
         // link3: 'http://54.211.221.57:8501/',
         title: 'Music Streaming 3-Tier Application with React, Node JS, MongoDB, AWS EKS, PostgresQL, Docker, Jenkins',
         text: 'AWS EC2, AWS S3, React, Node Js, Express, MongoDB, PostgreSQL, Docker, Nginx, Redis, Kubernetes, AWS EKS, Docker, Docker Compose, Jenkins, Sonarqube, Neon db'
