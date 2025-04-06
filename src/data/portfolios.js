@@ -44,6 +44,16 @@ import gpac from '../img/portImages/gpac.png';
 
 const portfolios = [
     {
+        id: 91,
+        category: 'Machine Learning',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743899570/Screenshot_2025-04-05_at_8.19.11_PM_ypiwbv.png',
+        link1: 'https://github.com/VaibhavBansal26/Car-Price-Prediction',
+        link2: 'https://youtu.be/_bjaJZPFovM',
+        // link3: 'http://54.211.221.57:8501/',
+        title: 'Car Price Prediction using Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, MinIO, Debezium',
+        text: 'Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, Zookeeper, Machine Learning, MinIO, Debezium'
+    },
+    {
         id: 1,
         category: 'Machine Learning',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742416573/Screenshot_2025-03-19_at_4.35.52_PM_jwcpzu.png',
