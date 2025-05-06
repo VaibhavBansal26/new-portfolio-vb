@@ -44,6 +44,16 @@ import gpac from '../img/portImages/gpac.png';
 
 const portfolios = [
     {
+        id: 93,
+        category: 'Machine Learning',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1746515810/Screenshot_2025-05-06_at_3.14.47_AM_nggebr.png',
+        link1: 'https://github.com/VaibhavBansal26/medical-app',
+        // link2: 'https://youtu.be/_bjaJZPFovM',
+        link3: 'https://medical-app-vb.streamlit.app/',
+        title: 'Heart Disease Prediction using Generative AI, Streamlit, OpenAI',
+        text: 'Genrative AI, Streamlit, Machine Learning, Docker, OpenAI, Python'
+    },
+    {
         id: 91,
         category: 'Machine Learning',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743899570/Screenshot_2025-04-05_at_8.19.11_PM_ypiwbv.png',
