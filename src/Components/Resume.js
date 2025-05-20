@@ -107,7 +107,7 @@ function Resume() {
                         title={'M.S in Data Science     '}
                         subTitle={'State University New York, Buffalo'}
                         link={'https://www.buffalo.edu/'}
-                        text={"Pursuing Master's in Data Science program with GPA - 3.815 out of 4 ."}
+                        text={"Pursuing Master's in Data Science program with GPA - 3.833 out of 4 ."}
                         css={0}
                     />
                     <ResumeItem 
