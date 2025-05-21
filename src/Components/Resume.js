@@ -20,7 +20,7 @@ function Resume() {
                 <div className="resume-content">
                     <ResumeItem 
                         year={'Jan 2025  -  Present'} 
-                        title={'Graduate Teaching Assistant at SUNY Buffalo'}
+                        title={'Graduate Student Assistant at SUNY Buffalo'}
                         subTitle={'State University New York, Buffalo'}
                         link={'https://www.buffalo.edu/'}
                         text={`Graduate Teaching Assistant for Applied Machine Learning At Scale Course (CDA500LEC MK1) at University at Buffalo.
