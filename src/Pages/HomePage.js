@@ -65,8 +65,8 @@ function HomePage(props) {
                 {/* <h1>Hi, I'm <span className='myname'  data-value="" id="typewriter-effect"></span></h1> */}
                 <h1>Hi, I'm <span className='myname'  data-value="">Vaibhav Bansal</span></h1>
                 <p>
-                    I am an India-based Software developer and Data Science enthusiast, with an M.S. in Data Science from State University of New York at Buffalo (SUNY).
-                    At Dashclicks India Ltd and Wipro, I honed my software-development expertise, architecting and deploying scalable, user-centric applications using Python, Java, React, Docker, and AWS that drove measurable business impact. 
+                    I am an India-based Software developer and Data Science enthusiast, with an M.S. in Data Science from State University of New York (SUNY) at Buffalo.
+                    At Dashclicks India Ltd and Wipro Technologies Ltd, I honed my software-development expertise, architecting and deploying scalable, user-centric applications using Python, Java, React, Docker, and AWS that drove measurable business impact. 
                 </p>
                 <div className="icons">
                     <a href="https://www.facebook.com/vaibhavcoo" className="icon i-facebook">
