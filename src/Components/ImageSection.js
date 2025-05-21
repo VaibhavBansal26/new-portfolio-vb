@@ -18,7 +18,9 @@ function ImageSection({theme}) {
                 <h4>I am <span>Vaibhav Bansal</span></h4>
                 <h2>Front-End Developer | 3.5+ Years of Experience</h2>
                 <p className="paragraph">
-                    I am Vaibhav Bansal, a dedicated Software Developer with over 3.5+ years of valuable experience. Currently, pursuing Master's in Engineering Science in Data Science in State UniversIty New York (SUNY) at Buffalo.   My professional journey includes significant experience at leading organizations like Dashclicks India Ltd , Wipro, JK Tyre, Smart Controls India, where I developed my expertise in software development. Throughout my journey, I've remained committed to continuous skill enhancement and professional growth. My confidence stems from the ability to generate innovative ideas that drive substantial organizational advancement. Beyond coding, I'm passionate about adventure sports, lawn tennis, and staying updated with the latest technology blogs.
+                I’m Vaibhav Bansal-an experienced software engineer and full-stack developer with 3.5+ years of hands-on experience and an M.S. in Data Science from SUNY Buffalo (Buffalo, NY). I’ve architected and deployed scalable full-stack applications and data-engineering pipelines using Python, R, React Js, Node Js, SQL, Spark, Docker, AWS, and Kubernetes. At Dashclicks India Ltd, Wipro, JK Tyre, and Smart Controls India, I honed my skills in software development, machine-learning engineering, MLOps automation, and CI/CD workflows to deliver measurable business impact.
+                <br/>
+                Driven by continuous learning and innovation, I excel at translating complex problems into high-performance software. Outside of work, I’m an adventure-sports enthusiast and tennis player, and I stay current on technology trends through blogs and community forums.
                 </p>
                 
                 <div className="about-info">
