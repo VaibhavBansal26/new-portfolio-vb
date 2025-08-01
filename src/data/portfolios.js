@@ -44,6 +44,16 @@ import gpac from '../img/portImages/gpac.png';
 
 const portfolios = [
     {
+        id: 94,
+        category: 'Machine Learning',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1747167771/Screenshot_2025-05-13_at_4.17.20_PM_nwvmud.png',
+        link1: 'https://github.com/VaibhavBansal26/crypto-trade-project',
+        // link2: 'https://youtu.be/_bjaJZPFovM',
+        link3: 'http://164.92.96.19:8501/',
+        title: 'Crypto Trade Prediction',
+        text: 'Streamlit, Machine Learning, Docker, Digital Ocean, Python, DuckDB, RedPandas'
+    },
+    {
         id: 93,
         category: 'Machine Learning',
         image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1746515810/Screenshot_2025-05-06_at_3.14.47_AM_nggebr.png',
@@ -122,6 +132,16 @@ const portfolios = [
         link3: 'https://drive.google.com/file/d/1TrdBe-yA4fHNoq0-Y8MU3AYU6vMaHnRc/view?usp=sharing',
         title: 'NYC Taxi Ride Data Engineering , Data Analysis & Visualization using Power BI',
         text: 'AWS Glue, AWS Event Bridge, AWS S3, AWS Athena, AWS Quicksight, Power BI'
+    },
+    {
+        id: 95,
+        category: 'Machine Learning',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1747202557/Screenshot_2025-05-14_at_2.01.52_AM_d1kenq.png',
+        link1: 'https://github.com/VaibhavBansal26/snowflake-taxi-data-project',
+        // link2: 'https://youtu.be/_bjaJZPFovM',
+        link3: 'https://app-taxi-data-snowflak-project-vb.streamlit.app/',
+        title: 'Taxi Data Prediction Dashboard using Snowflake, Streamlit, SnowPark',
+        text: 'Streamlit, Mlflow, Snowflake, Snowpark, Python'
     },
     {
         id: 5,
