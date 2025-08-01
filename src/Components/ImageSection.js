@@ -16,9 +16,9 @@ function ImageSection({theme}) {
             </div>
             <div className="right-content">
                 <h4>I am <span>Vaibhav Bansal</span></h4>
-                <h2>Front-End Developer | 3.5+ Years of Experience</h2>
+                <h2>Front-End Developer | 4+ Years of Experience</h2>
                 <p className="paragraph">
-                    I am Vaibhav Bansal, a dedicated Software Developer with over 3.5+ years of valuable experience. Currently, pursuing Master's in Engineering Science in Data Science in State UniversIty New York (SUNY) at Buffalo.   My professional journey includes significant experience at leading organizations like Dashclicks India Ltd , Wipro, JK Tyre, Smart Controls India, where I developed my expertise in software development. Throughout my journey, I've remained committed to continuous skill enhancement and professional growth. My confidence stems from the ability to generate innovative ideas that drive substantial organizational advancement. Beyond coding, I'm passionate about adventure sports, lawn tennis, and staying updated with the latest technology blogs.
+                    I am Vaibhav Bansal, a dedicated Software Developer with over 4+ years of valuable experience. Currently, pursuing Master's in Engineering Science in Data Science in State UniversIty New York (SUNY) at Buffalo.   My professional journey includes significant experience at leading organizations like Dashclicks India Ltd , Wipro, JK Tyre, Smart Controls India, where I developed my expertise in software development. Throughout my journey, I've remained committed to continuous skill enhancement and professional growth. My confidence stems from the ability to generate innovative ideas that drive substantial organizational advancement. Beyond coding, I'm passionate about adventure sports, lawn tennis, and staying updated with the latest technology blogs.
                 </p>
                 
                 <div className="about-info">
