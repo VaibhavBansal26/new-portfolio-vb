@@ -19,7 +19,7 @@ function Resume() {
                 </div>
                 <div className="resume-content">
                     <ResumeItem 
-                        year={'Jan 2025  -  Present'} 
+                        year={'Jan 2025  -  May 2025'} 
                         title={'Graduate Student Assistant at SUNY Buffalo'}
                         subTitle={'State University New York, Buffalo'}
                         link={'https://www.buffalo.edu/'}
