@@ -6,7 +6,7 @@ function PrimaryButton({title}) {
     return (
         <PrimaryButtonStyled>
             <DownloadIcon />
-            <a href="https://drive.google.com/file/d/1XkLsenUxv9C_qr54YeOaRR4PuCUJAXYc/view?usp=sharing" download="VaibhavBansal_Resume.pdf">{title}</a>
+            <a href="https://drive.google.com/file/d/1RgxdMM1Rr9BdjhWYSmcnw0Bh07JVegAC/view?usp=sharing" download="VaibhavBansal_Resume.pdf">{title}</a>
         </PrimaryButtonStyled>
     )
 }
