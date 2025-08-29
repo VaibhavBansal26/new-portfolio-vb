@@ -6,7 +6,7 @@ function ResumeBtn({title}) {
     return (
         <ResumeButtonStyled>
             <DownloadIcon />
-            <a href="https://drive.google.com/file/d/1hh1VZklc3sH2OXUOb6iNEx3Y49CkyuBR/view?usp=sharing" download="VaibhavBansal_Resume.pdf">{title}</a>
+            <a href="https://drive.google.com/file/d/10b3UnhI1tAdouk_Of5saq3f0EApTXVbk/view?usp=sharing" download="VaibhavBansal_Resume.pdf">{title}</a>
         </ResumeButtonStyled>
     )
 }
