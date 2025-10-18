@@ -43,6 +43,16 @@ import gpac from '../img/portImages/gpac.png';
 
 
 const portfolios = [
+     {
+        id: 94,
+        category: 'Agentic AI',
+        image: 'https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1760818635/Screenshot_2025-10-18_at_4.16.22_PM_yzy63g.png',
+        link1: 'https://github.com/VaibhavBansal26/Disaster-Response-AI-Copilot',
+        // link2: 'https://youtu.be/_bjaJZPFovM',
+        link3: 'https://disaster-response-ai-copilot-vb1.streamlit.app/',
+        title: 'Disaster Response AI Copilot',
+        text: 'Streamlit, Machine Learning, AI Agent, Azure OpenAI, Azure AI Foundry, RAG, Azure Cognitive Search'
+    },
     {
         id: 94,
         category: 'Machine Learning',
