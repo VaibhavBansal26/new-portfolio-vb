@@ -8,7 +8,6 @@ import SmokeSection from '../Components/SmokeSection';
 import ParticleLogo from '../Components/ParticleLogo';
 import TextScramble from '../Components/TextScramble';
 import MagneticButton from '../Components/MagneticButton';
-import RevealText from '../Components/RevealText';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import GithubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
