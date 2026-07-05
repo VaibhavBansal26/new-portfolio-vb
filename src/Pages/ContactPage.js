@@ -91,38 +91,6 @@ function ContactPage() {
                             </form>
                         </div>
                     </div>
-<<<<<<< HEAD
-                    <form  className="form">
-                        <div className="form-field">
-                            <label htmlFor="name"  >Enter your name*</label>
-                            <input type="text" id="name" value={name} onChange={e => setName(e.target.value)} required/>
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="email"  >Enter your email*</label>
-                            <input type="email" id="email" value={recemail} onChange={e => setRecEmail(e.target.value)} required/>
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="subject"  >Enter your subject</label>
-                            <input type="text" id="subject" value={subject} onChange={e => setSubject(e.target.value)}/>
-                        </div>
-                        <div className="form-field">
-                            <label htmlFor="text-area">Enter your Message*</label>
-                            <textarea name="textarea" id="textarea" cols="30" rows="10" value={message}  onChange={e => setMessage(e.target.value)}></textarea>
-                        </div>
-                        <div className="form-field f-button">
-                            <SecondaryButton title={'Send Email'} onClick={sendEmail}/>
-                        </div>
-                    </form>
-                </div>
-                <div className="right-content">
-                    <ContactItem title={'Phone'} icon={phone} cont1={'+91-9165375933'} cont2={'+1-716-866-1430'} cont3={'+1-716-907-9458'} />
-                    <ContactItem title={'Email'} icon={email} cont1={'vaibhav.bansal945@gmail.com'} cont2={'vbansal6@buffalo.edu'} />
-                    <ContactItem title={'Local Address'} icon={location} cont1={'41 Englewood Avenue, Buffalo, New York, 14214-1105'} cont2={'United States'} />
-                    <ContactItem title={'Permanent Address'} icon={location} cont1={'21 Madhuvan Colony, Thatipur, Gwalior, Madhya Pradesh, 474011'} cont2={'India'} />
-                    
-                </div>
-            </InnerLayout>
-=======
 
                     <div className="right-content">
                         <ContactItem title={'Phone'} icon={phone} cont1={'+91-9165375933'} cont2={'+1-716-866-1430'} cont3={'+1-716-907-9458'} />
@@ -131,7 +99,6 @@ function ContactPage() {
                         <ContactItem title={'Permanent Address'} icon={location} cont1={'21 Madhuvan Colony, Thatipur, Gwalior, Madhya Pradesh, 474011'} cont2={'India'} />
                     </div>
                 </InnerLayout>
->>>>>>> d92ffab (redesign)
             </ContactPageStyled>
         </MainLayout>
     );

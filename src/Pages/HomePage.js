@@ -94,50 +94,6 @@ function HomePage({ theme }) {
 
     return (
         <HomePageStyled>
-<<<<<<< HEAD
-            <div className="particle-con">
-                <Particle theme={theme}/>
-            </div>
-            {/* <div className="codeThemeSec">
-                <CodeThemeSec/>
-            </div> */}
-            {/* <div className="codeTheme">
-                <CodeTheme/>
-            </div> */}
-            <div className='underlayText'>
-                VAIBHAV BANSAL
-            </div>
-            <div className="typography">
-                {/* <h1>Hi, I'm <span className='myname'  data-value="" id="typewriter-effect"></span></h1> */}
-                <h1>Hi, I'm <span className='myname'  data-value="">Vaibhav Bansal</span></h1>
-                <p>
-                   I am an AI Software Developer with 4+ years of experience and an M.S. from the State University of New York (SUNY) at Buffalo. At DashClicks and Wipro, I built and shipped scalable, user focused applications and AI driven features using Python, Java, React, Docker, and AWS, delivering measurable business impact through reliable systems and strong engineering practices.
-                </p>
-                <div className="icons">
-                    <a href="https://www.facebook.com/vaibhavcoo" className="icon i-facebook">
-                        <FacebookIcon />
-                    </a>
-                    <a href="https://github.com/VaibhavBansal26" className="icon i-github">
-                        <GithubIcon />
-                    </a>
-                    {/* <a href="https://www.youtube.com/channel/UCj5oKvqzKkYzPbXYbodKetQ" className="icon i-youtube">
-                        <YoutubeIcon />
-                    </a> */}
-                    <a href="https://www.linkedin.com/in/vaibhavbansal-profile/" className="icon i-linkedin">
-                        <LinkedInIcon />
-                    </a>
-                    <a href="https://www.instagram.com/vaibhav.bansal945/" className="icon i-instagram">
-                        <InstagramIcon />
-                    </a>
-                    <a href="https://www.researchgate.net/profile/Vaibhav-Bansal-6" className="icon i-researchgate">
-                    <img src={iconRS} alt='reasearch gate' title='reasearch gate'/>
-                    </a>
-                </div><br/>
-                <ResumeBtn title={'Resume'} />
-                {/* <div>
-                <img src={carbon} width="70%" height="40%" alt='reasearch gate' title='reasearch gate'/>
-                </div> */}
-=======
             <div className="hero" ref={heroRef}>
                 <motion.div className="left" style={{ y: leftY, opacity: heroOpacity, filter: heroFilter }}>
                     <p className="eyebrow mono">
@@ -225,7 +181,6 @@ function HomePage({ theme }) {
                     <span>scroll</span>
                     <KeyboardArrowDownIcon />
                 </motion.div>
->>>>>>> d92ffab (redesign)
             </div>
 
             <section className="impact-section section-shell" aria-labelledby="impact-title">
