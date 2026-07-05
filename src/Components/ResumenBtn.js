@@ -12,39 +12,40 @@ function ResumeBtn({title}) {
 }
 
 const ResumeButtonStyled = styled.div`
-    background-color: var(--primary-btn-color);
-    padding: .8rem 3rem;
+    background-color: transparent;
+    padding: .8rem 2.5rem;
     color: var(--white-color);
-    border: 2px solid var(--primary-btn-border-color);
+    border: 2px solid var(--primary-color);
     cursor: pointer;
-    display: inline-block;
-    border-radius: 4px;
-    justify-content: space-between;
-    font-size: inherit;
-    font-weight: 900;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    border-radius: 8px;
+    font-size: .95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
     text-transform: uppercase;
     position: relative;
-    transition: all .4s ease-in-out;
+    transition: transform .2s ease-in-out, box-shadow .25s ease-in-out, background-color .25s ease-in-out, color .25s ease-in-out;
     svg {
         vertical-align: middle;
-        margin-right: 0 0.15rem;
+        color: var(--primary-color);
+        transition: color .25s ease-in-out;
     }
     a{
-        font-weight: 900;
+        font-weight: 700;
+        transition: color .25s ease-in-out;
     }
-    &::after{
-        content: "";
-        position: absolute;
-        width: 0;
-        height: .2rem;
-        transition: all .4s ease-in-out;
-        left: 0;
-        bottom: 0;
-        opacity: .7;
+    &:hover{
+        background-color: var(--primary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px var(--primary-glow);
+        a, svg{
+            color: var(--on-primary);
+        }
     }
-    &:hover::after{
-        width: 100%;
-        background-color: var(--white-color);
+    &:active{
+        transform: translateY(0);
     }
 `;
 export default ResumeBtn;

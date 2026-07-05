@@ -15,28 +15,30 @@ function ServiceCard({image, title, paragraph}) {
 
 const ServiceCardStyled = styled.div`
     background-color: var(--background-dark-grey);
-    border-left: 1px solid var(--border-color);
-    border-top: 8px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    transition: all .4s ease-in-out;
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform .25s ease-in-out, border-color .25s ease-in-out, box-shadow .25s ease-in-out;
     &:hover{
-        border-top: 8px solid var(--primary-color);
-        transform: translateY(3px);
+        border-top-color: var(--primary-color);
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, .2);
     }
     .container{
-        padding: 1.2rem;
+        padding: 1.5rem;
         h4{
             color: var(--white-color);
-            font-size: 1.6rem;
+            font-size: 1.4rem;
+            font-weight: 700;
             padding: 1rem 0;
             position: relative;
             &::after{
                 content: "";
-                width: 4rem;
-                background-color: var(--border-color);
+                width: 3rem;
+                background-color: var(--primary-color);
                 height: 3px;
-                position: absolute;;
+                position: absolute;
                 left: 0;
                 bottom: 0;
                 border-radius: 10px;
@@ -45,6 +47,7 @@ const ServiceCardStyled = styled.div`
 
         p{
             padding: .8rem 0;
+            line-height: 1.7;
         }
     }
 `;

@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components';
+import usePageTitle from '../hooks/usePageTitle';
 import Title from '../Components/Title';
 import certificates from '../data/certification';
 import {MainLayout, InnerLayout} from '../styles/Layouts';
 
 
 function CertificationPage() {
+    usePageTitle('Certifications');
     return (
             <MainLayout>
             <CertStyled>
@@ -42,7 +44,16 @@ const CertStyled = styled.div`
         }
         .cert-item{
             background-color: var(--background-dark-grey);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
             padding: 1rem 1rem;
+            transition: transform .25s ease-in-out, border-color .25s ease-in-out, box-shadow .25s ease-in-out;
+            &:hover{
+                transform: translateY(-4px);
+                border-color: var(--primary-color);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, .2);
+            }
         }
         .image{
             width: 100%;

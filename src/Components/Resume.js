@@ -2,20 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import {InnerLayout} from '../styles/Layouts';
 import Title from '../Components/Title';
-import SmallTitle from '../Components/SmallTitle';
-import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-import SchoolIcon from '@mui/icons-material/School';
 import ResumeItem from '../Components/ResumeItem';
 
 function Resume() {
-    const briefcase = <BusinessCenterIcon />
-    const school = <SchoolIcon />
     return (
         <ResumeStyled>
             <Title title={'Resume'} span={'resume'} />
             <InnerLayout>
                 <div className="small-title">
-                    <SmallTitle icon={school} title={'Academic Work Experience'} />
+                    <p className="dir mono"><span className="prompt">~ $</span> cd ./academic-experience</p>
                 </div>
                 <div className="resume-content">
                     <ResumeItem 
@@ -44,7 +39,7 @@ function Resume() {
                         
                 </div>
                 <div className="small-title u-small-title-margin">
-                    <SmallTitle icon={briefcase} title={'Professional Work Experience'} />
+                    <p className="dir mono"><span className="prompt">~ $</span> cd ./professional-experience</p>
                 </div>
                 <div className="resume-content">
                     <ResumeItem 
@@ -99,7 +94,7 @@ function Resume() {
                     />
                 </div>
                 <div className="small-title u-small-title-margin">
-                    <SmallTitle icon={school} title={'Educational Qualifications'} />
+                    <p className="dir mono"><span className="prompt">~ $</span> cd ./education</p>
                 </div>
                 <div className="resume-content ">
                 <ResumeItem 
@@ -147,17 +142,36 @@ function Resume() {
 
 const ResumeStyled = styled.section`
     .small-title{
-        padding-bottom: 3rem;
+        padding-bottom: 2.2rem;
     }
     .u-small-title-margin{
         margin-top: 4rem;
     }
-    .u-small-title-no-pad{
-        padding-left: 0rem;
+
+    .dir{
+        font-size: .95rem;
+        color: var(--white-color);
+        font-weight: 600;
+        .prompt{
+            color: var(--primary-color);
+            font-family: var(--font-mono);
+        }
     }
 
     .resume-content{
-        border-left: 2px solid var(--border-color);
+        position: relative;
+        padding-left: 2px;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            border-radius: 2px;
+            background: linear-gradient(180deg, var(--primary-color), var(--accent-2) 55%, transparent);
+            opacity: .55;
+        }
     }
 `;
 export default Resume

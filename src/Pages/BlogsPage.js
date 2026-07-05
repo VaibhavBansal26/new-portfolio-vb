@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import usePageTitle from '../hooks/usePageTitle';
 import Title from '../Components/Title';
 import blogs from '../data/blogs';
 import {MainLayout, InnerLayout} from '../styles/Layouts';
 
 function BlogsPage() {
+    usePageTitle('Blogs');
     return (
         <MainLayout>
             <BlogsStyled>
@@ -14,7 +16,7 @@ function BlogsPage() {
                         blogs.map((blog)=>{
                             return <div key={blog.id} className={'blog-item'}>
                                 <div className="image">
-                                    <img src={blog.image} alt={'blog'}/>
+                                    <img src={blog.image} alt={blog.title}/>
                                 </div>
                                 <div className="title">
                                     <a href={blog.link} target="_blank" rel="noreferrer">
@@ -41,7 +43,16 @@ const BlogsStyled = styled.div`
         }
         .blog-item{
             background-color: var(--background-dark-grey);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
             padding: 1rem 1rem;
+            transition: transform .25s ease-in-out, border-color .25s ease-in-out, box-shadow .25s ease-in-out;
+            &:hover{
+                transform: translateY(-4px);
+                border-color: var(--primary-color);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, .2);
+            }
         }
         .image{
             width: 100%;

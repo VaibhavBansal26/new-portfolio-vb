@@ -21,23 +21,34 @@ function ContactItem({title, icon, cont1, cont2, cont3}) {
 }
 
 const ContactItemStyled = styled.div`
-    padding:1.5rem 2rem;
+    padding: 1.5rem 2rem;
     background-color: var(--background-dark-grey);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
     display: flex;
     align-items: center;
+    transition: border-color .25s ease-in-out, transform .25s ease-in-out;
+    &:hover{
+        border-color: var(--primary-color);
+        transform: translateY(-2px);
+    }
     &:not(:last-child){
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.5rem;
     }
     .left-content{
-        padding: 1.5rem;
+        padding: 1.2rem;
         border: 1px solid var(--border-color);
+        border-radius: 10px;
+        background-color: var(--background-light-color-2);
+        color: var(--primary-color);
         font-size: 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
         margin-right: 1.5rem;
         svg{
-            font-size: 2.3rem;
+            font-size: 2rem;
+            color: var(--primary-color);
         }
     }
 

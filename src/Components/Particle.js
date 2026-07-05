@@ -106,15 +106,13 @@ function Particle({theme})  {
             //   },
               particles: {
                   color: {
-                      value: `${theme === 'light-theme' ? '#007bff' : '#ffffff'}`,
-                    //   value: `${theme === 'light-theme' ? '#3498db' : '#1abc9c'}`,
+                      value: `${theme === 'light-theme' ? '#16A34A' : '#22C55E'}`,
                   },
                   links: {
-                      color: `${theme === 'light-theme' ? '#007bff' : '#ffffff'}`,
-                    //   color: `${theme === 'light-theme' ? '#3498db' : '#1abc9c'}`,
+                      color: `${theme === 'light-theme' ? '#94A3B8' : '#475569'}`,
                       distance: 150,
                       enable: true,
-                      opacity: 0.5,
+                      opacity: 0.4,
                       width: 1,
                   },
                   move: {
@@ -124,7 +122,7 @@ function Particle({theme})  {
                           default: "bounce",
                       },
                       random: false,
-                      speed: 6,
+                      speed: 2,
                       straight: false,
                   },number: {
                     density: {

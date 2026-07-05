@@ -64,51 +64,46 @@ const NavigationStyled = styled.nav`
         padding: 1.5rem 0;
         img{
             width: 60%;
-            height:150px;
+            height: 150px;
+            object-fit: cover;
             border-radius: 50%;
-            border: 4px solid var(--border-color);
+            border: 3px solid var(--primary-color);
+            box-shadow: 0 0 0 6px var(--background-light-color-2);
+            transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+            &:hover{
+                transform: scale(1.04);
+                box-shadow: 0 0 25px var(--primary-glow);
+            }
         }
     }
 
     .nav-items{
         width: 100%;
         text-align: center;
-        .active-class{
-            background-color: var(--primary-color-light);
-            color: white;
+        .active-class,
+        a.active{
+            background-color: var(--background-light-color-2);
+            color: var(--primary-color) !important;
+            border-left: 3px solid var(--primary-color) !important;
         }
         li{
             display: block;
             a{
                 display: block;
-                padding: .45rem 0;
+                padding: .55rem 0;
                 position: relative;
                 z-index: 10;
                 text-transform: uppercase;
-                transition: all .4s ease-in-out;
+                transition: color .25s ease-in-out, background-color .25s ease-in-out;
                 font-weight: 600;
-                letter-spacing: 1px;
+                font-size: .85rem;
+                letter-spacing: 2px;
+                border-left: 3px solid transparent;
                 &:hover{
                     cursor: pointer;
-                    color: var(--white-color);
+                    color: var(--primary-color);
+                    background-color: var(--background-light-color-2);
                 }
-                &::before{
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 0;
-                    height: 50%;
-                    background-color: var( --primary-color);
-                    transition: All 0.4s cubic-bezier(1,-0.2,.25,.95) ;
-                    opacity: 0.21;
-                    z-index: -1;
-                }
-            }
-
-            a:hover::before{
-                width: 100%;
-                height: 100%;
             }
         }
     }
@@ -118,7 +113,8 @@ const NavigationStyled = styled.nav`
         width: 100%;
         p{
             padding: 1.3rem 0;
-            font-size: 1.1rem;
+            font-size: .85rem;
+            letter-spacing: .5px;
             display: block;
             text-align: center;
         }

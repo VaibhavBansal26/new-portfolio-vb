@@ -11,27 +11,25 @@ function SecondaryButton({title,onClick}) {
 
 const PrimaryButtonStyled = styled.button`
     background-color: var(--primary-color);
-    padding: .8rem 2.5rem;
-    color: white;
+    border: none;
+    padding: .8rem 2.2rem;
+    color: var(--on-primary);
     cursor: pointer;
     display: inline-block;
-    font-size: inherit;
+    border-radius: 8px;
+    font-size: .95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
     text-transform: uppercase;
     position: relative;
-    transition: all .4s ease-in-out;
-    &::after{
-        content: "";
-        position: absolute;
-        width: 0;
-        height: .2rem;
-        transition: all .4s ease-in-out;
-        left: 0;
-        bottom: 0;
-        opacity: .7;
+    transition: transform .2s ease-in-out, box-shadow .25s ease-in-out, background-color .25s ease-in-out;
+    &:hover{
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px var(--primary-glow);
+        background-color: var(--primary-color-light);
     }
-    &:hover::after{
-        width: 100%;
-        background-color: var(--white-color);
+    &:active{
+        transform: translateY(0);
     }
 `;
 export default SecondaryButton;

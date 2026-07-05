@@ -4,64 +4,42 @@ import styled from 'styled-components';
 function Title({title, span}) {
     return (
         <TitleStyled>
-            <h2>{title} <b><span>{span}</span></b></h2>
+            <p className="eyebrow">{span}</p>
+            <h2>{title}</h2>
         </TitleStyled>
     )
 }
 
 const TitleStyled = styled.div`
     position: relative;
-    h2{
-        color: var(--white-color);
-        font-size: 3.1rem;
+    padding-bottom: 1rem;
+
+    .eyebrow{
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        font-size: .8rem;
         font-weight: 600;
+        letter-spacing: .18em;
         text-transform: uppercase;
-        position: relative;
-        padding-bottom: .7rem;
-        @media screen and (max-width: 496px){
-            font-size: 2.8rem;
-        }
-        @media screen and (max-width: 370px){
-            font-size: 2rem;
-        }
+        color: var(--primary-color);
+        margin-bottom: .6rem;
         &::before{
             content: "";
-            position: absolute;
-            bottom: 0;
-            width: 7.4rem;
-            height: .33rem;
-            background-color: var(--background-light-color-2);
-            border-radius: 15px;
-            left: 0;
+            display: inline-block;
+            width: 2rem;
+            height: 2px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-2));
         }
-        &::after{
-            content: "";
-            position: absolute;
-            bottom: 0;
-            width: 3.5rem;
-            height: .33rem;
-            background-color: var(--primary-color);
-            border-radius: 15px;
-            left: 0;
-        }
-        span{
-            font-weight: 900;
-            color: rgba(25,29,43,.44);
-            font-size: 5rem;
-            position: absolute;
-            left: 0;
-            top: 30%;
-            z-index: -1;
-            @media screen and (max-width: 620px){
-                font-size: 4rem;
-            }
-            @media screen and (max-width: 496px){
-                font-size: 3rem;
-            }
-            @media screen and (max-width: 370px){
-                font-size: 2rem;
-            }
-        }
+    }
+
+    h2{
+        color: var(--white-color);
+        font-size: clamp(2.1rem, 4vw, 3rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
     }
 `;
 

@@ -17,20 +17,25 @@ function Button({filter, button}) {
 
 const ButtonStyled = styled.button`
     outline: none;
-    border: none;
-    background-color: var(--background-light-color-2);
-    padding: .4rem 1rem;
-    font-size: inherit;
-    color: var(--white-color);
+    border: 1px solid var(--border-color);
+    background-color: var(--background-dark-grey);
+    padding: .45rem 1.2rem;
+    font-size: .9rem;
+    font-weight: 600;
+    color: var(--font-light-color);
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all .25s ease-in-out;
     margin-bottom: .6rem;
-    border-radius:5px;
-    &:active ,&:focus{
+    border-radius: 2rem;
+    &:active, &:focus{
         background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: var(--on-primary);
     }
     &:hover{
-        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: var(--primary-color);
+        transform: translateY(-1px);
     }
 
     &:not(:last-child){

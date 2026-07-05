@@ -1,110 +1,75 @@
-import React from 'react';
-import { useState } from "react";
-import { useEffect } from "react";
-import Sidebar from "./Components/SideBar";
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import HomePage from "./Pages/HomePage";
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
+import Edith from './Components/Edith';
+import ThemeDecor from './Components/ThemeDecor';
+import CursorGlow from './Components/CursorGlow';
+import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
 import ResumePage from './Pages/ResumePage';
 import PortfolioPage from './Pages/PortfolioPage';
 import BlogsPage from './Pages/BlogsPage';
 import ContactPage from './Pages/ContactPage';
-import Brightness4Icon from '@mui/icons-material/Brightness4';
-import MenuIcon from '@mui/icons-material/Menu';
-import { Route, Routes } from "react-router-dom";
-import { IconButton, Switch } from "@mui/material";
-import CertificationPage from "./Pages/CertificationPage";
-function App() {
-  const [theme, setTheme] = useState('dark-theme');
-  const [checked, setChecked] = useState(false);
-  const [navToggle, setNavToggle] = useState(false);
+import CertificationPage from './Pages/CertificationPage';
+import NotFoundPage from './Pages/NotFoundPage';
 
-  useEffect(()=>{
+function App() {
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem('vb-theme') || 'dark-theme'
+  );
+  const location = useLocation();
+
+  useEffect(() => {
     document.documentElement.className = theme;
+    localStorage.setItem('vb-theme', theme);
   }, [theme]);
 
-  const themeToggler = () =>{
-    if(theme === 'light-theme'){
-      setTheme('dark-theme');
-      setChecked(false)
-    }else{
-      setTheme('light-theme');
-      setChecked(true)
-    }
-  }
   return (
     <div className="App">
-    <Sidebar navToggle={navToggle} theme={theme} />
-
-    <div className="theme">
-      <div className="light-dark-mode">
-          <div className="left-content">
-            <Brightness4Icon />
-          </div>
-          <div className="right-content">
-            <Switch
-              value=""
-              checked={checked}
-              inputProps={{ 'aria-label': '' }}
-              size="medium"
-              onClick={themeToggler}
-              
-            />
-          </div>
-        </div>
-    </div>
-
-    <div className="ham-burger-menu">
-      <IconButton onClick={() => setNavToggle(!navToggle)}>
-          <MenuIcon />
-      </IconButton>
-    </div>
-
-    <MainContentStyled>
-      <div className="lines">
-        <div className="line-1"></div>
-        <div className="line-2"></div>
-        <div className="line-3"></div>
-        <div className="line-4"></div>
+      <div className="aurora" aria-hidden="true">
+        <div className="blob blob-1"></div>
+        <div className="blob blob-2"></div>
+        <div className="blob blob-3"></div>
       </div>
+      <div className="grid-overlay" aria-hidden="true"></div>
+      <CursorGlow />
+      <ThemeDecor theme={theme} />
 
-      <Routes>
-        <Route path="/"  element={<HomePage theme={theme}/>}/>
-        <Route path="/about" element={<AboutPage theme={theme}/>}/>
-        <Route path="/resume"  element={<ResumePage theme={theme}/>}/>
-        <Route path="/portfolios"  element={<PortfolioPage/>}/>
-        <Route path="/blogs"  element={<BlogsPage/>}/>
-        <Route path="/certification"  element={<CertificationPage/>}/>
-        <Route path="/contact"  element={<ContactPage />}/>
-      </Routes>
+      <Navbar theme={theme} setTheme={setTheme} />
 
-    </MainContentStyled>
-</div>
+      <AnimatePresence mode="wait">
+        <MainContentStyled
+          key={location.pathname}
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -12 }}
+          transition={{ duration: 0.35, ease: 'easeOut' }}
+        >
+          <Routes location={location}>
+            <Route path="/" element={<HomePage theme={theme} />} />
+            <Route path="/about" element={<AboutPage theme={theme} />} />
+            <Route path="/resume" element={<ResumePage theme={theme} />} />
+            <Route path="/portfolios" element={<PortfolioPage />} />
+            <Route path="/blogs" element={<BlogsPage />} />
+            <Route path="/certification" element={<CertificationPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+          <Footer />
+        </MainContentStyled>
+      </AnimatePresence>
+
+      <Edith />
+    </div>
   );
 }
 
-const MainContentStyled = styled.main`
+const MainContentStyled = styled(motion.main)`
   position: relative;
-  margin-left: 16.3rem;
   min-height: 100vh;
-  @media screen and (max-width:1200px){
-    margin-left: 0;
-  }
-  .lines{
-    position: absolute;
-    min-height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    opacity: 0.4;
-    z-index: -1;
-    .line-1, .line-2, .line-3, .line-4{
-      width: 1px;
-      min-height: 100vh;
-      background-color: var(--border-color);
-    }
-  }
 `;
-
 
 export default App;

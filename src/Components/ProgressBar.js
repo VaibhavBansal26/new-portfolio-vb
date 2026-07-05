@@ -25,14 +25,18 @@ const ProgressBarStyled = styled.div`
         .progress{
             position: relative;
             width: 100%;
-            height: .4rem;
+            height: .45rem;
+            border-radius: 1rem;
+            overflow: hidden;
             background-color: var(--border-color);
             span{
                 position: absolute;
                 left: 0;
                 bottom: 0;
                 height: 100%;
-                background-color: var(--primary-color)
+                border-radius: 1rem;
+                background: linear-gradient(90deg, var(--primary-color), var(--primary-color-light));
+                transition: width .8s ease-in-out;
             }
         }
     }
