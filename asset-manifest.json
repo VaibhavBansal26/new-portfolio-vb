@@ -1,27 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.b5a6d0f7.css",
-    "main.js": "/static/js/main.c05edc80.js",
+    "main.js": "/static/js/main.ca61fc2a.js",
     "static/js/787.8dc771c0.chunk.js": "/static/js/787.8dc771c0.chunk.js",
     "static/media/netflix.PNG": "/static/media/netflix.a1cafc60cc5f89053d49.PNG",
     "static/media/movie.png": "/static/media/movie.638d969dc262511d3b3b.png",
     "static/media/martist.PNG": "/static/media/martist.f50f58c0ff07f7e8ace7.PNG",
+    "static/media/vaibhav-graduation.png": "/static/media/vaibhav-graduation.0b3bf18ddc563171bc9a.png",
     "static/media/disney.PNG": "/static/media/disney.594aa93177c9749ec005.PNG",
     "static/media/prime1.PNG": "/static/media/prime1.726fc619c352b9f8cf3c.PNG",
     "static/media/airbnb.PNG": "/static/media/airbnb.29398772e8596258f7ac.PNG",
     "static/media/news.PNG": "/static/media/news.4fb7681960d1de5235ee.PNG",
     "static/media/pizza.png": "/static/media/pizza.9951c142889f168cb1f6.png",
+    "static/media/winter-throne.png": "/static/media/winter-throne.da9f13fee20ac2414ebd.png",
     "static/media/nba.PNG": "/static/media/nba.a4651fb5eb78c100589b.PNG",
     "static/media/clothing.png": "/static/media/clothing.35d3ea46e5d69e3c1b30.png",
+    "static/media/robotics-lab.png": "/static/media/robotics-lab.dcd4542aee16fecd610b.png",
     "static/media/amazon.PNG": "/static/media/amazon.edba118315468e1031b1.PNG",
     "static/media/pizzaDev.PNG": "/static/media/pizzaDev.c2d1a3b0f6ad8f32b1b8.PNG",
     "static/media/hulu.PNG": "/static/media/hulu.2cfb9589f4e095aca5ed.PNG",
+    "static/media/cinema-ribbons.png": "/static/media/cinema-ribbons.483c9d6c109c6ea3d761.png",
+    "static/media/robotics-gauntlet-assembly.png": "/static/media/robotics-gauntlet-assembly.94b53eff21989e26618f.png",
     "static/media/tiktok.PNG": "/static/media/tiktok.b6160a29be78cf478736.PNG",
     "static/media/yt.PNG": "/static/media/yt.6fff063260c4fe58137d.PNG",
     "static/media/tinder.png": "/static/media/tinder.c3c2e94fd057a28f7f46.png",
     "static/media/interacttivityWJS.png": "/static/media/interacttivityWJS.49245271244969546634.png",
     "static/media/introToHtml.png": "/static/media/introToHtml.40359102603c8171e21d.png",
-    "static/media/avatar-new.png": "/static/media/avatar-new.443bb4b7b5b0be988e1b.png",
     "static/media/apcs.png": "/static/media/apcs.c5d0809d4ea4b5fe5801.png",
     "static/media/atm.png": "/static/media/atm.7dd8e47f499bf81d68b4.png",
     "static/media/pds.png": "/static/media/pds.bdbd7629cfb30f6210e6.png",
@@ -62,16 +65,12 @@
     "static/media/slack.png": "/static/media/slack.1742674a89004c11455c.png",
     "static/media/blog1.png": "/static/media/blog1.61be6a884c127d1cc714.png",
     "static/media/trello.PNG": "/static/media/trello.8fa2a4ef37d6c6ef2275.PNG",
-    "static/media/avatar-light3-white.jpeg": "/static/media/avatar-light3-white.22720208fe8eb2c68691.jpeg",
-    "static/media/vb.svg": "/static/media/vb.2abe036e7444d8471d5e063eb8d041f8.svg",
     "index.html": "/index.html",
     "static/media/icons8-researchgate.svg": "/static/media/icons8-researchgate.cda82ba5dc806a62eec8ffcbf1dd2dab.svg",
-    "main.b5a6d0f7.css.map": "/static/css/main.b5a6d0f7.css.map",
-    "main.c05edc80.js.map": "/static/js/main.c05edc80.js.map",
+    "main.ca61fc2a.js.map": "/static/js/main.ca61fc2a.js.map",
     "787.8dc771c0.chunk.js.map": "/static/js/787.8dc771c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5a6d0f7.css",
-    "static/js/main.c05edc80.js"
+    "static/js/main.ca61fc2a.js"
   ]
 }

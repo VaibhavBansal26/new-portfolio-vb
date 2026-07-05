@@ -1,6 +1,6 @@
 {
-  "short_name": "Vaibhav's Portfolio",
-  "name": "Vaibhav Bansal - Software Developer",
+  "short_name": "Vaibhav Bansal",
+  "name": "Vaibhav Bansal — AI Software Engineer",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#04060C",
+  "background_color": "#04060C"
 }
