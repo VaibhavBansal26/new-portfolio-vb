@@ -143,7 +143,7 @@ function HomePage({ theme }) {
                         </MagneticButton>
                         <MagneticButton strength={0.25}>
                             <a
-                                href="https://drive.google.com/file/d/1XkLsenUxv9C_qr54YeOaRR4PuCUJAXYc/view?usp=sharing"
+                                href="https://drive.google.com/file/d/16RVmz7PSKI6z7hhHtsfgoH-s3QkNuDU2/view?usp=sharing"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="btn btn-glass mono"
