@@ -44,7 +44,7 @@ function Resume() {
                 <div className="resume-content">
                     <ResumeItem 
                         year={'Sep 2021 - Jan 2024'} 
-                        title={'Front-end Developer'}
+                        title={'Software Engineer'}
                         subTitle={'Dashclicks India Ltd.'}
                         link={'https://www.dashclicks.com/'}
                         text={`I had undertaken a multitude of significant projects. One noteworthy achievement is the development of a dynamic website builder utilizing the power of Grapes.js and React.js. I worked with a dedicated team of three talented individuals, and together, we meticulously crafted over 200,000 lines of code in just two months.
@@ -58,7 +58,7 @@ function Resume() {
                     />
                     <ResumeItem 
                         year={'Aug 2020 - Sep 2021'} 
-                        title={'Project Engineer'}
+                        title={'Software Engineer'}
                         link={"https://www.wipro.com/"}
                         subTitle={'Wipro Technologies India Ltd.'}
                         text={`Notable projects in my tenure with Wipro Technologies include the development of a Vantiv parser, an EMV parser, and a JIRA Worklog Application. Leveraging the power of Python and Flask, I have crafted these applications to efficiently process and manage complex data, enhancing workflow efficiency.
