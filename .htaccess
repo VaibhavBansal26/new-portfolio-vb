@@ -1,4 +1,19 @@
 Options -MultiViews
 RewriteEngine On
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+# Consolidate duplicate www and apex URLs onto the canonical hostname.
+RewriteCond %{HTTP_HOST} ^www\.vaibhavbansal\.in$ [NC]
+RewriteRule ^ https://vaibhavbansal.in%{REQUEST_URI} [R=301,L]
+
+# Serve the pre-rendered HTML file for known portfolio routes.
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.html [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+RewriteRule ^(.+?)/?$ $1/index.html [QSA,L]
+
+# Return a real 404 status instead of a soft-404 SPA response.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ - [R=404,L]
