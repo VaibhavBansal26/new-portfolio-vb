@@ -366,12 +366,14 @@ function HomePage({ theme }) {
             </div>
             <div className="github-activity">
               <div className="github-activity-heading"><span className="mono">365-day contribution map</span><strong className="mono">Updated by GitHub</strong></div>
-              <a className="contribution-map" href="https://github.com/VaibhavBansal26" target="_blank" rel="noreferrer" aria-label="Open Vaibhav Bansal's GitHub contribution activity">
-                <img src={contributionUrl} alt="Vaibhav Bansal GitHub contribution calendar for the last year" loading="lazy" decoding="async" />
-              </a>
-              <div className="streak-panel">
-                <span className="mono">Contribution streak</span>
-                <img src={streakUrl} alt="Current and longest GitHub contribution streak for Vaibhav Bansal" loading="lazy" decoding="async" />
+              <div className="github-activity-panels">
+                <a className="contribution-map" href="https://github.com/VaibhavBansal26" target="_blank" rel="noreferrer" aria-label="Open Vaibhav Bansal's GitHub contribution activity">
+                  <img src={contributionUrl} alt="Vaibhav Bansal GitHub contribution calendar for the last year" loading="lazy" decoding="async" />
+                </a>
+                <div className="streak-panel">
+                  <span className="mono">Contribution streak</span>
+                  <img src={streakUrl} alt="Current and longest GitHub contribution streak for Vaibhav Bansal" loading="lazy" decoding="async" />
+                </div>
               </div>
             </div>
             {githubStats.latestRepo && (
@@ -504,39 +506,39 @@ const HomeStyled = styled.div`
   .compact .recognition-copy { padding: 20px; }
   .compact .recognition-copy h3 { font-size: 19px; }
   .compact .paper-visual { min-height: 100%; }
-  .packages { padding: 42px 36px 50px; border-bottom: 1px solid var(--line); }
-  .packages-heading { display: grid; grid-template-columns: 280px 1fr; align-items: start; gap: 28px; margin-bottom: 26px; }
+  .packages { padding: 36px 36px 42px; border-bottom: 1px solid var(--line); }
+  .packages-heading { display: grid; grid-template-columns: 280px 1fr; align-items: start; gap: 28px; margin-bottom: 22px; }
   .packages-heading h2 { font-family: var(--display); font-size: clamp(30px, 3.3vw, 50px); line-height: 1; letter-spacing: -.045em; }
   .packages-heading > div > p { max-width: 620px; margin-top: 10px; color: var(--muted); font-size: 14px; }
   .downloads-as-of { display: block; margin-top: 8px; color: var(--blue); font-size: 9px; text-transform: uppercase; }
   .package-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-  .package-card { position: relative; display: flex; min-height: 330px; flex-direction: column; padding: 22px 24px 24px; overflow: hidden; background: var(--package-surface); border: 1px solid var(--soft-line); border-left: 4px solid var(--blue); transform-origin: 50% 100%; will-change: transform; transition: background .35s ease, border-color .25s ease, box-shadow .25s ease; }
+  .package-card { position: relative; display: flex; min-height: 274px; flex-direction: column; padding: 18px 20px 20px; overflow: hidden; background: var(--package-surface); border: 1px solid var(--soft-line); border-left: 4px solid var(--blue); transform-origin: 50% 100%; will-change: transform; transition: background .35s ease, border-color .25s ease, box-shadow .25s ease; }
   .package-card:hover { border-color: var(--blue); box-shadow: 0 22px 52px rgba(15,18,29,.12); }
   .package-top, .package-footer { position: relative; z-index: 1; display: flex; align-items: center; gap: 14px; }
-  .package-symbol { display: grid; place-items: center; width: 50px; height: 50px; flex: 0 0 50px; color: var(--blue); background: var(--note-bg); border: 1px solid var(--soft-line); }
-  .package-symbol svg { font-size: 26px; }
+  .package-symbol { display: grid; place-items: center; width: 44px; height: 44px; flex: 0 0 44px; color: var(--blue); background: var(--note-bg); border: 1px solid var(--soft-line); }
+  .package-symbol svg { font-size: 23px; }
   .package-number { margin-right: auto; color: var(--muted); font-size: 9px; text-transform: uppercase; }
   .package-version { padding: 5px 9px; color: var(--blue); background: var(--mint); border-radius: 999px; font-size: 9px; }
-  .package-card h3 { position: relative; z-index: 1; margin-top: 22px; font-family: var(--display); font-size: clamp(22px, 2.2vw, 32px); line-height: 1; letter-spacing: -.035em; }
-  .package-card > p { position: relative; z-index: 1; max-width: 620px; margin-top: 13px; color: var(--muted); font-size: 13px; line-height: 1.55; }
-  .package-downloads { position: relative; z-index: 1; display: flex; align-items: flex-end; gap: 13px; margin-top: 22px; }
-  .package-downloads strong { display: block; font-family: var(--display); color: var(--blue); font-size: clamp(42px, 5vw, 64px); font-weight: 800; line-height: .8; letter-spacing: -.065em; text-shadow: 0 8px 26px color-mix(in srgb, var(--blue) 18%, transparent); }
+  .package-card h3 { position: relative; z-index: 1; margin-top: 17px; font-family: var(--display); font-size: clamp(21px, 2vw, 29px); line-height: 1; letter-spacing: -.035em; }
+  .package-card > p { position: relative; z-index: 1; max-width: 620px; margin-top: 10px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+  .package-downloads { position: relative; z-index: 1; display: flex; align-items: flex-end; gap: 12px; margin-top: 17px; }
+  .package-downloads strong { display: block; font-family: var(--display); color: var(--blue); font-size: clamp(36px, 3.7vw, 48px); font-weight: 800; line-height: .82; letter-spacing: -.06em; text-shadow: 0 7px 22px color-mix(in srgb, var(--blue) 16%, transparent); }
   .package-downloads > span { max-width: 150px; padding-bottom: 2px; color: var(--muted); font-size: 8px; font-weight: 700; line-height: 1.35; letter-spacing: .08em; text-transform: uppercase; }
-  .download-meter { display: grid; grid-template-columns: 92px 1fr; align-items: center; gap: 12px; margin-top: 18px; }
+  .download-meter { display: grid; grid-template-columns: 86px 1fr; align-items: center; gap: 10px; margin-top: 14px; }
   .download-meter > span:first-child { color: var(--muted); font-size: 8px; text-transform: uppercase; }
   .download-track { position: relative; height: 3px; overflow: hidden; background: var(--soft-line); }
   .download-fill { position: absolute; inset: 0 auto 0 0; display: block; background: var(--blue); transform-origin: 0 50%; }
-  .package-footer { margin-top: auto; padding-top: 24px; }
+  .package-footer { margin-top: auto; padding-top: 18px; }
   .package-footer { justify-content: space-between; }
   .package-footer > span { color: var(--muted); font-size: 9px; text-transform: uppercase; }
   .package-footer strong { display: inline-flex; align-items: center; gap: 8px; color: var(--blue); font-size: 13px; }
   .package-footer svg { font-size: 16px; }
-  .developer-stats { padding: 42px 36px 50px; border-bottom: 1px solid var(--line); }
-  .developer-heading { display: grid; grid-template-columns: 280px 1fr; align-items: start; gap: 28px; margin-bottom: 26px; }
+  .developer-stats { padding: 36px 36px 42px; border-bottom: 1px solid var(--line); }
+  .developer-heading { display: grid; grid-template-columns: 280px 1fr; align-items: start; gap: 28px; margin-bottom: 22px; }
   .developer-heading h2 { font-family: var(--display); font-size: clamp(30px, 3.3vw, 50px); line-height: 1; letter-spacing: -.045em; }
   .developer-heading > div > p { max-width: 680px; margin-top: 10px; color: var(--muted); font-size: 14px; }
-  .developer-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 18px; }
-  .github-card, .leetcode-card { min-width: 0; padding: 24px; background: var(--paper-strong); border: 1px solid var(--soft-line); transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+  .developer-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: stretch; gap: 18px; }
+  .github-card, .leetcode-card { min-width: 0; padding: 20px; background: var(--paper-strong); border: 1px solid var(--soft-line); transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
   .github-card:hover, .leetcode-card:hover { transform: translateY(-4px); border-color: var(--blue); box-shadow: 0 20px 56px rgba(15,18,29,.11); }
   .developer-card-top { display: flex; align-items: center; gap: 14px; }
   .developer-card-top > div { min-width: 0; margin-right: auto; }
@@ -548,28 +550,29 @@ const HomeStyled = styled.div`
   .live-indicator { display: inline-flex; align-items: center; gap: 6px; padding: 5px 8px; border: 1px solid var(--soft-line); }
   .live-indicator::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #a5a8af; }
   .live-indicator.online::before { background: var(--mint-strong); box-shadow: 0 0 0 4px var(--mint); }
-  .github-numbers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 26px; padding: 20px 0; border-block: 1px solid var(--line); }
+  .github-numbers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 18px; padding: 15px 0; border-block: 1px solid var(--line); }
   .github-numbers div + div { padding-left: 12px; border-left: 1px solid var(--line); }
-  .github-numbers strong { display: block; font-family: var(--display); color: var(--blue); font-size: 28px; line-height: 1; }
+  .github-numbers strong { display: block; font-family: var(--display); color: var(--blue); font-size: 24px; line-height: 1; }
   .github-numbers span.mono { display: block; margin-top: 6px; color: var(--muted); font-size: 8px; text-transform: uppercase; }
-  .github-activity { display: grid; gap: 12px; margin-top: 20px; }
+  .github-activity { display: grid; gap: 9px; margin-top: 15px; }
   .github-activity-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
   .github-activity-heading span, .github-activity-heading strong, .streak-panel > span { color: var(--muted); font-size: 8px; letter-spacing: .07em; text-transform: uppercase; }
   .github-activity-heading strong { color: var(--blue); }
-  .contribution-map { display: block; padding: 14px; overflow: hidden; background: #fff; border: 1px solid var(--soft-line); }
-  .contribution-map img { width: 100%; min-width: 650px; height: auto; display: block; }
-  .streak-panel { display: grid; grid-template-columns: 112px minmax(0, 1fr); align-items: center; gap: 14px; padding: 10px 14px; overflow: hidden; background: var(--package-surface); border: 1px solid var(--soft-line); }
-  .streak-panel img { width: 100%; max-height: 126px; display: block; object-fit: contain; }
-  .latest-repo { display: block; margin-top: 20px; padding: 16px; background: var(--package-surface); border-left: 3px solid var(--blue); }
-  .latest-repo > span:first-child { color: var(--blue); font-size: 8px; text-transform: uppercase; }
-  .latest-repo > strong { display: block; margin-top: 5px; font-family: var(--display); font-size: 21px; }
-  .latest-repo p { margin-top: 7px; color: var(--muted); font-size: 12px; line-height: 1.45; }
-  .latest-repo .text-link { margin-top: 10px; font-size: 11px; }
-  .developer-profile-link { margin-top: 18px; font-size: 12px; }
+  .github-activity-panels { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(145px, .8fr); gap: 9px; }
+  .contribution-map { min-width: 0; min-height: 114px; display: grid; place-items: center; padding: 7px; overflow: hidden; background: #fff; border: 1px solid var(--soft-line); }
+  .contribution-map img { width: 100%; min-width: 0; height: auto; display: block; }
+  .streak-panel { min-width: 0; min-height: 114px; display: grid; grid-template-rows: auto 1fr; align-items: center; gap: 6px; padding: 8px; overflow: hidden; background: var(--package-surface); border: 1px solid var(--soft-line); }
+  .streak-panel img { width: 100%; max-height: 84px; display: block; object-fit: contain; }
+  .latest-repo { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: 'meta action' 'title action'; align-items: center; gap: 3px 14px; margin-top: 12px; padding: 11px 12px; background: var(--package-surface); border-left: 3px solid var(--blue); }
+  .latest-repo > span:first-child { grid-area: meta; color: var(--blue); font-size: 8px; text-transform: uppercase; }
+  .latest-repo > strong { grid-area: title; display: block; margin-top: 2px; overflow: hidden; font-family: var(--display); font-size: 18px; text-overflow: ellipsis; white-space: nowrap; }
+  .latest-repo p { display: none; }
+  .latest-repo .text-link { grid-area: action; margin: 0; font-size: 10px; white-space: nowrap; }
+  .developer-profile-link { margin-top: 12px; font-size: 12px; }
   .leetcode-card { display: flex; flex-direction: column; overflow: hidden; }
   .leetcode-card .developer-card-top > .text-link { font-size: 11px; }
-  .leetcode-visual { display: grid; place-items: center; flex: 1; min-height: 250px; margin-top: 22px; overflow: hidden; background: var(--package-surface); border: 1px solid var(--soft-line); }
-  .leetcode-visual img { width: 100%; height: auto; display: block; }
+  .leetcode-visual { display: grid; place-items: center; flex: 1; min-height: 270px; margin-top: 18px; padding: 10px; overflow: hidden; background: color-mix(in srgb, #f7a41d 5%, var(--package-surface)); border: 1px solid var(--soft-line); }
+  .leetcode-visual img { width: 100%; height: 100%; display: block; object-fit: contain; object-position: center; }
   .work-preview { padding: 28px 36px 54px; }
   .work-grid { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 30px; }
   .work-heading { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; }
@@ -627,7 +630,7 @@ const HomeStyled = styled.div`
   .timeline p { margin-top: 7px; color: var(--muted); font-size: 12px; line-height: 1.45; }
   @media (max-width: 1220px) { .hero { min-height: 640px; grid-template-columns: minmax(470px, 1fr) 390px; gap: 12px; } .hero-photo-wrap, .hero-photo-wrap figure { width: 390px; } .manifesto { display: none; } .project-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 900px) { .hero { min-height: auto; grid-template-columns: 1fr; padding-inline: 24px; } .hero-photo-wrap { width: min(100%, 390px); justify-self: start; } .hero-photo-wrap figure { width: min(100%, 390px); height: auto; } .photo-sticky { display: none; } .recognition-heading, .packages-heading, .developer-heading { grid-template-columns: 1fr; } .recognition-grid, .developer-grid { grid-template-columns: 1fr; } .times-square { grid-template-columns: 1fr; } .times-square .recognition-media { aspect-ratio: 16 / 9; } .work-grid { grid-template-columns: 1fr; } .building { padding: 28px 0 0; border-left: 0; border-top: 1px solid var(--line); } }
-  @media (max-width: 680px) { .hero, .recognition, .packages, .developer-stats, .work-preview { padding-inline: 18px; } .hero-copy h1 { font-size: clamp(68px, 24vw, 102px); } .stats { display: grid; grid-template-columns: repeat(3, 1fr); } .stats div { min-width: 0; padding: 0 10px 0 0; } .stats div + div { padding-left: 10px; } .stats b { font-size: 23px; } .actions { flex-direction: column; } .note { left: 0; } .compact { grid-template-columns: 1fr; } .compact .recognition-media, .compact .paper-visual { min-height: 190px; } .package-grid { grid-template-columns: 1fr; } .package-card { min-height: 250px; } .package-downloads { align-items: flex-start; flex-direction: column; } .package-downloads strong { font-size: 52px; } .github-card, .leetcode-card { padding: 18px; } .github-numbers { grid-template-columns: repeat(2, 1fr); } .github-numbers div:nth-child(3) { border-left: 0; } .contribution-map { overflow-x: auto; } .streak-panel { grid-template-columns: 1fr; } .project-grid { grid-template-columns: 1fr; } .project-body > p { min-height: 0; } .work-heading { grid-template-columns: 1fr; } }
+  @media (max-width: 680px) { .hero, .recognition, .packages, .developer-stats, .work-preview { padding-inline: 18px; } .hero-copy h1 { font-size: clamp(68px, 24vw, 102px); } .stats { display: grid; grid-template-columns: repeat(3, 1fr); } .stats div { min-width: 0; padding: 0 10px 0 0; } .stats div + div { padding-left: 10px; } .stats b { font-size: 23px; } .actions { flex-direction: column; } .note { left: 0; } .compact { grid-template-columns: 1fr; } .compact .recognition-media, .compact .paper-visual { min-height: 190px; } .package-grid { grid-template-columns: 1fr; } .package-card { min-height: 246px; } .package-downloads { align-items: flex-start; flex-direction: column; } .package-downloads strong { font-size: 42px; } .github-card, .leetcode-card { padding: 18px; } .github-numbers { grid-template-columns: repeat(2, 1fr); } .github-numbers div:nth-child(3) { border-left: 0; } .github-activity-panels { grid-template-columns: 1fr; } .contribution-map { overflow-x: auto; } .latest-repo { grid-template-columns: 1fr; grid-template-areas: 'meta' 'title' 'action'; } .latest-repo .text-link { margin-top: 7px; } .project-grid { grid-template-columns: 1fr; } .project-body > p { min-height: 0; } .work-heading { grid-template-columns: 1fr; } }
   @media (hover: none) { .project-peek { opacity: .9; transform: none; } }
 `;
 
