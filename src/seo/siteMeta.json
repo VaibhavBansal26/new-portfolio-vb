@@ -1,0 +1,43 @@
+{
+  "/": {
+    "title": "Vaibhav Bansal — AI Software Engineer & Full-Stack Developer",
+    "description": "Vaibhav Bansal is an AI software engineer with 5+ years of experience building scalable full-stack, data and machine-learning products with Python, React and AWS.",
+    "type": "ProfilePage"
+  },
+  "/about": {
+    "title": "About Vaibhav Bansal — AI Engineer & Software Developer",
+    "description": "Meet Vaibhav Bansal, an AI software engineer and SUNY Buffalo Data Science graduate focused on practical AI, full-stack products and dependable data systems.",
+    "type": "ProfilePage"
+  },
+  "/resume": {
+    "title": "Experience — Vaibhav Bansal | AI & Software Engineering",
+    "description": "Explore Vaibhav Bansal's software engineering, AI, teaching and data experience across DashClicks, Wipro and the University at Buffalo.",
+    "type": "ProfilePage"
+  },
+  "/portfolios": {
+    "title": "AI, Data & Full-Stack Projects — Vaibhav Bansal",
+    "description": "Browse Vaibhav Bansal's portfolio of AI systems, machine-learning products, data platforms, developer tools and full-stack applications.",
+    "type": "CollectionPage"
+  },
+  "/blogs": {
+    "title": "Writing & Videos — Vaibhav Bansal | AI and Software Engineering",
+    "description": "Articles and videos by Vaibhav Bansal about AI systems, RAG, developer tooling, web architecture, data engineering and building useful software.",
+    "type": "CollectionPage"
+  },
+  "/certification": {
+    "title": "Credentials & Certifications — Vaibhav Bansal",
+    "description": "View Vaibhav Bansal's verified credentials in data science, machine learning, cloud computing, software engineering and web development.",
+    "type": "CollectionPage"
+  },
+  "/contact": {
+    "title": "Contact Vaibhav Bansal — AI Software Engineer",
+    "description": "Contact Vaibhav Bansal about AI engineering, full-stack development, data systems, open-source collaboration and product opportunities.",
+    "type": "ContactPage"
+  },
+  "404": {
+    "title": "Page Not Found — Vaibhav Bansal",
+    "description": "The requested page could not be found.",
+    "type": "WebPage",
+    "noindex": true
+  }
+}

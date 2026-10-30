@@ -1,75 +1,61 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import React, { Suspense, useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
-import Edith from './Components/Edith';
-import ThemeDecor from './Components/ThemeDecor';
-import CursorGlow from './Components/CursorGlow';
 import HomePage from './Pages/HomePage';
-import AboutPage from './Pages/AboutPage';
-import ResumePage from './Pages/ResumePage';
-import PortfolioPage from './Pages/PortfolioPage';
-import BlogsPage from './Pages/BlogsPage';
-import ContactPage from './Pages/ContactPage';
-import CertificationPage from './Pages/CertificationPage';
-import NotFoundPage from './Pages/NotFoundPage';
+
+const AboutPage = React.lazy(() => import('./Pages/AboutPage'));
+const ResumePage = React.lazy(() => import('./Pages/ResumePage'));
+const PortfolioPage = React.lazy(() => import('./Pages/PortfolioPage'));
+const BlogsPage = React.lazy(() => import('./Pages/BlogsPage'));
+const ContactPage = React.lazy(() => import('./Pages/ContactPage'));
+const CertificationPage = React.lazy(() => import('./Pages/CertificationPage'));
+const NotFoundPage = React.lazy(() => import('./Pages/NotFoundPage'));
 
 function App() {
-  const [theme, setTheme] = useState(
-    () => localStorage.getItem('vb-theme') || 'dark-theme'
-  );
   const location = useLocation();
+  const [theme, setTheme] = useState(() => localStorage.getItem('vb-theme') || 'porcelain');
 
   useEffect(() => {
-    document.documentElement.className = theme;
+    document.documentElement.dataset.theme = theme;
     localStorage.setItem('vb-theme', theme);
   }, [theme]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [location.pathname]);
+
   return (
-    <div className="App">
-      <div className="aurora" aria-hidden="true">
-        <div className="blob blob-1"></div>
-        <div className="blob blob-2"></div>
-        <div className="blob blob-3"></div>
-      </div>
-      <div className="grid-overlay" aria-hidden="true"></div>
-      <CursorGlow />
-      <ThemeDecor theme={theme} />
-
+    <div className="site-app">
       <Navbar theme={theme} setTheme={setTheme} />
-
-      <AnimatePresence mode="wait">
-        <MainContentStyled
-          key={location.pathname}
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -12 }}
-          transition={{ duration: 0.35, ease: 'easeOut' }}
-        >
-          <Routes location={location}>
-            <Route path="/" element={<HomePage theme={theme} />} />
-            <Route path="/about" element={<AboutPage theme={theme} />} />
-            <Route path="/resume" element={<ResumePage theme={theme} />} />
-            <Route path="/portfolios" element={<PortfolioPage />} />
-            <Route path="/blogs" element={<BlogsPage />} />
-            <Route path="/certification" element={<CertificationPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-          <Footer />
-        </MainContentStyled>
-      </AnimatePresence>
-
-      <Edith />
+      <div className="app-main">
+        <AnimatePresence mode="wait">
+          <motion.main
+            key={location.pathname}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: .28, ease: 'easeOut' }}
+          >
+            <Suspense fallback={<div className="route-loading" role="status" aria-live="polite">Loading page…</div>}>
+              <Routes location={location}>
+                <Route path="/" element={<HomePage theme={theme} />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/resume" element={<ResumePage />} />
+                <Route path="/portfolios" element={<PortfolioPage />} />
+                <Route path="/blogs" element={<BlogsPage />} />
+                <Route path="/certification" element={<CertificationPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </Suspense>
+          </motion.main>
+        </AnimatePresence>
+        <Footer />
+      </div>
     </div>
   );
 }
-
-const MainContentStyled = styled(motion.main)`
-  position: relative;
-  min-height: 100vh;
-`;
 
 export default App;

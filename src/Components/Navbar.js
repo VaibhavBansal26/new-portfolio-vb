@@ -1,445 +1,174 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import PaletteIcon from '@mui/icons-material/Palette';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-
-const themes = [
-    { id: 'dark-theme', label: 'dark', dot: '#2DE0A5' },
-    { id: 'light-theme', label: 'light', dot: '#059669' },
-    { id: 'hp-theme', label: 'harry potter', dot: '#D3A625' },
-    { id: 'ironman-theme', label: 'iron man', dot: '#E23636' },
-    { id: 'netflix-theme', label: 'netflix', dot: '#E50914' },
-    { id: 'got-theme', label: 'game of thrones', dot: '#A8D7E8' },
-];
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
+import ArrowOutwardRoundedIcon from '@mui/icons-material/ArrowOutwardRounded';
 
 const links = [
-    { to: '/', label: 'home' },
-    { to: '/about', label: 'about' },
-    { to: '/resume', label: 'resume' },
-    { to: '/portfolios', label: 'work' },
-    { to: '/blogs', label: 'blogs' },
-    { to: '/certification', label: 'certs' },
-    { to: '/contact', label: 'contact' },
+  ['/', 'Work', '01'],
+  ['/about', 'About', '02'],
+  ['/resume', 'Experience', '03'],
+  ['/portfolios', 'Projects', '04'],
+  ['/blogs', 'Writing', '05'],
+  ['/certification', 'Credentials', '06'],
+  ['/contact', 'Contact', '07'],
 ];
 
-function Navbar({ theme, setTheme }) {
-    const [open, setOpen] = useState(false);
-    const [themeMenu, setThemeMenu] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+const themes = [
+  ['porcelain', 'Porcelain', '#5b5bd6'],
+  ['midnight', 'Midnight', '#8f91ff'],
+  ['clay', 'Clay', '#c2553f'],
+  ['arctic', 'Arctic', '#147d91'],
+];
 
-    useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 12);
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
-        return () => window.removeEventListener('scroll', onScroll);
-    }, []);
-
-    return (
-        <>
-            <NavbarStyled className={scrolled ? 'scrolled' : ''}>
-                <div className="inner">
-                    <NavLink to="/" className="logo" aria-label="Home">
-                        <span className="tag">&lt;</span>vb<span className="tag">&nbsp;/&gt;</span>
-                    </NavLink>
-
-                    <ul className="links">
-                        {links.map((l, i) => (
-                            <li key={l.to}>
-                                <NavLink to={l.to} end={l.to === '/'}>
-                                    <span className="num">0{i + 1}.</span>
-                                    {l.label}
-                                </NavLink>
-                            </li>
-                        ))}
-                    </ul>
-
-                    <div className="availability mono">
-                        <span className="signal" />
-                        <div>
-                            <strong>available for work</strong>
-                            <p>AI engineering · full-stack</p>
-                        </div>
-                    </div>
-
-                    <div className="actions">
-                        <div className="theme-picker">
-                            <button
-                                className="icon-btn"
-                                onClick={() => setThemeMenu(!themeMenu)}
-                                aria-label="Choose theme"
-                                aria-expanded={themeMenu}
-                            >
-                                <PaletteIcon />
-                            </button>
-                            {themeMenu && (
-                                <>
-                                    <div className="backdrop" onClick={() => setThemeMenu(false)} />
-                                    <ul className="theme-menu">
-                                        {themes.map((t) => (
-                                            <li key={t.id}>
-                                                <button
-                                                    className={`mono ${theme === t.id ? 'current' : ''}`}
-                                                    onClick={() => { setTheme(t.id); setThemeMenu(false); }}
-                                                >
-                                                    <span className="dot" style={{ background: t.dot }} />
-                                                    {t.label}
-                                                </button>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </>
-                            )}
-                        </div>
-                        <span className="theme-label mono">theme</span>
-                        <div className="theme-swatches" aria-label="Quick theme selection">
-                            {themes.map((t) => (
-                                <button
-                                    key={t.id}
-                                    className={theme === t.id ? 'selected' : ''}
-                                    style={{ '--swatch': t.dot }}
-                                    onClick={() => setTheme(t.id)}
-                                    aria-label={`Use ${t.label} theme`}
-                                    title={t.label}
-                                />
-                            ))}
-                        </div>
-                        <button
-                            className="icon-btn menu-btn"
-                            onClick={() => setOpen(true)}
-                            aria-label="Open menu"
-                        >
-                            <MenuIcon />
-                        </button>
-                    </div>
-                </div>
-            </NavbarStyled>
-
-            <MobileMenuStyled className={open ? 'open' : ''}>
-                <button
-                    className="close-btn"
-                    onClick={() => setOpen(false)}
-                    aria-label="Close menu"
-                >
-                    <CloseIcon />
-                </button>
-                <ul>
-                    {links.map((l, i) => (
-                        <li key={l.to} style={{ transitionDelay: `${0.05 * i + 0.1}s` }}>
-                            <NavLink to={l.to} end={l.to === '/'} onClick={() => setOpen(false)}>
-                                <span className="num">0{i + 1}.</span>
-                                {l.label}
-                            </NavLink>
-                        </li>
-                    ))}
-                </ul>
-            </MobileMenuStyled>
-        </>
-    );
+function ThemePicker({ theme, setTheme }) {
+  return (
+    <div className="theme-picker" role="group" aria-label="Choose color theme">
+      <span className="mono">Theme</span>
+      <div>
+        {themes.map(([id, label, color]) => (
+          <button
+            key={id}
+            type="button"
+            className={theme === id ? 'active' : ''}
+            style={{ '--swatch': color }}
+            onClick={() => setTheme(id)}
+            aria-label={`Use ${label} theme`}
+            aria-pressed={theme === id}
+            title={label}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
-const NavbarStyled = styled.nav`
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 50;
-    background: transparent;
-    border-bottom: 1px solid transparent;
-    backdrop-filter: blur(18px) saturate(1.4);
-    -webkit-backdrop-filter: blur(18px) saturate(1.4);
-    transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease;
+function Navbar({ theme, setTheme }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <Rail>
+        <div className="rail-top">
+          <NavLink to="/" className="mark" aria-label="Vaibhav Bansal home">&lt;vb /&gt;</NavLink>
+          <span className="edition mono">Portfolio · 2026</span>
+        </div>
+        <nav aria-label="Primary navigation">
+          <div className="rail-heading">
+            <span className="rail-label mono">Index</span>
+            <span className="rail-count mono">07 pages</span>
+          </div>
+          {links.map(([to, label, no]) => (
+            <NavLink key={to} to={to} end={to === '/'}>
+              <span className="nav-index mono">{no}</span>
+              <span className="nav-label">{label}</span>
+              <ArrowOutwardRoundedIcon />
+            </NavLink>
+          ))}
+        </nav>
+        <ThemePicker theme={theme} setTheme={setTheme} />
+        <div className="rail-meta">
+          <span className="availability"><i /> Available for work</span>
+          <p className="mono">Buffalo, NY · worldwide</p>
+          <a className="resume" href="https://drive.google.com/file/d/16RVmz7PSKI6z7hhHtsfgoH-s3QkNuDU2/view?usp=sharing" target="_blank" rel="noreferrer">
+            <DownloadRoundedIcon /> résumé
+          </a>
+          <div className="socials">
+            <a href="https://github.com/VaibhavBansal26" aria-label="GitHub"><GitHubIcon /></a>
+            <a href="https://www.linkedin.com/in/vaibhavbansal-profile/" aria-label="LinkedIn"><LinkedInIcon /></a>
+            <a href="mailto:vaibhav.bansal945@gmail.com" aria-label="Email"><MailOutlineIcon /></a>
+          </div>
+        </div>
+      </Rail>
 
-    &.scrolled{
-        background: var(--nav-bg);
-        border-bottom: 1px solid var(--glass-border);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, .15);
-    }
+      <MobileBar>
+        <NavLink to="/" className="mark" aria-label="Home">&lt;vb /&gt;</NavLink>
+        <span className="availability"><i /> Available</span>
+        <button onClick={() => setOpen(!open)} aria-expanded={open} aria-label={open ? 'Close menu' : 'Open menu'}>
+          {open ? <CloseRoundedIcon /> : <MenuRoundedIcon />}
+        </button>
+      </MobileBar>
+      <MobileMenu className={open ? 'open' : ''}>
+        {links.map(([to, label], index) => (
+          <NavLink key={to} to={to} end={to === '/'} onClick={() => setOpen(false)}>
+            <span className="mono">0{index + 1}</span>{label}
+          </NavLink>
+        ))}
+        <ThemePicker theme={theme} setTheme={setTheme} />
+      </MobileMenu>
+    </>
+  );
+}
 
-    .inner{
-        max-width: 76rem;
-        margin: 0 auto;
-        height: 4.2rem;
-        padding: 0 clamp(1.2rem, 4vw, 3rem);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-    }
-
-    .logo{
-        font-family: var(--font-mono);
-        font-weight: 700;
-        font-size: 1.05rem;
-        color: var(--white-color);
-        letter-spacing: -0.03em;
-        white-space: nowrap;
-        .tag{
-            color: var(--primary-color);
-            font-family: var(--font-mono);
-            font-weight: 500;
-        }
-        &:hover .tag{
-            text-shadow: 0 0 12px var(--primary-glow);
-        }
-    }
-
-    .links{
-        display: flex;
-        align-items: center;
-        gap: clamp(.6rem, 1.8vw, 1.7rem);
-        li a{
-            display: inline-flex;
-            align-items: baseline;
-            gap: .35rem;
-            font-family: var(--font-mono);
-            font-size: .8rem;
-            font-weight: 500;
-            color: var(--font-light-color);
-            padding: .35rem 0;
-            position: relative;
-            transition: color .2s ease;
-            .num{
-                font-family: var(--font-mono);
-                font-size: .68rem;
-                color: var(--primary-color);
-                opacity: .85;
-            }
-            &::after{
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 0;
-                height: 1.5px;
-                background: var(--primary-color);
-                transition: width .25s ease;
-            }
-            &:hover{
-                color: var(--white-color);
-            }
-            &.active{
-                color: var(--white-color);
-                &::after{
-                    width: 100%;
-                }
-            }
-        }
-    }
-
-    .actions{
-        display: flex;
-        align-items: center;
-        gap: .3rem;
-    }
-
-    .availability{
-        display: none;
-    }
-
-    .theme-label{
-        margin-left: .45rem;
-        color: var(--font-light-color);
-        font-size: .62rem;
-        letter-spacing: .08em;
-        text-transform: uppercase;
-    }
-
-    .theme-swatches{
-        display: flex;
-        align-items: center;
-        gap: .55rem;
-
-        button{
-            width: .68rem;
-            height: .68rem;
-            padding: 0;
-            border: 0;
-            border-radius: 50%;
-            background: var(--swatch);
-            box-shadow: 0 0 0 1px var(--glass-border);
-            cursor: pointer;
-            transition: transform .2s ease, box-shadow .2s ease;
-
-            &:hover{
-                transform: scale(1.2);
-            }
-
-            &.selected{
-                box-shadow:
-                    0 0 0 2px var(--background-dark-color),
-                    0 0 0 3px var(--swatch),
-                    0 0 12px var(--swatch);
-            }
-        }
-    }
-
-    .icon-btn{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 2.25rem;
-        height: 2.25rem;
-        border-radius: 8px;
-        border: 1px solid var(--glass-border);
-        background: transparent;
-        color: var(--font-light-color);
-        cursor: pointer;
-        transition: color .2s ease, border-color .2s ease, background-color .2s ease;
-        svg{
-            font-size: 1.1rem;
-        }
-        &:hover{
-            color: var(--primary-color);
-            border-color: var(--primary-color);
-            background: var(--background-light-color-2);
-        }
-    }
-
-    .menu-btn{
-        display: none;
-    }
-
-    .theme-picker{
-        position: relative;
-        .backdrop{
-            position: fixed;
-            inset: 0;
-            z-index: 1;
-        }
-        .theme-menu{
-            position: absolute;
-            top: calc(100% + .6rem);
-            right: 0;
-            z-index: 2;
-            min-width: 11rem;
-            padding: .4rem;
-            border-radius: 12px;
-            border: 1px solid var(--glass-border);
-            background: var(--nav-bg);
-            backdrop-filter: blur(20px) saturate(1.4);
-            -webkit-backdrop-filter: blur(20px) saturate(1.4);
-            box-shadow: 0 16px 44px rgba(0, 0, 0, .35);
-            li button{
-                display: flex;
-                align-items: center;
-                gap: .6rem;
-                width: 100%;
-                padding: .5rem .7rem;
-                border: none;
-                border-radius: 8px;
-                background: transparent;
-                color: var(--font-light-color);
-                font-size: .8rem;
-                cursor: pointer;
-                transition: background-color .15s ease, color .15s ease;
-                .dot{
-                    width: .6rem;
-                    height: .6rem;
-                    border-radius: 50%;
-                    flex-shrink: 0;
-                }
-                &:hover{
-                    background: var(--background-light-color-2);
-                    color: var(--white-color);
-                }
-                &.current{
-                    color: var(--primary-color);
-                    background: var(--background-light-color-2);
-                }
-            }
-        }
-    }
-
-    @media screen and (max-width: 900px){
-        .links{
-            display: none;
-        }
-        .menu-btn{
-            display: flex;
-        }
-        .theme-label,
-        .theme-swatches{
-            display: none;
-        }
-    }
-
-    @media screen and (max-width: 1100px){
-        .theme-label,
-        .theme-swatches{
-            display: none;
-        }
-    }
-
+const Rail = styled.aside`
+  position: fixed; inset: 0 auto 0 0; width: var(--rail-width); z-index: 40;
+  display: flex; flex-direction: column; color: white; background: var(--rail);
+  padding: 28px 16px 22px;
+  .rail-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 0 8px 18px; border-bottom: 1px solid rgba(255,255,255,.13); }
+  .mark { font-family: var(--mono); font-weight: 700; font-size: 21px; letter-spacing: -.06em; }
+  .edition { color: rgba(255,255,255,.45); font-size: 7px; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
+  nav { display: flex; flex-direction: column; gap: 6px; margin-top: 28px; }
+  .rail-heading { display: flex; align-items: center; justify-content: space-between; margin: 0 9px 9px; }
+  .rail-label, .rail-count { color: rgba(255,255,255,.42); font-size: 8px; letter-spacing: .12em; text-transform: uppercase; }
+  nav a { position: relative; display: grid; grid-template-columns: 25px 1fr 16px; align-items: center; min-height: 42px; padding: 0 10px; border: 1px solid transparent; color: rgba(255,255,255,.64); transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s ease; }
+  nav a:hover { color: white; background: rgba(255,255,255,.055); transform: translateX(3px); }
+  nav a.active { color: white; background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.14); }
+  .nav-index { color: rgba(255,255,255,.37); font-size: 8px; }
+  .nav-label { font-size: 13px; font-weight: 600; letter-spacing: -.01em; }
+  nav a svg { width: 15px; height: 15px; opacity: 0; transform: translate(-4px, 4px); transition: opacity .2s ease, transform .2s ease; }
+  nav a:hover svg, nav a.active svg { opacity: 1; transform: translate(0, 0); }
+  nav a.active .nav-index { color: var(--mint); }
+  .theme-picker { margin-top: 24px; padding: 18px 8px 0; border-top: 1px solid rgba(255,255,255,.13); }
+  .theme-picker > span { display: block; margin-bottom: 8px; color: rgba(255,255,255,.52); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+  .theme-picker > div { display: flex; gap: 8px; }
+  .theme-picker button { width: 19px; height: 19px; padding: 0; border: 2px solid transparent; border-radius: 50%; background: var(--swatch); cursor: pointer; box-shadow: 0 0 0 1px rgba(255,255,255,.34); transition: transform .2s ease, border-color .2s ease; }
+  .theme-picker button:hover { transform: scale(1.14); }
+  .theme-picker button.active { border-color: white; transform: scale(1.14); }
+  .rail-meta { margin-top: auto; padding: 18px 8px 0; border-top: 1px solid rgba(255,255,255,.13); }
+  .rail-meta > p { margin-top: 12px; color: rgba(255,255,255,.58); font-size: 8px; line-height: 1.5; }
+  .availability { display: flex; align-items: center; gap: 7px; margin-top: 0; font-size: 11px; }
+  .availability i { width: 8px; height: 8px; border-radius: 50%; background: var(--mint-strong); box-shadow: 0 0 0 4px rgba(57,189,130,.16); }
+  .resume { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 16px; padding: 10px; border: 1px solid rgba(255,255,255,.28); font-size: 11px; transition: background .2s ease, border-color .2s ease; }
+  .resume:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.55); }
+  .resume svg { font-size: 16px; }
+  .socials { display: flex; gap: 9px; margin-top: 18px; }
+  .socials svg { font-size: 17px; }
+  .socials a { color: rgba(255,255,255,.75); }
+  .socials a:hover { color: var(--mint); }
+  @media (max-width: 980px) { display: none; }
 `;
 
-const MobileMenuStyled = styled.div`
-    position: fixed;
-    inset: 0;
-    z-index: 60;
-    background: var(--nav-bg);
-    backdrop-filter: blur(24px) saturate(1.4);
-    -webkit-backdrop-filter: blur(24px) saturate(1.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .3s ease, visibility .3s ease;
+const MobileBar = styled.header`
+  display: none;
+  @media (max-width: 980px) {
+    position: fixed; inset: 0 0 auto; z-index: 55; height: 72px; padding: 0 20px;
+    display: flex; align-items: center; justify-content: space-between; color: white; background: var(--rail);
+    .mark { font-family: var(--mono); font-weight: 700; }
+    button { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.28); background: transparent; color: white; }
+    .availability { display: flex; align-items: center; gap: 7px; font-size: 11px; }
+    .availability i { width: 7px; height: 7px; border-radius: 50%; background: var(--mint-strong); }
+  }
+`;
 
-    &.open{
-        opacity: 1;
-        visibility: visible;
-        li{
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .close-btn{
-        position: absolute;
-        top: 1.3rem;
-        right: 1.3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 2.8rem;
-        height: 2.8rem;
-        border-radius: 10px;
-        border: 1px solid var(--glass-border);
-        background: var(--glass-bg);
-        color: var(--white-color);
-        cursor: pointer;
-    }
-
-    ul{
-        text-align: left;
-        li{
-            opacity: 0;
-            transform: translateY(14px);
-            transition: opacity .35s ease, transform .35s ease;
-            a{
-                display: flex;
-                align-items: baseline;
-                gap: .8rem;
-                font-family: var(--font-mono);
-                font-size: 1.7rem;
-                font-weight: 600;
-                padding: .6rem 2rem;
-                color: var(--white-color);
-                .num{
-                    font-family: var(--font-mono);
-                    font-size: .95rem;
-                    color: var(--primary-color);
-                }
-                &.active,
-                &:hover{
-                    color: var(--primary-color);
-                }
-            }
-        }
-    }
+const MobileMenu = styled.nav`
+  display: none;
+  @media (max-width: 980px) {
+    position: fixed; inset: 72px 0 auto; z-index: 54; padding: 20px; background: var(--rail); transform: translateY(-120%); transition: transform .28s ease;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px;
+    &.open { transform: translateY(0); }
+    a { display: flex; gap: 10px; padding: 12px; color: rgba(255,255,255,.7); }
+    a.active { color: white; background: rgba(255,255,255,.08); }
+    a span { color: var(--mint); font-size: 10px; }
+    .theme-picker { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; margin-top: 8px; padding: 14px 12px 4px; border-top: 1px solid rgba(255,255,255,.14); }
+    .theme-picker > span { color: rgba(255,255,255,.65); font-size: 10px; text-transform: uppercase; letter-spacing: .1em; }
+    .theme-picker > div { display: flex; gap: 12px; }
+    .theme-picker button { width: 22px; height: 22px; padding: 0; border: 2px solid transparent; border-radius: 50%; background: var(--swatch); box-shadow: 0 0 0 1px rgba(255,255,255,.35); }
+    .theme-picker button.active { border-color: white; }
+  }
 `;
 
 export default Navbar;

@@ -1,45 +1,45 @@
-import pizza from '../img/portImages/pizza.png';
-import chat from '../img/portImages/chat.png';
-import clothing from '../img/portImages/clothing.png';
+import pizza from '../img/portImages/pizza.webp';
+import chat from '../img/portImages/chat.webp';
+import clothing from '../img/portImages/clothing.webp';
 
 
-import movie from '../img/portImages/movie.png';
-import tinder from '../img/portImages/tinder.png';
-import zoom from '../img/portImages/zoom.png';
+import movie from '../img/portImages/movie.webp';
+import tinder from '../img/portImages/tinder.webp';
+import zoom from '../img/portImages/zoom.webp';
 
-import twitter from '../img/portImages/twitter.png';
-import slack from '../img/portImages/slack.png';
-import whatsapp from '../img/portImages/whatsapp.png';
+import twitter from '../img/portImages/twitter.webp';
+import slack from '../img/portImages/slack.webp';
+import whatsapp from '../img/portImages/whatsapp.webp';
 
-import spotify from '../img/portImages/spotify.png';
-import yt1 from '../img/portImages/mern-yt-2.PNG';
-import instagram from '../img/portImages/instagram.png';
+import spotify from '../img/portImages/spotify.webp';
+import yt1 from '../img/portImages/mern-yt-2.webp';
+import instagram from '../img/portImages/instagram.webp';
 
-import tour from '../img/portImages/tour.png';
-import natural from '../img/portImages/natural-disaster.png';
-import hulu from '../img/portImages/hulu.PNG';
+import tour from '../img/portImages/tour.webp';
+import natural from '../img/portImages/natural-disaster.webp';
+import hulu from '../img/portImages/hulu.webp';
 
-import news from '../img/portImages/news.PNG';
-import nba from '../img/portImages/nba.PNG';
-import artist from '../img/portImages/martist.PNG';
+import news from '../img/portImages/news.webp';
+import nba from '../img/portImages/nba.webp';
+import artist from '../img/portImages/martist.webp';
 
-import prime from '../img/portImages/prime1.PNG';
-import linkedin from '../img/portImages/linkedin.PNG';
-import trello from '../img/portImages/trello.PNG';
+import prime from '../img/portImages/prime1.webp';
+import linkedin from '../img/portImages/linkedin.webp';
+import trello from '../img/portImages/trello.webp';
 
-import tiktok from '../img/portImages/tiktok.PNG';
-import covid from '../img/portImages/covid.PNG';
-import disney from '../img/portImages/disney.PNG';
+import tiktok from '../img/portImages/tiktok.webp';
+import covid from '../img/portImages/covid.webp';
+import disney from '../img/portImages/disney.webp';
 
-import youtube from '../img/portImages/yt.PNG';
-import facebook from '../img/portImages/facebook.PNG';
-import airbnb from '../img/portImages/airbnb.PNG';
+import youtube from '../img/portImages/yt.webp';
+import facebook from '../img/portImages/facebook.webp';
+import airbnb from '../img/portImages/airbnb.webp';
 
-import netflix from '../img/portImages/netflix.PNG';
-import pizzaDev from '../img/portImages/pizzaDev.PNG';
-import amazon from '../img/portImages/amazon.PNG';
-import vbSearchBlog from '../img/portImages/vsSearchBlog.png';
-import gpac from '../img/portImages/gpac.png';
+import netflix from '../img/portImages/netflix.webp';
+import pizzaDev from '../img/portImages/pizzaDev.webp';
+import amazon from '../img/portImages/amazon.webp';
+import vbSearchBlog from '../img/portImages/vsSearchBlog.webp';
+import gpac from '../img/portImages/gpac.webp';
 
 
 const portfolios = [

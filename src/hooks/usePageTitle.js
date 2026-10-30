@@ -1,12 +1,70 @@
 import { useEffect } from 'react';
+import siteMeta from '../seo/siteMeta.json';
 
-const BASE = 'Vaibhav Bansal';
+const SITE_URL = 'https://vaibhavbansal.in';
+const SOCIAL_IMAGE = `${SITE_URL}/og-vaibhav-bansal.jpg`;
+
+const normalizePath = pathname => {
+    if (!pathname || pathname === '/') return '/';
+    return pathname.replace(/\/+$/, '');
+};
+
+const upsertMeta = (selector, attributes) => {
+    let element = document.head.querySelector(selector);
+    if (!element) {
+        element = document.createElement('meta');
+        document.head.appendChild(element);
+    }
+    Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
+};
+
+const upsertCanonical = href => {
+    let canonical = document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', href);
+};
 
 export default function usePageTitle(page) {
     useEffect(() => {
-        document.title = page ? `${page} | ${BASE}` : `${BASE} — AI Software Engineer`;
-        return () => {
-            document.title = `${BASE} — AI Software Engineer`;
-        };
+        const pathname = normalizePath(window.location.pathname);
+        const isNotFound = page === '404' || !siteMeta[pathname];
+        const meta = isNotFound ? siteMeta['404'] : siteMeta[pathname];
+        const canonicalUrl = isNotFound ? `${SITE_URL}${pathname}` : `${SITE_URL}${pathname === '/' ? '/' : pathname}`;
+
+        document.title = meta.title;
+        upsertMeta('meta[name="description"]', { name: 'description', content: meta.description });
+        upsertMeta('meta[name="robots"]', { name: 'robots', content: meta.noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large' });
+        upsertMeta('meta[property="og:title"]', { property: 'og:title', content: meta.title });
+        upsertMeta('meta[property="og:description"]', { property: 'og:description', content: meta.description });
+        upsertMeta('meta[property="og:type"]', { property: 'og:type', content: 'website' });
+        upsertMeta('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
+        upsertMeta('meta[property="og:image"]', { property: 'og:image', content: SOCIAL_IMAGE });
+        upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: meta.title });
+        upsertMeta('meta[name="twitter:description"]', { name: 'twitter:description', content: meta.description });
+        upsertMeta('meta[name="twitter:image"]', { name: 'twitter:image', content: SOCIAL_IMAGE });
+        upsertCanonical(canonicalUrl);
+
+        const previousRouteSchema = document.getElementById('route-structured-data');
+        if (previousRouteSchema) previousRouteSchema.remove();
+        if (!meta.noindex) {
+            const schema = document.createElement('script');
+            schema.id = 'route-structured-data';
+            schema.type = 'application/ld+json';
+            schema.textContent = JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': meta.type,
+                name: meta.title,
+                description: meta.description,
+                url: canonicalUrl,
+                isPartOf: { '@id': `${SITE_URL}/#website` },
+                about: { '@id': `${SITE_URL}/#person` },
+                inLanguage: 'en-US'
+            });
+            document.head.appendChild(schema);
+        }
     }, [page]);
 }
