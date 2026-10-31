@@ -43,6 +43,8 @@ import gpac from '../img/portImages/gpac.webp';
 import fidelityMemVisual from '../img/portImages/fidelitymem-system.svg';
 import shortsFactoryVisual from '../img/portImages/shorts-factory-studio.svg';
 import conversationsVisual from '../img/portImages/conversations-inbox.svg';
+import shopFlowVisual from '../img/portImages/shopflow-commerce.svg';
+import interviewSuiteVisual from '../img/portImages/interview-suite.svg';
 
 
 const portfolios = [
@@ -169,6 +171,36 @@ const portfolios = [
             signals: [{ value: '3 channels', label: 'Unified inbox' }, { value: '38 permissions', label: 'Access model' }],
         },
     },
+    {
+        id: 1009,
+        category: 'Commerce Platform',
+        image: shopFlowVisual,
+        link1: 'https://github.com/VaibhavBansal26/shopflow-ecommerce',
+        title: 'ShopFlow — Realtime Ecommerce Platform',
+        text: 'React, Node.js, Express, PostgreSQL, Redis, Socket.IO, React Native, FastAPI, Stripe, AI Recommendations',
+        featured: {
+            title: 'ShopFlow Commerce',
+            category: 'Realtime commerce platform',
+            copy: 'A multi-surface ecommerce system spanning shopper, admin, rider and conversational ordering, with live tracking, subscriptions and hybrid recommendations.',
+            tags: ['React', 'Node.js', 'PostgreSQL', 'Socket.IO'],
+            signals: [{ value: '4 surfaces', label: 'Product system' }, { value: 'Live orders', label: 'Realtime flow' }],
+        },
+    },
+    {
+        id: 1010,
+        category: 'AI Interviewing',
+        image: interviewSuiteVisual,
+        link1: 'https://github.com/VaibhavBansal26/interivew-suite',
+        title: 'Interview Suite — AI Mock Interview Workspace',
+        text: 'React 19, Vite, Express 5, OpenAI Realtime, WebRTC, React Flow, Python, Java, Voice AI',
+        featured: {
+            title: 'Interview Suite',
+            category: 'AI interview simulator',
+            copy: 'A private Amazon-style interview workspace with a realtime voice interviewer, coding execution, system-design canvases and production-debugging rounds.',
+            tags: ['React 19', 'OpenAI Realtime', 'WebRTC', 'Express'],
+            signals: [{ value: '4 round types', label: 'Practice system' }, { value: 'Live voice', label: 'Interview loop' }],
+        },
+    },
      {
         id: 94,
         category: 'Agentic AI',
@@ -195,6 +227,13 @@ const portfolios = [
         link3: 'http://164.92.96.19:8501/',
         title: 'Crypto Trade Prediction',
         text: 'Streamlit, Machine Learning, Docker, Digital Ocean, Python, DuckDB, RedPandas',
+        featured: {
+            title: 'Crypto Trade Prediction',
+            category: 'Fintech + ML',
+            copy: 'A deployable Streamlit workflow for predicting crypto price movement from live market data.',
+            tags: ['Streamlit', 'Machine Learning', 'Docker', 'DuckDB'],
+            signals: [{ value: 'Live market', label: 'Data source' }, { value: 'ML forecast', label: 'Model output' }],
+        },
     },
     {
         id: 93,

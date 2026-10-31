@@ -23,7 +23,7 @@ import { useGitHubStats, useNpmDownloadCounts } from '../hooks/useLiveData';
 
 const projects = portfolios
   .filter(project => project.featured)
-  .slice(0, 9)
+  .slice(0, 12)
   .map((project, index) => ({
     no: String(index + 1).padStart(2, '0'),
     title: project.title,
@@ -382,7 +382,11 @@ function HomePage({ theme }) {
         <div className="work-grid">
           <div className="project-area">
             <div className="work-heading">
-              <p className="section-index">04 / selected projects <strong><AnimatedNumber value={projects.length} pad={2} /> selected · <AnimatedNumber value={portfolios.length} /> in archive</strong></p>
+              <div>
+                <p className="section-index">04 / selected work</p>
+                <h2>My top <AnimatedNumber value={projects.length} />.</h2>
+                <p className="work-summary"><strong><AnimatedNumber value={projects.length} pad={2} /> selected</strong> from <AnimatedNumber value={portfolios.length} /> projects in the archive.</p>
+              </div>
               <Link className="text-link mono" to="/portfolios">View all projects <ArrowForwardRoundedIcon /></Link>
             </div>
             <motion.div className="project-grid" variants={projectGridMotion} initial={reduceMotion ? false : 'hidden'} whileInView={reduceMotion ? undefined : 'show'} viewport={{ once: true, amount: .08 }}>
@@ -548,9 +552,11 @@ const HomeStyled = styled.div`
   .leetcode-visual img { width: 100%; height: 100%; display: block; object-fit: contain; object-position: center; }
   .work-preview { padding: 28px 36px 54px; }
   .work-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
-  .work-heading { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; }
+  .work-heading { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px; }
+  .work-heading h2 { margin-top: 12px; font-family: var(--display); font-size: clamp(48px, 5.2vw, 82px); line-height: .88; letter-spacing: -.065em; }
+  .work-summary { margin-top: 14px; color: var(--muted); font-size: 14px; }
+  .work-summary strong { color: var(--blue); font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
   .work-heading .text-link { font-size: 11px; }
-  .work-heading .section-index strong { color: var(--blue); font-size: 10px; white-space: nowrap; }
   .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 24px; margin-top: 34px; }
   .project { position: relative; display: flex; min-width: 0; flex-direction: column; overflow: visible; background: var(--project-surface); border: 1px solid var(--soft-line); border-top: 3px solid var(--blue); box-shadow: 4px -5px 0 color-mix(in srgb, var(--blue) 9%, var(--paper)), 8px -10px 0 color-mix(in srgb, var(--blue) 5%, var(--paper)); transform-origin: 50% 100%; transform-style: preserve-3d; will-change: transform; transition: background .35s ease, border-color .25s ease, box-shadow .25s ease; }
   .project:hover, .project:focus-within { z-index: 4; border-color: var(--blue); box-shadow: 6px -7px 0 color-mix(in srgb, var(--blue) 13%, var(--paper)), 12px -14px 0 color-mix(in srgb, var(--blue) 7%, var(--paper)), 0 28px 68px rgba(15, 18, 29, .16); }
