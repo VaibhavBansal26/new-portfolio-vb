@@ -48,10 +48,12 @@ function InteractiveProjectCard({ project, index, total }) {
           <motion.img
             src={project.image}
             alt={`${project.title} interface`}
+            loading="eager"
+            decoding="async"
             style={reduceMotion ? undefined : { x: imageX, y: imageY }}
             variants={reduceMotion ? undefined : { hover: { scale: 1.095 } }}
           />
-          <motion.div className="project-image-shade" variants={reduceMotion ? undefined : { hover: { opacity: .92 } }} />
+          <motion.div className="project-image-shade" variants={reduceMotion ? undefined : { hover: { opacity: .06 } }} />
           <div className="project-image-meta mono">
             <span>/ {project.category || project.tags[0] || 'Product build'}</span>
             <span>{project.no} / {String(total).padStart(2, '0')}</span>

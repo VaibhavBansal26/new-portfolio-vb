@@ -19,13 +19,22 @@ import avatarNormal from '../img/avatar-uneven-cloth.webp';
 import avatarBurned from '../img/avatar-burned-cloth.webp';
 import ashParticles from '../img/ash-particles-v3.webp';
 import chatImage from '../img/portImages/chat.webp';
-import naturalImage from '../img/portImages/natural-disaster.webp';
 import portfolios from '../data/portfolios';
 import { useGitHubStats, useNpmDownloadCounts } from '../hooks/useLiveData';
 
+const selectedProjectImages = [
+  'https://res.cloudinary.com/vaibhav-codexpress/image/upload/f_auto,q_auto,c_limit,w_1280/v1760818635/Screenshot_2025-10-18_at_4.16.22_PM_yzy63g.png',
+  'https://res.cloudinary.com/vaibhav-codexpress/image/upload/f_auto,q_auto,c_limit,w_1280/v1747167771/Screenshot_2025-05-13_at_4.17.20_PM_nwvmud.png',
+  'https://res.cloudinary.com/vaibhav-codexpress/image/upload/f_auto,q_auto,c_limit,w_1280/v1746515810/Screenshot_2025-05-06_at_3.14.47_AM_nggebr.png',
+  'https://i.ytimg.com/vi/_bjaJZPFovM/maxresdefault.jpg',
+  'https://res.cloudinary.com/vaibhav-codexpress/image/upload/f_auto,q_auto,c_limit,w_1280/v1742416573/Screenshot_2025-03-19_at_4.35.52_PM_jwcpzu.png',
+  'https://i.ytimg.com/vi/ZcIbqeIAC0Y/maxresdefault.jpg',
+  'https://i.ytimg.com/vi/VKSf1NfdjTU/maxresdefault.jpg',
+];
+
 const projects = [
   { no: '01', title: 'Real-time Chat Application', image: chatImage, category: 'Real-time system', copy: 'A responsive messaging product with presence, group conversations, and reliable live updates.', tags: ['React', 'Firebase', 'Realtime'], signals: [{ value: 'Live presence', label: 'Realtime state' }, { value: 'Group chat', label: 'Core workflow' }], href: 'https://github.com/VaibhavBansal26/React-Chat-App' },
-  { no: '02', title: 'Natural Disaster Intelligence', image: naturalImage, category: 'Satellite + ML', copy: 'Data-driven signals for disaster preparedness using satellite data, ML models, and interactive maps.', tags: ['Python', 'React', 'AWS', 'Machine Learning'], signals: [{ value: 'Satellite data', label: 'Signal source' }, { value: 'ML + maps', label: 'Decision layer' }], href: 'https://github.com/VaibhavBansal26/Capstone-2020-Natural-Disaster-Prediction' },
+  { no: '02', title: 'Natural Disaster Intelligence', image: 'https://i.ytimg.com/vi/Gad5vz1Pkcc/maxresdefault.jpg', category: 'Satellite + ML', copy: 'Data-driven signals for disaster preparedness using satellite data, ML models, and interactive maps.', tags: ['Python', 'React', 'AWS', 'Machine Learning'], signals: [{ value: 'Satellite data', label: 'Signal source' }, { value: 'ML + maps', label: 'Decision layer' }], href: 'https://github.com/VaibhavBansal26/Capstone-2020-Natural-Disaster-Prediction' },
   ...portfolios.slice(0, 7).map((project, index) => ({
     no: String(index + 3).padStart(2, '0'),
     title: project.title,
@@ -38,7 +47,7 @@ const projects = [
       'Real-time Logs Processing',
       'Azure Medallion Architecture',
     ][index],
-    image: project.image,
+    image: selectedProjectImages[index] || project.image,
     category: ['AI copilot', 'Fintech + ML', 'Healthcare AI', 'MLOps system', 'Recommendation ML', 'Data engineering', 'Azure lakehouse'][index],
     copy: [
       'AI copilot for real-world disaster response using RAG and Azure AI services.',
@@ -574,20 +583,20 @@ const HomeStyled = styled.div`
   .leetcode-visual { display: grid; place-items: center; flex: 1; min-height: 270px; margin-top: 18px; padding: 10px; overflow: hidden; background: color-mix(in srgb, #f7a41d 5%, var(--package-surface)); border: 1px solid var(--soft-line); }
   .leetcode-visual img { width: 100%; height: 100%; display: block; object-fit: contain; object-position: center; }
   .work-preview { padding: 28px 36px 54px; }
-  .work-grid { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 30px; }
+  .work-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
   .work-heading { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; }
   .work-heading .text-link { font-size: 11px; }
   .work-heading .section-index strong { color: var(--blue); font-size: 10px; white-space: nowrap; }
-  .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 18px; margin-top: 36px; }
+  .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 24px; margin-top: 34px; }
   .project { position: relative; display: flex; min-width: 0; flex-direction: column; overflow: visible; background: var(--project-surface); border: 1px solid var(--soft-line); border-top: 3px solid var(--blue); box-shadow: 4px -5px 0 color-mix(in srgb, var(--blue) 9%, var(--paper)), 8px -10px 0 color-mix(in srgb, var(--blue) 5%, var(--paper)); transform-origin: 50% 100%; transform-style: preserve-3d; will-change: transform; transition: background .35s ease, border-color .25s ease, box-shadow .25s ease; }
   .project:hover, .project:focus-within { z-index: 4; border-color: var(--blue); box-shadow: 6px -7px 0 color-mix(in srgb, var(--blue) 13%, var(--paper)), 12px -14px 0 color-mix(in srgb, var(--blue) 7%, var(--paper)), 0 28px 68px rgba(15, 18, 29, .16); }
   .project:focus-within { box-shadow: 0 0 0 2px var(--mint-strong), 6px -7px 0 color-mix(in srgb, var(--blue) 13%, var(--paper)), 0 28px 68px rgba(15, 18, 29, .16); }
-  .project-media-shell { position: relative; padding: 10px 10px 0; overflow: hidden; background: color-mix(in srgb, var(--project-surface) 88%, var(--blue)); }
-  .project .image-frame { position: relative; height: auto; overflow: hidden; aspect-ratio: 16 / 10; border-bottom: 1px solid var(--line); }
+  .project-media-shell { position: relative; padding: 9px 9px 0; overflow: hidden; background: color-mix(in srgb, var(--project-surface) 88%, var(--blue)); }
+  .project .image-frame { position: relative; height: auto; overflow: hidden; aspect-ratio: 16 / 9; background: #0b1020; border-bottom: 1px solid var(--line); }
   .project .image-frame, .project .image-frame img { will-change: transform; }
-  .project .image-frame img { width: calc(100% + 16px); max-width: none; height: calc(100% + 12px); margin: -6px -8px; }
+  .project .image-frame img { width: calc(100% + 16px); max-width: none; height: calc(100% + 12px); margin: -6px -8px; object-fit: cover; object-position: center; filter: saturate(1.07) contrast(1.025); }
   .project .image-frame video { width: 100%; height: 100%; display: block; object-fit: cover; background: #080b12; }
-  .project-image-shade { position: absolute; inset: 0; z-index: 1; opacity: .36; pointer-events: none; background: rgba(7,11,21,.5); }
+  .project-image-shade { position: absolute; inset: 0; z-index: 1; opacity: .14; pointer-events: none; background: linear-gradient(180deg, rgba(7,11,21,.48) 0%, transparent 42%, rgba(7,11,21,.18) 100%); }
   .project-image-meta { position: absolute; inset: 0 0 auto; z-index: 2; min-height: 34px; display: flex; align-items: center; justify-content: space-between; padding: 0 10px; color: rgba(255,255,255,.92); background: rgba(7,11,21,.84); font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
   .project-signal-note { position: absolute; right: -1px; bottom: 10px; z-index: 3; min-width: 135px; display: flex; align-items: center; gap: 8px; padding: 9px 11px; color: var(--ink); background: var(--paper-strong); border: 1px solid var(--soft-line); box-shadow: 4px 5px 0 color-mix(in srgb, var(--ink) 9%, transparent); transform-origin: 100% 100%; }
   .project-signal-note > svg { flex: 0 0 auto; color: var(--mint-strong); font-size: 13px; }
@@ -619,18 +628,18 @@ const HomeStyled = styled.div`
   .project-cta:focus-visible { outline: 2px solid var(--mint-strong); outline-offset: -4px; }
   .project-cta-arrow { display: inline-flex; align-items: center; }
   .project-cta svg { font-size: 18px; }
-  .building { padding-left: 24px; border-left: 1px solid var(--line); }
-  .timeline { margin-top: 24px; }
-  .timeline article { position: relative; padding: 0 0 28px 28px; border-left: 1px solid #aeb0b5; }
-  .timeline article:last-child { border-left-color: transparent; }
-  .timeline .dot { position: absolute; left: -7px; top: 2px; width: 13px; height: 13px; border-radius: 50%; background: var(--paper); border: 1px solid #8e929b; }
+  .building { margin-top: 58px; padding-top: 26px; border-top: 1px solid var(--line); }
+  .timeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 22px; }
+  .timeline article { position: relative; min-width: 0; padding: 25px 24px 0 0; border-top: 1px solid #aeb0b5; }
+  .timeline article:last-child { border-top-color: #aeb0b5; }
+  .timeline .dot { position: absolute; left: 0; top: -7px; width: 13px; height: 13px; border-radius: 50%; background: var(--paper); border: 1px solid #8e929b; }
   .timeline .active .dot { background: var(--mint-strong); border-color: var(--mint-strong); box-shadow: 0 0 0 5px var(--mint); }
   .timeline small { color: #6b7079; font-size: 9px; text-transform: uppercase; }
   .timeline h3 { margin-top: 6px; font-size: 14px; line-height: 1.3; }
   .timeline p { margin-top: 7px; color: var(--muted); font-size: 12px; line-height: 1.45; }
   @media (max-width: 1220px) { .hero { min-height: 640px; grid-template-columns: minmax(470px, 1fr) 390px; gap: 12px; } .hero-photo-wrap, .hero-photo-wrap figure { width: 390px; } .manifesto { display: none; } .project-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 900px) { .hero { min-height: auto; grid-template-columns: 1fr; padding-inline: 24px; } .hero-photo-wrap { width: min(100%, 390px); justify-self: start; } .hero-photo-wrap figure { width: min(100%, 390px); height: auto; } .photo-sticky { display: none; } .recognition-heading, .packages-heading, .developer-heading { grid-template-columns: 1fr; } .recognition-grid, .developer-grid { grid-template-columns: 1fr; } .times-square { grid-template-columns: 1fr; } .times-square .recognition-media { aspect-ratio: 16 / 9; } .work-grid { grid-template-columns: 1fr; } .building { padding: 28px 0 0; border-left: 0; border-top: 1px solid var(--line); } }
-  @media (max-width: 680px) { .hero, .recognition, .packages, .developer-stats, .work-preview { padding-inline: 18px; } .hero-copy h1 { font-size: clamp(68px, 24vw, 102px); } .stats { display: grid; grid-template-columns: repeat(3, 1fr); } .stats div { min-width: 0; padding: 0 10px 0 0; } .stats div + div { padding-left: 10px; } .stats b { font-size: 23px; } .actions { flex-direction: column; } .note { left: 0; } .compact { grid-template-columns: 1fr; } .compact .recognition-media, .compact .paper-visual { min-height: 190px; } .package-grid { grid-template-columns: 1fr; } .package-card { min-height: 246px; } .package-downloads { align-items: flex-start; flex-direction: column; } .package-downloads strong { font-size: 42px; } .github-card, .leetcode-card { padding: 18px; } .github-numbers { grid-template-columns: repeat(2, 1fr); } .github-numbers div:nth-child(3) { border-left: 0; } .github-activity-panels { grid-template-columns: 1fr; } .contribution-map { overflow-x: auto; } .latest-repo { grid-template-columns: 1fr; grid-template-areas: 'meta' 'title' 'action'; } .latest-repo .text-link { margin-top: 7px; } .project-grid { grid-template-columns: 1fr; } .project-body > p { min-height: 0; } .work-heading { grid-template-columns: 1fr; } }
+  @media (max-width: 900px) { .hero { min-height: auto; grid-template-columns: 1fr; padding-inline: 24px; } .hero-photo-wrap { width: min(100%, 390px); justify-self: start; } .hero-photo-wrap figure { width: min(100%, 390px); height: auto; } .photo-sticky { display: none; } .recognition-heading, .packages-heading, .developer-heading { grid-template-columns: 1fr; } .recognition-grid, .developer-grid { grid-template-columns: 1fr; } .times-square { grid-template-columns: 1fr; } .times-square .recognition-media { aspect-ratio: 16 / 9; } .work-grid { grid-template-columns: 1fr; } .timeline { grid-template-columns: 1fr; gap: 22px; } }
+  @media (max-width: 680px) { .hero, .recognition, .packages, .developer-stats, .work-preview { padding-inline: 18px; } .hero-copy h1 { font-size: clamp(68px, 24vw, 102px); } .stats { display: grid; grid-template-columns: repeat(3, 1fr); } .stats div { min-width: 0; padding: 0 10px 0 0; } .stats div + div { padding-left: 10px; } .stats b { font-size: 23px; } .actions { flex-direction: column; } .note { left: 0; } .compact { grid-template-columns: 1fr; } .compact .recognition-media, .compact .paper-visual { min-height: 190px; } .package-grid { grid-template-columns: 1fr; } .package-card { min-height: 246px; } .package-downloads { align-items: flex-start; flex-direction: column; } .package-downloads strong { font-size: 42px; } .github-card, .leetcode-card { padding: 18px; } .github-numbers { grid-template-columns: repeat(2, 1fr); } .github-numbers div:nth-child(3) { border-left: 0; } .github-activity-panels { grid-template-columns: 1fr; } .contribution-map { overflow-x: auto; } .latest-repo { grid-template-columns: 1fr; grid-template-areas: 'meta' 'title' 'action'; } .latest-repo .text-link { margin-top: 7px; } .project-grid { grid-template-columns: 1fr; } .project-body > p { min-height: 0; } .work-heading { grid-template-columns: 1fr; } .building { margin-top: 42px; } }
   @media (hover: none) { .project-peek { opacity: .9; transform: none; } }
 `;
 
