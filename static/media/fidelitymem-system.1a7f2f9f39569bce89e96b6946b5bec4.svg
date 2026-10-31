@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">FidelityMem adaptive memory architecture</title>
+  <desc id="desc">An editorial system diagram showing working context flowing through a fidelity gate into hybrid long-term memory.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#182346"/>
+    </linearGradient>
+    <linearGradient id="memory" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8f91ff"/>
+      <stop offset="1" stop-color="#5b5bd6"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity=".16" fill="none" stroke="#aeb4ff">
+    <circle cx="1280" cy="160" r="310"/>
+    <circle cx="1280" cy="160" r="220"/>
+    <circle cx="280" cy="790" r="260"/>
+  </g>
+  <text x="238" y="102" fill="#bfc5dc" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" letter-spacing="5">ADAPTIVE HYBRID MEMORY / LLM AGENTS</text>
+  <text x="236" y="205" fill="#f7f4ea" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="750" letter-spacing="-3">FidelityMem</text>
+  <text x="240" y="255" fill="#9fa8c2" font-family="Inter, Arial, sans-serif" font-size="28">Recall-constrained context. Evidence restored when it matters.</text>
+
+  <g transform="translate(220 360)">
+    <rect width="330" height="290" rx="10" fill="#111a32" stroke="#344060" stroke-width="2"/>
+    <rect x="28" y="28" width="118" height="34" rx="17" fill="#223052"/>
+    <text x="48" y="51" fill="#bfc5dc" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="2">ACTIVE</text>
+    <text x="28" y="118" fill="#f7f4ea" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="700">Working context</text>
+    <g transform="translate(28 158)" fill="#7783a2">
+      <rect width="270" height="14" rx="7"/>
+      <rect y="34" width="232" height="14" rx="7"/>
+      <rect y="68" width="282" height="14" rx="7"/>
+    </g>
+    <text x="28" y="266" fill="#68d6aa" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17">TOKEN PRESSURE → EVICT</text>
+  </g>
+
+  <g transform="translate(610 360)">
+    <circle cx="190" cy="145" r="118" fill="#5b5bd6" opacity=".2" filter="url(#glow)"/>
+    <circle cx="190" cy="145" r="108" fill="url(#memory)"/>
+    <circle cx="190" cy="145" r="82" fill="#10172a" stroke="#c3c5ff" stroke-width="2" stroke-dasharray="8 8"/>
+    <text x="190" y="132" text-anchor="middle" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">FIDELITY</text>
+    <text x="190" y="166" text-anchor="middle" fill="#d8daff" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" letter-spacing="3">GATE</text>
+    <text x="190" y="282" text-anchor="middle" fill="#bfc5dc" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16">RECALL ≥ 95%</text>
+  </g>
+
+  <g transform="translate(1010 360)">
+    <rect width="370" height="290" rx="10" fill="#111a32" stroke="#344060" stroke-width="2"/>
+    <text x="30" y="58" fill="#f7f4ea" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Hybrid memory</text>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17">
+      <rect x="30" y="92" width="145" height="62" rx="8" fill="#202c50"/>
+      <text x="52" y="130" fill="#c8cdf0">BM25 + DENSE</text>
+      <rect x="191" y="92" width="149" height="62" rx="8" fill="#202c50"/>
+      <text x="205" y="130" fill="#c8cdf0" font-size="14">RELATION GRAPH</text>
+      <rect x="30" y="174" width="145" height="62" rx="8" fill="#202c50"/>
+      <text x="52" y="212" fill="#c8cdf0">RRF FUSION</text>
+      <rect x="191" y="174" width="149" height="62" rx="8" fill="#183c3b"/>
+      <text x="205" y="212" fill="#8de4bd" font-size="14">RAW EVIDENCE ↗</text>
+    </g>
+    <text x="30" y="267" fill="#7783a2" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">COMPRESS · RETRIEVE · RESTORE</text>
+  </g>
+
+  <g stroke="#7278dd" stroke-width="4" fill="none">
+    <path d="M550 505 H595"/>
+    <path d="M998 505 H1002"/>
+  </g>
+  <g fill="#7278dd">
+    <path d="M595 505l-16-10v20z"/>
+    <path d="M1002 505l-16-10v20z"/>
+  </g>
+  <g transform="translate(238 760)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="19" fill="#aab2cb">
+    <text>01  OBSERVE</text>
+    <text x="360">02  VALIDATE</text>
+    <text x="720">03  COMPRESS</text>
+    <text x="960">04  RESTORE</text>
+  </g>
+</svg>

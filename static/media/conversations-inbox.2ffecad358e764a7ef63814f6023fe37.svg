@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Conversations unified customer inbox</title>
+  <desc id="desc">A modern realtime inbox combining live chat, SMS and email with routing, presence and team collaboration.</desc>
+  <defs>
+    <linearGradient id="ci-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071b22"/>
+      <stop offset="1" stop-color="#0a3340"/>
+    </linearGradient>
+    <linearGradient id="ci-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5de3c1"/>
+      <stop offset="1" stop-color="#48a7ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#ci-bg)"/>
+  <g opacity=".15" fill="none" stroke="#67d5d0" stroke-width="2"><circle cx="1280" cy="120" r="280"/><circle cx="1280" cy="120" r="198"/><circle cx="240" cy="800" r="260"/></g>
+  <text x="230" y="104" fill="#8fbfc4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" letter-spacing="5">REALTIME CUSTOMER OPERATIONS</text>
+  <text x="228" y="202" fill="#effdf9" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="750" letter-spacing="-3">Conversations</text>
+  <text x="232" y="253" fill="#94b8be" font-family="Inter, Arial, sans-serif" font-size="27">Live chat, SMS and email — one routed workspace for every customer moment.</text>
+
+  <g transform="translate(225 330)">
+    <rect width="1150" height="370" rx="18" fill="#09232b" stroke="#28606a" stroke-width="2"/>
+    <rect width="235" height="370" rx="18" fill="#0b1c24"/>
+    <text x="32" y="48" fill="#7fa5ab" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="2">INBOXES</text>
+    <g font-family="Inter, Arial, sans-serif" font-size="21" fill="#cce6e6">
+      <rect x="22" y="72" width="191" height="52" rx="10" fill="#17444b"/><text x="47" y="105">All conversations</text>
+      <text x="47" y="164">Live chat</text><circle cx="193" cy="157" r="12" fill="#5de3c1"/>
+      <text x="47" y="216">SMS</text><circle cx="193" cy="209" r="12" fill="#48a7ff"/>
+      <text x="47" y="268">Email</text><circle cx="193" cy="261" r="12" fill="#ffb85c"/>
+      <text x="47" y="320">Team chat</text>
+    </g>
+    <g transform="translate(270 34)">
+      <text x="0" y="28" fill="#f1fbfa" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Product onboarding</text>
+      <text x="0" y="58" fill="#739aa0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">LIVE CHAT · ASSIGNED TO MAYA · 2 TEAMMATES VIEWING</text>
+      <g transform="translate(0 92)" font-family="Inter, Arial, sans-serif" font-size="20">
+        <rect x="0" y="0" width="520" height="72" rx="14" fill="#12313a"/><text x="24" y="43" fill="#d7eceb">Can you help me connect the widget?</text>
+        <rect x="220" y="94" width="560" height="92" rx="14" fill="url(#ci-accent)"/><text x="246" y="132" fill="#08212a">Absolutely — I checked your domain and</text><text x="246" y="160" fill="#08212a">prepared the exact install snippet.</text>
+        <rect x="0" y="210" width="660" height="62" rx="13" fill="#0e2931" stroke="#285661"/><text x="22" y="248" fill="#799da2">Reply, add a note, mention a teammate…</text>
+      </g>
+      <g transform="translate(805 4)">
+        <circle cx="22" cy="22" r="22" fill="#5de3c1"/><text x="22" y="29" text-anchor="middle" fill="#073038" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">M</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(230 788)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#91b9be">
+    <text>SOCKET.IO PRESENCE</text><text x="350">ROUND-ROBIN ROUTING</text><text x="720">38 PERMISSIONS</text><text x="1020">POSTGRES + REDIS</text>
+  </g>
+</svg>

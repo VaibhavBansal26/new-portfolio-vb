@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Shorts Factory AI production workflow</title>
+  <desc id="desc">An editorial studio dashboard showing a story moving through script, voice, render, review and publishing.</desc>
+  <defs>
+    <linearGradient id="sf-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#100d20"/>
+      <stop offset="1" stop-color="#251447"/>
+    </linearGradient>
+    <linearGradient id="sf-card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff5f68"/>
+      <stop offset="1" stop-color="#ff9f43"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sf-bg)"/>
+  <g opacity=".14" fill="none" stroke="#bca7ff" stroke-width="2">
+    <circle cx="1320" cy="110" r="270"/><circle cx="1320" cy="110" r="190"/><circle cx="260" cy="820" r="280"/>
+  </g>
+  <text x="230" y="105" fill="#c9bff0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" letter-spacing="5">AI VIDEO STUDIO / VERTICAL MEDIA</text>
+  <text x="228" y="202" fill="#fff8ed" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="750" letter-spacing="-3">Shorts Factory</text>
+  <text x="232" y="253" fill="#bcb1d4" font-family="Inter, Arial, sans-serif" font-size="27">Fresh signal → original script → timed voice → 1080 × 1920 render → publish</text>
+
+  <g transform="translate(225 335)">
+    <rect width="1150" height="350" rx="18" fill="#17132a" stroke="#4b3c70" stroke-width="2"/>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="2">
+      <text x="42" y="48" fill="#978bb7">PRODUCTION RUN</text>
+      <text x="900" y="48" fill="#73e0ad">READY TO REVIEW</text>
+    </g>
+    <g transform="translate(42 80)">
+      <rect width="210" height="220" rx="12" fill="url(#sf-card)"/>
+      <rect x="72" y="33" width="66" height="114" rx="8" fill="#120f20" opacity=".9"/>
+      <path d="M96 71l38 19-38 20z" fill="#fff"/>
+      <text x="105" y="183" text-anchor="middle" fill="#2a1220" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="750">SOURCE</text>
+    </g>
+    <g transform="translate(302 105)" font-family="Inter, Arial, sans-serif">
+      <g>
+        <rect width="170" height="70" rx="10" fill="#28203f" stroke="#5f4e84"/>
+        <text x="85" y="43" text-anchor="middle" fill="#f6f0ff" font-size="23" font-weight="700">SCRIPT</text>
+      </g>
+      <g transform="translate(210)">
+        <rect width="170" height="70" rx="10" fill="#28203f" stroke="#5f4e84"/>
+        <text x="85" y="43" text-anchor="middle" fill="#f6f0ff" font-size="23" font-weight="700">VOICE</text>
+      </g>
+      <g transform="translate(420)">
+        <rect width="170" height="70" rx="10" fill="#28203f" stroke="#5f4e84"/>
+        <text x="85" y="43" text-anchor="middle" fill="#f6f0ff" font-size="23" font-weight="700">RENDER</text>
+      </g>
+      <g transform="translate(630)">
+        <rect width="170" height="70" rx="10" fill="#183a34" stroke="#55b795"/>
+        <text x="85" y="43" text-anchor="middle" fill="#7ef0bd" font-size="23" font-weight="700">PUBLISH</text>
+      </g>
+    </g>
+    <g stroke="#ff7b68" stroke-width="4" fill="none">
+      <path d="M492 220h170"/><path d="M702 220h170"/><path d="M912 220h170"/>
+    </g>
+    <g fill="#ff7b68"><path d="M662 220l-14-9v18z"/><path d="M872 220l-14-9v18z"/><path d="M1082 220l-14-9v18z"/></g>
+    <text x="304" y="279" fill="#9085aa" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17">9 STORY FORMATS · WORD-TIMED CAPTIONS · HUMAN REVIEW · SCHEDULED RELEASES</text>
+  </g>
+  <g transform="translate(230 770)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#b5a8d1">
+    <text>01  DISCOVER</text><text x="285">02  WRITE</text><text x="545">03  SPEAK</text><text x="805">04  RENDER</text><text x="1070">05  SHIP</text>
+  </g>
+</svg>
