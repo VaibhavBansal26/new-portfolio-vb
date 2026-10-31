@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Interview Suite AI mock interview workspace</title>
+  <desc id="desc">An editorial mock interview workspace showing a realtime voice interviewer, coding exercise, system design and evaluation signals.</desc>
+  <defs>
+    <linearGradient id="is-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#20284d"/>
+    </linearGradient>
+    <linearGradient id="is-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8d8fff"/>
+      <stop offset="1" stop-color="#5fc8ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#is-bg)"/>
+  <g opacity=".14" fill="none" stroke="#aeb4ff" stroke-width="2">
+    <circle cx="1300" cy="115" r="275"/><circle cx="1300" cy="115" r="188"/><circle cx="270" cy="815" r="270"/>
+  </g>
+  <text x="230" y="104" fill="#b9bee0" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="23" letter-spacing="5">REALTIME VOICE / INTERVIEW LAB</text>
+  <text x="228" y="202" fill="#f8f7ff" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="750" letter-spacing="-3">Interview Suite</text>
+  <text x="232" y="253" fill="#aab1cf" font-family="Inter, Arial, sans-serif" font-size="27">Phone screen, coding, system design and debugging — one private practice room.</text>
+
+  <g transform="translate(225 330)">
+    <rect width="1150" height="370" rx="18" fill="#10172d" stroke="#39456d" stroke-width="2"/>
+    <rect width="235" height="370" rx="18" fill="#0a1021"/>
+    <text x="30" y="48" fill="#8992b7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" letter-spacing="2">PRACTICE ROOM</text>
+    <g font-family="Inter, Arial, sans-serif" font-size="20" fill="#cdd2eb">
+      <rect x="20" y="76" width="195" height="48" rx="9" fill="#262f55"/><text x="44" y="107">Phone screen</text>
+      <text x="44" y="162">DSA coding</text><text x="44" y="212">System design</text><text x="44" y="262">Debugging</text><text x="44" y="312">Session review</text>
+    </g>
+    <g transform="translate(270 32)">
+      <text x="0" y="28" fill="#f3f4ff" font-family="Inter, Arial, sans-serif" font-size="29" font-weight="700">SDE II mock interview</text>
+      <text x="0" y="58" fill="#8992b7" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">OPENAI REALTIME · WEBRTC CONNECTED · 24:18</text>
+      <g transform="translate(0 88)">
+        <rect width="260" height="215" rx="14" fill="#18213d"/>
+        <circle cx="130" cy="82" r="48" fill="url(#is-accent)"/>
+        <path d="M112 74c0-14 8-24 18-24s18 10 18 24v15c0 14-8 24-18 24s-18-10-18-24z" fill="#10172d"/>
+        <path d="M99 88c0 24 13 38 31 38s31-14 31-38M130 126v24M109 151h42" fill="none" stroke="#dfe2ff" stroke-width="7" stroke-linecap="round"/>
+        <text x="130" y="186" text-anchor="middle" fill="#eef0ff" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">AI interviewer live</text>
+      </g>
+      <g transform="translate(290 88)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+        <rect width="535" height="215" rx="14" fill="#0b1122" stroke="#354064"/>
+        <text x="24" y="34" fill="#7f89b2" font-size="15">PROBLEM · LRU CACHE</text>
+        <text x="24" y="76" fill="#8d8fff" font-size="18">class</text><text x="88" y="76" fill="#f6f3ff" font-size="18">LRUCache:</text>
+        <text x="48" y="112" fill="#5fc8ff" font-size="18">def</text><text x="92" y="112" fill="#f6f3ff" font-size="18">get(self, key):</text>
+        <rect x="48" y="132" width="370" height="10" rx="5" fill="#3b4569"/><rect x="48" y="158" width="300" height="10" rx="5" fill="#2a3354"/>
+        <rect x="378" y="170" width="126" height="30" rx="15" fill="#173c42"/><text x="441" y="191" text-anchor="middle" fill="#78e0c5" font-size="13">TESTS 8 / 8</text>
+      </g>
+    </g>
+  </g>
+  <g transform="translate(230 790)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#a7aece">
+    <text>VOICE INTERVIEW</text><text x="320">BOUNDED CODE RUNNER</text><text x="710">SYSTEM DESIGN</text><text x="1010">SESSION REVIEW</text>
+  </g>
+</svg>

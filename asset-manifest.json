@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.js": "/static/js/main.3a310d85.js",
+    "main.js": "/static/js/main.ef974b1a.js",
     "static/js/5.20d3a1bb.chunk.js": "/static/js/5.20d3a1bb.chunk.js",
     "static/js/290.38779b35.chunk.js": "/static/js/290.38779b35.chunk.js",
-    "static/js/780.c6d81490.chunk.js": "/static/js/780.c6d81490.chunk.js",
+    "static/js/780.acbf3828.chunk.js": "/static/js/780.acbf3828.chunk.js",
     "static/js/656.fbb43fd9.chunk.js": "/static/js/656.fbb43fd9.chunk.js",
     "static/js/99.98b98824.chunk.js": "/static/js/99.98b98824.chunk.js",
     "static/js/308.5ca26bb1.chunk.js": "/static/js/308.5ca26bb1.chunk.js",
@@ -74,12 +74,14 @@
     "static/media/ecomethod.webp": "/static/media/ecomethod.bae0ea9809b39499569b.webp",
     "index.html": "/index.html",
     "static/media/fidelitymem-system.svg": "/static/media/fidelitymem-system.1a7f2f9f39569bce89e96b6946b5bec4.svg",
+    "static/media/interview-suite.svg": "/static/media/interview-suite.7c26e607e933cd05e38b647d2f663db3.svg",
+    "static/media/shopflow-commerce.svg": "/static/media/shopflow-commerce.9aafbab4483c6e91b3c97e11b530d1db.svg",
     "static/media/shorts-factory-studio.svg": "/static/media/shorts-factory-studio.ac2af9c5297b5eb229afb18421ffef4f.svg",
     "static/media/conversations-inbox.svg": "/static/media/conversations-inbox.2ffecad358e764a7ef63814f6023fe37.svg",
-    "main.3a310d85.js.map": "/static/js/main.3a310d85.js.map",
+    "main.ef974b1a.js.map": "/static/js/main.ef974b1a.js.map",
     "5.20d3a1bb.chunk.js.map": "/static/js/5.20d3a1bb.chunk.js.map",
     "290.38779b35.chunk.js.map": "/static/js/290.38779b35.chunk.js.map",
-    "780.c6d81490.chunk.js.map": "/static/js/780.c6d81490.chunk.js.map",
+    "780.acbf3828.chunk.js.map": "/static/js/780.acbf3828.chunk.js.map",
     "656.fbb43fd9.chunk.js.map": "/static/js/656.fbb43fd9.chunk.js.map",
     "99.98b98824.chunk.js.map": "/static/js/99.98b98824.chunk.js.map",
     "308.5ca26bb1.chunk.js.map": "/static/js/308.5ca26bb1.chunk.js.map",
@@ -87,6 +89,6 @@
     "787.8dc771c0.chunk.js.map": "/static/js/787.8dc771c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.3a310d85.js"
+    "static/js/main.ef974b1a.js"
   ]
 }
