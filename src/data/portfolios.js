@@ -40,9 +40,135 @@ import pizzaDev from '../img/portImages/pizzaDev.webp';
 import amazon from '../img/portImages/amazon.webp';
 import vbSearchBlog from '../img/portImages/vsSearchBlog.webp';
 import gpac from '../img/portImages/gpac.webp';
+import fidelityMemVisual from '../img/portImages/fidelitymem-system.svg';
+import shortsFactoryVisual from '../img/portImages/shorts-factory-studio.svg';
+import conversationsVisual from '../img/portImages/conversations-inbox.svg';
 
 
 const portfolios = [
+    {
+        id: 1001,
+        category: 'Full-stack Product',
+        image: 'https://raw.githubusercontent.com/VaibhavBansal26/aether-cinema/main/docs/screenshots/02-desktop-home.png',
+        link1: 'https://github.com/VaibhavBansal26/aether-cinema',
+        link3: 'https://aether-api-demo.onrender.com',
+        title: 'AETHER — Cinema, Considered',
+        text: 'Java, Spring Boot, PostgreSQL, Python, Recommendation Systems, Kafka, Redis, Cloudflare R2',
+        featured: {
+            title: 'AETHER Cinema',
+            category: 'Cinematic platform',
+            copy: 'A cinematic streaming foundation with discovery, playback, creator tooling, managed authentication and a private recommendation layer.',
+            tags: ['Spring Boot', 'PostgreSQL', 'Python', 'Kafka'],
+            signals: [{ value: 'Full-stack', label: 'Product system' }, { value: 'Hybrid ranking', label: 'Recommendation layer' }],
+        },
+    },
+    {
+        id: 1002,
+        category: 'SaaS Platform',
+        image: 'https://raw.githubusercontent.com/VaibhavBansal26/funnels/main/docs/design/builder-1440-light.webp',
+        link1: 'https://github.com/VaibhavBansal26/funnels',
+        title: 'Funnels — Build, Publish & Measure',
+        text: 'TypeScript, React 19, GrapesJS, Hono, PostgreSQL, SQLite, Cloudflare Pages, Analytics',
+        featured: {
+            title: 'Funnels',
+            category: 'SaaS builder',
+            copy: 'A production-minded funnel platform with visual page building, publishing, analytics, leads, orders and custom-domain workflows.',
+            tags: ['TypeScript', 'React 19', 'GrapesJS', 'Hono'],
+            signals: [{ value: 'Drag + drop', label: 'Visual builder' }, { value: 'Publish + measure', label: 'Product loop' }],
+        },
+    },
+    {
+        id: 1003,
+        category: 'Interactive 3D',
+        image: 'https://raw.githubusercontent.com/VaibhavBansal26/forge-living-games/main/public/assets/moonlit-valley.png',
+        link1: 'https://github.com/VaibhavBansal26/forge-living-games',
+        link3: 'https://forge-living-games.vaibhavbansal024.workers.dev/',
+        title: 'FORGE — Living Games',
+        text: 'React, Three.js, WebSockets, SQLite, Cloudflare Workers, Durable Objects, Multiplayer',
+        featured: {
+            title: 'FORGE Living Games',
+            category: '3D world builder',
+            copy: 'A browser platform for discovering, building, publishing and playing collaborative 3D adventure worlds and battle chess.',
+            tags: ['React', 'Three.js', 'WebSockets', 'Cloudflare'],
+            signals: [{ value: 'Live worlds', label: 'Creation system' }, { value: '8 players', label: 'Shared sessions' }],
+        },
+    },
+    {
+        id: 1004,
+        category: 'AI Learning',
+        image: 'https://raw.githubusercontent.com/VaibhavBansal26/recall/main/docs/demo/recall-demo.gif',
+        link1: 'https://github.com/VaibhavBansal26/recall',
+        link2: 'https://github.com/VaibhavBansal26/recall/raw/main/docs/demo/recall-demo.mp4',
+        title: 'Recall — Voice-first Learning Companion',
+        text: 'FastAPI, PostgreSQL, PWA, Voice AI, Retrieval, Embeddings, n8n, Spaced Repetition',
+        featured: {
+            title: 'Recall with Aria',
+            category: 'Voice learning',
+            copy: 'A local-first learning companion that turns conversation and sources into notes, diagrams, recall sessions and measurable retention.',
+            tags: ['FastAPI', 'PostgreSQL', 'Voice AI', 'n8n'],
+            signals: [{ value: 'Voice first', label: 'Learning flow' }, { value: '6 phases', label: 'Recall engine' }],
+        },
+    },
+    {
+        id: 1005,
+        category: 'Agentic AI',
+        image: 'https://raw.githubusercontent.com/VaibhavBansal26/friday-ai-assistant/main/apps/desktop/src/assets/friday-core-aurora.png',
+        link1: 'https://github.com/VaibhavBansal26/friday-ai-assistant',
+        title: 'Friday AI Assistant',
+        text: 'Tauri, React, FastAPI, OpenAI Realtime, Voice AI, PostgreSQL, Redis, Approval Workflows',
+        featured: {
+            title: 'Friday AI Assistant',
+            category: 'Desktop agent',
+            copy: 'A privacy-conscious macOS assistant combining realtime voice, local memory and approval-gated actions across coding and communication tools.',
+            tags: ['Tauri', 'React', 'FastAPI', 'Realtime AI'],
+            signals: [{ value: 'Approval gated', label: 'Action safety' }, { value: 'Local first', label: 'Memory model' }],
+        },
+    },
+    {
+        id: 1006,
+        category: 'AI Research',
+        image: fidelityMemVisual,
+        link1: 'https://github.com/VaibhavBansal26/FidelityMem',
+        title: 'FidelityMem — Adaptive Hybrid Memory',
+        text: 'Python, LLM Agents, Hybrid Retrieval, BM25, RRF, Memory Compression, Recall Evaluation',
+        featured: {
+            title: 'FidelityMem',
+            category: 'Agent memory research',
+            copy: 'A recall-constrained hybrid memory layer that controls active context, long-term storage, compression and evidence restoration for LLM agents.',
+            tags: ['Python', 'Hybrid retrieval', 'BM25', 'RRF'],
+            signals: [{ value: '≥95% recall', label: 'Policy constraint' }, { value: '4-level', label: 'Compression ladder' }],
+        },
+    },
+    {
+        id: 1007,
+        category: 'AI Media Automation',
+        image: shortsFactoryVisual,
+        link1: 'https://github.com/VaibhavBansal26/shorts-factory',
+        title: 'Shorts Factory — AI Video Production Studio',
+        text: 'Python, Claude, RSS, arXiv, Neural TTS, FFmpeg, YouTube Data API, Flask, SQLite, Desktop Apps',
+        featured: {
+            title: 'Shorts Factory',
+            category: 'AI media pipeline',
+            copy: 'An end-to-end studio that discovers fresh technical stories, writes varied scripts, generates timed voice and vertical video, then publishes to YouTube.',
+            tags: ['Python', 'Claude', 'FFmpeg', 'YouTube API'],
+            signals: [{ value: '9 formats', label: 'Creative system' }, { value: 'End to end', label: 'Production flow' }],
+        },
+    },
+    {
+        id: 1008,
+        category: 'Realtime SaaS',
+        image: conversationsVisual,
+        link1: 'https://github.com/VaibhavBansal26/conversations',
+        title: 'Conversations — Unified Customer Inbox',
+        text: 'TypeScript, React, Hono, Socket.IO, SQLite, PostgreSQL, Redis, Twilio, SendGrid, Stripe, RBAC',
+        featured: {
+            title: 'Conversations',
+            category: 'Realtime customer platform',
+            copy: 'A unified live-chat, SMS and email workspace with team routing, AI assistance, browser calls, billing, permissions and a scale-out realtime architecture.',
+            tags: ['TypeScript', 'Socket.IO', 'PostgreSQL', 'Redis'],
+            signals: [{ value: '3 channels', label: 'Unified inbox' }, { value: '38 permissions', label: 'Access model' }],
+        },
+    },
      {
         id: 94,
         category: 'Agentic AI',
@@ -51,7 +177,14 @@ const portfolios = [
         // link2: 'https://youtu.be/_bjaJZPFovM',
         link3: 'https://disaster-response-ai-copilot-vb1.streamlit.app/',
         title: 'Disaster Response AI Copilot',
-        text: 'Streamlit, Machine Learning, AI Agent, Azure OpenAI, Azure AI Foundry, RAG, Azure Cognitive Search'
+        text: 'Streamlit, Machine Learning, AI Agent, Azure OpenAI, Azure AI Foundry, RAG, Azure Cognitive Search',
+        featured: {
+            title: 'Disaster Response AI Copilot',
+            category: 'AI copilot',
+            copy: 'An AI copilot for real-world disaster response using retrieval workflows and Azure AI services.',
+            tags: ['Streamlit', 'RAG', 'Azure OpenAI', 'AI Agent'],
+            signals: [{ value: 'RAG + Azure', label: 'AI stack' }, { value: 'Multi-modal', label: 'Response flow' }],
+        },
     },
     {
         id: 94,
@@ -61,7 +194,7 @@ const portfolios = [
         // link2: 'https://youtu.be/_bjaJZPFovM',
         link3: 'http://164.92.96.19:8501/',
         title: 'Crypto Trade Prediction',
-        text: 'Streamlit, Machine Learning, Docker, Digital Ocean, Python, DuckDB, RedPandas'
+        text: 'Streamlit, Machine Learning, Docker, Digital Ocean, Python, DuckDB, RedPandas',
     },
     {
         id: 93,
@@ -71,7 +204,7 @@ const portfolios = [
         // link2: 'https://youtu.be/_bjaJZPFovM',
         link3: 'https://medical-app-vb.streamlit.app/',
         title: 'Heart Disease Prediction using Generative AI, Streamlit, OpenAI',
-        text: 'Genrative AI, Streamlit, Machine Learning, Docker, OpenAI, Python'
+        text: 'Genrative AI, Streamlit, Machine Learning, Docker, OpenAI, Python',
     },
     {
         id: 91,

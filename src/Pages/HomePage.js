@@ -18,59 +18,23 @@ import HeroField from '../Components/HeroField';
 import avatarNormal from '../img/avatar-uneven-cloth.webp';
 import avatarBurned from '../img/avatar-burned-cloth.webp';
 import ashParticles from '../img/ash-particles-v3.webp';
-import chatImage from '../img/portImages/chat.webp';
 import portfolios from '../data/portfolios';
 import { useGitHubStats, useNpmDownloadCounts } from '../hooks/useLiveData';
 
-const selectedProjectImages = [
-  'https://res.cloudinary.com/vaibhav-codexpress/image/upload/f_auto,q_auto,c_limit,w_1280/v1760818635/Screenshot_2025-10-18_at_4.16.22_PM_yzy63g.png',
-  'https://res.cloudinary.com/vaibhav-codexpress/image/upload/f_auto,q_auto,c_limit,w_1280/v1747167771/Screenshot_2025-05-13_at_4.17.20_PM_nwvmud.png',
-  'https://res.cloudinary.com/vaibhav-codexpress/image/upload/f_auto,q_auto,c_limit,w_1280/v1746515810/Screenshot_2025-05-06_at_3.14.47_AM_nggebr.png',
-  'https://i.ytimg.com/vi/_bjaJZPFovM/maxresdefault.jpg',
-  'https://res.cloudinary.com/vaibhav-codexpress/image/upload/f_auto,q_auto,c_limit,w_1280/v1742416573/Screenshot_2025-03-19_at_4.35.52_PM_jwcpzu.png',
-  'https://i.ytimg.com/vi/ZcIbqeIAC0Y/maxresdefault.jpg',
-  'https://i.ytimg.com/vi/VKSf1NfdjTU/maxresdefault.jpg',
-];
-
-const projects = [
-  { no: '01', title: 'Real-time Chat Application', image: chatImage, category: 'Real-time system', copy: 'A responsive messaging product with presence, group conversations, and reliable live updates.', tags: ['React', 'Firebase', 'Realtime'], signals: [{ value: 'Live presence', label: 'Realtime state' }, { value: 'Group chat', label: 'Core workflow' }], href: 'https://github.com/VaibhavBansal26/React-Chat-App' },
-  { no: '02', title: 'Natural Disaster Intelligence', image: 'https://i.ytimg.com/vi/Gad5vz1Pkcc/maxresdefault.jpg', category: 'Satellite + ML', copy: 'Data-driven signals for disaster preparedness using satellite data, ML models, and interactive maps.', tags: ['Python', 'React', 'AWS', 'Machine Learning'], signals: [{ value: 'Satellite data', label: 'Signal source' }, { value: 'ML + maps', label: 'Decision layer' }], href: 'https://github.com/VaibhavBansal26/Capstone-2020-Natural-Disaster-Prediction' },
-  ...portfolios.slice(0, 7).map((project, index) => ({
-    no: String(index + 3).padStart(2, '0'),
+const projects = portfolios
+  .filter(project => project.featured)
+  .slice(0, 9)
+  .map((project, index) => ({
+    no: String(index + 1).padStart(2, '0'),
     title: project.title,
-    displayTitle: [
-      'Disaster Response AI Copilot',
-      'Crypto Trade Prediction',
-      'Heart Disease Prediction',
-      'Car Price Prediction',
-      'Movie Recommendation Engine',
-      'Real-time Logs Processing',
-      'Azure Medallion Architecture',
-    ][index],
-    image: selectedProjectImages[index] || project.image,
-    category: ['AI copilot', 'Fintech + ML', 'Healthcare AI', 'MLOps system', 'Recommendation ML', 'Data engineering', 'Azure lakehouse'][index],
-    copy: [
-      'AI copilot for real-world disaster response using RAG and Azure AI services.',
-      'Predicts crypto price movement from live market data in a deployable Streamlit workflow.',
-      'Generative-AI-assisted risk screening with an interactive patient prediction flow.',
-      'End-to-end ML pipeline with experiment tracking, streaming events and model serving.',
-      'Hybrid recommendations combining cosine similarity with collaborative filtering.',
-      'Streaming log pipeline orchestrated through Kafka, Airflow and Elasticsearch.',
-      'Azure lakehouse pipeline organized around bronze, silver and gold data layers.',
-    ][index],
-    tags: project.text.split(',').map(tag => tag.trim()).filter(Boolean).slice(0, 4),
-    signals: [
-      [{ value: 'RAG + Azure', label: 'AI stack' }, { value: 'Multi-modal', label: 'Response flow' }],
-      [{ value: 'Live market', label: 'Data source' }, { value: 'ML forecast', label: 'Model output' }],
-      [{ value: 'GenAI assist', label: 'Experience' }, { value: 'Risk scoring', label: 'Core output' }],
-      [{ value: '9-part stack', label: 'Architecture' }, { value: 'MLflow', label: 'Tracking' }],
-      [{ value: '2 methods', label: 'Recommenders' }, { value: 'AWS', label: 'Deployment' }],
-      [{ value: '3-stage flow', label: 'Pipeline' }, { value: 'Realtime', label: 'Processing' }],
-      [{ value: '3 lake layers', label: 'Architecture' }, { value: 'DBT + Azure', label: 'Transform' }],
-    ][index],
+    displayTitle: project.featured.title,
+    image: project.image,
+    category: project.featured.category,
+    copy: project.featured.copy,
+    tags: project.featured.tags,
+    signals: project.featured.signals,
     href: project.link3 || project.link1 || project.link2,
-  })),
-];
+  }));
 
 const packageItems = [
   {
