@@ -211,6 +211,13 @@ const portfolios = [
         link1: 'https://github.com/VaibhavBansal26/ridehail-platform',
         title: 'Ridehail — Realtime Mobility Platform',
         text: 'Java 21, Spring Boot 3, PostgreSQL, Next.js, React Native, WebSockets, Redis, RabbitMQ, Stripe Connect',
+        featured: {
+            title: 'Ridehail Platform',
+            category: 'Realtime mobility',
+            copy: 'A production-shaped ride-sharing system with live dispatch, dynamic fares, customer and rider apps, operations tooling and balanced payment ledgers.',
+            tags: ['Spring Boot 3', 'Next.js', 'WebSockets', 'Stripe Connect'],
+            signals: [{ value: '5 surfaces', label: 'Product system' }, { value: 'Live dispatch', label: 'Realtime core' }],
+        },
     },
     {
         id: 1012,
@@ -219,6 +226,13 @@ const portfolios = [
         link1: 'https://github.com/VaibhavBansal26/multi-agent-code-review',
         title: 'MACRV — Multi-Agent Code Review System',
         text: 'Python, FastAPI, LangGraph, Claude Agents, Celery, Redis, PostgreSQL, Semgrep, Bandit, GitHub Apps',
+        featured: {
+            title: 'MACRV Code Review',
+            category: 'Multi-agent DevTool',
+            copy: 'An automated pull-request review pipeline that coordinates specialist agents, static security scans, severity classification and merge decisions.',
+            tags: ['FastAPI', 'LangGraph', 'Claude Agents', 'Semgrep'],
+            signals: [{ value: 'Parallel agents', label: 'Review system' }, { value: 'Merge gate', label: 'Security control' }],
+        },
     },
     {
         id: 1013,
@@ -227,6 +241,13 @@ const portfolios = [
         link1: 'https://github.com/VaibhavBansal26/spotlight-talent-platform',
         title: 'Spotlight — Talent Community Platform',
         text: 'TypeScript, React, Vite, Express, PostgreSQL, Prisma, Redis, Socket.IO, FastAPI, S3, BullMQ',
+        featured: {
+            title: 'Spotlight Talent',
+            category: 'Creator community',
+            copy: 'A talent community for creator profiles, reels, reviews, live showcases, groups, agencies, rewards and head-to-head battles.',
+            tags: ['TypeScript', 'React', 'PostgreSQL', 'Socket.IO'],
+            signals: [{ value: 'Live showcases', label: 'Creator format' }, { value: 'Ranked discovery', label: 'Recommendation flow' }],
+        },
     },
      {
         id: 94,

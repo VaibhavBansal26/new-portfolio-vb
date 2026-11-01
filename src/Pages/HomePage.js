@@ -23,7 +23,7 @@ import { useGitHubStats, useNpmDownloadCounts } from '../hooks/useLiveData';
 
 const projects = portfolios
   .filter(project => project.featured)
-  .slice(0, 12)
+  .slice(0, 15)
   .map((project, index) => ({
     no: String(index + 1).padStart(2, '0'),
     title: project.title,
