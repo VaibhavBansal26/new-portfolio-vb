@@ -45,6 +45,9 @@ import shortsFactoryVisual from '../img/portImages/shorts-factory-studio.svg';
 import conversationsVisual from '../img/portImages/conversations-inbox.svg';
 import shopFlowVisual from '../img/portImages/shopflow-commerce.svg';
 import interviewSuiteVisual from '../img/portImages/interview-suite.svg';
+import ridehailVisual from '../img/portImages/ridehail-operations.svg';
+import codeReviewVisual from '../img/portImages/multi-agent-code-review.svg';
+import spotlightVisual from '../img/portImages/spotlight-talent.svg';
 
 
 const portfolios = [
@@ -200,6 +203,30 @@ const portfolios = [
             tags: ['React 19', 'OpenAI Realtime', 'WebRTC', 'Express'],
             signals: [{ value: '4 round types', label: 'Practice system' }, { value: 'Live voice', label: 'Interview loop' }],
         },
+    },
+    {
+        id: 1011,
+        category: 'Mobility Platform',
+        image: ridehailVisual,
+        link1: 'https://github.com/VaibhavBansal26/ridehail-platform',
+        title: 'Ridehail — Realtime Mobility Platform',
+        text: 'Java 21, Spring Boot 3, PostgreSQL, Next.js, React Native, WebSockets, Redis, RabbitMQ, Stripe Connect',
+    },
+    {
+        id: 1012,
+        category: 'Agentic DevTools',
+        image: codeReviewVisual,
+        link1: 'https://github.com/VaibhavBansal26/multi-agent-code-review',
+        title: 'MACRV — Multi-Agent Code Review System',
+        text: 'Python, FastAPI, LangGraph, Claude Agents, Celery, Redis, PostgreSQL, Semgrep, Bandit, GitHub Apps',
+    },
+    {
+        id: 1013,
+        category: 'Creator Platform',
+        image: spotlightVisual,
+        link1: 'https://github.com/VaibhavBansal26/spotlight-talent-platform',
+        title: 'Spotlight — Talent Community Platform',
+        text: 'TypeScript, React, Vite, Express, PostgreSQL, Prisma, Redis, Socket.IO, FastAPI, S3, BullMQ',
     },
      {
         id: 94,
