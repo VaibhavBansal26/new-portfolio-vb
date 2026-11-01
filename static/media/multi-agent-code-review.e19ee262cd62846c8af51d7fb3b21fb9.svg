@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Multi-agent code review pipeline</title>
+  <desc id="desc">Editorial interface visualizing parallel review agents, security scans and merge decisions.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#161126"/><stop offset="1" stop-color="#271943"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity=".15" stroke="#b9a7ff"><path d="M0 160h1600M0 320h1600M0 480h1600M0 640h1600M0 800h1600"/><path d="M200 0v900M400 0v900M600 0v900M800 0v900M1000 0v900M1200 0v900M1400 0v900"/></g>
+  <text x="88" y="102" fill="#c4b5fd" font-family="monospace" font-size="24" letter-spacing="6">/ MULTI-AGENT REVIEW</text>
+  <text x="88" y="175" fill="#fbf8f1" font-family="Arial,sans-serif" font-size="60" font-weight="700">Every pull request gets a team.</text>
+  <text x="88" y="218" fill="#a99fc0" font-family="monospace" font-size="20">parallel review · security gates · audit-ready reports</text>
+  <g font-family="monospace">
+    <rect x="88" y="288" width="292" height="130" fill="#fbf8f1"/><text x="122" y="334" fill="#736887" font-size="17" letter-spacing="3">GITHUB PR</text><text x="122" y="384" fill="#1f1731" font-size="27" font-weight="700">#184  READY</text>
+    <path d="M380 353h96" stroke="#c4b5fd" stroke-width="5"/><path d="m463 339 18 14-18 14" fill="none" stroke="#c4b5fd" stroke-width="5"/>
+    <rect x="488" y="278" width="376" height="150" rx="4" fill="#7557d9"/><text x="524" y="327" fill="#ddd5ff" font-size="17" letter-spacing="3">ORCHESTRATOR</text><text x="524" y="383" fill="#fff" font-size="30" font-weight="700">LANGGRAPH PIPELINE</text>
+    <path d="M864 353h87M951 353v-110M951 353v110" fill="none" stroke="#c4b5fd" stroke-width="5"/>
+    <rect x="980" y="178" width="270" height="128" fill="#2e2445" stroke="#7b68aa"/><text x="1013" y="224" fill="#b9a7ff" font-size="17" letter-spacing="3">AGENT 01</text><text x="1013" y="270" fill="#fff" font-size="25" font-weight="700">FILE REVIEW</text>
+    <rect x="980" y="322" width="270" height="128" fill="#2e2445" stroke="#7b68aa"/><text x="1013" y="368" fill="#b9a7ff" font-size="17" letter-spacing="3">AGENT 02</text><text x="1013" y="414" fill="#fff" font-size="25" font-weight="700">CLASSIFIER</text>
+    <rect x="980" y="466" width="270" height="128" fill="#2e2445" stroke="#7b68aa"/><text x="1013" y="512" fill="#b9a7ff" font-size="17" letter-spacing="3">AGENT 03</text><text x="1013" y="558" fill="#fff" font-size="25" font-weight="700">DEEP SCAN</text>
+    <path d="M1250 242h77v282h-77" fill="none" stroke="#c4b5fd" stroke-width="5"/>
+    <rect x="1350" y="308" width="172" height="150" fill="#f0655b"/><text x="1380" y="350" fill="#4a1416" font-size="16" letter-spacing="2">MERGE GATE</text><text x="1380" y="407" fill="#1d0a0c" font-size="30" font-weight="700">BLOCK</text><text x="1380" y="436" fill="#551b1f" font-size="15">2 critical</text>
+    <rect x="88" y="525" width="776" height="244" fill="#211832" stroke="#554372"/><text x="124" y="572" fill="#c4b5fd" font-size="17" letter-spacing="3">FINDINGS / LIVE</text>
+    <text x="124" y="630" fill="#ff8279" font-size="22">● CRITICAL</text><text x="325" y="630" fill="#e9e2f5" font-size="21">SQL injection in query builder</text>
+    <text x="124" y="686" fill="#f0bd62" font-size="22">● SUGGEST</text><text x="325" y="686" fill="#e9e2f5" font-size="21">Retry branch lacks backoff</text>
+    <text x="124" y="742" fill="#72d8a2" font-size="22">● OPTIMISE</text><text x="325" y="742" fill="#e9e2f5" font-size="21">Batch independent lookups</text>
+  </g>
+  <text x="88" y="840" fill="#9e91b5" font-family="monospace" font-size="18" letter-spacing="3">FASTAPI  /  CLAUDE AGENTS  /  SEMGREP  /  CELERY</text>
+</svg>

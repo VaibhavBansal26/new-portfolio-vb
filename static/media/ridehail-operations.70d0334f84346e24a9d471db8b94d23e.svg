@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Ridehail realtime operations interface</title>
+  <desc id="desc">Editorial dashboard showing a city map, active trips, driver supply and a balanced payments ledger.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071b2d"/><stop offset="1" stop-color="#102d3c"/></linearGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#7dd3c7" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+  <text x="92" y="105" fill="#8ee6d3" font-family="monospace" font-size="24" letter-spacing="6">/ REALTIME MOBILITY OPS</text>
+  <text x="92" y="178" fill="#f5f1e8" font-family="Arial,sans-serif" font-size="62" font-weight="700">Ridehail control room</text>
+  <text x="92" y="221" fill="#93aebe" font-family="monospace" font-size="20">dispatch · live location · payments · safety</text>
+  <rect x="92" y="282" width="910" height="500" rx="4" fill="#0b2234" stroke="#31576a"/>
+  <path d="M150 680C270 570 332 650 442 515S650 430 748 310M246 312c30 88 126 102 150 198s100 154 236 140 191 42 288 110M568 284c-36 122 12 183 100 220s157 27 256-34" fill="none" stroke="#3e6877" stroke-width="7"/>
+  <path d="M150 680C270 570 332 650 442 515S650 430 748 310" fill="none" stroke="#8ee6d3" stroke-width="8" stroke-dasharray="18 18"/>
+  <g fill="#f6a84b" stroke="#071b2d" stroke-width="7"><circle cx="180" cy="653" r="16"/><circle cx="443" cy="512" r="16"/><circle cx="746" cy="312" r="16"/></g>
+  <g font-family="monospace"><rect x="1042" y="282" width="466" height="147" fill="#f5f1e8"/><text x="1080" y="329" fill="#56707d" font-size="18" letter-spacing="3">ACTIVE TRIPS</text><text x="1080" y="395" fill="#0b2234" font-size="54" font-weight="700">148</text><text x="1295" y="394" fill="#1b957f" font-size="19">+12 now</text>
+  <rect x="1042" y="449" width="466" height="146" fill="#f6a84b"/><text x="1080" y="496" fill="#5c3713" font-size="18" letter-spacing="3">DRIVER SUPPLY</text><text x="1080" y="560" fill="#071b2d" font-size="54" font-weight="700">92%</text><text x="1270" y="558" fill="#5c3713" font-size="19">citywide</text>
+  <rect x="1042" y="615" width="466" height="167" fill="#102d3c" stroke="#31576a"/><text x="1080" y="662" fill="#8ee6d3" font-size="18" letter-spacing="3">LEDGER STATUS</text><text x="1080" y="727" fill="#f5f1e8" font-size="42" font-weight="700">BALANCED</text><circle cx="1456" cy="710" r="15" fill="#48d49b"/></g>
+  <rect x="92" y="823" width="1416" height="2" fill="#31576a"/><text x="92" y="863" fill="#8aa0ae" font-family="monospace" font-size="18" letter-spacing="3">SPRING BOOT 3  /  WEBSOCKETS  /  STRIPE CONNECT</text>
+</svg>
