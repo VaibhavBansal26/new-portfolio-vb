@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Health Semantic Search interface</title>
+  <desc id="desc">Editorial medical search interface showing a cited answer, retrieval modes, access controls and ranked FDA label evidence.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#082523"/><stop offset="1" stop-color="#123d37"/></linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#7fe0ca" stroke-opacity=".055"/></pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+  <text x="90" y="104" fill="#8ce7d2" font-family="monospace" font-size="24" letter-spacing="6">/ CITED HEALTH RETRIEVAL</text>
+  <text x="90" y="178" fill="#f7f4ea" font-family="Arial,sans-serif" font-size="62" font-weight="700">Evidence first. Guessing never.</text>
+  <text x="90" y="222" fill="#9cbeb7" font-family="monospace" font-size="20">permission-aware · hybrid search · source-grounded answers</text>
+  <rect x="90" y="282" width="1420" height="520" rx="10" fill="#f7f4ea"/>
+  <rect x="90" y="282" width="268" height="520" rx="10" fill="#102f2b"/>
+  <g font-family="monospace"><text x="126" y="340" fill="#8ce7d2" font-size="17" letter-spacing="3">SEARCH MODE</text>
+    <rect x="122" y="370" width="204" height="54" rx="27" fill="#58cbb1"/><text x="171" y="404" fill="#092520" font-size="19" font-weight="700">HYBRID + RERANK</text>
+    <text x="126" y="480" fill="#8caea6" font-size="16" letter-spacing="2">ACCESS GROUP</text><text x="126" y="521" fill="#f7f4ea" font-size="21">CLINICAL</text>
+    <text x="126" y="590" fill="#8caea6" font-size="16" letter-spacing="2">CORPUS</text><text x="126" y="631" fill="#f7f4ea" font-size="21">FDA LABELS</text>
+    <text x="126" y="700" fill="#8caea6" font-size="16" letter-spacing="2">INDEX</text><text x="126" y="741" fill="#f7f4ea" font-size="21">53,275 CHUNKS</text>
+  </g>
+  <rect x="398" y="320" width="1072" height="70" rx="35" fill="#fff" stroke="#c7d8d2"/><text x="442" y="365" fill="#314d48" font-family="Arial,sans-serif" font-size="25">What warnings apply when taking ibuprofen?</text><circle cx="1424" cy="355" r="24" fill="#164d44"/><path d="m1414 355 8 8 15-18" fill="none" stroke="#fff" stroke-width="5"/>
+  <rect x="398" y="422" width="680" height="332" rx="8" fill="#e6f4ef" stroke="#afd4ca"/>
+  <text x="436" y="470" fill="#287967" font-family="monospace" font-size="17" letter-spacing="3">CITED ANSWER</text>
+  <text x="436" y="521" fill="#163b34" font-family="Arial,sans-serif" font-size="27" font-weight="700">Use the lowest effective dose.</text>
+  <text x="436" y="566" fill="#45635d" font-family="Arial,sans-serif" font-size="21">The label warns of cardiovascular and</text><text x="436" y="600" fill="#45635d" font-family="Arial,sans-serif" font-size="21">gastrointestinal risks, especially with</text><text x="436" y="634" fill="#45635d" font-family="Arial,sans-serif" font-size="21">higher doses or longer use.</text>
+  <rect x="436" y="674" width="290" height="44" rx="22" fill="#c7e8de"/><text x="462" y="703" fill="#195e50" font-family="monospace" font-size="17">[1] FDA IBUPROFEN LABEL</text>
+  <g font-family="monospace"><rect x="1110" y="422" width="360" height="94" rx="7" fill="#143e38"/><text x="1140" y="457" fill="#8ce7d2" font-size="15" letter-spacing="2">TOP RESULT</text><text x="1140" y="493" fill="#fff" font-size="23" font-weight="700">0.94 RECALL@10</text>
+    <rect x="1110" y="532" width="360" height="94" rx="7" fill="#164d44"/><text x="1140" y="567" fill="#8ce7d2" font-size="15" letter-spacing="2">ACCESS CHECK</text><text x="1140" y="603" fill="#fff" font-size="23" font-weight="700">PASSED · 0 LEAKS</text>
+    <rect x="1110" y="642" width="360" height="112" rx="7" fill="#e2b85a"/><text x="1140" y="680" fill="#664812" font-size="15" letter-spacing="2">OFF-TOPIC QUERY</text><text x="1140" y="723" fill="#302309" font-size="23" font-weight="700">REFUSE, DON'T GUESS</text></g>
+  <text x="90" y="855" fill="#8fb7ae" font-family="monospace" font-size="18" letter-spacing="3">FASTAPI  /  BM25 + BGE  /  CROSS-ENCODER  /  PGVECTOR</text>
+</svg>

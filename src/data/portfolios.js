@@ -48,6 +48,7 @@ import interviewSuiteVisual from '../img/portImages/interview-suite.svg';
 import ridehailVisual from '../img/portImages/ridehail-operations.svg';
 import codeReviewVisual from '../img/portImages/multi-agent-code-review.svg';
 import spotlightVisual from '../img/portImages/spotlight-talent.svg';
+import healthSearchVisual from '../img/portImages/health-semantic-search.svg';
 
 
 const portfolios = [
@@ -249,6 +250,23 @@ const portfolios = [
             signals: [{ value: 'Live showcases', label: 'Creator format' }, { value: 'Ranked discovery', label: 'Recommendation flow' }],
         },
     },
+    {
+        id: 1014,
+        category: 'Health AI',
+        image: healthSearchVisual,
+        link1: 'https://github.com/VaibhavBansal26/health-semantic-search',
+        link2: 'https://huggingface.co/spaces/Vaibhavbansal26/health-semantic-search-app',
+        link3: 'https://health-semantic-search.onrender.com',
+        title: 'Health Semantic Search — Cited Medical Retrieval',
+        text: 'Python, FastAPI, React, BM25, BGE Embeddings, Hybrid Retrieval, Cross-encoder Reranking, PostgreSQL, pgvector',
+        featured: {
+            title: 'Health Semantic Search',
+            category: 'Permission-aware retrieval',
+            copy: 'A self-hostable search system over public health documents with access-aware retrieval, hybrid ranking, source citations and refusal when evidence is insufficient.',
+            tags: ['FastAPI', 'Hybrid retrieval', 'BGE embeddings', 'pgvector'],
+            signals: [{ value: '53K+ chunks', label: 'Search corpus' }, { value: '0.94 recall@10', label: 'Reranked retrieval' }],
+        },
+    },
      {
         id: 94,
         category: 'Agentic AI',
@@ -291,7 +309,14 @@ const portfolios = [
         // link2: 'https://youtu.be/_bjaJZPFovM',
         link3: 'https://medical-app-vb.streamlit.app/',
         title: 'Heart Disease Prediction using Generative AI, Streamlit, OpenAI',
-        text: 'Genrative AI, Streamlit, Machine Learning, Docker, OpenAI, Python',
+        text: 'Generative AI, Streamlit, Machine Learning, Docker, OpenAI, Python',
+        featured: {
+            title: 'Heart Disease AI',
+            category: 'Clinical prediction',
+            copy: 'An interactive health-risk prediction workflow combining a trained machine-learning model with Streamlit and generative AI guidance.',
+            tags: ['Streamlit', 'Machine Learning', 'OpenAI', 'Docker'],
+            signals: [{ value: 'Risk prediction', label: 'Model output' }, { value: 'GenAI guidance', label: 'User experience' }],
+        },
     },
     {
         id: 91,
@@ -301,7 +326,14 @@ const portfolios = [
         link2: 'https://youtu.be/_bjaJZPFovM',
         // link3: 'http://54.211.221.57:8501/',
         title: 'Car Price Prediction using Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, MinIO, Debezium',
-        text: 'Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, Zookeeper, Machine Learning, MinIO, Debezium'
+        text: 'Streamlit, MLflow, Docker, Kafka, PostgreSQL, Zookeeper, Machine Learning, MinIO, Debezium',
+        featured: {
+            title: 'Car Price ML Platform',
+            category: 'Production ML system',
+            copy: 'A production-oriented vehicle price prediction system with experiment tracking, event streaming, data infrastructure and containerized delivery.',
+            tags: ['Streamlit', 'MLflow', 'Kafka', 'PostgreSQL'],
+            signals: [{ value: 'Tracked models', label: 'ML lifecycle' }, { value: 'Streaming data', label: 'Pipeline layer' }],
+        },
     },
     {
         id: 1,
