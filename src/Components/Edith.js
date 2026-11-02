@@ -35,7 +35,7 @@ const KB = [
     },
     {
         keys: ['project', 'portfolio', 'built', 'work samples'],
-        reply: "He has shipped 40+ projects — full-stack apps, ML systems, and data pipelines. Highlights: the grapesjs-advance-components npm package, a published Springer research paper on stereo-vision obstacle avoidance, and an ML project featured in Times Square. Visit the Work page to browse them.",
+        reply: "He has shipped 60+ projects — full-stack apps, ML systems, and data pipelines. Highlights: the grapesjs-advance-components npm package, a published Springer research paper on stereo-vision obstacle avoidance, and an ML project featured in Times Square. Visit the Work page to browse them.",
     },
     {
         keys: ['times square', 'billboard', 'featured', 'nyc'],
