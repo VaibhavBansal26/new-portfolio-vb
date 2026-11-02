@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.js": "/static/js/main.718c6680.js",
+    "main.js": "/static/js/main.a1b61337.js",
     "static/js/5.20d3a1bb.chunk.js": "/static/js/5.20d3a1bb.chunk.js",
     "static/js/290.38779b35.chunk.js": "/static/js/290.38779b35.chunk.js",
-    "static/js/780.e48b015f.chunk.js": "/static/js/780.e48b015f.chunk.js",
+    "static/js/780.b30165a4.chunk.js": "/static/js/780.b30165a4.chunk.js",
     "static/js/656.fbb43fd9.chunk.js": "/static/js/656.fbb43fd9.chunk.js",
     "static/js/99.98b98824.chunk.js": "/static/js/99.98b98824.chunk.js",
     "static/js/308.5ca26bb1.chunk.js": "/static/js/308.5ca26bb1.chunk.js",
@@ -74,6 +74,7 @@
     "static/media/ecomethod.webp": "/static/media/ecomethod.bae0ea9809b39499569b.webp",
     "index.html": "/index.html",
     "static/media/fidelitymem-system.svg": "/static/media/fidelitymem-system.1a7f2f9f39569bce89e96b6946b5bec4.svg",
+    "static/media/health-semantic-search.svg": "/static/media/health-semantic-search.3c4325f5e066a7f5b304059203a7fa45.svg",
     "static/media/interview-suite.svg": "/static/media/interview-suite.7c26e607e933cd05e38b647d2f663db3.svg",
     "static/media/shopflow-commerce.svg": "/static/media/shopflow-commerce.9aafbab4483c6e91b3c97e11b530d1db.svg",
     "static/media/shorts-factory-studio.svg": "/static/media/shorts-factory-studio.ac2af9c5297b5eb229afb18421ffef4f.svg",
@@ -81,10 +82,10 @@
     "static/media/conversations-inbox.svg": "/static/media/conversations-inbox.2ffecad358e764a7ef63814f6023fe37.svg",
     "static/media/spotlight-talent.svg": "/static/media/spotlight-talent.e41e3152efc8bc7bbe7009cace9b4661.svg",
     "static/media/ridehail-operations.svg": "/static/media/ridehail-operations.70d0334f84346e24a9d471db8b94d23e.svg",
-    "main.718c6680.js.map": "/static/js/main.718c6680.js.map",
+    "main.a1b61337.js.map": "/static/js/main.a1b61337.js.map",
     "5.20d3a1bb.chunk.js.map": "/static/js/5.20d3a1bb.chunk.js.map",
     "290.38779b35.chunk.js.map": "/static/js/290.38779b35.chunk.js.map",
-    "780.e48b015f.chunk.js.map": "/static/js/780.e48b015f.chunk.js.map",
+    "780.b30165a4.chunk.js.map": "/static/js/780.b30165a4.chunk.js.map",
     "656.fbb43fd9.chunk.js.map": "/static/js/656.fbb43fd9.chunk.js.map",
     "99.98b98824.chunk.js.map": "/static/js/99.98b98824.chunk.js.map",
     "308.5ca26bb1.chunk.js.map": "/static/js/308.5ca26bb1.chunk.js.map",
@@ -92,6 +93,6 @@
     "787.8dc771c0.chunk.js.map": "/static/js/787.8dc771c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.718c6680.js"
+    "static/js/main.a1b61337.js"
   ]
 }
