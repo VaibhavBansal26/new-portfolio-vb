@@ -53,6 +53,15 @@ import healthSearchVisual from '../img/portImages/health-semantic-search.svg';
 
 const portfolios = [
     {
+        id: 1015,
+        category: 'Research Discovery AI',
+        image: 'https://raw.githubusercontent.com/VaibhavBansal26/grantlens/master/demo/demo.gif',
+        link1: 'https://github.com/VaibhavBansal26/grantlens',
+        link2: 'https://github.com/VaibhavBansal26/grantlens/raw/master/demo/grantlens_demo.mp4',
+        title: 'GrantLens — Research Funding Discovery',
+        text: 'Next.js 16, TypeScript, Flask, PostgreSQL, pgvector, Redis, BM25, BGE Embeddings, Hybrid Search, OpenAI',
+    },
+    {
         id: 1001,
         category: 'Full-stack Product',
         image: 'https://raw.githubusercontent.com/VaibhavBansal26/aether-cinema/main/docs/screenshots/02-desktop-home.png',
