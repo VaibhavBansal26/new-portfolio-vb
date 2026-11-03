@@ -60,6 +60,13 @@ const portfolios = [
         link2: 'https://github.com/VaibhavBansal26/grantlens/raw/master/demo/grantlens_demo.mp4',
         title: 'GrantLens — Research Funding Discovery',
         text: 'Next.js 16, TypeScript, Flask, PostgreSQL, pgvector, Redis, BM25, BGE Embeddings, Hybrid Search, OpenAI',
+        featured: {
+            title: 'GrantLens',
+            category: 'Research funding AI',
+            copy: 'An evidence-grounded research assistant for hybrid grant discovery, applicant-fit checks, literature reviews, cited document Q&A and deadline tracking.',
+            tags: ['Next.js 16', 'Flask', 'pgvector', 'Hybrid search'],
+            signals: [{ value: '0.687 nDCG@10', label: 'Hybrid search' }, { value: '66 / 68', label: 'Cited QA facts' }],
+        },
     },
     {
         id: 1001,
