@@ -87,6 +87,15 @@ const portfolios = [
         text: 'FastAPI, React, Kafka, PostgreSQL, Redis, Airflow, Docker, LangGraph, RAG Incident Memory, MCP Tools',
     },
     {
+        id: 1018,
+        category: 'AI Framework',
+        image: 'https://raw.githubusercontent.com/VaibhavBansal26/captra/main/assets/brand/captra-readme-header.png',
+        link1: 'https://github.com/VaibhavBansal26/captra',
+        link3: 'https://www.npmjs.com/package/captra',
+        title: 'Captra — Capability-First AI Framework',
+        text: 'TypeScript, AI Agents, Typed Capabilities, Scoped Memory, Approvals, Generated UI, PostgreSQL, MCP, React, OpenAI',
+    },
+    {
         id: 1001,
         category: 'Full-stack Product',
         image: 'https://raw.githubusercontent.com/VaibhavBansal26/aether-cinema/main/docs/screenshots/02-desktop-home.png',
