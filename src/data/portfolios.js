@@ -49,6 +49,8 @@ import ridehailVisual from '../img/portImages/ridehail-operations.svg';
 import codeReviewVisual from '../img/portImages/multi-agent-code-review.svg';
 import spotlightVisual from '../img/portImages/spotlight-talent.svg';
 import healthSearchVisual from '../img/portImages/health-semantic-search.svg';
+import memoRankVisual from '../img/portImages/memorank-retrieval.svg';
+import selfHealingVisual from '../img/portImages/self-healing-pipeline.svg';
 
 
 const portfolios = [
@@ -67,6 +69,22 @@ const portfolios = [
             tags: ['Next.js 16', 'Flask', 'pgvector', 'Hybrid search'],
             signals: [{ value: '0.687 nDCG@10', label: 'Hybrid search' }, { value: '66 / 68', label: 'Cited QA facts' }],
         },
+    },
+    {
+        id: 1016,
+        category: 'Agent Memory Research',
+        image: memoRankVisual,
+        link1: 'https://github.com/VaibhavBansal26/memorank',
+        title: 'MemoRank — Long-Horizon Agent Memory',
+        text: 'Python, MCP, OpenAI Agents SDK, Anthropic SDK, BM25, Dense Retrieval, Cross-encoder Reranking, SQLite, A/B Testing',
+    },
+    {
+        id: 1017,
+        category: 'AI Data Reliability',
+        image: selfHealingVisual,
+        link1: 'https://github.com/VaibhavBansal26/Self-Healing-Data-Pipeline',
+        title: 'AI-Powered Self-Healing Data Pipeline',
+        text: 'FastAPI, React, Kafka, PostgreSQL, Redis, Airflow, Docker, LangGraph, RAG Incident Memory, MCP Tools',
     },
     {
         id: 1001,
