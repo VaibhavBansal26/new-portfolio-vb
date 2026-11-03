@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.562b3491.js",
+    "main.js": "/static/js/main.d99eb2df.js",
     "static/js/5.20d3a1bb.chunk.js": "/static/js/5.20d3a1bb.chunk.js",
     "static/js/290.38779b35.chunk.js": "/static/js/290.38779b35.chunk.js",
     "static/js/780.5360c4af.chunk.js": "/static/js/780.5360c4af.chunk.js",
@@ -84,7 +84,7 @@
     "static/media/conversations-inbox.svg": "/static/media/conversations-inbox.2ffecad358e764a7ef63814f6023fe37.svg",
     "static/media/spotlight-talent.svg": "/static/media/spotlight-talent.e41e3152efc8bc7bbe7009cace9b4661.svg",
     "static/media/ridehail-operations.svg": "/static/media/ridehail-operations.70d0334f84346e24a9d471db8b94d23e.svg",
-    "main.562b3491.js.map": "/static/js/main.562b3491.js.map",
+    "main.d99eb2df.js.map": "/static/js/main.d99eb2df.js.map",
     "5.20d3a1bb.chunk.js.map": "/static/js/5.20d3a1bb.chunk.js.map",
     "290.38779b35.chunk.js.map": "/static/js/290.38779b35.chunk.js.map",
     "780.5360c4af.chunk.js.map": "/static/js/780.5360c4af.chunk.js.map",
@@ -95,6 +95,6 @@
     "787.8dc771c0.chunk.js.map": "/static/js/787.8dc771c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.562b3491.js"
+    "static/js/main.d99eb2df.js"
   ]
 }
