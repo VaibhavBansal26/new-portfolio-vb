@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Self-healing data pipeline control room</title>
+  <desc id="desc">An operations dashboard showing a broken streaming consumer detected, safely restarted and verified by an AI recovery agent.</desc>
+  <defs>
+    <linearGradient id="heal-bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101419"/><stop offset="1" stop-color="#202830"/></linearGradient>
+    <linearGradient id="heal-flow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f0a43a"/><stop offset="1" stop-color="#57d49f"/></linearGradient>
+    <pattern id="heal-grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#heal-bg)"/><rect width="1600" height="900" fill="url(#heal-grid)"/>
+  <text x="92" y="94" fill="#f0a43a" font-family="monospace" font-size="22" letter-spacing="6">/ AI DATA RELIABILITY LAB</text>
+  <text x="90" y="172" fill="#f7f4ea" font-family="Arial,sans-serif" font-size="64" font-weight="750">Detect. Repair. Verify.</text>
+  <text x="92" y="217" fill="#9ca7ae" font-family="Arial,sans-serif" font-size="25">A streaming pipeline that responds to failure—with guardrails.</text>
+  <g transform="translate(90 280)">
+    <rect width="1420" height="504" rx="12" fill="#151b21" stroke="#3b454d" stroke-width="2"/>
+    <g transform="translate(38 42)" font-family="monospace">
+      <text fill="#78858d" font-size="15" letter-spacing="3">LIVE PIPELINE MAP</text>
+      <g transform="translate(0 46)">
+        <rect width="226" height="106" rx="8" fill="#202a31" stroke="#46545d"/><text x="22" y="38" fill="#91a0a9" font-size="14">01 / INGEST</text><text x="22" y="75" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">Kafka events</text><circle cx="198" cy="30" r="8" fill="#57d49f"/>
+        <path d="M226 53h44" stroke="#77858c" stroke-width="3"/><path d="m270 53-12-8v16z" fill="#77858c"/>
+        <rect x="270" width="226" height="106" rx="8" fill="#37241d" stroke="#d26f3d" stroke-width="2"/><text x="292" y="38" fill="#e48d62" font-size="14">02 / CONSUMER</text><text x="292" y="75" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">STOPPED</text><circle cx="468" cy="30" r="8" fill="#ef654f"/>
+        <path d="M496 53h44" stroke="#77858c" stroke-width="3" stroke-dasharray="6 6"/><path d="m540 53-12-8v16z" fill="#77858c"/>
+        <rect x="540" width="226" height="106" rx="8" fill="#202a31" stroke="#46545d"/><text x="562" y="38" fill="#91a0a9" font-size="14">03 / VALIDATE</text><text x="562" y="75" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">Rules + AI</text><circle cx="738" cy="30" r="8" fill="#79858c"/>
+        <path d="M766 53h44" stroke="#77858c" stroke-width="3"/><path d="m810 53-12-8v16z" fill="#77858c"/>
+        <rect x="810" width="226" height="106" rx="8" fill="#202a31" stroke="#46545d"/><text x="832" y="38" fill="#91a0a9" font-size="14">04 / STORE</text><text x="832" y="75" fill="#fff" font-family="Arial,sans-serif" font-size="25" font-weight="700">PostgreSQL</text><circle cx="1008" cy="30" r="8" fill="#79858c"/>
+      </g>
+      <g transform="translate(0 194)">
+        <rect width="1036" height="206" rx="8" fill="#11171c" stroke="#343e45"/>
+        <text x="24" y="38" fill="#78858d" font-size="14" letter-spacing="2">INCIDENT #042 · AUTO-HEALER</text>
+        <g transform="translate(24 65)">
+          <circle cx="9" cy="9" r="9" fill="#ef654f"/><text x="34" y="15" fill="#e4e9ec" font-size="17">Health monitor detected stopped consumer</text>
+          <path d="M9 24v26" stroke="#58666e" stroke-width="2"/>
+          <circle cx="9" cy="65" r="9" fill="#f0a43a"/><text x="34" y="71" fill="#e4e9ec" font-size="17">Policy selected allowlisted restart action</text>
+          <path d="M9 80v26" stroke="#58666e" stroke-width="2"/>
+          <circle cx="9" cy="121" r="9" fill="#57d49f"/><text x="34" y="127" fill="#e4e9ec" font-size="17">Service readiness verified · incident recorded</text>
+        </g>
+        <rect x="716" y="54" width="286" height="118" rx="7" fill="#172820" stroke="#35775d"/>
+        <text x="744" y="86" fill="#73cbaa" font-size="13" letter-spacing="2">RECOVERY STATUS</text><text x="744" y="129" fill="#f7f4ea" font-family="Arial,sans-serif" font-size="31" font-weight="700">HEALED</text><text x="744" y="155" fill="#73cbaa" font-size="14">VERIFICATION PASSED</text>
+      </g>
+    </g>
+    <g transform="translate(1120 42)" font-family="monospace">
+      <text fill="#78858d" font-size="15" letter-spacing="3">CONTROL PLANE</text>
+      <rect y="46" width="262" height="112" rx="8" fill="#2b2118" stroke="#76512c"/><text x="22" y="80" fill="#d69b53" font-size="13">RISK POLICY</text><text x="22" y="116" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">Approval gate</text><text x="22" y="141" fill="#a78a69" font-size="13">HIGH-RISK ACTIONS</text>
+      <rect y="176" width="262" height="112" rx="8" fill="#1c2730" stroke="#3d5669"/><text x="22" y="210" fill="#7da7c4" font-size="13">INCIDENT MEMORY</text><text x="22" y="246" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">RAG context</text><text x="22" y="271" fill="#7891a3" font-size="13">PAST RECOVERIES</text>
+      <rect y="306" width="262" height="112" rx="8" fill="#172820" stroke="#35775d"/><text x="22" y="340" fill="#73cbaa" font-size="13">OBSERVABILITY</text><text x="22" y="376" fill="#fff" font-family="Arial,sans-serif" font-size="22" font-weight="700">Trace + cost</text><text x="22" y="401" fill="#6da38c" font-size="13">AUDIT TIMELINE</text>
+    </g>
+  </g>
+  <rect x="90" y="824" width="1420" height="4" fill="url(#heal-flow)"/>
+  <text x="92" y="866" fill="#89959c" font-family="monospace" font-size="17" letter-spacing="3">FASTAPI / KAFKA / AIRFLOW / LANGGRAPH / RAG / MCP TOOLS</text>
+</svg>
