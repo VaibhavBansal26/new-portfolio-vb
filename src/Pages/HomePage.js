@@ -160,7 +160,7 @@ function HomePage({ theme }) {
           <p className="bio">5+ years turning complex problems into scalable software and data products — Python, React, AWS. M.S. in Data Science at SUNY Buffalo. Previously engineering at DashClicks &amp; Wipro.</p>
           <div className="stats" aria-label="Career highlights">
             <div><b>5+</b><span>Years experience</span></div>
-            <div><b>60+</b><span>Projects delivered</span></div>
+            <div><b>70+</b><span>Projects delivered</span></div>
             <div><b>M.S.</b><span>Data Science · SUNY Buffalo</span></div>
           </div>
           <div className="actions">

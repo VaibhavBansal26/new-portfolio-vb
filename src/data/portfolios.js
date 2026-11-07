@@ -96,6 +96,15 @@ const portfolios = [
         text: 'TypeScript, AI Agents, Typed Capabilities, Scoped Memory, Approvals, Generated UI, PostgreSQL, MCP, React, OpenAI',
     },
     {
+        id: 1019,
+        category: 'Healthcare AI Platform',
+        image: 'https://raw.githubusercontent.com/VaibhavBansal26/smart-health-assistant/main/docs/demo/recommend-result.png',
+        link1: 'https://github.com/VaibhavBansal26/smart-health-assistant',
+        link2: 'https://github.com/VaibhavBansal26/smart-health-assistant/raw/main/docs/demo/demo.mp4',
+        title: 'Smart Health Assistant — Secure AI Care Platform',
+        text: 'Angular, Spring Boot, Java 21, Python, FastAPI, Machine Learning, Claude, SSE, Healthcare Security, Explainable AI',
+    },
+    {
         id: 1001,
         category: 'Full-stack Product',
         image: 'https://raw.githubusercontent.com/VaibhavBansal26/aether-cinema/main/docs/screenshots/02-desktop-home.png',
