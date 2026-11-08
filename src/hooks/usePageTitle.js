@@ -28,19 +28,20 @@ const upsertCanonical = href => {
     canonical.setAttribute('href', href);
 };
 
-export default function usePageTitle(page) {
+export default function usePageTitle(page, override = null) {
     useEffect(() => {
         const pathname = normalizePath(window.location.pathname);
-        const isNotFound = page === '404' || !siteMeta[pathname];
-        const meta = isNotFound ? siteMeta['404'] : siteMeta[pathname];
-        const canonicalUrl = isNotFound ? `${SITE_URL}${pathname}` : `${SITE_URL}${pathname === '/' ? '/' : pathname}`;
+        const isNotFound = !override && (page === '404' || !siteMeta[pathname]);
+        const meta = override || (isNotFound ? siteMeta['404'] : siteMeta[pathname]);
+        const metaPath = override?.path || pathname;
+        const canonicalUrl = `${SITE_URL}${metaPath === '/' ? '/' : metaPath}`;
 
         document.title = meta.title;
         upsertMeta('meta[name="description"]', { name: 'description', content: meta.description });
         upsertMeta('meta[name="robots"]', { name: 'robots', content: meta.noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large' });
         upsertMeta('meta[property="og:title"]', { property: 'og:title', content: meta.title });
         upsertMeta('meta[property="og:description"]', { property: 'og:description', content: meta.description });
-        upsertMeta('meta[property="og:type"]', { property: 'og:type', content: 'website' });
+        upsertMeta('meta[property="og:type"]', { property: 'og:type', content: meta.type === 'SoftwareSourceCode' ? 'article' : 'website' });
         upsertMeta('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
         upsertMeta('meta[property="og:image"]', { property: 'og:image', content: SOCIAL_IMAGE });
         upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: meta.title });
@@ -54,7 +55,7 @@ export default function usePageTitle(page) {
             const schema = document.createElement('script');
             schema.id = 'route-structured-data';
             schema.type = 'application/ld+json';
-            schema.textContent = JSON.stringify({
+            schema.textContent = JSON.stringify(meta.schema || {
                 '@context': 'https://schema.org',
                 '@type': meta.type,
                 name: meta.title,
@@ -66,5 +67,5 @@ export default function usePageTitle(page) {
             });
             document.head.appendChild(schema);
         }
-    }, [page]);
+    }, [page, override]);
 }

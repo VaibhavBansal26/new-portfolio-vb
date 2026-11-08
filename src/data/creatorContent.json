@@ -1,0 +1,267 @@
+{
+  "generatedAt": "2026-11-08T19:54:16.357Z",
+  "sources": {
+    "medium": "https://medium.com/feed/@vaibhav.bansal945",
+    "youtube": "https://www.youtube.com/@VaibhavBansalCode"
+  },
+  "mediumPosts": [
+    {
+      "title": "I Built a CLI That Turns One Sentence Into a Website, and Refuses to Ship Your API Keys",
+      "summary": "Last year I had an old npm package with one component in it: an accordion for GrapesJS. Nobody used it, and it deserved that. This autumn I rebuilt it into something I would actually use, and I want to explain what it became, what it does well, and where it is still weak. The sho",
+      "link": "https://medium.com/@vaibhav.bansal945/ai-website-generator-cli-blocks-leaked-api-keys-e5f19ebbac62?source=rss-7add18bd7c11------2",
+      "publishedAt": "Wed, 28 Oct 2026 19:22:36 GMT",
+      "thumbnail": "https://cdn-images-1.medium.com/max/800/1*TuUar-E-_HvOSMs9ghmTXw.gif"
+    },
+    {
+      "title": "Build a Minimal RAG Pipeline in 50 Lines of Python (No Framework Required)",
+      "summary": "Every RAG tutorial starts the same way: install a vector database, sign up for an embeddings API, wire up a framework with fourteen abstractions. By the time it works, you can’t explain what any single piece does. So let’s do the opposite. Fifty lines of plain Python, one depende",
+      "link": "https://medium.com/@vaibhav.bansal945/build-a-minimal-rag-pipeline-in-50-lines-of-python-no-framework-required-4c1d7db275b9?source=rss-7add18bd7c11------2",
+      "publishedAt": "Fri, 03 Jul 2026 21:22:19 GMT",
+      "thumbnail": "https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=4c1d7db275b9"
+    },
+    {
+      "title": "Exploring CSR, SSR, ISR, and SSG: Which Rendering Method is Right for You?",
+      "summary": "Introduction: The intricate world of web application development requires careful consideration when it comes to rendering web pages. Among the multitude of choices, four rendering methods stand out: Client-Side Rendering (CSR), Server-Side Rendering (SSR), Incremental Static Reg",
+      "link": "https://medium.com/@vaibhav.bansal945/exploring-csr-ssr-isr-and-ssg-which-rendering-method-is-right-for-you-6c7c20793c08?source=rss-7add18bd7c11------2",
+      "publishedAt": "Thu, 24 Aug 2023 19:22:15 GMT",
+      "thumbnail": "https://medium.com/_/stat?event=post.clientViewed&referrerSource=full_rss&postId=6c7c20793c08"
+    }
+  ],
+  "youtube": {
+    "videos": [
+      {
+        "id": "ZcIbqeIAC0Y",
+        "title": "Real-time Logs Processing using Apache Kafka, Airflow, ElasticSearch (Data Engineering)",
+        "copy": "",
+        "link": "https://www.youtube.com/watch?v=ZcIbqeIAC0Y",
+        "thumbnail": "https://i.ytimg.com/vi/ZcIbqeIAC0Y/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBegWkE89wSWK7pAYJNOujjHTY2yw",
+        "views": 46,
+        "publishedLabel": "4mo ago",
+        "duration": "22:48",
+        "isShort": false
+      },
+      {
+        "id": "_bjaJZPFovM",
+        "title": "Car Price Prediction using Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, FAST Api, MinIO, Debezium",
+        "copy": "",
+        "link": "https://www.youtube.com/watch?v=_bjaJZPFovM",
+        "thumbnail": "https://i.ytimg.com/vi/_bjaJZPFovM/hq720.jpg?sqp=-oaymwExCNAFEJQDSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYVyBOKGUwDw==&rs=AOn4CLCe8ijdW49OYPs5UQheZxSJdUV-Vw",
+        "views": 69,
+        "publishedLabel": "1y ago",
+        "duration": "6:34",
+        "isShort": false
+      },
+      {
+        "id": "Z1XzofG0cNE",
+        "title": "Music Stream 3 Tier Application  using React Js, Node Js, Mongo DB, PostgresSql, Kubernetes, Jenkins",
+        "copy": "",
+        "link": "https://www.youtube.com/watch?v=Z1XzofG0cNE",
+        "thumbnail": "https://i.ytimg.com/vi/Z1XzofG0cNE/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC2NYRnIKtQcTseVTMKt4YaeNAg3g",
+        "views": 24,
+        "publishedLabel": "1y ago",
+        "duration": "18:54",
+        "isShort": false
+      },
+      {
+        "id": "ucCxmocb8W8",
+        "title": "Connecting Power Bi to Athena on Mac using AWS EC2 instance",
+        "copy": "",
+        "link": "https://www.youtube.com/watch?v=ucCxmocb8W8",
+        "thumbnail": "https://i.ytimg.com/vi/ucCxmocb8W8/hq720.jpg?sqp=-oaymwExCNAFEJQDSFryq4qpAyMIARUAAIhCGAHwAQH4Af4JgALQBYoCDAgAEAEYZCBlKE8wDw==&rs=AOn4CLC0rnkGu4uJ9lI-prtTOLvX7ZcE3g",
+        "views": 236,
+        "publishedLabel": "1y ago",
+        "duration": "13:19",
+        "isShort": false
+      },
+      {
+        "id": "ENTbjSBwjS0",
+        "title": "A Shiny R Application for Customer Segmentation And Sales Analysis with Product Recommendation",
+        "copy": "",
+        "link": "https://www.youtube.com/watch?v=ENTbjSBwjS0",
+        "thumbnail": "https://i.ytimg.com/vi/ENTbjSBwjS0/hq720.jpg?sqp=-oaymwExCNAFEJQDSFryq4qpAyMIARUAAIhCGAHwAQH4Af4IgALQBYoCDAgAEAEYRyBYKGUwDw==&rs=AOn4CLDa4Lz7CKIpyG9qWiC3xGVWyCjE2g",
+        "views": 26,
+        "publishedLabel": "1y ago",
+        "duration": "3:53",
+        "isShort": false
+      },
+      {
+        "id": "VKSf1NfdjTU",
+        "title": "End to End Data Engineering Project - Medallion Architecture in Azure",
+        "copy": "",
+        "link": "https://www.youtube.com/watch?v=VKSf1NfdjTU",
+        "thumbnail": "https://i.ytimg.com/vi/VKSf1NfdjTU/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCqIvK2OMKRwX1MVUcBsWHl_N6_Ng",
+        "views": 1200,
+        "publishedLabel": "1y ago",
+        "duration": "1:08:40",
+        "isShort": false
+      },
+      {
+        "id": "1Ca0Y4s37ls",
+        "title": "Data Science Salary Prediction Using Flask, React.js - End to End Project",
+        "copy": "",
+        "link": "https://www.youtube.com/watch?v=1Ca0Y4s37ls",
+        "thumbnail": "https://i.ytimg.com/vi/1Ca0Y4s37ls/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCXAB6J-ZzK3uV1kgZderyaV0h8fA",
+        "views": 160,
+        "publishedLabel": "1y ago",
+        "duration": "12:03",
+        "isShort": false
+      },
+      {
+        "id": "Gad5vz1Pkcc",
+        "title": "Natural disaster prediction using deep learning and machine learning  CAPSTONE-2020",
+        "copy": "",
+        "link": "https://www.youtube.com/watch?v=Gad5vz1Pkcc",
+        "thumbnail": "https://i.ytimg.com/vi/Gad5vz1Pkcc/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBDXz9PyUi-9KfiLwMJpRMoJdj8hw",
+        "views": 10000,
+        "publishedLabel": "6y ago",
+        "duration": "40:15",
+        "isShort": false
+      }
+    ],
+    "shorts": [
+      {
+        "id": "yhyR53YRvOs",
+        "title": "Double Booking Problem: How BookMyShow Locks Seat A7",
+        "copy": "",
+        "link": "https://www.youtube.com/shorts/yhyR53YRvOs",
+        "thumbnail": "https://i.ytimg.com/vi/yhyR53YRvOs/frame0.jpg",
+        "views": 21,
+        "publishedLabel": null,
+        "duration": "Short",
+        "isShort": true
+      },
+      {
+        "id": "O34rHovDIBM",
+        "title": "How ChatGPT Works: System Design for Millions of Users",
+        "copy": "",
+        "link": "https://www.youtube.com/shorts/O34rHovDIBM",
+        "thumbnail": "https://i.ytimg.com/vi/O34rHovDIBM/frame0.jpg",
+        "views": 40,
+        "publishedLabel": null,
+        "duration": "Short",
+        "isShort": true
+      },
+      {
+        "id": "MiR15uarrzM",
+        "title": "Government AI Coding Agents: IAM Beats Better Models",
+        "copy": "",
+        "link": "https://www.youtube.com/shorts/MiR15uarrzM",
+        "thumbnail": "https://i.ytimg.com/vi/MiR15uarrzM/frame0.jpg",
+        "views": 17,
+        "publishedLabel": null,
+        "duration": "Short",
+        "isShort": true
+      },
+      {
+        "id": "UdkamLcm3Tk",
+        "title": "Should AI Agents Argue With Themselves First?",
+        "copy": "",
+        "link": "https://www.youtube.com/shorts/UdkamLcm3Tk",
+        "thumbnail": "https://i.ytimg.com/vi/UdkamLcm3Tk/frame0.jpg",
+        "views": 29,
+        "publishedLabel": null,
+        "duration": "Short",
+        "isShort": true
+      },
+      {
+        "id": "BWo1EWeGZpg",
+        "title": "Vision Model Failing? Fix the Image, Not the Prompt",
+        "copy": "",
+        "link": "https://www.youtube.com/shorts/BWo1EWeGZpg",
+        "thumbnail": "https://i.ytimg.com/vi/BWo1EWeGZpg/frame0.jpg",
+        "views": 26,
+        "publishedLabel": null,
+        "duration": "Short",
+        "isShort": true
+      },
+      {
+        "id": "pkjFhK0SoyM",
+        "title": "How Netflix Streams Video Without Buffering (Explained)",
+        "copy": "",
+        "link": "https://www.youtube.com/shorts/pkjFhK0SoyM",
+        "thumbnail": "https://i.ytimg.com/vi/pkjFhK0SoyM/frame0.jpg",
+        "views": 62,
+        "publishedLabel": null,
+        "duration": "Short",
+        "isShort": true
+      },
+      {
+        "id": "FQZ2e0C4TOM",
+        "title": "AI Agent Memory: Why Vector Search Isn't Enough",
+        "copy": "",
+        "link": "https://www.youtube.com/shorts/FQZ2e0C4TOM",
+        "thumbnail": "https://i.ytimg.com/vi/FQZ2e0C4TOM/frame0.jpg",
+        "views": 39,
+        "publishedLabel": null,
+        "duration": "Short",
+        "isShort": true
+      },
+      {
+        "id": "vRnMJPwzwkA",
+        "title": "SFT vs Preference Optimization vs RL: Which to Pick?",
+        "copy": "",
+        "link": "https://www.youtube.com/shorts/vRnMJPwzwkA",
+        "thumbnail": "https://i.ytimg.com/vi/vRnMJPwzwkA/frame0.jpg",
+        "views": 38,
+        "publishedLabel": null,
+        "duration": "Short",
+        "isShort": true
+      },
+      {
+        "id": "g0m4Ute5MQs",
+        "title": "RAG vs MCP: Why You Don't Have to Pick One",
+        "copy": "",
+        "link": "https://www.youtube.com/shorts/g0m4Ute5MQs",
+        "thumbnail": "https://i.ytimg.com/vi/g0m4Ute5MQs/frame0.jpg",
+        "views": 60,
+        "publishedLabel": null,
+        "duration": "Short",
+        "isShort": true
+      },
+      {
+        "id": "3VEfwntf02A",
+        "title": "Agentic RAG: Why Your Bot's Answers Are Half Right",
+        "copy": "",
+        "link": "https://www.youtube.com/shorts/3VEfwntf02A",
+        "thumbnail": "https://i.ytimg.com/vi/3VEfwntf02A/frame0.jpg",
+        "views": 78,
+        "publishedLabel": null,
+        "duration": "Short",
+        "isShort": true
+      },
+      {
+        "id": "AzLQpjXxRXI",
+        "title": "4 rules of the sigma engineer #Shorts",
+        "copy": "",
+        "link": "https://www.youtube.com/shorts/AzLQpjXxRXI",
+        "thumbnail": "https://i.ytimg.com/vi/AzLQpjXxRXI/frame0.jpg",
+        "views": 19,
+        "publishedLabel": null,
+        "duration": "Short",
+        "isShort": true
+      },
+      {
+        "id": "9oFI9PFiA3c",
+        "title": "Your Prompt Isn't the Problem. Your Context Is.",
+        "copy": "",
+        "link": "https://www.youtube.com/shorts/9oFI9PFiA3c",
+        "thumbnail": "https://i.ytimg.com/vi/9oFI9PFiA3c/frame0.jpg",
+        "views": 190,
+        "publishedLabel": null,
+        "duration": "Short",
+        "isShort": true
+      },
+      {
+        "id": "LcUqidCJIUI",
+        "title": "How do you know your AI is right ?",
+        "copy": "",
+        "link": "https://www.youtube.com/shorts/LcUqidCJIUI",
+        "thumbnail": "https://i.ytimg.com/vi/LcUqidCJIUI/frame0.jpg",
+        "views": 27,
+        "publishedLabel": null,
+        "duration": "Short",
+        "isShort": true
+      }
+    ]
+  }
+}

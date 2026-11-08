@@ -88,8 +88,8 @@ function InteractiveProjectCard({ project, index, total }) {
       <motion.a
         className="project-cta"
         href={project.href}
-        target="_blank"
-        rel="noreferrer"
+        target={project.href?.startsWith('/') ? undefined : '_blank'}
+        rel={project.href?.startsWith('/') ? undefined : 'noreferrer'}
         aria-label={`View ${project.title} project`}
         variants={reduceMotion ? undefined : { hover: { backgroundColor: 'var(--ink)', color: 'var(--on-ink)' } }}
       >

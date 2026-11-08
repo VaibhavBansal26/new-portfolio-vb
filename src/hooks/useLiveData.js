@@ -1,7 +1,17 @@
 import { useEffect, useState } from 'react';
+import creatorSnapshot from '../data/creatorContent.json';
 
 const SIX_HOURS = 6 * 60 * 60 * 1000;
 const THIRTY_MINUTES = 30 * 60 * 1000;
+const SNAPSHOT_YOUTUBE = [...(creatorSnapshot.youtube?.videos || []), ...(creatorSnapshot.youtube?.shorts || [])];
+const SNAPSHOT_CONTENT = {
+  medium: creatorSnapshot.mediumPosts?.[0] || null,
+  mediumPosts: creatorSnapshot.mediumPosts || [],
+  youtube: SNAPSHOT_YOUTUBE,
+  isLive: false,
+  isSnapshot: true,
+  generatedAt: creatorSnapshot.generatedAt,
+};
 
 const readCache = (key, maxAge = SIX_HOURS) => {
   try {
@@ -190,7 +200,7 @@ const youtubeVideoId = item => {
 };
 
 export function useLatestCreatorContent() {
-  const [content, setContent] = useState(() => readCache('vb-creator-feeds-v5', THIRTY_MINUTES) || { medium: null, mediumPosts: [], youtube: [], isLive: false });
+  const [content, setContent] = useState(() => readCache('vb-creator-feeds-v6', THIRTY_MINUTES) || SNAPSHOT_CONTENT);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -199,7 +209,7 @@ export function useLatestCreatorContent() {
       fetchYoutubeFeed(controller.signal)
     ])
       .then(([mediumItems, youtubeItems]) => {
-        const mediumPosts = mediumItems
+        const liveMediumPosts = mediumItems
           .map(item => ({
             title: plainText(item.title),
             summary: plainText(item.description || item.content).slice(0, 220),
@@ -207,24 +217,25 @@ export function useLatestCreatorContent() {
             publishedAt: item.pubDate,
             thumbnail: safeUrl(item.thumbnail)
           }))
-          .filter(item => item.title && item.link)
-          .slice(0, 8);
+          .filter(item => item.title && item.link);
+        const mediumPosts = [...new Map([...liveMediumPosts, ...SNAPSHOT_CONTENT.mediumPosts].map(item => [item.link, item])).values()];
         const medium = mediumPosts[0] || null;
-        const youtube = youtubeItems
+        const liveYoutube = youtubeItems
           .map(item => ({
             id: item.id || youtubeVideoId(item),
             title: plainText(item.title),
             copy: plainText(item.description || item.content).slice(0, 220),
             link: safeUrl(item.link),
-            isShort: typeof item.isShort === 'boolean' ? item.isShort : safeUrl(item.link).includes('/shorts/'),
+            isShort: SNAPSHOT_YOUTUBE.find(snapshot => snapshot.id === (item.id || youtubeVideoId(item)))?.isShort
+              ?? (typeof item.isShort === 'boolean' ? item.isShort : safeUrl(item.link).includes('/shorts/')),
             views: Number(item.views || 0),
             publishedAt: item.pubDate,
             thumbnail: safeUrl(item.thumbnail)
           }))
-          .filter(item => item.id && item.title)
-          .slice(0, 15);
-        const value = { medium, mediumPosts, youtube, isLive: Boolean(medium || youtube.length) };
-        writeCache('vb-creator-feeds-v5', value);
+          .filter(item => item.id && item.title);
+        const youtube = [...new Map([...liveYoutube, ...SNAPSHOT_YOUTUBE].map(item => [item.id, item])).values()];
+        const value = { medium, mediumPosts, youtube, isLive: Boolean(medium || liveYoutube.length), isSnapshot: false };
+        writeCache('vb-creator-feeds-v6', value);
         setContent(value);
       })
       .catch(() => {});

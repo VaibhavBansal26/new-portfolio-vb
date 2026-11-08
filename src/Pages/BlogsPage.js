@@ -62,6 +62,10 @@ const youtubeVideos = [
 ];
 
 const formatViews = value => new Intl.NumberFormat('en-US', { notation: Number(value) >= 1000 ? 'compact' : 'standard', maximumFractionDigits: 1 }).format(Number(value) || 0);
+const formatPublishedDate = value => {
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? null : date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+};
 
 function BlogsPage() {
   usePageTitle('Writing');
@@ -71,14 +75,12 @@ function BlogsPage() {
   const liveVideos = React.useMemo(() => creatorContent.youtube.map((video, index) => ({
     ...video,
     eyebrow: index === 0 ? 'Latest upload · live feed' : 'From the channel · live feed',
-    meta: video.publishedAt
-      ? new Date(video.publishedAt.replace(' ', 'T')).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
-      : 'YouTube',
+    meta: formatPublishedDate(video.publishedAt) || video.publishedLabel || 'YouTube',
     copy: video.copy || 'The latest build note, walkthrough, or engineering experiment from Vaibhav Bansal Code.',
   })), [creatorContent.youtube]);
-  const mostViewedVideo = liveVideos.reduce((leader, video) => Number(video.views || 0) > Number(leader.views || 0) ? video : leader, youtubeVideos[0]);
   const longVideos = liveVideos.filter(video => !video.isShort);
   const shortVideos = liveVideos.filter(video => video.isShort);
+  const mostViewedVideo = longVideos.reduce((leader, video) => Number(video.views || 0) > Number(leader.views || 0) ? video : leader, youtubeVideos[0]);
   const latestVideo = longVideos[0] || youtubeVideos[1] || mostViewedVideo;
   const sliderVideos = (longVideos.length ? longVideos : youtubeVideos.slice(1))
     .filter(video => video.id !== mostViewedVideo.id && video.id !== latestVideo.id);
@@ -86,7 +88,7 @@ function BlogsPage() {
   const displayedArticles = React.useMemo(() => {
     const feedArticles = (creatorContent.mediumPosts || []).map((post, index) => ({
       no: String(index + 1).padStart(2, '0'),
-      type: `Medium · ${post.publishedAt ? new Date(post.publishedAt.replace(' ', 'T')).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'recent post'}`,
+      type: `Medium · ${formatPublishedDate(post.publishedAt) || 'recent post'}`,
       title: post.title,
       summary: post.summary || 'A recent article from Vaibhav Bansal on Medium.',
       tags: index === 0 ? ['Medium', 'Newest', 'Live feed'] : ['Medium', 'From the archive'],
@@ -97,7 +99,7 @@ function BlogsPage() {
       isLatest: index === 0,
     }));
     const source = feedArticles.length ? feedArticles : articles;
-    return source.slice(0, 6).map((article, index) => ({ ...article, no: String(index + 1).padStart(2, '0') }));
+    return source.map((article, index) => ({ ...article, no: String(index + 1).padStart(2, '0') }));
   }, [creatorContent.mediumPosts]);
 
   return (
@@ -116,12 +118,10 @@ function BlogsPage() {
         </div>
         <motion.div
           className="publishing-dial"
-          aria-label="Three articles and one featured video"
-          animate={reduceMotion ? undefined : { rotate: 360 }}
-          transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+          aria-label={`${displayedArticles.length} articles, ${longVideos.length} long-form videos and ${shortVideos.length} Shorts`}
         >
-          <span className="mono">READ · WATCH · BUILD · REPEAT ·</span>
-          <strong>3+1</strong>
+          <span className="mono">READ · WATCH · BUILD · REPEAT</span>
+          <strong>{displayedArticles.length}·{longVideos.length}·{shortVideos.length}</strong>
         </motion.div>
       </header>
 
@@ -161,7 +161,7 @@ function BlogsPage() {
         </div>
 
         <div className="video-slider" aria-label="More long-form videos">
-          <div className="slider-heading"><div><span className="mono">More from the channel</span><strong>{creatorContent.isLive ? 'Automatically refreshed' : 'Selected videos'}</strong></div><div><button type="button" onClick={() => moveVideoRail(-1)} aria-label="Previous videos"><ArrowBackRoundedIcon /></button><button type="button" onClick={() => moveVideoRail(1)} aria-label="Next videos"><ArrowForwardRoundedIcon /></button></div></div>
+          <div className="slider-heading"><div><span className="mono">More from the channel</span><strong>{creatorContent.isLive ? 'Automatically refreshed' : 'Latest build snapshot'}</strong></div><div><button type="button" onClick={() => moveVideoRail(-1)} aria-label="Previous videos"><ArrowBackRoundedIcon /></button><button type="button" onClick={() => moveVideoRail(1)} aria-label="Next videos"><ArrowForwardRoundedIcon /></button></div></div>
           <div className="video-rail" ref={videoRailRef}>
             {sliderVideos.map((video, index) => (
               <a className="rail-video" href={video.link || `https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noreferrer" key={video.id}>
@@ -174,7 +174,7 @@ function BlogsPage() {
 
         {shortVideos.length > 0 ? <div className="shorts-section" aria-label="YouTube Shorts">
           <div className="shorts-heading"><div><span className="mono">Shorts / quick ideas</span><h3>Small screen.<br />One sharp thought.</h3></div><YouTubeIcon /></div>
-          <div className="shorts-rail">{shortVideos.map((video, index) => <a className="short-card" href={video.link} target="_blank" rel="noreferrer" key={video.id}><div><img src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`} alt={`Short: ${video.title}`} loading="lazy" decoding="async" /><span className="short-number mono">0{index + 1}</span><span className="short-play"><PlayArrowRoundedIcon /></span></div><p className="mono">Short · {video.meta}</p><h4>{video.title}</h4></a>)}</div>
+          <div className="shorts-rail">{shortVideos.map((video, index) => <a className="short-card" href={video.link} target="_blank" rel="noreferrer" key={video.id}><div><img src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`} alt={`Short: ${video.title}`} loading="lazy" decoding="async" /><span className="short-number mono">{String(index + 1).padStart(2, '0')}</span><span className="short-play"><PlayArrowRoundedIcon /></span></div><p className="mono">Short · {video.meta}</p><h4>{video.title}</h4></a>)}</div>
         </div> : null}
       </section>
 
@@ -233,8 +233,11 @@ const WritingStyled = styled.div`
   .writing-hero { display: grid; grid-template-columns: 1fr 174px; align-items: end; gap: 46px; }
   .publishing-dial { position: relative; width: 154px; height: 154px; display: grid; place-items: center; justify-self: end; border: 1px solid var(--line); border-radius: 50%; }
   .publishing-dial::before { content: ''; position: absolute; inset: 16px; border: 1px dashed var(--blue); border-radius: 50%; }
-  .publishing-dial span { position: absolute; color: var(--muted); font-size: 8px; letter-spacing: .08em; }
-  .publishing-dial strong { font-family: var(--display); color: var(--blue); font-size: 42px; letter-spacing: -.07em; }
+  .publishing-dial::after { content: ''; position: absolute; inset: 6px; border: 2px solid transparent; border-top-color: var(--blue); border-right-color: color-mix(in srgb, var(--blue) 38%, transparent); border-radius: 50%; animation: dial-spin 8s linear infinite; }
+  .publishing-dial span { position: absolute; top: 36px; width: 106px; color: var(--muted); font-size: 6px; line-height: 1.3; letter-spacing: .08em; text-align: center; }
+  .publishing-dial strong { position: relative; z-index: 1; margin-top: 22px; font-family: var(--display); color: var(--blue); font-size: 30px; letter-spacing: -.07em; }
+  @keyframes dial-spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .publishing-dial::after { animation: none; } }
   .watch-stage { width: min(100%, 1000px); margin-inline: auto; padding: 56px 0 58px; border-bottom: 1px solid var(--line); }
   .video-heading { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 28px; margin-bottom: 22px; }
   .video-heading h2 { margin-top: 16px; font-family: var(--display); font-size: clamp(34px, 4.2vw, 56px); line-height: .92; letter-spacing: -.055em; }

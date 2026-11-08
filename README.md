@@ -6,11 +6,12 @@ A modern, responsive portfolio for an AI software engineer and product builder.
 
 ## Highlights
 
-- Nine interactive project case-study cards
+- 18 featured project case studies and a searchable 70-project archive
+- Individual, indexable project pages enriched from GitHub documentation and repository evidence
 - Live npm lifetime-download totals
 - GitHub contribution, streak, repository, and profile signals
 - LeetCode profile integration
-- Automatically refreshed Medium and YouTube content
+- Build-time Medium, long-form YouTube, and Shorts snapshots with resilient live-feed enhancement
 - Four color themes with matching portrait and note treatments
 - Responsive editorial layouts and reduced-motion support
 - Route-specific SEO metadata, structured data, sitemap, and prerendered HTML
@@ -36,7 +37,14 @@ Create the production build:
 npm run build
 ```
 
-The post-build step generates route-specific HTML for the seven indexable pages and the custom 404 page.
+The pre-build step refreshes public creator content. The post-build step generates route-specific HTML for the seven primary pages, 70 project pages, the custom 404 page, structured data, feeds, `projects.json`, `llms.txt`, and `llms-full.txt`.
+
+Refresh public data manually when needed:
+
+```bash
+npm run sync:creator-content
+npm run sync:project-details
+```
 
 ## Version history
 

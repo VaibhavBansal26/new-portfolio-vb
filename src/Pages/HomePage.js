@@ -20,6 +20,7 @@ import avatarBurned from '../img/avatar-burned-cloth.webp';
 import ashParticles from '../img/ash-particles-v3.webp';
 import portfolios from '../data/portfolios';
 import { useGitHubStats, useNpmDownloadCounts } from '../hooks/useLiveData';
+import projectSlug from '../utils/projectSlug';
 
 const projects = portfolios
   .filter(project => project.featured)
@@ -33,7 +34,7 @@ const projects = portfolios
     copy: project.featured.copy,
     tags: project.featured.tags,
     signals: project.featured.signals,
-    href: project.link3 || project.link1 || project.link2,
+    href: `/projects/${projectSlug(project)}`,
   }));
 
 const packageItems = [

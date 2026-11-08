@@ -8,6 +8,7 @@ import HomePage from './Pages/HomePage';
 const AboutPage = React.lazy(() => import('./Pages/AboutPage'));
 const ResumePage = React.lazy(() => import('./Pages/ResumePage'));
 const PortfolioPage = React.lazy(() => import('./Pages/PortfolioPage'));
+const ProjectDetailPage = React.lazy(() => import('./Pages/ProjectDetailPage'));
 const BlogsPage = React.lazy(() => import('./Pages/BlogsPage'));
 const ContactPage = React.lazy(() => import('./Pages/ContactPage'));
 const CertificationPage = React.lazy(() => import('./Pages/CertificationPage'));
@@ -44,6 +45,7 @@ function App() {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/resume" element={<ResumePage />} />
                 <Route path="/portfolios" element={<PortfolioPage />} />
+                <Route path="/projects/:slug" element={<ProjectDetailPage />} />
                 <Route path="/blogs" element={<BlogsPage />} />
                 <Route path="/certification" element={<CertificationPage />} />
                 <Route path="/contact" element={<ContactPage />} />

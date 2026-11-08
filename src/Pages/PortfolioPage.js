@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import usePageTitle from '../hooks/usePageTitle';
@@ -6,6 +7,7 @@ import AnimatedNumber from '../Components/AnimatedNumber';
 import portfolios from '../data/portfolios';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import ArrowOutwardRoundedIcon from '@mui/icons-material/ArrowOutwardRounded';
+import projectSlug from '../utils/projectSlug';
 
 const categories = ['All', ...new Set(portfolios.map(item => item.category))];
 
@@ -50,12 +52,14 @@ function PortfolioPage() {
         <AnimatePresence mode="popLayout">
         {visible.map((project, index) => (
           <motion.article className="project-card" layout key={`${project.title}-${project.link1 || index}`} custom={index} variants={reduceMotion ? undefined : archiveCardMotion} initial={reduceMotion ? false : 'hidden'} animate={reduceMotion ? undefined : 'show'} exit={reduceMotion ? undefined : 'exit'} whileHover={reduceMotion ? undefined : 'hover'}>
-            <motion.a className="image-frame" href={project.link3 || project.link1 || project.link2} target="_blank" rel="noreferrer" variants={reduceMotion ? undefined : { hover: { scale: .985 } }}>
+            <motion.div className="image-frame" variants={reduceMotion ? undefined : { hover: { scale: .985 } }}>
+              <Link to={`/projects/${projectSlug(project)}`} aria-label={`Read ${project.title} project details`}>
               <motion.img src={project.image} alt={`${project.title} project`} loading="lazy" decoding="async" variants={reduceMotion ? undefined : { hover: { scale: 1.065 } }} />
               <span className="project-index mono">{String(index + 1).padStart(2, '0')}</span>
-            </motion.a>
+              </Link>
+            </motion.div>
             <div className="project-meta"><span className="mono">{project.category}</span></div>
-            <h2>{project.title}</h2>
+            <h2><Link to={`/projects/${projectSlug(project)}`}>{project.title}</Link></h2>
             <p>{project.text}</p>
             <div className="project-links">
               {project.link1 && <a className="text-link" href={project.link1} target="_blank" rel="noreferrer">Source <ArrowOutwardRoundedIcon /></a>}
@@ -89,6 +93,7 @@ const ProjectsStyled = styled.div`
   .project-card { padding: 0 0 22px; background: var(--project-surface); border-bottom: 1px solid var(--line); transform-origin: 50% 100%; will-change: transform; transition: background .35s ease, box-shadow .25s ease; }
   .project-card:hover { box-shadow: 0 22px 54px rgba(15,18,29,.11); }
   .project-card .image-frame { position: relative; display: block; height: 255px; overflow: hidden; border: 1px solid var(--line); will-change: transform; }
+  .project-card .image-frame > a { display: block; width: 100%; height: 100%; }
   .project-card .image-frame img { will-change: transform; }
   .project-index { position: absolute; left: 12px; top: 12px; padding: 6px 8px; background: var(--paper-strong); font-size: 10px; }
   .project-meta { margin: 16px 16px 0; color: var(--blue); font-size: 10px; text-transform: uppercase; }

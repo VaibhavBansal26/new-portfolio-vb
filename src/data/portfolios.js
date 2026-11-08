@@ -379,13 +379,6 @@ const portfolios = [
         // link3: 'http://54.211.221.57:8501/',
         title: 'Car Price Prediction using Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, MinIO, Debezium',
         text: 'Streamlit, MLflow, Docker, Kafka, PostgreSQL, Zookeeper, Machine Learning, MinIO, Debezium',
-        featured: {
-            title: 'Car Price ML Platform',
-            category: 'Production ML system',
-            copy: 'A production-oriented vehicle price prediction system with experiment tracking, event streaming, data infrastructure and containerized delivery.',
-            tags: ['Streamlit', 'MLflow', 'Kafka', 'PostgreSQL'],
-            signals: [{ value: 'Tracked models', label: 'ML lifecycle' }, { value: 'Streaming data', label: 'Pipeline layer' }],
-        },
     },
     {
         id: 1,

@@ -24,8 +24,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "prebuild": "node scripts/sync-creator-content.mjs",
     "build": "react-scripts build",
     "postbuild": "node scripts/prerender-seo.mjs",
+    "sync:creator-content": "node scripts/sync-creator-content.mjs",
+    "sync:project-details": "node scripts/sync-project-details.mjs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
