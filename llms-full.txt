@@ -1,0 +1,1105 @@
+# Vaibhav Bansal
+
+> AI software engineer with 5+ years building full-stack products, data platforms, machine-learning systems and open-source developer tools.
+
+This is Vaibhav Bansal's interactive technical portfolio. The related professional profile is https://www.thevaibhavbansal.com/. Both sites describe the same person.
+
+## Core pages
+- [Home](https://vaibhavbansal.in/)
+- [About](https://vaibhavbansal.in/about)
+- [Experience](https://vaibhavbansal.in/resume)
+- [Projects](https://vaibhavbansal.in/portfolios)
+- [Writing and videos](https://vaibhavbansal.in/blogs)
+- [Credentials](https://vaibhavbansal.in/certification)
+- [Contact](https://vaibhavbansal.in/contact)
+- [Project data](https://vaibhavbansal.in/projects.json)
+- [JSON feed](https://vaibhavbansal.in/feed.json)
+- [RSS feed](https://vaibhavbansal.in/feed.xml)
+
+## Identity
+- GitHub: https://github.com/VaibhavBansal26
+- LinkedIn: https://www.linkedin.com/in/vaibhavbansal-profile/
+- ORCID: https://orcid.org/0000-0002-5433-0385
+- Medium: https://medium.com/@vaibhav.bansal945
+- YouTube: https://www.youtube.com/@VaibhavBansalCode
+
+## Highlights
+- 70 projects across AI, data engineering, full stack and developer tooling
+- Four npm packages: grapesjs-advance-components, promptsite, captra, create-captra
+- Springer Nature research: Obstacle Avoidance Using Stereo Vision and Depth Maps for Visual Aid Devices
+- M.S. Data Science, University at Buffalo, SUNY
+
+## Experience
+### Graduate Student Assistant — University at Buffalo, SUNY
+January–May 2025. Supported Applied Machine Learning at Scale for a 90+ student cohort, helping teams move from notebooks to reproducible data and MLOps workflows.
+Technologies: Python, SQL, Spark, Kafka, AWS, Docker, Hopsworks.
+
+### Graduate Teaching Assistant — University at Buffalo, SUNY
+August 2024–January 2025. Led 20+ practical labs and supported more than 130 students across Python, SQL, machine learning and Docker fundamentals.
+Technologies: Python, SQL, Machine Learning, Docker.
+
+### Software Engineer — DashClicks India Ltd.
+September 2021–January 2024. Built a GrapesJS and React website builder, reusable visual components, payment experiences, form-builder extensions and realtime support tooling.
+Technologies: React, GrapesJS, JavaScript, Form.io, Sockets, Draft.js.
+
+### Software Engineer — Wipro Technologies India Ltd.
+August 2020–September 2021. Developed payment and productivity tooling including Vantiv and EMV parsers, JIRA worklog software and MX payment-terminal support.
+Technologies: Python, Flask, C++, AWS, Payments.
+
+### Front-end Industrial Intern — Smart Software Solutions
+2018 and 2019. Barcode integration and industrial web applications.
+Technologies: Web development, Barcode systems.
+
+### Industrial Intern — J.K. Tyre India
+June 2018. Oracle training and data-management foundations.
+Technologies: Oracle, Data management.
+
+### Web Development Intern — E-Biz Technocrats
+June 2017. Online newspaper and blog-management products across the full web stack.
+Technologies: Web development, Full stack.
+
+## Projects
+### GrantLens — Research Funding Discovery
+Category: Research Discovery AI
+An evidence-grounded research assistant for hybrid grant discovery, applicant-fit checks, literature reviews, cited document Q&A and deadline tracking.
+README overview: Hybrid semantic search over research funding, plus an academic research assistant. Watch the 8-minute demo : every feature, the stack and models, and the measured results, including what didn't work.
+Verified features:
+- Search: Keyword (BM25) and meaning (embedding) search fused into one ranking, with filters for status, agency, close date and amount
+- Fit check: Compares your profile with a grant's own text. Every met or not-met verdict must quote the grant, or it is downgraded to unclear
+- Find grants for my work: Paste a summary or give an ORCID; get open grants ranked against your work, with your closest paper shown for each
+- Paper search: Scholarly papers through OpenAlex
+- Literature reviews: Themes, per-paper annotations and theme summaries, each backed by a quote from the abstract. Built as a background job
+- Documents: Upload a PDF and ask questions; answers carry a verified citation, and unanswerable questions say so
+- Watchlist, saved searches, deadlines: Track grants, email alerts and reminders (verified addresses only), a deadline calendar
+Architecture: - Backend: Flask, Postgres 16 with pgvector (HNSW), Redis, a separate worker process for slow jobs - Frontend: Next.js 16 and TypeScript - Run and ship: Docker Compose, Caddy (automatic HTTPS), GitHub Actions (tests, images to GHCR, deploy script with rollback) - Models: BAAI/bge-small-en-v1.5 embeddings run locally; OpenAI gpt-4o-mini writes answers, summaries and checks. Llama 3.1 8B through Hugging Face is an optional backend ( LLM BACKEND=hf )
+Technologies: Next.js 16, Flask, pgvector, Hybrid search
+Page: https://vaibhavbansal.in/projects/grantlens-research-funding-discovery
+Repository: https://github.com/VaibhavBansal26/grantlens
+README: https://github.com/VaibhavBansal26/grantlens/blob/master/README.md
+
+### MemoRank — Long-Horizon Agent Memory
+Category: Agent Memory Research
+MemoRank — Long-Horizon Agent Memory is a Agent Memory Research project by Vaibhav Bansal built with Python, MCP, OpenAI Agents SDK, Anthropic SDK, BM25, Dense Retrieval, Cross-encoder Reranking, SQLite, A/B Testing.
+README overview: Long-horizon memory for security-investigation agents. No model training anywhere: retrieval (BM25 + dense), a pretrained cross-encoder, and entity-aware heuristics decide which records an agent sees. Served over MCP to OpenAI Agents SDK and Anthropic SDK agents. Includes an evaluation harness for LongMemEval and LoCoMo, a synthetic security-investigation set, CI gates, and a pre-registered online A/B.
+Verified features:
+- memorank
+- Results at a glance
+- Architecture
+- Use as a library
+- Problem
+- Memory schema (fixed)
+- Baselines
+Architecture: flowchart LR A[Agent Anthropic SDK / OpenAI Agents SDK] -- MCP -- M[Memory server store memory, recall, rerank] A -- MCP -- L[Alert server live 2-day window] M -- P[dense + BM25 candidates cross-encoder score entity-scoped recency, entity chaining] F[Feature flag sticky hash, 50/50] -. picks variant .- M A -- T[(Session log SQLite)]
+Technologies: Python, MCP, OpenAI Agents SDK, Anthropic SDK, BM25, Dense Retrieval, Cross-encoder Reranking, SQLite, A/B Testing
+Page: https://vaibhavbansal.in/projects/memorank-long-horizon-agent-memory
+Repository: https://github.com/VaibhavBansal26/memorank
+README: https://github.com/VaibhavBansal26/memorank/blob/main/README.md
+
+### AI-Powered Self-Healing Data Pipeline
+Category: AI Data Reliability
+AI-Powered Self-Healing Data Pipeline is a AI Data Reliability project by Vaibhav Bansal built with FastAPI, React, Kafka, PostgreSQL, Redis, Airflow, Docker, LangGraph, RAG Incident Memory, MCP Tools.
+README overview: A production-style reliability lab for streaming data pipelines. The platform combines FastAPI, React, Kafka, PostgreSQL, Redis, Apache Airflow, Docker, LangGraph, RAG incident memory and MCP-style operational tools to demonstrate record repair, stage monitoring, safe automated recovery, human approval and recovery observability. Project status: Portfolio/research demo, not a hardened production deployment. Recovery actions can affect local Docker services; use in an isolated development environment.
+Verified features:
+- Ingestion and data repair: Validates Kafka events, applies deterministic rules, optionally reasons about harder problems with an LLM, persists valid records, and routes unrecoverable events to the DLQ.
+- Infrastructure recovery: Monitors Docker-backed services, detects stopped consumers and unavailable dependencies, invokes an allowlisted recovery action and verifies the result.
+- Safe autonomy: A background auto-healer monitors the system; the recovery policy/agent selects allowed actions; risky operations require human review.
+- AI operations: Incident memory / RAG, traces, tool-call evaluation, semantic caching, cost summaries and an agent activity timeline.
+- Control room: React pages for the live pipeline map, background console, approvals, incidents, replay, metrics and AI engineering.
+Architecture: A production-style reliability lab for streaming data pipelines. The platform combines FastAPI, React, Kafka, PostgreSQL, Redis, Apache Airflow, Docker, LangGraph, RAG incident memory and MCP-style operational tools to demonstrate record repair, stage monitoring, safe automated recovery, human approval and recovery observability. Project status: Portfolio/research demo, not a hardened production deployment. Recovery actions can affect local Docker services; use in an isolated development environment.
+Technologies: FastAPI, React, Kafka, PostgreSQL, Redis, Airflow, Docker, LangGraph, RAG Incident Memory, MCP Tools
+Page: https://vaibhavbansal.in/projects/ai-powered-self-healing-data-pipeline
+Repository: https://github.com/VaibhavBansal26/Self-Healing-Data-Pipeline
+README: https://github.com/VaibhavBansal26/Self-Healing-Data-Pipeline/blob/main/README.md
+
+### Captra — Capability-First AI Framework
+Category: AI Framework
+Captra — Capability-First AI Framework is a AI Framework project by Vaibhav Bansal built with TypeScript, AI Agents, Typed Capabilities, Scoped Memory, Approvals, Generated UI, PostgreSQL, MCP, React, OpenAI.
+README overview: Captra is a capability-first framework for type-safe, memory-aware AI applications.
+Verified features:
+- Captra
+- Live application state
+- Shared multi-agent state
+- Resumable agent checkpoints
+- Observability and evaluations
+- Lifecycle hooks
+- Integration plugins
+Technologies: TypeScript, AI Agents, Typed Capabilities, Scoped Memory, Approvals, Generated UI, PostgreSQL, MCP, React, OpenAI
+Page: https://vaibhavbansal.in/projects/captra-capability-first-ai-framework
+Repository: https://github.com/VaibhavBansal26/captra
+README: https://github.com/VaibhavBansal26/captra/blob/main/README.md
+
+### Smart Health Assistant — Secure AI Care Platform
+Category: Healthcare AI Platform
+Smart Health Assistant — Secure AI Care Platform is a Healthcare AI Platform project by Vaibhav Bansal built with Angular, Spring Boot, Java 21, Python, FastAPI, Machine Learning, Claude, SSE, Healthcare Security, Explainable AI.
+README overview: Angular + Spring Boot + ML healthcare app: login and roles (patient / doctor), appointment booking, an ML doctor recommender , a streaming AI health chat (Claude), and a diabetes risk check . Educational project, not a medical device: nothing here is a diagnosis.
+Verified features:
+- Admin Doctors.Component.Spec
+- Admin Doctors.Component
+- Doctor Dialog.Component
+- Appointment Form.Component
+- Appointment List.Component
+- Reschedule Dialog.Component
+- Auth Pages.Spec
+Architecture: Angular /risk - Spring POST /api/risk/diabetes - FastAPI /risk/diabetes - saved per user
+Technologies: Angular, Spring Boot, Java 21, Python, FastAPI, Machine Learning, Claude, SSE, Healthcare Security, Explainable AI
+Page: https://vaibhavbansal.in/projects/smart-health-assistant-secure-ai-care-platform
+Repository: https://github.com/VaibhavBansal26/smart-health-assistant
+README: https://github.com/VaibhavBansal26/smart-health-assistant/blob/main/README.md
+
+### AETHER — Cinema, Considered
+Category: Full-stack Product
+A cinematic streaming foundation with discovery, playback, creator tooling, managed authentication and a private recommendation layer.
+README overview: A cinematic streaming product foundation with an ink-black theme, lime accents, original promotional key art, and content-first browsing. This release includes a free Render demonstration with managed Neon authentication and a separate owner-private Sites preview. It is not a production service and has not been tested at one million concurrent viewers. Live demo: https://aether-api-demo.onrender.com · Authentication · Deployment limits.
+Verified features:
+- AETHER — Cinema, considered
+- Run
+- What works in the preview
+- Python recommendation engine
+- Integration foundation
+- GitHub
+- Media and screenshots
+Architecture: The implementation is centered on Java, Spring Boot, PostgreSQL, Python, Recommendation Systems. The repository is organized into deploy, dist, docs, frontend, infra, load-tests areas. Delivery and dependency evidence includes Docker, Node package manifest, Python requirements, Maven.
+Technologies: Spring Boot, PostgreSQL, Python, Kafka
+Page: https://vaibhavbansal.in/projects/aether-cinema-considered
+Repository: https://github.com/VaibhavBansal26/aether-cinema
+README: https://github.com/VaibhavBansal26/aether-cinema/blob/main/README.md
+
+### Funnels — Build, Publish & Measure
+Category: SaaS Platform
+A production-minded funnel platform with visual page building, publishing, analytics, leads, orders and custom-domain workflows.
+README overview: Build, publish and measure marketing funnels: a drag-and-drop page builder on GrapesJS, templates, custom domains with DNS verification, public serving, analytics, leads and orders, signed webhooks and AI assistance. TypeScript, Hono, SQLite or PostgreSQL, React 19, Tailwind. More screens, light and dark, at three sizes: docs/design/DESIGN.md. Every page and control is described in the user guide; how each feature works end to end in docs/FEATURES.md; the code map, data model and jobs in docs/FUNCTIONS.md; the full documentation index is docs/README.md.
+Verified features:
+- Admin
+- Ads
+- Ai
+- Analyticsapi
+- Assets
+- Auth
+- Billing
+Architecture: Funnels is one Node process (Hono on SQLite by default, or PostgreSQL) that serves the JSON API, the built React app, published funnel pages (by Host header and on built-in /s/... addresses) and signed previews. An in-process worker drains a database-backed job queue. Funnels can also be published as static sites to Cloudflare Pages, and an optional Cloudflare Worker can sit in front. The code map, jobs, route groups and the full data model are in FUNCTIONS.md.
+Technologies: TypeScript, React 19, GrapesJS, Hono
+Page: https://vaibhavbansal.in/projects/funnels-build-publish-and-measure
+Repository: https://github.com/VaibhavBansal26/funnels
+README: https://github.com/VaibhavBansal26/funnels/blob/main/README.md
+
+### FORGE — Living Games
+Category: Interactive 3D
+A browser platform for discovering, building, publishing and playing collaborative 3D adventure worlds and battle chess.
+README overview: - React application, generated cover art, responsive Discover, profiles, search and bookmarks. - Actual Three.js low-poly world rendering, 12 reusable object types, drag placement, object manipulation, transform/material controls and deterministic visual rules. - Local email/password accounts using scrypt password hashing; HTTP-only, SameSite session cookies; seven-day sessions; server-side project roles; basic login throttling and mutation-origin checks. - SQLite persistence for accounts, avatars, projects, memberships, bookmarks and published snapshots. - WebSocket collaboration with presence, cursor indicators, saved-state broadcasts and optimistic revision checks. - Server-authoritative multiplayer crystal collection, bounded movement, basic cottage/rock collision checks, shared win state, private draft playtesting and session invite links. - Project JSON export and a searchable build guide. - No model calls in editing, saving, publishing, avatars, or playing.
+Verified features:
+- FORGE
+- Play online
+- Run
+- Try the complete flow
+- What is implemented
+- Explicit limits
+- Verification
+Architecture: The implementation is centered on JavaScript, React, Three.js, WebSockets, SQLite. The repository is organized into cloudflare, scripts, server, shared, src, worker areas. Delivery and dependency evidence includes Docker, Node package manifest.
+Technologies: React, Three.js, WebSockets, Cloudflare
+Page: https://vaibhavbansal.in/projects/forge-living-games
+Repository: https://github.com/VaibhavBansal26/forge-living-games
+README: https://github.com/VaibhavBansal26/forge-living-games/blob/main/README.md
+
+### Recall — Voice-first Learning Companion
+Category: AI Learning
+A local-first learning companion that turns conversation and sources into notes, diagrams, recall sessions and measurable retention.
+README overview: Voice-first learning companion (single user, local-first). The full spec and phase plan is in CLAUDE.md; deviations are logged in DECISIONS.md. Watch the 81 second demo with voiceover: recall-demo.mp4 (the app running on the built-in test model, so Aria's replies are canned; the music is synthesised by docs/demo/make music.py ).
+Verified features:
+- Recall
+- Status
+- Use it on laptop, iPhone and iPad
+- Run locally
+- Develop
+- Phase 0 demo
+- Phase 1: turning on real voice
+Architecture: The implementation is centered on Python, FastAPI, PostgreSQL, PWA, Voice AI. The repository is organized into backend, docs, frontend, n8n, scripts areas. Delivery and dependency evidence includes Docker, Docker Compose, Node package manifest, Python project manifest.
+Technologies: FastAPI, PostgreSQL, Voice AI, n8n
+Page: https://vaibhavbansal.in/projects/recall-voice-first-learning-companion
+Repository: https://github.com/VaibhavBansal26/recall
+README: https://github.com/VaibhavBansal26/recall/blob/main/README.md
+
+### Friday AI Assistant
+Category: Agentic AI
+A privacy-conscious macOS assistant combining realtime voice, local memory and approval-gated actions across coding and communication tools.
+README overview: Friday is a privacy-conscious desktop AI assistant for macOS. It combines a React/Tauri desktop interface with a local FastAPI service, realtime voice, approval-gated external actions, coding tools, communications, content workflows, learning tools, and local memory foundations. Friday is designed to show evidence for completed actions. High-impact operations such as sending email, publishing content, creating repositories, pushing Git commits, or submitting forms require explicit approval.
+Verified features:
+- Voice and conversation: Realtime speech, transcription, spoken responses, tool routing, startup greeting — OpenAI API key, microphone permission
+- Tasks and planning: Create and manage tasks, learning topics, study plans, ideas, and notifications — None for local/in-memory use
+- Gmail: Connect Gmail, sync recent messages, summarize mail, create visible drafts, and send after approval — Google OAuth client and Gmail API
+- Spotify: Open Spotify, search for a track, select a Spotify Connect device, and play music — Spotify Premium and Spotify OAuth app
+- GitHub and coding: List and clone repositories, inspect trees, read/create/edit files, open Finder or VS Code, run safe commands, create repositories, commit/push with approval — GitHub CLI authentication; VS Code CLI for editor actions
+- LinkedIn content: Create copyable drafts, preview publishing, and publish through an approved connected application — LinkedIn developer application and approved products/scopes
+- Content studio: Draft LinkedIn, Medium, X, Instagram, and other channel content in visible workspaces — Publishing credentials vary by provider
+Architecture: Trust boundaries: UI is untrusted input; FastAPI authenticates a local session; supervisor output is advisory; policy and verification are deterministic; adapters alone resolve credential references; external content is inert data; PostgreSQL is authoritative for confirmed facts and workflow state.
+Technologies: Tauri, React, FastAPI, Realtime AI
+Page: https://vaibhavbansal.in/projects/friday-ai-assistant
+Repository: https://github.com/VaibhavBansal26/friday-ai-assistant
+README: https://github.com/VaibhavBansal26/friday-ai-assistant/blob/main/README.md
+
+### FidelityMem — Adaptive Hybrid Memory
+Category: AI Research
+A recall-constrained hybrid memory layer that controls active context, long-term storage, compression and evidence restoration for LLM agents.
+README overview: Module Role --- --- window.py Adaptive working window: per-message retention score, boundary triggers (token pressure, topic shift, task completion, inactivity), eviction into extraction. extraction.py Candidate memories with types (semantic / episodic / procedural / relational), entities, numbers, dates, negations, relations. validation.py Stage 1 source & consistency (trust, contradiction, supersede-not-delete, untrusted-instruction guard). Stage 2 relevance & utility (durability score, fact-aware dedupe). compression.py Four-level compression ladder and the fidelity gate : probes built from the raw source must survive, or the level backs off. Stage 3. stores/ Immutable archival store (JSONL-persistable), BM25, dense index with a hermetic hashing embedder, relation graph with relation-following expansion and hub penalty, trie for exact/prefix identifiers. retrieval/ Query classification, per-type plans, RRF fusion + ranking function, relation chaining for multi-hop, sufficiency check and raw-source expansion, token-budgeted context. controller.py Recall-constrained policy search over (compression level, top-k, expansion budget, routes) with tuning/hold-out split, promotion, rejec
+Verified features:
+- FidelityMem
+- What is in the box
+- Benchmark
+- LLM-judged evaluation (Phase 6)
+- needs ANTHROPIC API KEY (or ANTHROPIC AUTH TOKEN / ant auth login )
+- plumbing check without a credential
+- Status
+Architecture: The implementation is centered on Python, LLM Agents, Hybrid Retrieval, BM25, RRF. The repository is organized into docs, fidelitymem, scripts areas. Delivery and dependency evidence includes Python project manifest.
+Technologies: Python, Hybrid retrieval, BM25, RRF
+Page: https://vaibhavbansal.in/projects/fidelitymem-adaptive-hybrid-memory
+Repository: https://github.com/VaibhavBansal26/FidelityMem
+README: https://github.com/VaibhavBansal26/FidelityMem/blob/claude/compassionate-clarke-bpch7h/README.md
+
+### Shorts Factory — AI Video Production Studio
+Category: AI Media Automation
+An end-to-end studio that discovers fresh technical stories, writes varied scripts, generates timed voice and vertical video, then publishes to YouTube.
+README overview: Sources: Towards Data Science, Medium (AI / software-eng / LLM tags), Netflix TechBlog, Amazon Science, AWS ML blog, Microsoft Research, Microsoft Engineering blog, Google Research, arXiv (cs.AI / cs.LG / cs.SE). Edit config.yaml to add or remove feeds. Formats ( --format ): concept explainer , ask question , research opinion , myth vs fact , analogy , interview question , hot take , quick news , this vs that . Add more in src/formats.py .
+Verified features:
+- Shorts Factory
+- Music, memes and clips
+- Web UI (manual by default)
+- Sigma and K-drama formats
+- Desktop app (macOS)
+- Creative system: 9 formats
+- Production flow: End to end
+Architecture: RSS/arXiv sources ─▶ pick fresh item ─▶ Claude writes script (one of 9 formats) ─▶ neural voiceover + word timings ─▶ 1080x1920 render (captions, your logo) ─▶ YouTube upload
+Technologies: Python, Claude, FFmpeg, YouTube API
+Page: https://vaibhavbansal.in/projects/shorts-factory-ai-video-production-studio
+Repository: https://github.com/VaibhavBansal26/shorts-factory
+README: https://github.com/VaibhavBansal26/shorts-factory/blob/main/README.md
+
+### Conversations — Unified Customer Inbox
+Category: Realtime SaaS
+A unified live-chat, SMS and email workspace with team routing, AI assistance, browser calls, billing, permissions and a scale-out realtime architecture.
+README overview: - Inbox : live chat widget, SMS (Twilio) and email (SendGrid) in one place; inboxes with round-robin routing, notes and @mentions, snooze, templates, notifications (in-app, email, Web Push), CSAT, copies of a conversation by email, optional AI assistance. - Support automation : tickets, departments and routing, AI support agents in the chat and on SMS and email, visitor details and pre-chat custom fields (docs/AI-AGENTS.md). - Calls : browser voice and video with visitors, phone calls, calls with the AI assistant (optionally with a photoreal avatar), teammate and group calls, call links (docs/CALLS.md). All off by default; nothing is recorded. - Team chat : channels (public or private), direct and group messages, threads, reactions, pins, search, shared customer-conversation cards (docs/TEAM-CHAT.md). - Channels you connect yourself : each workspace pastes its own Twilio and SendGrid credentials and is told plainly when a channel is in test mode (docs/CHANNELS.md); the chat widget has a guided install and an in-app preview (docs/WIDGET.md). - Access : 38 permissions, four built-in roles plus custom roles, two-factor, invitations, audit log (docs/RBAC.md). - Money : plans, prepaid c
+Verified features:
+- Admin
+- Agents
+- Analytics
+- Analytics Api
+- Auth
+- Billing
+- Calls
+Architecture: Conversations is a unified customer inbox: live chat (embeddable widget), SMS (Twilio) and email (SendGrid) land in one inbox that a team works together. It is a standalone product with its own auth, tenancy, contacts, jobs and AI; it knows nothing about any other application. - Server: Node = 22.13, TypeScript (strict), Hono + @hono/node-server , Socket.IO 4 on the same HTTP server , built-in node:sqlite (WAL, foreign keys), zod , jose . - Web: React 19, Vite, react-router, TanStack Query, plain CSS. - One process serves the REST API, the Socket.IO namespaces, the widget script, the built web app and the background scheduler.
+Technologies: TypeScript, Socket.IO, PostgreSQL, Redis
+Page: https://vaibhavbansal.in/projects/conversations-unified-customer-inbox
+Repository: https://github.com/VaibhavBansal26/conversations
+README: https://github.com/VaibhavBansal26/conversations/blob/main/README.md
+
+### ShopFlow — Realtime Ecommerce Platform
+Category: Commerce Platform
+A multi-surface ecommerce system spanning shopper, admin, rider and conversational ordering, with live tracking, subscriptions and hybrid recommendations.
+README overview: A full-stack, production-ready ecommerce platform handling 5,000 orders/day with 100,000 concurrent users .
+Verified features:
+- 4 Panels : Shopper, Admin, Rider, AI Chat (order via conversation)
+- Payments : Google Pay, Card (Stripe), Cash on Delivery, Wallet
+- AI Recommendations : Region-based + collaborative filtering + purchase history
+- Real-time : WebSocket for live order tracking + rider location
+- Auth : Google OAuth 2.0 + OTP (Twilio)
+- Subscriptions : Monthly/weekly auto-delivery with discounts
+- Scheduled Delivery : Pick date & time at checkout
+Architecture: The implementation is centered on JavaScript, React, Node.js, Express, PostgreSQL. The repository is organized into backend, frontend, mobile, recommendation-engine areas. Delivery and dependency evidence includes Docker, Docker Compose, Node package manifest, Python requirements.
+Technologies: React, Node.js, PostgreSQL, Socket.IO
+Page: https://vaibhavbansal.in/projects/shopflow-realtime-ecommerce-platform
+Repository: https://github.com/VaibhavBansal26/shopflow-ecommerce
+README: https://github.com/VaibhavBansal26/shopflow-ecommerce/blob/main/README.md
+
+### Interview Suite — AI Mock Interview Workspace
+Category: AI Interviewing
+A private Amazon-style interview workspace with a realtime voice interviewer, coding execution, system-design canvases and production-debugging rounds.
+README overview: A private, local Amazon-style SDE I/SDE II mock interview application.
+Verified features:
+- Interview Suite
+- Included
+- Run
+- Privacy and security
+- Practice system: 4 round types
+- Interview loop: Live voice
+- Product focus: AI interview simulator
+Architecture: The implementation is centered on JavaScript, React 19, Vite, Express 5, OpenAI Realtime. The repository is organized into scripts, src, worker areas. Delivery and dependency evidence includes Docker, Node package manifest.
+Technologies: React 19, OpenAI Realtime, WebRTC, Express
+Page: https://vaibhavbansal.in/projects/interview-suite-ai-mock-interview-workspace
+Repository: https://github.com/VaibhavBansal26/interivew-suite
+README: https://github.com/VaibhavBansal26/interivew-suite/blob/main/README.md
+
+### Ridehail — Realtime Mobility Platform
+Category: Mobility Platform
+A production-shaped ride-sharing system with live dispatch, dynamic fares, customer and rider apps, operations tooling and balanced payment ledgers.
+README overview: Part Where What --- --- --- API src/ Spring Boot 3, JPA, Flyway on Postgres, JWT roles CUSTOMER / RIDER / ADMIN , STOMP WebSocket Admin panel admin-web/ Next.js: live map, trips, riders, payments, ledger, disputes, incidents, support, rider verification, audit log (docs/ADMIN PANEL.md) Rider and customer web apps clients/apps/rider-web , customer-web Next.js, with maps (Leaflet), road routes, address search, vehicle pictures and live car tracking; sign-in cookies are held by the app's server, never by browser JavaScript Phone apps clients/apps/rider-mobile , customer-mobile Expo / React Native, tokens in the keychain, with the same maps, routes, address search and vehicle pictures (the map is a Leaflet page in a WebView: no native map library or key). Tested and bundled, but not yet run on a device Shared client clients/packages/api Typed REST and realtime client with schema-checked responses (clients/README.md)
+Verified features:
+- Dynamic fares: upfront quotes with demand and supply surge pricing, locked at booking.
+- Dispatch: nearest-rider offers with timeouts; the rider accepts or declines. Live rider location for the customer.
+- Maps, routes and live tracking: the customer searches for a destination by name, sees the pickup, destination and the road between them on a map, and watches the driver's vehicle (a bike, auto, sedan or SUV) move live; the driver sees every offer, and the trip, on a map. Several requests at once stack on the driver's screen, each on its own map. The admin map shows every driver as their vehicle. Search and routes go through the API (docs/GEO.md); tiles come from OpenStreetMap by default ( MAP TILE URL changes that).
+- Realtime: offers, trip updates and rider location over WebSocket. One instance out of the box; many with RabbitMQ and Redis (docs/SCALING.md, docs/LIVE LOCATION.md).
+- Payments: the card is charged when a trip ends; a double-entry ledger that must balance (enforced in the database); commission; refunds.
+- Rider payouts: riders withdraw their share through Stripe Connect (Accounts v2, Express dashboard). A payout waits for the provider's settled funds rather than failing.
+- Disputes and provider problems: chargebacks are recorded and the rider's share frozen until decided; text evidence is compiled and submitted from the admin panel; failed bank payouts, reversed transfers and failed refunds become incidents for a person (docs/DISPUTES.md).
+Architecture: The implementation is centered on Java, Java 21, Spring Boot 3, PostgreSQL, Next.js. The repository is organized into admin-web, clients, docker, docs, scripts, src areas. Delivery and dependency evidence includes Docker, Docker Compose, Node package manifest, Maven.
+Technologies: Spring Boot 3, Next.js, WebSockets, Stripe Connect
+Page: https://vaibhavbansal.in/projects/ridehail-realtime-mobility-platform
+Repository: https://github.com/VaibhavBansal26/ridehail-platform
+README: https://github.com/VaibhavBansal26/ridehail-platform/blob/main/README.md
+
+### MACRV — Multi-Agent Code Review System
+Category: Agentic DevTools
+An automated pull-request review pipeline that coordinates specialist agents, static security scans, severity classification and merge decisions.
+README overview: An automated code review pipeline powered by Claude agents. Reviews pull requests, classifies findings by severity, blocks critical bugs, notifies developers, and generates audit reports.
+Verified features:
+- MACRV — Multi-Agent Code Review System
+- Architecture
+- Finding Categories
+- Build Phases
+- Quick Start
+- 1. Clone and configure
+- 2. Start all services
+Architecture: The implementation is centered on Python, FastAPI, LangGraph, Claude Agents, Celery. The repository is organized into alembic, app, docker areas. Delivery and dependency evidence includes Docker, Docker Compose, Python requirements, Python project manifest.
+Technologies: FastAPI, LangGraph, Claude Agents, Semgrep
+Page: https://vaibhavbansal.in/projects/macrv-multi-agent-code-review-system
+Repository: https://github.com/VaibhavBansal26/multi-agent-code-review
+README: https://github.com/VaibhavBansal26/multi-agent-code-review/blob/claude/sweet-brown-bkbjnh/README.md
+
+### Spotlight — Talent Community Platform
+Category: Creator Platform
+A talent community for creator profiles, reels, reviews, live showcases, groups, agencies, rewards and head-to-head battles.
+README overview: Spotlight is a production-shaped React, Express, PostgreSQL, and Node starter for a talent community: creator profiles, content and reels, category-based reviews, chat, groups, agencies, live showcase events, diamonds, marketplace rewards, and head-to-head battles.
+Verified features:
+- Spotlight
+- Run locally
+- Production direction
+- Recommendation parameters
+- Media uploads
+- Product domains
+- Service boundaries at scale
+Architecture: The implementation is centered on TypeScript, React, Vite, Express, PostgreSQL. The repository is organized into apps, docs, services areas. Delivery and dependency evidence includes Docker, Docker Compose, Node package manifest, Python requirements.
+Technologies: TypeScript, React, PostgreSQL, Socket.IO
+Page: https://vaibhavbansal.in/projects/spotlight-talent-community-platform
+Repository: https://github.com/VaibhavBansal26/spotlight-talent-platform
+README: https://github.com/VaibhavBansal26/spotlight-talent-platform/blob/main/README.md
+
+### Health Semantic Search — Cited Medical Retrieval
+Category: Health AI
+A self-hostable search system over public health documents with access-aware retrieval, hybrid ranking, source citations and refusal when evidence is insufficient.
+README overview: Permission-aware, cited semantic search over public health documents. Built stage by stage, with every design decision and measurement logged. The goal is a product a health system could adopt: self-hostable, answers always cite their source, and "no supported answer" beats a guess. Live app: https://health-semantic-search.onrender.com (free tier: it sleeps when idle, so the first load can take a minute; search only, no cited answers, see below) Research write-up: docs/PAPER.md, a workshop-style draft with every number traced to ENGINEERING LOG.md Full app with cited answers: https://huggingface.co/spaces/Vaibhavbansal26/health-semantic-search-app (same React app, reranker and cited answers; free CPU, so answers take 3-6 s) Original Gradio demo: the Space Vaibhavbansal26/health-semantic-search (reranker, no accounts)
+Verified features:
+- Health Semantic Search
+- What it is
+- Stack
+- Status
+- Results so far
+- Architecture
+- Data
+Architecture: Layer Choice Notes --- --- --- Front end React 18, Vite 5, plain CSS about 52 kB gzipped; served by the API process, no separate host API FastAPI, uvicorn search, accounts, admin; security headers, per-request access mask Accounts and tokens SQLite, scrypt, PyJWT (RS256) one-hour tokens with a jti , sign-out and admin revocation, login rate limit Keyword search bm25s with a Snowball stemmer index built once, loaded memory-mapped Dense search BAAI/bge-small-en-v1.5 PyTorch in the full engine, ONNX Runtime (fastembed) in the lite one Fusion and routing weighted reciprocal rank fusion, identifier router NDC, CAS and imprint queries go to keyword search only Reranker and answers bge-reranker-base, extractive answers with a refusal threshold full engine only (about 2 GB) Access control boolean mask inside every retriever, mask-keyed cache document, tenant and section rules Corpus, sync Postgres 16 + pgvector, DailyMed, openFDA, ClinicalTrials.gov connectors kill-safe incremental sync, versioned index publishing Evaluation recall@k, MRR, nDCG, paired bootstrap five model-written question sets, tooling for a real-query set Packaging Docker (multi-stage), Render Blueprint ( render.yaml ) image about 700 MB; runs in under 250 MB of RAM CI GitHub Actions pytest on Python 3.11 and 3.13 (PR 15) Two engines share one API. The full engine ( HSS ENGINE=full ) has the reranker and cited answers and needs about 2 GB. The lite engine ( hss.lite , the default) fits 512 MB: chunk text in SQLite, memory-mapped BM25 and float16 vectors, an ONNX query encoder. On 60 questions it returned the same
+Technologies: FastAPI, Hybrid retrieval, BGE embeddings, pgvector
+Page: https://vaibhavbansal.in/projects/health-semantic-search-cited-medical-retrieval
+Repository: https://github.com/VaibhavBansal26/health-semantic-search
+README: https://github.com/VaibhavBansal26/health-semantic-search/blob/main/README.md
+
+### Disaster Response AI Copilot
+Category: Agentic AI
+An AI copilot for real-world disaster response using retrieval workflows and Azure AI services.
+README overview: An AI copilot for real-world disaster response using retrieval workflows and Azure AI services.
+Verified features:
+- Ask Agent
+- Dashboard
+- Debug
+- New Incident
+- Reports
+- Retrieval Debug
+- Vision Assess
+Architecture: The implementation is centered on Python, Streamlit, Machine Learning, AI Agent, Azure OpenAI. The repository is organized into app, data, docs, scripts areas. Delivery and dependency evidence includes Docker, Python requirements.
+Technologies: Streamlit, RAG, Azure OpenAI, AI Agent
+Page: https://vaibhavbansal.in/projects/disaster-response-ai-copilot
+Repository: https://github.com/VaibhavBansal26/Disaster-Response-AI-Copilot
+README: https://github.com/VaibhavBansal26/Disaster-Response-AI-Copilot/blob/main/README_DATA.md
+
+### Crypto Trade Prediction
+Category: Machine Learning
+A deployable Streamlit workflow for predicting crypto price movement from live market data.
+README overview: 1. Execute docker build -t ml-trading-service ./services/base 2. Execute docker-compose up -d
+Verified features:
+- Cryptocurrency TradeBots
+- Steps 1: Start up the docker containers
+- Step 2: Fetch historical data from the past 30 days
+- Step 3: Start fetching the realtime crypto trades
+- Step 4: Start candle-maker service
+- Step 5: Start prediction service
+- Step 6: Get gap data
+Architecture: The implementation is centered on Jupyter Notebook, Streamlit, Machine Learning, Docker, Digital Ocean. The repository is organized into data, services areas. Delivery and dependency evidence includes Docker, Docker Compose, Python requirements.
+Technologies: Streamlit, Machine Learning, Docker, DuckDB
+Page: https://vaibhavbansal.in/projects/crypto-trade-prediction
+Repository: https://github.com/VaibhavBansal26/crypto-trade-project
+README: https://github.com/VaibhavBansal26/crypto-trade-project/blob/main/README.md
+
+### Heart Disease Prediction using Generative AI, Streamlit, OpenAI
+Category: Machine Learning
+An interactive health-risk prediction workflow combining a trained machine-learning model with Streamlit and generative AI guidance.
+README overview: Heart-risk estimate + personalised next steps from a hybrid content / collaborative recommender.
+Verified features:
+- Risk model — predicts a heart-disease risk score from 11 clinical inputs. Candidates (each in one sklearn Pipeline , imputation fitted inside CV folds): logistic regression, gradient boosting and a PyTorch MLP .
+- Hybrid recommender — ranks 13 lifestyle / screening / clinical interventions:
+- Content-based: patient needs (lipids, BP, glucose, fitness, metabolic, cardiac work-up) matched to each intervention's target vector.
+- Collaborative: a PyTorch two-tower model. The patient tower is an MLP on features plus the mean embedding of interventions the patient already liked; the item tower is an id embedding plus content features. It handles cold start (features only) and warm start (liked items).
+- Hybrid: α·content + (1-α)·collaborative , with α tuned on a validation split. A safety rule always surfaces a cardiology referral at high scores.
+- Education links from the NIH/NLM MedlinePlus web service (free, no key).
+- MLflow experiment tracking and model registry, browsable from the app's 🧪 MLflow tab.
+Architecture: The implementation is centered on Python, Generative AI, Streamlit, Machine Learning, Docker. The repository is organized into artifacts, data, deploy, docs, medapp, reports areas. Delivery and dependency evidence includes Docker, Docker Compose, Python requirements.
+Technologies: Streamlit, Machine Learning, OpenAI, Docker
+Page: https://vaibhavbansal.in/projects/heart-disease-prediction-using-generative-ai-streamlit-openai
+Repository: https://github.com/VaibhavBansal26/medical-app
+README: https://github.com/VaibhavBansal26/medical-app/blob/main/README.md
+
+### Car Price Prediction using Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, MinIO, Debezium
+Category: Machine Learning
+Car Price Prediction using Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, MinIO, Debezium is a Machine Learning project by Vaibhav Bansal built with Streamlit, MLflow, Docker, Kafka, PostgreSQL, Zookeeper, Machine Learning, MinIO, Debezium.
+README overview: A machine learning system for predicting car prices using MLflow and Streamlit. This project implements a complete pipeline for predicting car prices with an interactive web interface and real-time visualization.
+Verified features:
+- Real-time car price predictions
+- Interactive data visualization with Streamlit
+- RESTful API with FastAPI
+- ML model versioning and tracking with MLflow
+- Beautiful charts with Plotly
+- Scalable architecture
+- API documentation with Swagger UI
+Architecture: - Frontend : Streamlit application for data visualization and interaction - Backend : FastAPI REST API for data management - ML Pipeline : MLflow for model management and serving - Storage : PostgreSQL for data storage, MinIO for model artifacts mermaid graph TB UI[Streamlit UI:8501] -- API[FastAPI:8000] API -- DB[(PostgreSQL:5432)] DB -- DEB[Debezium:8083] DEB -- KAFKA[Kafka:9092] KAFKA -- ML[ML Service] ML -- MLFLOW[MLflow:5000] MLFLOW -- MINIO[(MinIO:9000)] ML -- KAFKA KAFKA -- API API -- DB
+Technologies: Streamlit, MLflow, Docker, Kafka, PostgreSQL, Zookeeper, Machine Learning, MinIO, Debezium
+Page: https://vaibhavbansal.in/projects/car-price-prediction-using-streamlit-mlflow-docker-kakfka-postgresql-minio-debezium
+Repository: https://github.com/VaibhavBansal26/Car-Price-Prediction
+README: https://github.com/VaibhavBansal26/Car-Price-Prediction/blob/main/README.md
+
+### Movie Recommendation using Cosine Similarity & Collaborative Filtering
+Category: Machine Learning
+Movie Recommendation using Cosine Similarity & Collaborative Filtering is a Machine Learning project by Vaibhav Bansal built with AWS EC2, AWS S3, Python, Flask, Machine Learning, Collaborative Filtering, Cosine Similarity, Streamlit.
+README overview: Deployed in AWS EC2, Frontend in Streamlit, Cosine Similarity, Fast Api, Postgres
+Verified features:
+- Movie-Recommendation-Project
+Technologies: AWS EC2, AWS S3, Python, Flask, Machine Learning, Collaborative Filtering, Cosine Similarity, Streamlit
+Page: https://vaibhavbansal.in/projects/movie-recommendation-using-cosine-similarity-and-collaborative-filtering
+Repository: https://github.com/VaibhavBansal26/Movie-Recommendation-Project
+README: https://github.com/VaibhavBansal26/Movie-Recommendation-Project/blob/main/README.md
+
+### Realtime Logs Processing using Apache Airflow, Kafka & Elatisearch (Data Engineering)
+Category: Data Engineering
+Realtime Logs Processing using Apache Airflow, Kafka & Elatisearch (Data Engineering) is a Data Engineering project by Vaibhav Bansal built with Elastisearch, Apache Airflow, Kafka, Python, Data Engineering.
+README overview: Realtime Logs Processing With Apache Airflow, Kafka &amp; Elastisearch
+Verified features:
+- Realtime-Logs-Processing
+- System Architecture
+- Demo Video
+- Screenshots
+Technologies: Elastisearch, Apache Airflow, Kafka, Python, Data Engineering
+Page: https://vaibhavbansal.in/projects/realtime-logs-processing-using-apache-airflow-kafka-and-elatisearch-data-engineering
+Repository: https://github.com/VaibhavBansal26/Realtime-Logs-Processing
+README: https://github.com/VaibhavBansal26/Realtime-Logs-Processing/blob/main/README.md
+
+### Medallion Architecture Design using Azure (Data Engineering)
+Category: Data Engineering
+Medallion Architecture Design using Azure (Data Engineering) is a Data Engineering project by Vaibhav Bansal built with Azure, Azure Databricks, DBT, Azure SQL Database, Azure Data Factory, Azure DataLake Gen 2.
+README overview: Medallion Architetcure Layers 1. Bronze Layer - Raw Data 2. Silver - Fine Tuned Data 3. Gold - Refined Data
+Verified features:
+- Design-Medallion-Architecture-Azure
+- Medallion Architecture
+- Demo
+- Workflow Instructions
+- Create Azure Databricks workspace
+- Base Databricks Notebook
+- Set up DBT
+Architecture: Medallion Architetcure Layers 1. Bronze Layer - Raw Data 2. Silver - Fine Tuned Data 3. Gold - Refined Data
+Technologies: Azure, Azure Databricks, DBT, Azure SQL Database, Azure Data Factory, Azure DataLake Gen 2
+Page: https://vaibhavbansal.in/projects/medallion-architecture-design-using-azure-data-engineering
+Repository: https://github.com/VaibhavBansal26/Design-Medallion-Architecture-Azure#
+README: https://github.com/VaibhavBansal26/Design-Medallion-Architecture-Azure/blob/main/README.md
+
+### DevSecOps - Movie Booking 2 Stage Deplyement Pipeline using Terraform, Jenkins & Kubernetes
+Category: DevOps
+DevSecOps - Movie Booking 2 Stage Deplyement Pipeline using Terraform, Jenkins & Kubernetes is a DevOps project by Vaibhav Bansal built with Jenkins, Docker, Terraform, AWS, DevSecOps, SonarQube, Owasp, Trivy, AWS EC2, Amazon EKS, Kubernetes, Prometheus, Grafana, Helm, Email Notification.
+README overview: Full Deployment Pipe - Terraform, EC2, Amazon EKS, Docker, Jenkins, SonarQube, Owasp, Trivy, AgroCD, Kubernetes
+Verified features:
+- Book Tickets Page
+- Home Page
+- Login Page
+- Payments Page
+- See All
+- Summery Page
+- Movie Page
+Architecture: Configure Infrastructure in AWS using Terraform brew install terraform which terraform source /.zshrc
+Technologies: Jenkins, Docker, Terraform, AWS, DevSecOps, SonarQube, Owasp, Trivy, AWS EC2, Amazon EKS, Kubernetes, Prometheus, Grafana, Helm, Email Notification
+Page: https://vaibhavbansal.in/projects/devsecops-movie-booking-2-stage-deplyement-pipeline-using-terraform-jenkins-and-kubernetes
+Repository: https://github.com/VaibhavBansal26/DevSecOps-MovieBooking
+README: https://github.com/VaibhavBansal26/DevSecOps-MovieBooking/blob/main/README.md
+
+### Music Streaming 3-Tier Application with React, Node JS, MongoDB, AWS EKS, PostgresQL, Docker, Jenkins
+Category: MERN
+Music Streaming 3-Tier Application with React, Node JS, MongoDB, AWS EKS, PostgresQL, Docker, Jenkins is a MERN project by Vaibhav Bansal built with AWS EC2, AWS S3, React, Node Js, Express, MongoDB, PostgreSQL, Docker, Nginx, Redis, Kubernetes, AWS EKS, Docker, Docker Compose, Jenkins, Sonarqube, Neon db.
+README overview: A microservice-based music streaming app: a React frontend plus three Node/TypeScript services, containerised with Docker and deployed to AWS EKS through a Jenkins pipeline.
+Verified features:
+- Admin
+- Album
+- Home
+- Login
+- Play List
+- Register
+- Music Streaming Application
+Architecture: Service Port Responsibility Storage --- --- --- --- userService 5001 Register / login (JWT), profile, playlist toggle MongoDB songService 5003 Read-only albums and songs, Redis-cached PostgreSQL (Neon), Redis adminService 5002 Admin-only album/song upload and delete, cache invalidation PostgreSQL (Neon), Redis, Cloudinary frontend 80 React + Vite + Tailwind SPA served by nginx none adminService authenticates requests by calling userService GET /api/v1/user/getUserProfile with the caller's token header.
+Technologies: AWS EC2, AWS S3, React, Node Js, Express, MongoDB, PostgreSQL, Docker, Nginx, Redis, Kubernetes, AWS EKS, Docker, Docker Compose, Jenkins, Sonarqube, Neon db
+Page: https://vaibhavbansal.in/projects/music-streaming-3-tier-application-with-react-node-js-mongodb-aws-eks-postgresql-docker-jenkins
+Repository: https://github.com/VaibhavBansal26/Music-Streaming-Appl
+README: https://github.com/VaibhavBansal26/Music-Streaming-Appl/blob/main/README.md
+
+### NYC Taxi Ride Data Engineering , Data Analysis & Visualization using Power BI
+Category: Data Analytics
+NYC Taxi Ride Data Engineering , Data Analysis & Visualization using Power BI is a Data Analytics project by Vaibhav Bansal built with AWS Glue, AWS Event Bridge, AWS S3, AWS Athena, AWS Quicksight, Power BI.
+README overview: AWS Lambda, Power BI, AWS Athena, AWS Glue, Glue Studio, Data Cataloging, Event Bridge
+Verified features:
+- Taxi-Data-PowerBi-Project
+Technologies: AWS Glue, AWS Event Bridge, AWS S3, AWS Athena, AWS Quicksight, Power BI
+Page: https://vaibhavbansal.in/projects/nyc-taxi-ride-data-engineering-data-analysis-and-visualization-using-power-bi
+Repository: https://github.com/VaibhavBansal26/Taxi-Data-PowerBi-Project
+README: https://github.com/VaibhavBansal26/Taxi-Data-PowerBi-Project/blob/main/README.md
+
+### Taxi Data Prediction Dashboard using Snowflake, Streamlit, SnowPark
+Category: Machine Learning
+Taxi Data Prediction Dashboard using Snowflake, Streamlit, SnowPark is a Machine Learning project by Vaibhav Bansal built with Streamlit, Mlflow, Snowflake, Snowpark, Python.
+README overview: https://app-taxi-data-snowflak-project-vb.streamlit.app/
+Verified features:
+- snowflake-taxi-data-project
+Technologies: Streamlit, Mlflow, Snowflake, Snowpark, Python
+Page: https://vaibhavbansal.in/projects/taxi-data-prediction-dashboard-using-snowflake-streamlit-snowpark
+Repository: https://github.com/VaibhavBansal26/snowflake-taxi-data-project
+README: https://github.com/VaibhavBansal26/snowflake-taxi-data-project/blob/main/README.md
+
+### DevSecOps - Food App Deployment Full Pipeline using Terraform & Jenkins
+Category: DevOps
+DevSecOps - Food App Deployment Full Pipeline using Terraform & Jenkins is a DevOps project by Vaibhav Bansal built with Jenkins, Docker, Terraform, AWS, DevSecOps, SonarQube, Owasp, Trivy, AWS EC2.
+README overview: Deploying Food Delivery App - Terraform, Jenkins, SonarQube, Trivy, Docker, Prometheus, Grafana, Helm, React Js App is down as of now becuase running EC2 instance is expensive!
+Verified features:
+- DevSecOps-FoodApp
+- Jenkins
+- SonarQube
+- App
+Technologies: Jenkins, Docker, Terraform, AWS, DevSecOps, SonarQube, Owasp, Trivy, AWS EC2
+Page: https://vaibhavbansal.in/projects/devsecops-food-app-deployment-full-pipeline-using-terraform-and-jenkins
+Repository: https://github.com/VaibhavBansal26/DevSecOps-FoodApp
+README: https://github.com/VaibhavBansal26/DevSecOps-FoodApp/blob/main/README.md
+
+### DevSecOps - App Deployment Full Pipeline
+Category: DevOps
+DevSecOps - App Deployment Full Pipeline is a DevOps project by Vaibhav Bansal built with Amazon EKS,Prometheus, Grafana, Helm, Jenkins, Docker, Kubernetes, AWS, DevSecOps, SonarQube, Owasp, Trivy.
+README overview: 1. GitHub → Jenkins → SonarQube → Docker Build : Code is pulled from GitHub, built by Jenkins, analyzed by SonarQube, and containerized via Docker. 2. Argo CD, Helm, and EKS : Argo CD (GitOps) or Helm charts are used to deploy and manage your application on Amazon EKS.
+Verified features:
+- DevSecOps-Bms
+- Jenkins
+- Sonar Qube
+- Amazon EKS Dashboard
+- Prometheus
+- Grafana
+- Agro CD
+Architecture: pipeline { agent any tools { jdk 'jdk17' nodejs 'node-16' } environment { SCANNER HOME=tool 'sonar-scanner' } stages { stage ("clean workspace") { steps { cleanWs() } } stage ("Git checkout") { steps { git branch: 'main', url: 'https://github.com/VaibhavBansal26/DevSecOps-Bms.git' } } stage("Sonarqube Analysis "){ steps{ withSonarQubeEnv('sonar-server') { sh ''' $SCANNER HOME/bin/sonar-scanner -Dsonar.projectName=bms-prime \ -Dsonar.projectKey=bms-prime ''' } } } stage("quality gate"){ steps { script { waitForQualityGate abortPipeline: false, credentialsId: 'Sonar-token' } } } stage("Install NPM Dependencies") { steps { sh "npm install" } } stage("OWASP FS Scan") { steps { script { dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit --format XML --out dependency-check-report', odcInstallation: 'DP-Check' } dependencyCheckPublisher pattern: ' /dependency-check-report/dependency-check-report.xml' } } stage("Verify Dependency Check Report") { steps { sh 'ls -R $WORKSPACE' } } stage ("Trivy File Scan") { steps { sh "trivy fs . trivy.txt" } } stage ("Build Docker Image") { steps { sh "docker build -t bms-prime ." } } stage ("Tag & Push to DockerHub") { steps { script { withDockerRegistry(credentialsId: 'docker-cred') { sh "docker tag bms-prime vaibhavbansal26/bms-prime:latest " sh "docker push vaibhavbansal26/bms-prime:latest " } } } } stage('Docker Scout Image') { steps { script{ withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker'){ sh 'docker-scout quickview vaibhavbansal26/bms-prime:latest' sh 'docker-scout cves vaibhavbansal2
+Technologies: Amazon EKS, Prometheus, Grafana, Helm, Jenkins, Docker, Kubernetes, AWS, DevSecOps, SonarQube, Owasp, Trivy
+Page: https://vaibhavbansal.in/projects/devsecops-app-deployment-full-pipeline
+Repository: https://github.com/VaibhavBansal26/DevSecOps-Bms
+README: https://github.com/VaibhavBansal26/DevSecOps-Bms/blob/main/README.md
+
+### NYC Taxi Ride Time Series Prediction
+Category: Machine Learning
+NYC Taxi Ride Time Series Prediction is a Machine Learning project by Vaibhav Bansal built with Python, Hopsworks, DagsHub Integration, MLflow, Batch Processing, Machine Learning, Time Series, Streamlit.
+README overview: https://nyc-taxi-ride-timeseries-prediction-monitoring-vb.streamlit.app https://nyc-taxi-ride-timeseries-prediction-vb.streamlit.app
+Technologies: Python, Hopsworks, DagsHub Integration, MLflow, Batch Processing, Machine Learning, Time Series, Streamlit
+Page: https://vaibhavbansal.in/projects/nyc-taxi-ride-time-series-prediction
+Repository: https://github.com/VaibhavBansal26/Nyc-Taxi-Ride-TimeSeries-Prediction
+README: https://github.com/VaibhavBansal26/Nyc-Taxi-Ride-TimeSeries-Prediction/blob/main/README.md
+
+### Data Science Salary Prediction
+Category: Machine Learning
+Data Science Salary Prediction is a Machine Learning project by Vaibhav Bansal built with Python, Snowflake, Pyspark, React.js, Apache Kafka, Redis, Flask, Airflow, Zookeeper, AWS EC2, AWS S3, Machine Learning, Docker, PostgreSQL, Firebase.
+README overview: Front End Deployment On Firebase ============================== https://datascience-salary-vb.web.app/ Tech Stack ================ 1. Apache Spark 2. Kafka 3. Postgresql 4. Python 5. Snowflake 6. Firebase 7. Linear Regression 8. Machine Learning 9. Redis 10. S3 11. Airflow 12. ZOOKEEPER 13. Flask 14. React JS 15. AWS EC2 16. Github CI/CD 17. Docker 18. Docker Compose 19. mlflow
+Verified features:
+- About
+- Error Boundary
+- Home Page
+- Prediction Page
+- Project Demo
+- Visualization
+- Data Science Salary Prediction
+Technologies: Python, Snowflake, Pyspark, React.js, Apache Kafka, Redis, Flask, Airflow, Zookeeper, AWS EC2, AWS S3, Machine Learning, Docker, PostgreSQL, Firebase
+Page: https://vaibhavbansal.in/projects/data-science-salary-prediction
+Repository: https://github.com/VaibhavBansal26/data_science_salary_prediction_v2
+README: https://github.com/VaibhavBansal26/data_science_salary_prediction_v2/blob/main/README.md
+
+### Heart Disease Prediction
+Category: Machine Learning
+Heart Disease Prediction is a Machine Learning project by Vaibhav Bansal built with Python, Mlflow, DagsHub Integration, Streamlit, Digital Ocean, Machine Learning, Docker, SQLite3.
+README overview: Deployed Link https://heart-disease-prediction-grp-14.streamlit.app/
+Verified features:
+- heart disease prediction version2
+Technologies: Python, Mlflow, DagsHub Integration, Streamlit, Digital Ocean, Machine Learning, Docker, SQLite3
+Page: https://vaibhavbansal.in/projects/heart-disease-prediction
+Repository: https://github.com/VaibhavBansal26/heart_disease_prediction_version2
+README: https://github.com/VaibhavBansal26/heart_disease_prediction_version2/blob/main/README.md
+
+### Customer Segmentation And Sales Analysis with Product Recommendation
+Category: Machine Learning
+Customer Segmentation And Sales Analysis with Product Recommendation is a Machine Learning project by Vaibhav Bansal built with R, ShinyR, SQLite3, Machine Learning.
+README overview: Greatest Project Demo Link: https://vaibhavbansal.shinyapps.io/sdmproject/
+Technologies: R, ShinyR, SQLite3, Machine Learning
+Page: https://vaibhavbansal.in/projects/customer-segmentation-and-sales-analysis-with-product-recommendation
+Repository: https://github.com/VaibhavBansal26/sdm-project
+README: https://github.com/VaibhavBansal26/sdm-project/blob/main/README.md
+
+### Grapesjs Advance Components
+Category: Package & Extension
+Grapesjs Advance Components is a Package & Extension project by Vaibhav Bansal built with Npm package using react js , grapesjs.
+README overview: - promptsite , a command line tool. It writes a multi-page site from one sentence with your own model, lets you polish it in a visual editor, audits it for leaked secrets , and deploys it to Cloudflare Pages or Netlify. - grapesjs-advance-components , a GrapesJS plugin with 41 accessible, themeable blocks (pricing, testimonials, team, tabs, forms that submit, Stripe checkout and more), defineComponent for your own blocks, and multi-page export. A real recording using the offline --provider mock , so no API key is needed. With a key, your model writes the copy.
+Verified features:
+- Export
+- Zip
+- Can I rely on it?
+- Will it clash with my design?
+- How it fits with other GrapesJS plugins
+- Repository layout
+- Development
+Technologies: Npm package using react js, grapesjs
+Page: https://vaibhavbansal.in/projects/grapesjs-advance-components
+Repository: https://github.com/VaibhavBansal26/grapesjs-advance-components
+README: https://github.com/VaibhavBansal26/grapesjs-advance-components/blob/main/README.md
+
+### VSCode Extension
+Category: Package & Extension
+VSCode Extension is a Package & Extension project by Vaibhav Bansal built with VSCode extension to search blogs.
+README overview: This is the README for the "vb-search-blog" extension. It allows users to access the latest Tech Blogs.
+Verified features:
+- Provides access to the latest Tech Blogs.
+Technologies: VSCode extension to search blogs
+Page: https://vaibhavbansal.in/projects/vscode-extension
+Repository: https://github.com/VaibhavBansal26/search-blog-vscode-extension
+README: https://github.com/VaibhavBansal26/search-blog-vscode-extension/blob/main/README.md
+
+### Funnel/Website Builder for Dashclicks India Ltd
+Category: React
+Funnel/Website Builder for Dashclicks India Ltd is a React project by Vaibhav Bansal built with Funnel/Website Builder using React, Grapesjs.
+Technologies: Funnel/Website Builder using React, Grapesjs
+Page: https://vaibhavbansal.in/projects/funnel-website-builder-for-dashclicks-india-ltd
+
+### Disney Plus UI
+Category: React
+Disney Plus UI is a React project by Vaibhav Bansal built with React, Redux, Styled Components, Firebase.
+README overview: React Disney Plus Clone using React, Firebase
+Verified features:
+- Counter
+- Counter API
+- Counter Slice
+- Counter Slice.Spec
+- Movie Slice
+- User Slice
+Technologies: React, Redux, Styled Components, Firebase
+Page: https://vaibhavbansal.in/projects/disney-plus-ui
+Repository: https://github.com/VaibhavBansal26/React-Disney-Plus-UI
+README: https://github.com/VaibhavBansal26/React-Disney-Plus-UI/blob/main/README.md
+
+### React Youtube UI
+Category: React
+React Youtube UI is a React project by Vaibhav Bansal built with React.
+README overview: React Youtube UI
+Technologies: React
+Page: https://vaibhavbansal.in/projects/react-youtube-ui
+Repository: https://github.com/VaibhavBansal26/React-Youtube-UI
+README: https://github.com/VaibhavBansal26/React-Youtube-UI/blob/main/README.md
+
+### React Airbnb UI
+Category: React
+React Airbnb UI is a React project by Vaibhav Bansal built with React.
+README overview: Airbnb UI clone using React
+Technologies: React
+Page: https://vaibhavbansal.in/projects/react-airbnb-ui
+Repository: https://github.com/VaibhavBansal26/React-Airbnb-vb
+README: https://github.com/VaibhavBansal26/React-Airbnb-vb/blob/main/README.md
+
+### React Estate App
+Category: React Native
+React Estate App is a React Native project by Vaibhav Bansal built with React Native- Real Estate App.
+README overview: In the output, you'll find options to open the app in a
+Verified features:
+- App Screenshots
+- Get started
+- Get a fresh project
+Technologies: React Native- Real Estate App
+Page: https://vaibhavbansal.in/projects/react-estate-app
+Repository: https://github.com/VaibhavBansal26/Real-Estate-App
+README: https://github.com/VaibhavBansal26/Real-Estate-App/blob/main/README.md
+
+### React Netflix
+Category: React
+React Netflix is a React project by Vaibhav Bansal built with React, Firebase, Stripe Payment.
+README overview: Netflix app using react
+Verified features:
+- User Slice
+- Home Screen
+- Login Screen
+- Plans Screen
+- Profile Screen
+- Sign In Screen
+Technologies: React, Firebase, Stripe Payment
+Page: https://vaibhavbansal.in/projects/react-netflix
+Repository: https://github.com/VaibhavBansal26/React-Netflix-App
+README: https://github.com/VaibhavBansal26/React-Netflix-App/blob/main/README.md
+
+### Pizza Delivery & Realtime Order Tracking
+Category: Node JS
+Pizza Delivery & Realtime Order Tracking is a Node JS project by Vaibhav Bansal built with Node JS, Socket IO, Stripe Payment, EJS Template.
+README overview: Realtime pizza order using node js, ejs,socket
+Verified features:
+- Api
+- Web
+- Realtime-pizza-order
+Technologies: Node JS, Socket IO, Stripe Payment, EJS Template
+Page: https://vaibhavbansal.in/projects/pizza-delivery-and-realtime-order-tracking
+Repository: https://github.com/VaibhavBansal26/Realtime-pizza-order
+README: https://github.com/VaibhavBansal26/Realtime-pizza-order/blob/main/README.md
+
+### React Amazon
+Category: React
+React Amazon is a React project by Vaibhav Bansal built with React, NEXT JS, Redux, Tailwind CSS, Firebase, Stripe Payment.
+README overview: Amazon Clone - React, firebase, Next JS, Tailwind CSS, Stripe Payment
+Verified features:
+-  App
+- [...Nextauth]
+- Create Checkout Session
+- Webhook
+- Checkout
+- Orders
+- Success
+Technologies: React, NEXT JS, Redux, Tailwind CSS, Firebase, Stripe Payment
+Page: https://vaibhavbansal.in/projects/react-amazon
+Repository: https://github.com/VaibhavBansal26/amazon-clone-stripe
+README: https://github.com/VaibhavBansal26/amazon-clone-stripe/blob/main/README.md
+
+### React  Pizza Shop
+Category: React
+React  Pizza Shop is a React project by Vaibhav Bansal built with React, Styled Components.
+README overview: Pizza order app using React, Styled Components, Firebase
+Technologies: React, Styled Components
+Page: https://vaibhavbansal.in/projects/react-pizza-shop
+Repository: https://github.com/VaibhavBansal26/Sliceline-pizza-order
+README: https://github.com/VaibhavBansal26/Sliceline-pizza-order/blob/main/README.md
+
+### React Chat App
+Category: React
+React Chat App is a React project by Vaibhav Bansal built with React, Redux and Firebase.
+README overview: Chat app using React,Redux,firebase
+Technologies: React, Redux and Firebase
+Page: https://vaibhavbansal.in/projects/react-chat-app
+Repository: https://github.com/VaibhavBansal26/React-Chat-App
+README: https://github.com/VaibhavBansal26/React-Chat-App/blob/main/README.md
+
+### React Ecommerce Clothing App
+Category: React
+React Ecommerce Clothing App is a React project by Vaibhav Bansal built with React, Redux, Hooks, Firebase & Stripe Payment.
+README overview: Deployment Link: https://www.vb-clothing-store.web.app
+Verified features:
+- Checkout.Component
+- Collection.Component
+- Homepage.Component
+- Shop.Component
+- Sign In And Sign Up.Component
+Technologies: React, Redux, Hooks, Firebase & Stripe Payment
+Page: https://vaibhavbansal.in/projects/react-ecommerce-clothing-app
+Repository: https://github.com/VaibhavBansal26/react_ecommerce_app
+README: https://github.com/VaibhavBansal26/react_ecommerce_app/blob/master/README.md
+
+### React Amazon Prime
+Category: React
+React Amazon Prime is a React project by Vaibhav Bansal built with React, Redux, Styled Components, Rapid API, Firebase.
+README overview: Tech stack: React, Firebase, Styled Components
+Verified features:
+- Counter
+- Counter API
+- Counter Slice
+- Counter Slice.Spec
+- Movie Slice
+- User Slice
+Technologies: React, Redux, Styled Components, Rapid API, Firebase
+Page: https://vaibhavbansal.in/projects/react-amazon-prime
+Repository: https://github.com/VaibhavBansal26/React-Amazon-Prime
+README: https://github.com/VaibhavBansal26/React-Amazon-Prime/blob/main/README.md
+
+### MERN Instagram Application (Photo Sharing App)
+Category: MERN
+MERN Instagram Application (Photo Sharing App) is a MERN project by Vaibhav Bansal built with Mongo DB, Express JS, React JS, Node JS .
+README overview: Instagram clone using MERN
+Verified features:
+- Auth Route
+- Post Route
+- User Route
+- MERN-INSTAGRAM-VB
+Technologies: Mongo DB, Express JS, React JS, Node JS
+Page: https://vaibhavbansal.in/projects/mern-instagram-application-photo-sharing-app
+Repository: https://github.com/VaibhavBansal26/MERN-INSTAGRAM-VB
+README: https://github.com/VaibhavBansal26/MERN-INSTAGRAM-VB/blob/main/README.md
+
+### React Linkedin UI App
+Category: React
+React Linkedin UI App is a React project by Vaibhav Bansal built with React, Redux, Styled Components, Firebase.
+README overview: Linkedin clone using React , Firebase
+Technologies: React, Redux, Styled Components, Firebase
+Page: https://vaibhavbansal.in/projects/react-linkedin-ui-app
+Repository: https://github.com/VaibhavBansal26/Reacrt-linkedin-vb
+README: https://github.com/VaibhavBansal26/Reacrt-linkedin-vb/blob/main/README.md
+
+### React Movie App
+Category: React
+React Movie App is a React project by Vaibhav Bansal built with React and Tmdb API.
+README overview: This project was bootstrapped with Create React App.
+Verified features:
+- Available Scripts
+- yarn start
+- yarn build
+- yarn eject
+- Learn More
+- Code Splitting
+- Analyzing the Bundle Size
+Technologies: React and Tmdb API
+Page: https://vaibhavbansal.in/projects/react-movie-app
+Repository: https://github.com/VaibhavBansal26/react-movie-app
+README: https://github.com/VaibhavBansal26/react-movie-app/blob/master/README.md
+
+### React Tinder UI clone
+Category: React
+React Tinder UI clone is a React project by Vaibhav Bansal built with React with Swipe Functionality.
+README overview: React tinder UI clone
+Technologies: React with Swipe Functionality
+Page: https://vaibhavbansal.in/projects/react-tinder-ui-clone
+Repository: https://github.com/VaibhavBansal26/React-tinder-UI
+README: https://github.com/VaibhavBansal26/React-tinder-UI/blob/main/README.md
+
+### Video Conferencing App
+Category: React
+Video Conferencing App is a React project by Vaibhav Bansal built with React, Node JS and Socket IO.
+README overview: Video conferencing using nodejs, socket io https://video-conferencing-app-vb.onrender.com
+Verified features:
+- Nodejs-Video-Conferencing
+Technologies: React, Node JS and Socket IO
+Page: https://vaibhavbansal.in/projects/video-conferencing-app
+Repository: https://github.com/VaibhavBansal26/Nodejs-Video-Conferencing
+README: https://github.com/VaibhavBansal26/Nodejs-Video-Conferencing/blob/main/README.md
+
+### React Twitter UI Clone
+Category: React
+React Twitter UI Clone is a React project by Vaibhav Bansal built with React and Firebase.
+README overview: Twitter clone using react firebase
+Technologies: React and Firebase
+Page: https://vaibhavbansal.in/projects/react-twitter-ui-clone
+Repository: https://github.com/VaibhavBansal26/React-Twitter-vb
+README: https://github.com/VaibhavBansal26/React-Twitter-vb/blob/main/README.md
+
+### React Slack UI
+Category: React
+React Slack UI is a React project by Vaibhav Bansal built with React and Firebase.
+README overview: React Slack application using React and firebase
+Technologies: React and Firebase
+Page: https://vaibhavbansal.in/projects/react-slack-ui
+Repository: https://github.com/VaibhavBansal26/React-Slack-vb
+README: https://github.com/VaibhavBansal26/React-Slack-vb/blob/main/README.md
+
+### React Whatsapp UI & Messaging
+Category: React
+React Whatsapp UI & Messaging is a React project by Vaibhav Bansal built with React and Firebase.
+README overview: For Node version - 20 export NODE OPTIONS=--openssl-legacy-provider npm start echo 'export NODE OPTIONS=--openssl-legacy-provider' /.zshrc source /.zshrc
+Technologies: React and Firebase
+Page: https://vaibhavbansal.in/projects/react-whatsapp-ui-and-messaging
+Repository: https://github.com/VaibhavBansal26/React-Whatsapp-UI
+README: https://github.com/VaibhavBansal26/React-Whatsapp-UI/blob/main/README.md
+
+### React Spotify Clone
+Category: React
+React Spotify Clone is a React project by Vaibhav Bansal built with React and Firebase.
+README overview: spotify clone using firebase react
+Technologies: React and Firebase
+Page: https://vaibhavbansal.in/projects/react-spotify-clone
+Repository: https://github.com/VaibhavBansal26/React-spotify-vb
+README: https://github.com/VaibhavBansal26/React-spotify-vb/blob/main/README.md
+
+### React Covid 19 Tracker
+Category: React
+React Covid 19 Tracker is a React project by Vaibhav Bansal built with React, Context API.
+README overview: Covid tracker using react
+Verified features:
+- React COVID Tracker
+Technologies: React, Context API
+Page: https://vaibhavbansal.in/projects/react-covid-19-tracker
+Repository: https://github.com/VaibhavBansal26/React-Covid-Tracker
+README: https://github.com/VaibhavBansal26/React-Covid-Tracker/blob/main/README.md
+
+### MERN Youtube Application
+Category: MERN
+MERN Youtube Application is a MERN project by Vaibhav Bansal built with Mongo DB, Express JS, React JS, Node JS - Register & Login to use Features .
+README overview: Youtube clone (video sharing app using node js, react js)
+Verified features:
+- Comment
+- Like
+- Subscribe
+- Users
+- Video
+Technologies: Mongo DB, Express JS, React JS, Node JS - Register & Login to use Features
+Page: https://vaibhavbansal.in/projects/mern-youtube-application
+Repository: https://github.com/VaibhavBansal26/React-Mern-Youtube
+README: https://github.com/VaibhavBansal26/React-Mern-Youtube/blob/main/README.md
+
+### Travelling and Adventrous Tour App with Stripe
+Category: Node JS
+Travelling and Adventrous Tour App with Stripe is a Node JS project by Vaibhav Bansal built with Server Side Rendering - Node JS, PUG Templates, Stripe Integration.
+README overview: Built using modern technologies node.js ,express, mongoDB, mongoose.
+Verified features:
+- Booking Routes
+- Review Routes
+- Tour Routes
+- User Routes
+- View Routes
+- Natours Travel Booking Applications
+Technologies: Server Side Rendering - Node JS, PUG Templates, Stripe Integration
+Page: https://vaibhavbansal.in/projects/travelling-and-adventrous-tour-app-with-stripe
+Repository: https://github.com/VaibhavBansal26/node-natours-travel-app
+README: https://github.com/VaibhavBansal26/node-natours-travel-app/blob/master/README.md
+
+### Natural Disaster Prediction & Management 
+Category: Machine Learning
+Natural Disaster Prediction & Management  is a Machine Learning project by Vaibhav Bansal built with Python, Flask, Google API,Machine Learning Algorithms, Deep Learning Methods.
+README overview: Estimates, live data and alerting for earthquakes, tsunamis, floods, hurricanes and storms. Started as a VIT University capstone in 2020 (Flask 1, TensorFlow 1) and rebuilt in 2026 on FastAPI, scikit-learn, HTMX, Tailwind and Leaflet, with live feeds and a Claude-powered assistant. Outputs are statistical estimates and other organisations' live data. They are not operational forecasts or warnings. Earthquakes cannot be predicted: the earthquake page reports a historical hazard rate, and real-time alerts come from the USGS feed, not from a model.
+Verified features:
+- Home: A live 3D globe of this week's USGS earthquakes, with module cards
+- Earthquake: Historical hazard for any place (rate and probability of M 6, 7, 8), the live USGS map, the week's strongest real earthquakes with one-click "Nearby help"
+- Flood: River level 1, 3 and 6 hours ahead for one gauge, shown next to "no change"
+- Tsunami, Hurricane, Storm: Small models with their held-out skill shown on the page
+- Live: GDACS global alerts, a weather outlook for any place, and the real-event alert watcher
+- Assistant: Plain-language questions answered with live tools and cited guidance (Claude key needed)
+- Alerts: Hospitals and police near a place or epicentre, then alert your contacts by email or SMS, optionally in other languages
+Architecture: This is the short map. Detail lives in code-walkthrough.md (backend), frontend.md (browser side), models.md (every model) and statistics.md (generated numbers). A FastAPI application that renders server-side Jinja2 pages, enhanced with HTMX. Models are trained once from the command line and loaded from disk at request time. Nothing trains, downloads or writes files inside a web request.
+Technologies: Python, Flask, Google API, Machine Learning Algorithms, Deep Learning Methods
+Page: https://vaibhavbansal.in/projects/natural-disaster-prediction-and-management
+Repository: https://github.com/VaibhavBansal26/Capstone-2020-Natural-Disaster-Prediction
+README: https://github.com/VaibhavBansal26/Natural-Disaster-Prediction/blob/master/README.md
+
+### React Hulu Clone
+Category: React
+React Hulu Clone is a React project by Vaibhav Bansal built with React.
+README overview: Hulu clone using react
+Technologies: React
+Page: https://vaibhavbansal.in/projects/react-hulu-clone
+Repository: https://github.com/VaibhavBansal26/React-Hulu
+README: https://github.com/VaibhavBansal26/React-Hulu/blob/main/README.md
+
+### React Trello UI
+Category: React
+React Trello UI is a React project by Vaibhav Bansal built with React.
+README overview: Trello clone
+Technologies: React
+Page: https://vaibhavbansal.in/projects/react-trello-ui
+Repository: https://github.com/VaibhavBansal26/React-trello
+README: https://github.com/VaibhavBansal26/React-trello/blob/main/README.md
+
+### React Tiktok UI
+Category: React
+React Tiktok UI is a React project by Vaibhav Bansal built with React.
+README overview: Titkok basic UI
+Technologies: React
+Page: https://vaibhavbansal.in/projects/react-tiktok-ui
+Repository: https://github.com/VaibhavBansal26/React-tiktok-UI
+README: https://github.com/VaibhavBansal26/React-tiktok-UI/blob/main/README.md
+
+### React NEWZ App
+Category: React
+React NEWZ App is a React project by Vaibhav Bansal built with React and API.
+README overview: React news app ui
+Technologies: React and API
+Page: https://vaibhavbansal.in/projects/react-newz-app
+Repository: https://github.com/VaibhavBansal26/React-news-app-ui
+README: https://github.com/VaibhavBansal26/React-news-app-ui/blob/main/README.md
+
+### React NBA App
+Category: React
+React NBA App is a React project by Vaibhav Bansal built with React.
+README overview: Basic react app example
+Technologies: React
+Page: https://vaibhavbansal.in/projects/react-nba-app
+Repository: https://github.com/VaibhavBansal26/React-Nba-app
+README: https://github.com/VaibhavBansal26/React-Nba-app/blob/main/README.md
+
+### React Facebook UI
+Category: React
+React Facebook UI is a React project by Vaibhav Bansal built with React, Next JS, Tailwind CSS.
+README overview: This is a Next.js project bootstrapped with create-next-app .
+Verified features:
+-  App
+- [...Nextauth]
+- Hello
+- Getting Started
+- or
+- Learn More
+Technologies: React, Next JS, Tailwind CSS
+Page: https://vaibhavbansal.in/projects/react-facebook-ui
+Repository: https://github.com/VaibhavBansal26/next-facebook-vb
+README: https://github.com/VaibhavBansal26/next-facebook-vb/blob/main/README.md
+
+### React Music Artist App
+Category: React
+React Music Artist App is a React project by Vaibhav Bansal built with React.
+README overview: Basic react artist app 
+Technologies: React
+Page: https://vaibhavbansal.in/projects/react-music-artist-app
+Repository: https://github.com/VaibhavBansal26/React-Artist-vb
+README: https://github.com/VaibhavBansal26/React-Artist-vb/blob/main/README.md
+
+## npm packages
+### grapesjs-advance-components
+41 accessible, themeable GrapesJS blocks, custom block APIs, multi-page export and bring-your-own-model AI.
+https://www.npmjs.com/package/grapesjs-advance-components
+
+### promptsite
+Turn one sentence into an audited, ready-to-deploy multi-page website using your own model and visual editing.
+https://www.npmjs.com/package/promptsite
+
+### captra
+An AI-native JavaScript framework for typed capabilities, agents, memory, tools and generated UI.
+https://www.npmjs.com/package/captra
+
+### create-captra
+Create a new Captra application from the command line.
+https://www.npmjs.com/package/create-captra
+
+## Research
+### Obstacle Avoidance Using Stereo Vision and Depth Maps for Visual Aid Devices
+A real-time obstacle detection framework for visually impaired users combining stereo cameras, ultrasonic sensors and on-device processing.
+Published by Springer Nature · SN Applied Sciences.
+https://doi.org/10.1007/s42452-020-2815-z
+
+## Writing
+- [I Built a CLI That Turns One Sentence Into a Website, and Refuses to Ship Your API Keys](https://medium.com/@vaibhav.bansal945/ai-website-generator-cli-blocks-leaked-api-keys-e5f19ebbac62?source=rss-7add18bd7c11------2) — Last year I had an old npm package with one component in it: an accordion for GrapesJS. Nobody used it, and it deserved that. This autumn I rebuilt it into something I would actually use, and I want to explain what it became, what it does well, and where it is still weak. The sho
+- [Build a Minimal RAG Pipeline in 50 Lines of Python (No Framework Required)](https://medium.com/@vaibhav.bansal945/build-a-minimal-rag-pipeline-in-50-lines-of-python-no-framework-required-4c1d7db275b9?source=rss-7add18bd7c11------2) — Every RAG tutorial starts the same way: install a vector database, sign up for an embeddings API, wire up a framework with fourteen abstractions. By the time it works, you can’t explain what any single piece does. So let’s do the opposite. Fifty lines of plain Python, one depende
+- [Exploring CSR, SSR, ISR, and SSG: Which Rendering Method is Right for You?](https://medium.com/@vaibhav.bansal945/exploring-csr-ssr-isr-and-ssg-which-rendering-method-is-right-for-you-6c7c20793c08?source=rss-7add18bd7c11------2) — Introduction: The intricate world of web application development requires careful consideration when it comes to rendering web pages. Among the multitude of choices, four rendering methods stand out: Client-Side Rendering (CSR), Server-Side Rendering (SSR), Incremental Static Reg
+
+## Long-form videos
+- [Real-time Logs Processing using Apache Kafka, Airflow, ElasticSearch (Data Engineering)](https://www.youtube.com/watch?v=ZcIbqeIAC0Y) — Real-time Logs Processing using Apache Kafka, Airflow, ElasticSearch (Data Engineering), published on Vaibhav Bansal Code.
+- [Car Price Prediction using Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, FAST Api, MinIO, Debezium](https://www.youtube.com/watch?v=_bjaJZPFovM) — Car Price Prediction using Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, FAST Api, MinIO, Debezium, published on Vaibhav Bansal Code.
+- [Music Stream 3 Tier Application  using React Js, Node Js, Mongo DB, PostgresSql, Kubernetes, Jenkins](https://www.youtube.com/watch?v=Z1XzofG0cNE) — Music Stream 3 Tier Application  using React Js, Node Js, Mongo DB, PostgresSql, Kubernetes, Jenkins, published on Vaibhav Bansal Code.
+- [Connecting Power Bi to Athena on Mac using AWS EC2 instance](https://www.youtube.com/watch?v=ucCxmocb8W8) — Connecting Power Bi to Athena on Mac using AWS EC2 instance, published on Vaibhav Bansal Code.
+- [A Shiny R Application for Customer Segmentation And Sales Analysis with Product Recommendation](https://www.youtube.com/watch?v=ENTbjSBwjS0) — A Shiny R Application for Customer Segmentation And Sales Analysis with Product Recommendation, published on Vaibhav Bansal Code.
+- [End to End Data Engineering Project - Medallion Architecture in Azure](https://www.youtube.com/watch?v=VKSf1NfdjTU) — End to End Data Engineering Project - Medallion Architecture in Azure, published on Vaibhav Bansal Code.
+- [Data Science Salary Prediction Using Flask, React.js - End to End Project](https://www.youtube.com/watch?v=1Ca0Y4s37ls) — Data Science Salary Prediction Using Flask, React.js - End to End Project, published on Vaibhav Bansal Code.
+- [Natural disaster prediction using deep learning and machine learning  CAPSTONE-2020](https://www.youtube.com/watch?v=Gad5vz1Pkcc) — Natural disaster prediction using deep learning and machine learning  CAPSTONE-2020, published on Vaibhav Bansal Code.
+
+## YouTube Shorts
+- [Double Booking Problem: How BookMyShow Locks Seat A7](https://www.youtube.com/shorts/yhyR53YRvOs) — Double Booking Problem: How BookMyShow Locks Seat A7, a YouTube Short by Vaibhav Bansal.
+- [How ChatGPT Works: System Design for Millions of Users](https://www.youtube.com/shorts/O34rHovDIBM) — How ChatGPT Works: System Design for Millions of Users, a YouTube Short by Vaibhav Bansal.
+- [Government AI Coding Agents: IAM Beats Better Models](https://www.youtube.com/shorts/MiR15uarrzM) — Government AI Coding Agents: IAM Beats Better Models, a YouTube Short by Vaibhav Bansal.
+- [Should AI Agents Argue With Themselves First?](https://www.youtube.com/shorts/UdkamLcm3Tk) — Should AI Agents Argue With Themselves First?, a YouTube Short by Vaibhav Bansal.
+- [Vision Model Failing? Fix the Image, Not the Prompt](https://www.youtube.com/shorts/BWo1EWeGZpg) — Vision Model Failing? Fix the Image, Not the Prompt, a YouTube Short by Vaibhav Bansal.
+- [How Netflix Streams Video Without Buffering (Explained)](https://www.youtube.com/shorts/pkjFhK0SoyM) — How Netflix Streams Video Without Buffering (Explained), a YouTube Short by Vaibhav Bansal.
+- [AI Agent Memory: Why Vector Search Isn't Enough](https://www.youtube.com/shorts/FQZ2e0C4TOM) — AI Agent Memory: Why Vector Search Isn't Enough, a YouTube Short by Vaibhav Bansal.
+- [SFT vs Preference Optimization vs RL: Which to Pick?](https://www.youtube.com/shorts/vRnMJPwzwkA) — SFT vs Preference Optimization vs RL: Which to Pick?, a YouTube Short by Vaibhav Bansal.
+- [RAG vs MCP: Why You Don't Have to Pick One](https://www.youtube.com/shorts/g0m4Ute5MQs) — RAG vs MCP: Why You Don't Have to Pick One, a YouTube Short by Vaibhav Bansal.
+- [Agentic RAG: Why Your Bot's Answers Are Half Right](https://www.youtube.com/shorts/3VEfwntf02A) — Agentic RAG: Why Your Bot's Answers Are Half Right, a YouTube Short by Vaibhav Bansal.
+- [4 rules of the sigma engineer #Shorts](https://www.youtube.com/shorts/AzLQpjXxRXI) — 4 rules of the sigma engineer #Shorts, a YouTube Short by Vaibhav Bansal.
+- [Your Prompt Isn't the Problem. Your Context Is.](https://www.youtube.com/shorts/9oFI9PFiA3c) — Your Prompt Isn't the Problem. Your Context Is., a YouTube Short by Vaibhav Bansal.
+- [How do you know your AI is right ?](https://www.youtube.com/shorts/LcUqidCJIUI) — How do you know your AI is right ?, a YouTube Short by Vaibhav Bansal.

@@ -1,0 +1,281 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Vaibhav Bansal — Writing, videos and engineering updates",
+  "home_page_url": "https://vaibhavbansal.in",
+  "feed_url": "https://vaibhavbansal.in/feed.json",
+  "authors": [
+    {
+      "name": "Vaibhav Bansal",
+      "url": "https://vaibhavbansal.in"
+    }
+  ],
+  "items": [
+    {
+      "id": "https://medium.com/@vaibhav.bansal945/ai-website-generator-cli-blocks-leaked-api-keys-e5f19ebbac62?source=rss-7add18bd7c11------2",
+      "url": "https://medium.com/@vaibhav.bansal945/ai-website-generator-cli-blocks-leaked-api-keys-e5f19ebbac62?source=rss-7add18bd7c11------2",
+      "title": "I Built a CLI That Turns One Sentence Into a Website, and Refuses to Ship Your API Keys",
+      "summary": "Last year I had an old npm package with one component in it: an accordion for GrapesJS. Nobody used it, and it deserved that. This autumn I rebuilt it into something I would actually use, and I want to explain what it became, what it does well, and where it is still weak. The sho",
+      "date_published": "Wed, 28 Oct 2026 19:22:36 GMT",
+      "tags": [
+        "article",
+        "medium",
+        "latest"
+      ]
+    },
+    {
+      "id": "https://medium.com/@vaibhav.bansal945/build-a-minimal-rag-pipeline-in-50-lines-of-python-no-framework-required-4c1d7db275b9?source=rss-7add18bd7c11------2",
+      "url": "https://medium.com/@vaibhav.bansal945/build-a-minimal-rag-pipeline-in-50-lines-of-python-no-framework-required-4c1d7db275b9?source=rss-7add18bd7c11------2",
+      "title": "Build a Minimal RAG Pipeline in 50 Lines of Python (No Framework Required)",
+      "summary": "Every RAG tutorial starts the same way: install a vector database, sign up for an embeddings API, wire up a framework with fourteen abstractions. By the time it works, you can’t explain what any single piece does. So let’s do the opposite. Fifty lines of plain Python, one depende",
+      "date_published": "Fri, 03 Jul 2026 21:22:19 GMT",
+      "tags": [
+        "article",
+        "medium",
+        "archive"
+      ]
+    },
+    {
+      "id": "https://medium.com/@vaibhav.bansal945/exploring-csr-ssr-isr-and-ssg-which-rendering-method-is-right-for-you-6c7c20793c08?source=rss-7add18bd7c11------2",
+      "url": "https://medium.com/@vaibhav.bansal945/exploring-csr-ssr-isr-and-ssg-which-rendering-method-is-right-for-you-6c7c20793c08?source=rss-7add18bd7c11------2",
+      "title": "Exploring CSR, SSR, ISR, and SSG: Which Rendering Method is Right for You?",
+      "summary": "Introduction: The intricate world of web application development requires careful consideration when it comes to rendering web pages. Among the multitude of choices, four rendering methods stand out: Client-Side Rendering (CSR), Server-Side Rendering (SSR), Incremental Static Reg",
+      "date_published": "Thu, 24 Aug 2023 19:22:15 GMT",
+      "tags": [
+        "article",
+        "medium",
+        "archive"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=ZcIbqeIAC0Y",
+      "url": "https://www.youtube.com/watch?v=ZcIbqeIAC0Y",
+      "title": "Real-time Logs Processing using Apache Kafka, Airflow, ElasticSearch (Data Engineering)",
+      "summary": "Real-time Logs Processing using Apache Kafka, Airflow, ElasticSearch (Data Engineering), published on Vaibhav Bansal Code.",
+      "tags": [
+        "video",
+        "youtube",
+        "long-form"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=_bjaJZPFovM",
+      "url": "https://www.youtube.com/watch?v=_bjaJZPFovM",
+      "title": "Car Price Prediction using Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, FAST Api, MinIO, Debezium",
+      "summary": "Car Price Prediction using Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, FAST Api, MinIO, Debezium, published on Vaibhav Bansal Code.",
+      "tags": [
+        "video",
+        "youtube",
+        "long-form"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=Z1XzofG0cNE",
+      "url": "https://www.youtube.com/watch?v=Z1XzofG0cNE",
+      "title": "Music Stream 3 Tier Application  using React Js, Node Js, Mongo DB, PostgresSql, Kubernetes, Jenkins",
+      "summary": "Music Stream 3 Tier Application  using React Js, Node Js, Mongo DB, PostgresSql, Kubernetes, Jenkins, published on Vaibhav Bansal Code.",
+      "tags": [
+        "video",
+        "youtube",
+        "long-form"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=ucCxmocb8W8",
+      "url": "https://www.youtube.com/watch?v=ucCxmocb8W8",
+      "title": "Connecting Power Bi to Athena on Mac using AWS EC2 instance",
+      "summary": "Connecting Power Bi to Athena on Mac using AWS EC2 instance, published on Vaibhav Bansal Code.",
+      "tags": [
+        "video",
+        "youtube",
+        "long-form"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=ENTbjSBwjS0",
+      "url": "https://www.youtube.com/watch?v=ENTbjSBwjS0",
+      "title": "A Shiny R Application for Customer Segmentation And Sales Analysis with Product Recommendation",
+      "summary": "A Shiny R Application for Customer Segmentation And Sales Analysis with Product Recommendation, published on Vaibhav Bansal Code.",
+      "tags": [
+        "video",
+        "youtube",
+        "long-form"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=VKSf1NfdjTU",
+      "url": "https://www.youtube.com/watch?v=VKSf1NfdjTU",
+      "title": "End to End Data Engineering Project - Medallion Architecture in Azure",
+      "summary": "End to End Data Engineering Project - Medallion Architecture in Azure, published on Vaibhav Bansal Code.",
+      "tags": [
+        "video",
+        "youtube",
+        "long-form"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=1Ca0Y4s37ls",
+      "url": "https://www.youtube.com/watch?v=1Ca0Y4s37ls",
+      "title": "Data Science Salary Prediction Using Flask, React.js - End to End Project",
+      "summary": "Data Science Salary Prediction Using Flask, React.js - End to End Project, published on Vaibhav Bansal Code.",
+      "tags": [
+        "video",
+        "youtube",
+        "long-form"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/watch?v=Gad5vz1Pkcc",
+      "url": "https://www.youtube.com/watch?v=Gad5vz1Pkcc",
+      "title": "Natural disaster prediction using deep learning and machine learning  CAPSTONE-2020",
+      "summary": "Natural disaster prediction using deep learning and machine learning  CAPSTONE-2020, published on Vaibhav Bansal Code.",
+      "tags": [
+        "video",
+        "youtube",
+        "long-form"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/yhyR53YRvOs",
+      "url": "https://www.youtube.com/shorts/yhyR53YRvOs",
+      "title": "Double Booking Problem: How BookMyShow Locks Seat A7",
+      "summary": "Double Booking Problem: How BookMyShow Locks Seat A7, a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/O34rHovDIBM",
+      "url": "https://www.youtube.com/shorts/O34rHovDIBM",
+      "title": "How ChatGPT Works: System Design for Millions of Users",
+      "summary": "How ChatGPT Works: System Design for Millions of Users, a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/MiR15uarrzM",
+      "url": "https://www.youtube.com/shorts/MiR15uarrzM",
+      "title": "Government AI Coding Agents: IAM Beats Better Models",
+      "summary": "Government AI Coding Agents: IAM Beats Better Models, a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/UdkamLcm3Tk",
+      "url": "https://www.youtube.com/shorts/UdkamLcm3Tk",
+      "title": "Should AI Agents Argue With Themselves First?",
+      "summary": "Should AI Agents Argue With Themselves First?, a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/BWo1EWeGZpg",
+      "url": "https://www.youtube.com/shorts/BWo1EWeGZpg",
+      "title": "Vision Model Failing? Fix the Image, Not the Prompt",
+      "summary": "Vision Model Failing? Fix the Image, Not the Prompt, a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/pkjFhK0SoyM",
+      "url": "https://www.youtube.com/shorts/pkjFhK0SoyM",
+      "title": "How Netflix Streams Video Without Buffering (Explained)",
+      "summary": "How Netflix Streams Video Without Buffering (Explained), a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/FQZ2e0C4TOM",
+      "url": "https://www.youtube.com/shorts/FQZ2e0C4TOM",
+      "title": "AI Agent Memory: Why Vector Search Isn't Enough",
+      "summary": "AI Agent Memory: Why Vector Search Isn't Enough, a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/vRnMJPwzwkA",
+      "url": "https://www.youtube.com/shorts/vRnMJPwzwkA",
+      "title": "SFT vs Preference Optimization vs RL: Which to Pick?",
+      "summary": "SFT vs Preference Optimization vs RL: Which to Pick?, a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/g0m4Ute5MQs",
+      "url": "https://www.youtube.com/shorts/g0m4Ute5MQs",
+      "title": "RAG vs MCP: Why You Don't Have to Pick One",
+      "summary": "RAG vs MCP: Why You Don't Have to Pick One, a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/3VEfwntf02A",
+      "url": "https://www.youtube.com/shorts/3VEfwntf02A",
+      "title": "Agentic RAG: Why Your Bot's Answers Are Half Right",
+      "summary": "Agentic RAG: Why Your Bot's Answers Are Half Right, a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/AzLQpjXxRXI",
+      "url": "https://www.youtube.com/shorts/AzLQpjXxRXI",
+      "title": "4 rules of the sigma engineer #Shorts",
+      "summary": "4 rules of the sigma engineer #Shorts, a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/9oFI9PFiA3c",
+      "url": "https://www.youtube.com/shorts/9oFI9PFiA3c",
+      "title": "Your Prompt Isn't the Problem. Your Context Is.",
+      "summary": "Your Prompt Isn't the Problem. Your Context Is., a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/LcUqidCJIUI",
+      "url": "https://www.youtube.com/shorts/LcUqidCJIUI",
+      "title": "How do you know your AI is right ?",
+      "summary": "How do you know your AI is right ?, a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3461 @@
+{
+  "name": "Projects by Vaibhav Bansal",
+  "url": "https://vaibhavbansal.in/portfolios",
+  "generated_at": "2026-11-08T21:22:45.467Z",
+  "count": 70,
+  "projects": [
+    {
+      "id": 1015,
+      "slug": "grantlens-research-funding-discovery",
+      "title": "GrantLens — Research Funding Discovery",
+      "category": "Research Discovery AI",
+      "description": "An evidence-grounded research assistant for hybrid grant discovery, applicant-fit checks, literature reviews, cited document Q&A and deadline tracking.",
+      "technologies": [
+        "Next.js 16",
+        "Flask",
+        "pgvector",
+        "Hybrid search"
+      ],
+      "url": "https://vaibhavbansal.in/projects/grantlens-research-funding-discovery",
+      "repository": "https://github.com/VaibhavBansal26/grantlens",
+      "demo": "https://github.com/VaibhavBansal26/grantlens/raw/master/demo/grantlens_demo.mp4",
+      "live_url": null,
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/grantlens/blob/master/README.md",
+      "readme_overview": "Hybrid semantic search over research funding, plus an academic research assistant. Watch the 8-minute demo : every feature, the stack and models, and the measured results, including what didn't work.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Search: Keyword (BM25) and meaning (embedding) search fused into one ranking, with filters for status, agency, close date and amount",
+        "Fit check: Compares your profile with a grant's own text. Every met or not-met verdict must quote the grant, or it is downgraded to unclear",
+        "Find grants for my work: Paste a summary or give an ORCID; get open grants ranked against your work, with your closest paper shown for each",
+        "Paper search: Scholarly papers through OpenAlex",
+        "Literature reviews: Themes, per-paper annotations and theme summaries, each backed by a quote from the abstract. Built as a background job",
+        "Documents: Upload a PDF and ask questions; answers carry a verified citation, and unanswerable questions say so",
+        "Watchlist, saved searches, deadlines: Track grants, email alerts and reminders (verified addresses only), a deadline calendar"
+      ],
+      "features_source": "documentation",
+      "architecture": "- Backend: Flask, Postgres 16 with pgvector (HNSW), Redis, a separate worker process for slow jobs - Frontend: Next.js 16 and TypeScript - Run and ship: Docker Compose, Caddy (automatic HTTPS), GitHub Actions (tests, images to GHCR, deploy script with rollback) - Models: BAAI/bge-small-en-v1.5 embeddings run locally; OpenAI gpt-4o-mini writes answers, summaries and checks. Llama 3.1 8B through Hugging Face is an optional backend ( LLM BACKEND=hf )",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-11-03T13:04:45Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Searching grants in GrantLens",
+          "url": "https://github.com/VaibhavBansal26/grantlens/blob/master/demo/demo.gif",
+          "source": "documentation"
+        },
+        {
+          "label": "Watch the 8-minute demo",
+          "url": "https://github.com/VaibhavBansal26/grantlens/blob/master/demo/grantlens_demo.mp4",
+          "source": "documentation"
+        },
+        {
+          "label": "Project demo",
+          "url": "https://github.com/VaibhavBansal26/grantlens/raw/master/demo/grantlens_demo.mp4",
+          "source": "portfolio"
+        },
+        {
+          "label": "Project preview",
+          "url": "https://raw.githubusercontent.com/VaibhavBansal26/grantlens/master/demo/demo.gif",
+          "source": "portfolio"
+        },
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/grantlens",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1016,
+      "slug": "memorank-long-horizon-agent-memory",
+      "title": "MemoRank — Long-Horizon Agent Memory",
+      "category": "Agent Memory Research",
+      "description": "MemoRank — Long-Horizon Agent Memory is a Agent Memory Research project by Vaibhav Bansal built with Python, MCP, OpenAI Agents SDK, Anthropic SDK, BM25, Dense Retrieval, Cross-encoder Reranking, SQLite, A/B Testing.",
+      "technologies": [
+        "Python",
+        "MCP",
+        "OpenAI Agents SDK",
+        "Anthropic SDK",
+        "BM25",
+        "Dense Retrieval",
+        "Cross-encoder Reranking",
+        "SQLite",
+        "A/B Testing"
+      ],
+      "url": "https://vaibhavbansal.in/projects/memorank-long-horizon-agent-memory",
+      "repository": "https://github.com/VaibhavBansal26/memorank",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/memorank/blob/main/README.md",
+      "readme_overview": "Long-horizon memory for security-investigation agents. No model training anywhere: retrieval (BM25 + dense), a pretrained cross-encoder, and entity-aware heuristics decide which records an agent sees. Served over MCP to OpenAI Agents SDK and Anthropic SDK agents. Includes an evaluation harness for LongMemEval and LoCoMo, a synthetic security-investigation set, CI gates, and a pre-registered online A/B.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "memorank",
+        "Results at a glance",
+        "Architecture",
+        "Use as a library",
+        "Problem",
+        "Memory schema (fixed)",
+        "Baselines"
+      ],
+      "features_source": "documentation",
+      "architecture": "flowchart LR A[Agent Anthropic SDK / OpenAI Agents SDK] -- MCP -- M[Memory server store memory, recall, rerank] A -- MCP -- L[Alert server live 2-day window] M -- P[dense + BM25 candidates cross-encoder score entity-scoped recency, entity chaining] F[Feature flag sticky hash, 50/50] -. picks variant .- M A -- T[(Session log SQLite)]",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-11-03T06:52:00Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 1017,
+      "slug": "ai-powered-self-healing-data-pipeline",
+      "title": "AI-Powered Self-Healing Data Pipeline",
+      "category": "AI Data Reliability",
+      "description": "AI-Powered Self-Healing Data Pipeline is a AI Data Reliability project by Vaibhav Bansal built with FastAPI, React, Kafka, PostgreSQL, Redis, Airflow, Docker, LangGraph, RAG Incident Memory, MCP Tools.",
+      "technologies": [
+        "FastAPI",
+        "React",
+        "Kafka",
+        "PostgreSQL",
+        "Redis",
+        "Airflow",
+        "Docker",
+        "LangGraph",
+        "RAG Incident Memory",
+        "MCP Tools"
+      ],
+      "url": "https://vaibhavbansal.in/projects/ai-powered-self-healing-data-pipeline",
+      "repository": "https://github.com/VaibhavBansal26/Self-Healing-Data-Pipeline",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Self-Healing-Data-Pipeline/blob/main/README.md",
+      "readme_overview": "A production-style reliability lab for streaming data pipelines. The platform combines FastAPI, React, Kafka, PostgreSQL, Redis, Apache Airflow, Docker, LangGraph, RAG incident memory and MCP-style operational tools to demonstrate record repair, stage monitoring, safe automated recovery, human approval and recovery observability. Project status: Portfolio/research demo, not a hardened production deployment. Recovery actions can affect local Docker services; use in an isolated development environment.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Ingestion and data repair: Validates Kafka events, applies deterministic rules, optionally reasons about harder problems with an LLM, persists valid records, and routes unrecoverable events to the DLQ.",
+        "Infrastructure recovery: Monitors Docker-backed services, detects stopped consumers and unavailable dependencies, invokes an allowlisted recovery action and verifies the result.",
+        "Safe autonomy: A background auto-healer monitors the system; the recovery policy/agent selects allowed actions; risky operations require human review.",
+        "AI operations: Incident memory / RAG, traces, tool-call evaluation, semantic caching, cost summaries and an agent activity timeline.",
+        "Control room: React pages for the live pipeline map, background console, approvals, incidents, replay, metrics and AI engineering."
+      ],
+      "features_source": "documentation",
+      "architecture": "A production-style reliability lab for streaming data pipelines. The platform combines FastAPI, React, Kafka, PostgreSQL, Redis, Apache Airflow, Docker, LangGraph, RAG incident memory and MCP-style operational tools to demonstrate record repair, stage monitoring, safe automated recovery, human approval and recovery observability. Project status: Portfolio/research demo, not a hardened production deployment. Recovery actions can affect local Docker services; use in an isolated development environment.",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-11-03T16:14:39Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Postgres outage while events flow: all 80 orders stored, 0 duplicates, 0 lost",
+          "url": "https://github.com/VaibhavBansal26/Self-Healing-Data-Pipeline/blob/main/docs/assets/self-healing-demo.gif",
+          "source": "documentation"
+        },
+        {
+          "label": "Demo Preview",
+          "url": "https://github.com/VaibhavBansal26/Self-Healing-Data-Pipeline/blob/main/docs/assets/demo-preview.gif",
+          "source": "repository-file"
+        }
+      ]
+    },
+    {
+      "id": 1018,
+      "slug": "captra-capability-first-ai-framework",
+      "title": "Captra — Capability-First AI Framework",
+      "category": "AI Framework",
+      "description": "Captra — Capability-First AI Framework is a AI Framework project by Vaibhav Bansal built with TypeScript, AI Agents, Typed Capabilities, Scoped Memory, Approvals, Generated UI, PostgreSQL, MCP, React, OpenAI.",
+      "technologies": [
+        "TypeScript",
+        "AI Agents",
+        "Typed Capabilities",
+        "Scoped Memory",
+        "Approvals",
+        "Generated UI",
+        "PostgreSQL",
+        "MCP",
+        "React",
+        "OpenAI"
+      ],
+      "url": "https://vaibhavbansal.in/projects/captra-capability-first-ai-framework",
+      "repository": "https://github.com/VaibhavBansal26/captra",
+      "demo": null,
+      "live_url": "https://www.npmjs.com/package/captra",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/captra/blob/main/README.md",
+      "readme_overview": "Captra is a capability-first framework for type-safe, memory-aware AI applications.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Captra",
+        "Live application state",
+        "Shared multi-agent state",
+        "Resumable agent checkpoints",
+        "Observability and evaluations",
+        "Lifecycle hooks",
+        "Integration plugins"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "TypeScript",
+        "topics": [],
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2026-10-30T22:23:15Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 1019,
+      "slug": "smart-health-assistant-secure-ai-care-platform",
+      "title": "Smart Health Assistant — Secure AI Care Platform",
+      "category": "Healthcare AI Platform",
+      "description": "Smart Health Assistant — Secure AI Care Platform is a Healthcare AI Platform project by Vaibhav Bansal built with Angular, Spring Boot, Java 21, Python, FastAPI, Machine Learning, Claude, SSE, Healthcare Security, Explainable AI.",
+      "technologies": [
+        "Angular",
+        "Spring Boot",
+        "Java 21",
+        "Python",
+        "FastAPI",
+        "Machine Learning",
+        "Claude",
+        "SSE",
+        "Healthcare Security",
+        "Explainable AI"
+      ],
+      "url": "https://vaibhavbansal.in/projects/smart-health-assistant-secure-ai-care-platform",
+      "repository": "https://github.com/VaibhavBansal26/smart-health-assistant",
+      "demo": "https://github.com/VaibhavBansal26/smart-health-assistant/raw/main/docs/demo/demo.mp4",
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/smart-health-assistant/blob/main/README.md",
+      "readme_overview": "Angular + Spring Boot + ML healthcare app: login and roles (patient / doctor), appointment booking, an ML doctor recommender , a streaming AI health chat (Claude), and a diabetes risk check . Educational project, not a medical device: nothing here is a diagnosis.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Admin Doctors.Component.Spec",
+        "Admin Doctors.Component",
+        "Doctor Dialog.Component",
+        "Appointment Form.Component",
+        "Appointment List.Component",
+        "Reschedule Dialog.Component",
+        "Auth Pages.Spec"
+      ],
+      "features_source": "documentation",
+      "architecture": "Angular /risk - Spring POST /api/risk/diabetes - FastAPI /risk/diabetes - saved per user",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "Java",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-11-07T00:46:44Z"
+      },
+      "demo_assets": [
+        {
+          "label": "DEMO.md",
+          "url": "https://github.com/VaibhavBansal26/smart-health-assistant/blob/main/DEMO.md",
+          "source": "documentation"
+        },
+        {
+          "label": "Admin Add Doctor",
+          "url": "https://github.com/VaibhavBansal26/smart-health-assistant/blob/main/docs/demo/admin-add-doctor.png",
+          "source": "repository-file"
+        },
+        {
+          "label": "Admin Doctor Invited",
+          "url": "https://github.com/VaibhavBansal26/smart-health-assistant/blob/main/docs/demo/admin-doctor-invited.png",
+          "source": "repository-file"
+        },
+        {
+          "label": "Admin Doctors",
+          "url": "https://github.com/VaibhavBansal26/smart-health-assistant/blob/main/docs/demo/admin-doctors.png",
+          "source": "repository-file"
+        },
+        {
+          "label": "Appointments List",
+          "url": "https://github.com/VaibhavBansal26/smart-health-assistant/blob/main/docs/demo/appointments-list.png",
+          "source": "repository-file"
+        },
+        {
+          "label": "Appointments Rescheduled",
+          "url": "https://github.com/VaibhavBansal26/smart-health-assistant/blob/main/docs/demo/appointments-rescheduled.png",
+          "source": "repository-file"
+        },
+        {
+          "label": "Book Form",
+          "url": "https://github.com/VaibhavBansal26/smart-health-assistant/blob/main/docs/demo/book-form.png",
+          "source": "repository-file"
+        },
+        {
+          "label": "Chat Emergency",
+          "url": "https://github.com/VaibhavBansal26/smart-health-assistant/blob/main/docs/demo/chat-emergency.png",
+          "source": "repository-file"
+        }
+      ]
+    },
+    {
+      "id": 1001,
+      "slug": "aether-cinema-considered",
+      "title": "AETHER — Cinema, Considered",
+      "category": "Full-stack Product",
+      "description": "A cinematic streaming foundation with discovery, playback, creator tooling, managed authentication and a private recommendation layer.",
+      "technologies": [
+        "Spring Boot",
+        "PostgreSQL",
+        "Python",
+        "Kafka"
+      ],
+      "url": "https://vaibhavbansal.in/projects/aether-cinema-considered",
+      "repository": "https://github.com/VaibhavBansal26/aether-cinema",
+      "demo": null,
+      "live_url": "https://aether-api-demo.onrender.com",
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/aether-cinema/blob/main/README.md",
+      "readme_overview": "A cinematic streaming product foundation with an ink-black theme, lime accents, original promotional key art, and content-first browsing. This release includes a free Render demonstration with managed Neon authentication and a separate owner-private Sites preview. It is not a production service and has not been tested at one million concurrent viewers. Live demo: https://aether-api-demo.onrender.com · Authentication · Deployment limits.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "AETHER — Cinema, considered",
+        "Run",
+        "What works in the preview",
+        "Python recommendation engine",
+        "Integration foundation",
+        "GitHub",
+        "Media and screenshots"
+      ],
+      "features_source": "documentation",
+      "architecture": "The implementation is centered on Java, Spring Boot, PostgreSQL, Python, Recommendation Systems. The repository is organized into deploy, dist, docs, frontend, infra, load-tests areas. Delivery and dependency evidence includes Docker, Node package manifest, Python requirements, Maven.",
+      "architecture_source": "repository-structure",
+      "repository_snapshot": {
+        "primary_language": "Java",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-10-22T18:33:19Z"
+      },
+      "demo_assets": [
+        {
+          "label": "direct resumable uploads, encoding, adaptive preview and publishing",
+          "url": "https://github.com/VaibhavBansal26/aether-cinema/blob/main/docs/VIDEO-PUBLISHING.md",
+          "source": "documentation"
+        },
+        {
+          "label": "01 Before",
+          "url": "https://github.com/VaibhavBansal26/aether-cinema/blob/main/docs/screenshots/01-before.png",
+          "source": "repository-file"
+        },
+        {
+          "label": "02 Desktop Home",
+          "url": "https://github.com/VaibhavBansal26/aether-cinema/blob/main/docs/screenshots/02-desktop-home.png",
+          "source": "repository-file"
+        },
+        {
+          "label": "03 Title Details",
+          "url": "https://github.com/VaibhavBansal26/aether-cinema/blob/main/docs/screenshots/03-title-details.png",
+          "source": "repository-file"
+        },
+        {
+          "label": "04 Mobile Home",
+          "url": "https://github.com/VaibhavBansal26/aether-cinema/blob/main/docs/screenshots/04-mobile-home.png",
+          "source": "repository-file"
+        },
+        {
+          "label": "05 Player",
+          "url": "https://github.com/VaibhavBansal26/aether-cinema/blob/main/docs/screenshots/05-player.png",
+          "source": "repository-file"
+        },
+        {
+          "label": "06 Memberships",
+          "url": "https://github.com/VaibhavBansal26/aether-cinema/blob/main/docs/screenshots/06-memberships.png",
+          "source": "repository-file"
+        },
+        {
+          "label": "07 Tablet Home",
+          "url": "https://github.com/VaibhavBansal26/aether-cinema/blob/main/docs/screenshots/07-tablet-home.png",
+          "source": "repository-file"
+        }
+      ]
+    },
+    {
+      "id": 1002,
+      "slug": "funnels-build-publish-and-measure",
+      "title": "Funnels — Build, Publish & Measure",
+      "category": "SaaS Platform",
+      "description": "A production-minded funnel platform with visual page building, publishing, analytics, leads, orders and custom-domain workflows.",
+      "technologies": [
+        "TypeScript",
+        "React 19",
+        "GrapesJS",
+        "Hono"
+      ],
+      "url": "https://vaibhavbansal.in/projects/funnels-build-publish-and-measure",
+      "repository": "https://github.com/VaibhavBansal26/funnels",
+      "demo": null,
+      "live_url": null,
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/funnels/blob/main/README.md",
+      "readme_overview": "Build, publish and measure marketing funnels: a drag-and-drop page builder on GrapesJS, templates, custom domains with DNS verification, public serving, analytics, leads and orders, signed webhooks and AI assistance. TypeScript, Hono, SQLite or PostgreSQL, React 19, Tailwind. More screens, light and dark, at three sizes: docs/design/DESIGN.md. Every page and control is described in the user guide; how each feature works end to end in docs/FEATURES.md; the code map, data model and jobs in docs/FUNCTIONS.md; the full documentation index is docs/README.md.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Admin",
+        "Ads",
+        "Ai",
+        "Analyticsapi",
+        "Assets",
+        "Auth",
+        "Billing"
+      ],
+      "features_source": "documentation",
+      "architecture": "Funnels is one Node process (Hono on SQLite by default, or PostgreSQL) that serves the JSON API, the built React app, published funnel pages (by Host header and on built-in /s/... addresses) and signed previews. An in-process worker drains a database-backed job queue. Funnels can also be published as static sites to Cloudflare Pages, and an optional Cloudflare Worker can sit in front. The code map, jobs, route groups and the full data model are in FUNCTIONS.md.",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "TypeScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-11-06T16:29:29Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Builder Preview",
+          "url": "https://github.com/VaibhavBansal26/funnels/blob/main/docs/design/guide/builder-preview.jpg",
+          "source": "repository-file"
+        },
+        {
+          "label": "Template Preview",
+          "url": "https://github.com/VaibhavBansal26/funnels/blob/main/docs/design/guide/template-preview.jpg",
+          "source": "repository-file"
+        },
+        {
+          "label": "Project preview",
+          "url": "https://raw.githubusercontent.com/VaibhavBansal26/funnels/main/docs/design/builder-1440-light.webp",
+          "source": "portfolio"
+        },
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/funnels",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1003,
+      "slug": "forge-living-games",
+      "title": "FORGE — Living Games",
+      "category": "Interactive 3D",
+      "description": "A browser platform for discovering, building, publishing and playing collaborative 3D adventure worlds and battle chess.",
+      "technologies": [
+        "React",
+        "Three.js",
+        "WebSockets",
+        "Cloudflare"
+      ],
+      "url": "https://vaibhavbansal.in/projects/forge-living-games",
+      "repository": "https://github.com/VaibhavBansal26/forge-living-games",
+      "demo": null,
+      "live_url": "https://forge-living-games.vaibhavbansal024.workers.dev/",
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/forge-living-games/blob/main/README.md",
+      "readme_overview": "- React application, generated cover art, responsive Discover, profiles, search and bookmarks. - Actual Three.js low-poly world rendering, 12 reusable object types, drag placement, object manipulation, transform/material controls and deterministic visual rules. - Local email/password accounts using scrypt password hashing; HTTP-only, SameSite session cookies; seven-day sessions; server-side project roles; basic login throttling and mutation-origin checks. - SQLite persistence for accounts, avatars, projects, memberships, bookmarks and published snapshots. - WebSocket collaboration with presence, cursor indicators, saved-state broadcasts and optimistic revision checks. - Server-authoritative multiplayer crystal collection, bounded movement, basic cottage/rock collision checks, shared win state, private draft playtesting and session invite links. - Project JSON export and a searchable build guide. - No model calls in editing, saving, publishing, avatars, or playing.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "FORGE",
+        "Play online",
+        "Run",
+        "Try the complete flow",
+        "What is implemented",
+        "Explicit limits",
+        "Verification"
+      ],
+      "features_source": "documentation",
+      "architecture": "The implementation is centered on JavaScript, React, Three.js, WebSockets, SQLite. The repository is organized into cloudflare, scripts, server, shared, src, worker areas. Delivery and dependency evidence includes Docker, Node package manifest.",
+      "architecture_source": "repository-structure",
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-10-23T12:56:03Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Live project",
+          "url": "https://forge-living-games.vaibhavbansal024.workers.dev/",
+          "source": "portfolio"
+        },
+        {
+          "label": "Project preview",
+          "url": "https://raw.githubusercontent.com/VaibhavBansal26/forge-living-games/main/public/assets/moonlit-valley.png",
+          "source": "portfolio"
+        },
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/forge-living-games",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1004,
+      "slug": "recall-voice-first-learning-companion",
+      "title": "Recall — Voice-first Learning Companion",
+      "category": "AI Learning",
+      "description": "A local-first learning companion that turns conversation and sources into notes, diagrams, recall sessions and measurable retention.",
+      "technologies": [
+        "FastAPI",
+        "PostgreSQL",
+        "Voice AI",
+        "n8n"
+      ],
+      "url": "https://vaibhavbansal.in/projects/recall-voice-first-learning-companion",
+      "repository": "https://github.com/VaibhavBansal26/recall",
+      "demo": "https://github.com/VaibhavBansal26/recall/raw/main/docs/demo/recall-demo.mp4",
+      "live_url": null,
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/recall/blob/main/README.md",
+      "readme_overview": "Voice-first learning companion (single user, local-first). The full spec and phase plan is in CLAUDE.md; deviations are logged in DECISIONS.md. Watch the 81 second demo with voiceover: recall-demo.mp4 (the app running on the built-in test model, so Aria's replies are canned; the music is synthesised by docs/demo/make music.py ).",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Recall",
+        "Status",
+        "Use it on laptop, iPhone and iPad",
+        "Run locally",
+        "Develop",
+        "Phase 0 demo",
+        "Phase 1: turning on real voice"
+      ],
+      "features_source": "documentation",
+      "architecture": "The implementation is centered on Python, FastAPI, PostgreSQL, PWA, Voice AI. The repository is organized into backend, docs, frontend, n8n, scripts areas. Delivery and dependency evidence includes Docker, Docker Compose, Node package manifest, Python project manifest.",
+      "architecture_source": "repository-structure",
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2026-10-31T17:35:01Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Recall with Aria: notebooks, notes, recitation and evaluation",
+          "url": "https://github.com/VaibhavBansal26/recall/blob/main/docs/demo/recall-demo.gif",
+          "source": "documentation"
+        },
+        {
+          "label": "recall-demo.mp4",
+          "url": "https://github.com/VaibhavBansal26/recall/raw/main/docs/demo/recall-demo.mp4",
+          "source": "documentation"
+        },
+        {
+          "label": "docs/demo/make music.py",
+          "url": "https://github.com/VaibhavBansal26/recall/blob/main/docs/demo/make_music.py",
+          "source": "documentation"
+        },
+        {
+          "label": "Recall Demo",
+          "url": "https://github.com/VaibhavBansal26/recall/blob/main/docs/demo/recall-demo.mp4",
+          "source": "repository-file"
+        },
+        {
+          "label": "Project preview",
+          "url": "https://raw.githubusercontent.com/VaibhavBansal26/recall/main/docs/demo/recall-demo.gif",
+          "source": "portfolio"
+        },
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/recall",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1005,
+      "slug": "friday-ai-assistant",
+      "title": "Friday AI Assistant",
+      "category": "Agentic AI",
+      "description": "A privacy-conscious macOS assistant combining realtime voice, local memory and approval-gated actions across coding and communication tools.",
+      "technologies": [
+        "Tauri",
+        "React",
+        "FastAPI",
+        "Realtime AI"
+      ],
+      "url": "https://vaibhavbansal.in/projects/friday-ai-assistant",
+      "repository": "https://github.com/VaibhavBansal26/friday-ai-assistant",
+      "demo": null,
+      "live_url": null,
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/friday-ai-assistant/blob/main/README.md",
+      "readme_overview": "Friday is a privacy-conscious desktop AI assistant for macOS. It combines a React/Tauri desktop interface with a local FastAPI service, realtime voice, approval-gated external actions, coding tools, communications, content workflows, learning tools, and local memory foundations. Friday is designed to show evidence for completed actions. High-impact operations such as sending email, publishing content, creating repositories, pushing Git commits, or submitting forms require explicit approval.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Voice and conversation: Realtime speech, transcription, spoken responses, tool routing, startup greeting — OpenAI API key, microphone permission",
+        "Tasks and planning: Create and manage tasks, learning topics, study plans, ideas, and notifications — None for local/in-memory use",
+        "Gmail: Connect Gmail, sync recent messages, summarize mail, create visible drafts, and send after approval — Google OAuth client and Gmail API",
+        "Spotify: Open Spotify, search for a track, select a Spotify Connect device, and play music — Spotify Premium and Spotify OAuth app",
+        "GitHub and coding: List and clone repositories, inspect trees, read/create/edit files, open Finder or VS Code, run safe commands, create repositories, commit/push with approval — GitHub CLI authentication; VS Code CLI for editor actions",
+        "LinkedIn content: Create copyable drafts, preview publishing, and publish through an approved connected application — LinkedIn developer application and approved products/scopes",
+        "Content studio: Draft LinkedIn, Medium, X, Instagram, and other channel content in visible workspaces — Publishing credentials vary by provider"
+      ],
+      "features_source": "documentation",
+      "architecture": "Trust boundaries: UI is untrusted input; FastAPI authenticates a local session; supervisor output is advisory; policy and verification are deterministic; adapters alone resolve credential references; external content is inert data; PostgreSQL is authoritative for confirmed facts and workflow state.",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-11-01T03:57:28Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Project preview",
+          "url": "https://raw.githubusercontent.com/VaibhavBansal26/friday-ai-assistant/main/apps/desktop/src/assets/friday-core-aurora.png",
+          "source": "portfolio"
+        },
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/friday-ai-assistant",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1006,
+      "slug": "fidelitymem-adaptive-hybrid-memory",
+      "title": "FidelityMem — Adaptive Hybrid Memory",
+      "category": "AI Research",
+      "description": "A recall-constrained hybrid memory layer that controls active context, long-term storage, compression and evidence restoration for LLM agents.",
+      "technologies": [
+        "Python",
+        "Hybrid retrieval",
+        "BM25",
+        "RRF"
+      ],
+      "url": "https://vaibhavbansal.in/projects/fidelitymem-adaptive-hybrid-memory",
+      "repository": "https://github.com/VaibhavBansal26/FidelityMem",
+      "demo": null,
+      "live_url": null,
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/FidelityMem/blob/claude/compassionate-clarke-bpch7h/README.md",
+      "readme_overview": "Module Role --- --- window.py Adaptive working window: per-message retention score, boundary triggers (token pressure, topic shift, task completion, inactivity), eviction into extraction. extraction.py Candidate memories with types (semantic / episodic / procedural / relational), entities, numbers, dates, negations, relations. validation.py Stage 1 source & consistency (trust, contradiction, supersede-not-delete, untrusted-instruction guard). Stage 2 relevance & utility (durability score, fact-aware dedupe). compression.py Four-level compression ladder and the fidelity gate : probes built from the raw source must survive, or the level backs off. Stage 3. stores/ Immutable archival store (JSONL-persistable), BM25, dense index with a hermetic hashing embedder, relation graph with relation-following expansion and hub penalty, trie for exact/prefix identifiers. retrieval/ Query classification, per-type plans, RRF fusion + ranking function, relation chaining for multi-hop, sufficiency check and raw-source expansion, token-budgeted context. controller.py Recall-constrained policy search over (compression level, top-k, expansion budget, routes) with tuning/hold-out split, promotion, rejec",
+      "overview_source": "documentation",
+      "verified_features": [
+        "FidelityMem",
+        "What is in the box",
+        "Benchmark",
+        "LLM-judged evaluation (Phase 6)",
+        "needs ANTHROPIC API KEY (or ANTHROPIC AUTH TOKEN / ant auth login )",
+        "plumbing check without a credential",
+        "Status"
+      ],
+      "features_source": "documentation",
+      "architecture": "The implementation is centered on Python, LLM Agents, Hybrid Retrieval, BM25, RRF. The repository is organized into docs, fidelitymem, scripts areas. Delivery and dependency evidence includes Python project manifest.",
+      "architecture_source": "repository-structure",
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-10-22T03:34:17Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/FidelityMem",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1007,
+      "slug": "shorts-factory-ai-video-production-studio",
+      "title": "Shorts Factory — AI Video Production Studio",
+      "category": "AI Media Automation",
+      "description": "An end-to-end studio that discovers fresh technical stories, writes varied scripts, generates timed voice and vertical video, then publishes to YouTube.",
+      "technologies": [
+        "Python",
+        "Claude",
+        "FFmpeg",
+        "YouTube API"
+      ],
+      "url": "https://vaibhavbansal.in/projects/shorts-factory-ai-video-production-studio",
+      "repository": "https://github.com/VaibhavBansal26/shorts-factory",
+      "demo": null,
+      "live_url": null,
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/shorts-factory/blob/main/README.md",
+      "readme_overview": "Sources: Towards Data Science, Medium (AI / software-eng / LLM tags), Netflix TechBlog, Amazon Science, AWS ML blog, Microsoft Research, Microsoft Engineering blog, Google Research, arXiv (cs.AI / cs.LG / cs.SE). Edit config.yaml to add or remove feeds. Formats ( --format ): concept explainer , ask question , research opinion , myth vs fact , analogy , interview question , hot take , quick news , this vs that . Add more in src/formats.py .",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Shorts Factory",
+        "Music, memes and clips",
+        "Web UI (manual by default)",
+        "Sigma and K-drama formats",
+        "Desktop app (macOS)",
+        "Creative system: 9 formats",
+        "Production flow: End to end"
+      ],
+      "features_source": "documentation",
+      "architecture": "RSS/arXiv sources ─▶ pick fresh item ─▶ Claude writes script (one of 9 formats) ─▶ neural voiceover + word timings ─▶ 1080x1920 render (captions, your logo) ─▶ YouTube upload",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 2,
+        "forks": 0,
+        "updated_at": "2026-11-06T00:24:38Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/shorts-factory",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1008,
+      "slug": "conversations-unified-customer-inbox",
+      "title": "Conversations — Unified Customer Inbox",
+      "category": "Realtime SaaS",
+      "description": "A unified live-chat, SMS and email workspace with team routing, AI assistance, browser calls, billing, permissions and a scale-out realtime architecture.",
+      "technologies": [
+        "TypeScript",
+        "Socket.IO",
+        "PostgreSQL",
+        "Redis"
+      ],
+      "url": "https://vaibhavbansal.in/projects/conversations-unified-customer-inbox",
+      "repository": "https://github.com/VaibhavBansal26/conversations",
+      "demo": null,
+      "live_url": null,
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/conversations/blob/main/README.md",
+      "readme_overview": "- Inbox : live chat widget, SMS (Twilio) and email (SendGrid) in one place; inboxes with round-robin routing, notes and @mentions, snooze, templates, notifications (in-app, email, Web Push), CSAT, copies of a conversation by email, optional AI assistance. - Support automation : tickets, departments and routing, AI support agents in the chat and on SMS and email, visitor details and pre-chat custom fields (docs/AI-AGENTS.md). - Calls : browser voice and video with visitors, phone calls, calls with the AI assistant (optionally with a photoreal avatar), teammate and group calls, call links (docs/CALLS.md). All off by default; nothing is recorded. - Team chat : channels (public or private), direct and group messages, threads, reactions, pins, search, shared customer-conversation cards (docs/TEAM-CHAT.md). - Channels you connect yourself : each workspace pastes its own Twilio and SendGrid credentials and is told plainly when a channel is in test mode (docs/CHANNELS.md); the chat widget has a guided install and an in-app preview (docs/WIDGET.md). - Access : 38 permissions, four built-in roles plus custom roles, two-factor, invitations, audit log (docs/RBAC.md). - Money : plans, prepaid c",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Admin",
+        "Agents",
+        "Analytics",
+        "Analytics Api",
+        "Auth",
+        "Billing",
+        "Calls"
+      ],
+      "features_source": "documentation",
+      "architecture": "Conversations is a unified customer inbox: live chat (embeddable widget), SMS (Twilio) and email (SendGrid) land in one inbox that a team works together. It is a standalone product with its own auth, tenancy, contacts, jobs and AI; it knows nothing about any other application. - Server: Node = 22.13, TypeScript (strict), Hono + @hono/node-server , Socket.IO 4 on the same HTTP server , built-in node:sqlite (WAL, foreign keys), zod , jose . - Web: React 19, Vite, react-router, TanStack Query, plain CSS. - One process serves the REST API, the Socket.IO namespaces, the widget script, the built web app and the background scheduler.",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "TypeScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-10-21T22:15:29Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/conversations",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1009,
+      "slug": "shopflow-realtime-ecommerce-platform",
+      "title": "ShopFlow — Realtime Ecommerce Platform",
+      "category": "Commerce Platform",
+      "description": "A multi-surface ecommerce system spanning shopper, admin, rider and conversational ordering, with live tracking, subscriptions and hybrid recommendations.",
+      "technologies": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Socket.IO"
+      ],
+      "url": "https://vaibhavbansal.in/projects/shopflow-realtime-ecommerce-platform",
+      "repository": "https://github.com/VaibhavBansal26/shopflow-ecommerce",
+      "demo": null,
+      "live_url": null,
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/shopflow-ecommerce/blob/main/README.md",
+      "readme_overview": "A full-stack, production-ready ecommerce platform handling 5,000 orders/day with 100,000 concurrent users .",
+      "overview_source": "documentation",
+      "verified_features": [
+        "4 Panels : Shopper, Admin, Rider, AI Chat (order via conversation)",
+        "Payments : Google Pay, Card (Stripe), Cash on Delivery, Wallet",
+        "AI Recommendations : Region-based + collaborative filtering + purchase history",
+        "Real-time : WebSocket for live order tracking + rider location",
+        "Auth : Google OAuth 2.0 + OTP (Twilio)",
+        "Subscriptions : Monthly/weekly auto-delivery with discounts",
+        "Scheduled Delivery : Pick date & time at checkout"
+      ],
+      "features_source": "documentation",
+      "architecture": "The implementation is centered on JavaScript, React, Node.js, Express, PostgreSQL. The repository is organized into backend, frontend, mobile, recommendation-engine areas. Delivery and dependency evidence includes Docker, Docker Compose, Node package manifest, Python requirements.",
+      "architecture_source": "repository-structure",
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-10-21T01:44:31Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/shopflow-ecommerce",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1010,
+      "slug": "interview-suite-ai-mock-interview-workspace",
+      "title": "Interview Suite — AI Mock Interview Workspace",
+      "category": "AI Interviewing",
+      "description": "A private Amazon-style interview workspace with a realtime voice interviewer, coding execution, system-design canvases and production-debugging rounds.",
+      "technologies": [
+        "React 19",
+        "OpenAI Realtime",
+        "WebRTC",
+        "Express"
+      ],
+      "url": "https://vaibhavbansal.in/projects/interview-suite-ai-mock-interview-workspace",
+      "repository": "https://github.com/VaibhavBansal26/interivew-suite",
+      "demo": null,
+      "live_url": null,
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/interivew-suite/blob/main/README.md",
+      "readme_overview": "A private, local Amazon-style SDE I/SDE II mock interview application.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Interview Suite",
+        "Included",
+        "Run",
+        "Privacy and security",
+        "Practice system: 4 round types",
+        "Interview loop: Live voice",
+        "Product focus: AI interview simulator"
+      ],
+      "features_source": "documentation",
+      "architecture": "The implementation is centered on JavaScript, React 19, Vite, Express 5, OpenAI Realtime. The repository is organized into scripts, src, worker areas. Delivery and dependency evidence includes Docker, Node package manifest.",
+      "architecture_source": "repository-structure",
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-10-23T16:50:14Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/interivew-suite",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1011,
+      "slug": "ridehail-realtime-mobility-platform",
+      "title": "Ridehail — Realtime Mobility Platform",
+      "category": "Mobility Platform",
+      "description": "A production-shaped ride-sharing system with live dispatch, dynamic fares, customer and rider apps, operations tooling and balanced payment ledgers.",
+      "technologies": [
+        "Spring Boot 3",
+        "Next.js",
+        "WebSockets",
+        "Stripe Connect"
+      ],
+      "url": "https://vaibhavbansal.in/projects/ridehail-realtime-mobility-platform",
+      "repository": "https://github.com/VaibhavBansal26/ridehail-platform",
+      "demo": null,
+      "live_url": null,
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/ridehail-platform/blob/main/README.md",
+      "readme_overview": "Part Where What --- --- --- API src/ Spring Boot 3, JPA, Flyway on Postgres, JWT roles CUSTOMER / RIDER / ADMIN , STOMP WebSocket Admin panel admin-web/ Next.js: live map, trips, riders, payments, ledger, disputes, incidents, support, rider verification, audit log (docs/ADMIN PANEL.md) Rider and customer web apps clients/apps/rider-web , customer-web Next.js, with maps (Leaflet), road routes, address search, vehicle pictures and live car tracking; sign-in cookies are held by the app's server, never by browser JavaScript Phone apps clients/apps/rider-mobile , customer-mobile Expo / React Native, tokens in the keychain, with the same maps, routes, address search and vehicle pictures (the map is a Leaflet page in a WebView: no native map library or key). Tested and bundled, but not yet run on a device Shared client clients/packages/api Typed REST and realtime client with schema-checked responses (clients/README.md)",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Dynamic fares: upfront quotes with demand and supply surge pricing, locked at booking.",
+        "Dispatch: nearest-rider offers with timeouts; the rider accepts or declines. Live rider location for the customer.",
+        "Maps, routes and live tracking: the customer searches for a destination by name, sees the pickup, destination and the road between them on a map, and watches the driver's vehicle (a bike, auto, sedan or SUV) move live; the driver sees every offer, and the trip, on a map. Several requests at once stack on the driver's screen, each on its own map. The admin map shows every driver as their vehicle. Search and routes go through the API (docs/GEO.md); tiles come from OpenStreetMap by default ( MAP TILE URL changes that).",
+        "Realtime: offers, trip updates and rider location over WebSocket. One instance out of the box; many with RabbitMQ and Redis (docs/SCALING.md, docs/LIVE LOCATION.md).",
+        "Payments: the card is charged when a trip ends; a double-entry ledger that must balance (enforced in the database); commission; refunds.",
+        "Rider payouts: riders withdraw their share through Stripe Connect (Accounts v2, Express dashboard). A payout waits for the provider's settled funds rather than failing.",
+        "Disputes and provider problems: chargebacks are recorded and the rider's share frozen until decided; text evidence is compiled and submitted from the admin panel; failed bank payouts, reversed transfers and failed refunds become incidents for a person (docs/DISPUTES.md)."
+      ],
+      "features_source": "documentation",
+      "architecture": "The implementation is centered on Java, Java 21, Spring Boot 3, PostgreSQL, Next.js. The repository is organized into admin-web, clients, docker, docs, scripts, src areas. Delivery and dependency evidence includes Docker, Docker Compose, Node package manifest, Maven.",
+      "architecture_source": "repository-structure",
+      "repository_snapshot": {
+        "primary_language": "Java",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-11-01T02:52:49Z"
+      },
+      "demo_assets": [
+        {
+          "label": "![Watch the demo",
+          "url": "https://github.com/VaibhavBansal26/ridehail-platform/blob/main/docs/demo/ridehail-demo.gif",
+          "source": "documentation"
+        },
+        {
+          "label": "mp4",
+          "url": "https://github.com/VaibhavBansal26/ridehail-platform/blob/main/docs/demo/ridehail-demo.mp4",
+          "source": "documentation"
+        },
+        {
+          "label": "scripts/demo",
+          "url": "https://github.com/VaibhavBansal26/ridehail-platform/blob/main/scripts/demo",
+          "source": "documentation"
+        },
+        {
+          "label": "scripts/demo",
+          "url": "https://github.com/VaibhavBansal26/ridehail-platform/blob/main/scripts/demo/README.md",
+          "source": "documentation"
+        },
+        {
+          "label": "docs/DEPLOYMENT.md",
+          "url": "https://github.com/VaibhavBansal26/ridehail-platform/blob/main/docs/DEPLOYMENT.md#deploying-on-render-a-free-demo",
+          "source": "documentation"
+        },
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/ridehail-platform",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1012,
+      "slug": "macrv-multi-agent-code-review-system",
+      "title": "MACRV — Multi-Agent Code Review System",
+      "category": "Agentic DevTools",
+      "description": "An automated pull-request review pipeline that coordinates specialist agents, static security scans, severity classification and merge decisions.",
+      "technologies": [
+        "FastAPI",
+        "LangGraph",
+        "Claude Agents",
+        "Semgrep"
+      ],
+      "url": "https://vaibhavbansal.in/projects/macrv-multi-agent-code-review-system",
+      "repository": "https://github.com/VaibhavBansal26/multi-agent-code-review",
+      "demo": null,
+      "live_url": null,
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/multi-agent-code-review/blob/claude/sweet-brown-bkbjnh/README.md",
+      "readme_overview": "An automated code review pipeline powered by Claude agents. Reviews pull requests, classifies findings by severity, blocks critical bugs, notifies developers, and generates audit reports.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "MACRV — Multi-Agent Code Review System",
+        "Architecture",
+        "Finding Categories",
+        "Build Phases",
+        "Quick Start",
+        "1. Clone and configure",
+        "2. Start all services"
+      ],
+      "features_source": "documentation",
+      "architecture": "The implementation is centered on Python, FastAPI, LangGraph, Claude Agents, Celery. The repository is organized into alembic, app, docker areas. Delivery and dependency evidence includes Docker, Docker Compose, Python requirements, Python project manifest.",
+      "architecture_source": "repository-structure",
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2026-11-03T23:25:24Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/multi-agent-code-review",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1013,
+      "slug": "spotlight-talent-community-platform",
+      "title": "Spotlight — Talent Community Platform",
+      "category": "Creator Platform",
+      "description": "A talent community for creator profiles, reels, reviews, live showcases, groups, agencies, rewards and head-to-head battles.",
+      "technologies": [
+        "TypeScript",
+        "React",
+        "PostgreSQL",
+        "Socket.IO"
+      ],
+      "url": "https://vaibhavbansal.in/projects/spotlight-talent-community-platform",
+      "repository": "https://github.com/VaibhavBansal26/spotlight-talent-platform",
+      "demo": null,
+      "live_url": null,
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/spotlight-talent-platform/blob/main/README.md",
+      "readme_overview": "Spotlight is a production-shaped React, Express, PostgreSQL, and Node starter for a talent community: creator profiles, content and reels, category-based reviews, chat, groups, agencies, live showcase events, diamonds, marketplace rewards, and head-to-head battles.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Spotlight",
+        "Run locally",
+        "Production direction",
+        "Recommendation parameters",
+        "Media uploads",
+        "Product domains",
+        "Service boundaries at scale"
+      ],
+      "features_source": "documentation",
+      "architecture": "The implementation is centered on TypeScript, React, Vite, Express, PostgreSQL. The repository is organized into apps, docs, services areas. Delivery and dependency evidence includes Docker, Docker Compose, Node package manifest, Python requirements.",
+      "architecture_source": "repository-structure",
+      "repository_snapshot": {
+        "primary_language": "TypeScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-10-29T20:59:27Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/spotlight-talent-platform",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1014,
+      "slug": "health-semantic-search-cited-medical-retrieval",
+      "title": "Health Semantic Search — Cited Medical Retrieval",
+      "category": "Health AI",
+      "description": "A self-hostable search system over public health documents with access-aware retrieval, hybrid ranking, source citations and refusal when evidence is insufficient.",
+      "technologies": [
+        "FastAPI",
+        "Hybrid retrieval",
+        "BGE embeddings",
+        "pgvector"
+      ],
+      "url": "https://vaibhavbansal.in/projects/health-semantic-search-cited-medical-retrieval",
+      "repository": "https://github.com/VaibhavBansal26/health-semantic-search",
+      "demo": "https://huggingface.co/spaces/Vaibhavbansal26/health-semantic-search-app",
+      "live_url": "https://health-semantic-search.onrender.com",
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/health-semantic-search/blob/main/README.md",
+      "readme_overview": "Permission-aware, cited semantic search over public health documents. Built stage by stage, with every design decision and measurement logged. The goal is a product a health system could adopt: self-hostable, answers always cite their source, and \"no supported answer\" beats a guess. Live app: https://health-semantic-search.onrender.com (free tier: it sleeps when idle, so the first load can take a minute; search only, no cited answers, see below) Research write-up: docs/PAPER.md, a workshop-style draft with every number traced to ENGINEERING LOG.md Full app with cited answers: https://huggingface.co/spaces/Vaibhavbansal26/health-semantic-search-app (same React app, reranker and cited answers; free CPU, so answers take 3-6 s) Original Gradio demo: the Space Vaibhavbansal26/health-semantic-search (reranker, no accounts)",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Health Semantic Search",
+        "What it is",
+        "Stack",
+        "Status",
+        "Results so far",
+        "Architecture",
+        "Data"
+      ],
+      "features_source": "documentation",
+      "architecture": "Layer Choice Notes --- --- --- Front end React 18, Vite 5, plain CSS about 52 kB gzipped; served by the API process, no separate host API FastAPI, uvicorn search, accounts, admin; security headers, per-request access mask Accounts and tokens SQLite, scrypt, PyJWT (RS256) one-hour tokens with a jti , sign-out and admin revocation, login rate limit Keyword search bm25s with a Snowball stemmer index built once, loaded memory-mapped Dense search BAAI/bge-small-en-v1.5 PyTorch in the full engine, ONNX Runtime (fastembed) in the lite one Fusion and routing weighted reciprocal rank fusion, identifier router NDC, CAS and imprint queries go to keyword search only Reranker and answers bge-reranker-base, extractive answers with a refusal threshold full engine only (about 2 GB) Access control boolean mask inside every retriever, mask-keyed cache document, tenant and section rules Corpus, sync Postgres 16 + pgvector, DailyMed, openFDA, ClinicalTrials.gov connectors kill-safe incremental sync, versioned index publishing Evaluation recall@k, MRR, nDCG, paired bootstrap five model-written question sets, tooling for a real-query set Packaging Docker (multi-stage), Render Blueprint ( render.yaml ) image about 700 MB; runs in under 250 MB of RAM CI GitHub Actions pytest on Python 3.11 and 3.13 (PR 15) Two engines share one API. The full engine ( HSS ENGINE=full ) has the reranker and cited answers and needs about 2 GB. The lite engine ( hss.lite , the default) fits 512 MB: chunk text in SQLite, memory-mapped BM25 and float16 vectors, an ONNX query encoder. On 60 questions it returned the same",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-11-02T05:20:30Z"
+      },
+      "demo_assets": [
+        {
+          "label": "The full app on the free Hugging Face Space: sign in with a demo account, pick Hybrid + reranker, ask a question, get a cited answer, then an off-topic question is refused",
+          "url": "https://github.com/VaibhavBansal26/health-semantic-search/blob/main/docs/reranker-demo.gif",
+          "source": "documentation"
+        },
+        {
+          "label": "Project demo",
+          "url": "https://huggingface.co/spaces/Vaibhavbansal26/health-semantic-search-app",
+          "source": "portfolio"
+        },
+        {
+          "label": "Live project",
+          "url": "https://health-semantic-search.onrender.com",
+          "source": "portfolio"
+        },
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/health-semantic-search",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "slug": "disaster-response-ai-copilot",
+      "title": "Disaster Response AI Copilot",
+      "category": "Agentic AI",
+      "description": "An AI copilot for real-world disaster response using retrieval workflows and Azure AI services.",
+      "technologies": [
+        "Streamlit",
+        "RAG",
+        "Azure OpenAI",
+        "AI Agent"
+      ],
+      "url": "https://vaibhavbansal.in/projects/disaster-response-ai-copilot",
+      "repository": "https://github.com/VaibhavBansal26/Disaster-Response-AI-Copilot",
+      "demo": null,
+      "live_url": "https://disaster-response-ai-copilot-vb1.streamlit.app/",
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/Disaster-Response-AI-Copilot/blob/main/README_DATA.md",
+      "readme_overview": "An AI copilot for real-world disaster response using retrieval workflows and Azure AI services.",
+      "overview_source": "portfolio",
+      "verified_features": [
+        "Ask Agent",
+        "Dashboard",
+        "Debug",
+        "New Incident",
+        "Reports",
+        "Retrieval Debug",
+        "Vision Assess"
+      ],
+      "features_source": "documentation",
+      "architecture": "The implementation is centered on Python, Streamlit, Machine Learning, AI Agent, Azure OpenAI. The repository is organized into app, data, docs, scripts areas. Delivery and dependency evidence includes Docker, Python requirements.",
+      "architecture_source": "repository-structure",
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-10-18T20:14:21Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Live project",
+          "url": "https://disaster-response-ai-copilot-vb1.streamlit.app/",
+          "source": "portfolio"
+        },
+        {
+          "label": "Project preview",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1760818635/Screenshot_2025-10-18_at_4.16.22_PM_yzy63g.png",
+          "source": "portfolio"
+        },
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/Disaster-Response-AI-Copilot",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "slug": "crypto-trade-prediction",
+      "title": "Crypto Trade Prediction",
+      "category": "Machine Learning",
+      "description": "A deployable Streamlit workflow for predicting crypto price movement from live market data.",
+      "technologies": [
+        "Streamlit",
+        "Machine Learning",
+        "Docker",
+        "DuckDB"
+      ],
+      "url": "https://vaibhavbansal.in/projects/crypto-trade-prediction",
+      "repository": "https://github.com/VaibhavBansal26/crypto-trade-project",
+      "demo": null,
+      "live_url": "http://164.92.96.19:8501/",
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/crypto-trade-project/blob/main/README.md",
+      "readme_overview": "1. Execute docker build -t ml-trading-service ./services/base 2. Execute docker-compose up -d",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Cryptocurrency TradeBots",
+        "Steps 1: Start up the docker containers",
+        "Step 2: Fetch historical data from the past 30 days",
+        "Step 3: Start fetching the realtime crypto trades",
+        "Step 4: Start candle-maker service",
+        "Step 5: Start prediction service",
+        "Step 6: Get gap data"
+      ],
+      "features_source": "documentation",
+      "architecture": "The implementation is centered on Jupyter Notebook, Streamlit, Machine Learning, Docker, Digital Ocean. The repository is organized into data, services areas. Delivery and dependency evidence includes Docker, Docker Compose, Python requirements.",
+      "architecture_source": "repository-structure",
+      "repository_snapshot": {
+        "primary_language": "Jupyter Notebook",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-05-13T20:24:39Z"
+      },
+      "demo_assets": [
+        {
+          "label": "1",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1747167771/Screenshot_2025-05-13_at_4.17.20_PM_nwvmud.png",
+          "source": "documentation"
+        },
+        {
+          "label": "2",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1747167771/Screenshot_2025-05-13_at_4.17.30_PM_hezhhz.png",
+          "source": "documentation"
+        },
+        {
+          "label": "3",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1747167771/Screenshot_2025-05-13_at_4.17.39_PM_uvdqti.png",
+          "source": "documentation"
+        },
+        {
+          "label": "4",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1747167809/Screenshot_2025-05-13_at_4.16.52_PM_xr8vow.png",
+          "source": "documentation"
+        },
+        {
+          "label": "Live project",
+          "url": "http://164.92.96.19:8501/",
+          "source": "portfolio"
+        },
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/crypto-trade-project",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "slug": "heart-disease-prediction-using-generative-ai-streamlit-openai",
+      "title": "Heart Disease Prediction using Generative AI, Streamlit, OpenAI",
+      "category": "Machine Learning",
+      "description": "An interactive health-risk prediction workflow combining a trained machine-learning model with Streamlit and generative AI guidance.",
+      "technologies": [
+        "Streamlit",
+        "Machine Learning",
+        "OpenAI",
+        "Docker"
+      ],
+      "url": "https://vaibhavbansal.in/projects/heart-disease-prediction-using-generative-ai-streamlit-openai",
+      "repository": "https://github.com/VaibhavBansal26/medical-app",
+      "demo": null,
+      "live_url": "https://medical-app-vb.streamlit.app/",
+      "featured": true,
+      "readme": "https://github.com/VaibhavBansal26/medical-app/blob/main/README.md",
+      "readme_overview": "Heart-risk estimate + personalised next steps from a hybrid content / collaborative recommender.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Risk model — predicts a heart-disease risk score from 11 clinical inputs. Candidates (each in one sklearn Pipeline , imputation fitted inside CV folds): logistic regression, gradient boosting and a PyTorch MLP .",
+        "Hybrid recommender — ranks 13 lifestyle / screening / clinical interventions:",
+        "Content-based: patient needs (lipids, BP, glucose, fitness, metabolic, cardiac work-up) matched to each intervention's target vector.",
+        "Collaborative: a PyTorch two-tower model. The patient tower is an MLP on features plus the mean embedding of interventions the patient already liked; the item tower is an id embedding plus content features. It handles cold start (features only) and warm start (liked items).",
+        "Hybrid: α·content + (1-α)·collaborative , with α tuned on a validation split. A safety rule always surfaces a cardiology referral at high scores.",
+        "Education links from the NIH/NLM MedlinePlus web service (free, no key).",
+        "MLflow experiment tracking and model registry, browsable from the app's 🧪 MLflow tab."
+      ],
+      "features_source": "documentation",
+      "architecture": "The implementation is centered on Python, Generative AI, Streamlit, Machine Learning, Docker. The repository is organized into artifacts, data, deploy, docs, medapp, reports areas. Delivery and dependency evidence includes Docker, Docker Compose, Python requirements.",
+      "architecture_source": "repository-structure",
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2026-11-04T04:46:20Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Live demo on Hugging Face Spaces",
+          "url": "https://huggingface.co/spaces/Vaibhavbansal26/cardiocompass",
+          "source": "documentation"
+        },
+        {
+          "label": "CardioCompass demo",
+          "url": "https://github.com/VaibhavBansal26/medical-app/blob/main/docs/demo.gif",
+          "source": "documentation"
+        },
+        {
+          "label": "Live project",
+          "url": "https://medical-app-vb.streamlit.app/",
+          "source": "portfolio"
+        },
+        {
+          "label": "Project preview",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1746515810/Screenshot_2025-05-06_at_3.14.47_AM_nggebr.png",
+          "source": "portfolio"
+        },
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/medical-app",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "slug": "car-price-prediction-using-streamlit-mlflow-docker-kakfka-postgresql-minio-debezium",
+      "title": "Car Price Prediction using Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, MinIO, Debezium",
+      "category": "Machine Learning",
+      "description": "Car Price Prediction using Streamlit, Mlflow, Docker, Kakfka, PostgreSQL, MinIO, Debezium is a Machine Learning project by Vaibhav Bansal built with Streamlit, MLflow, Docker, Kafka, PostgreSQL, Zookeeper, Machine Learning, MinIO, Debezium.",
+      "technologies": [
+        "Streamlit",
+        "MLflow",
+        "Docker",
+        "Kafka",
+        "PostgreSQL",
+        "Zookeeper",
+        "Machine Learning",
+        "MinIO",
+        "Debezium"
+      ],
+      "url": "https://vaibhavbansal.in/projects/car-price-prediction-using-streamlit-mlflow-docker-kakfka-postgresql-minio-debezium",
+      "repository": "https://github.com/VaibhavBansal26/Car-Price-Prediction",
+      "demo": "https://youtu.be/_bjaJZPFovM",
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Car-Price-Prediction/blob/main/README.md",
+      "readme_overview": "A machine learning system for predicting car prices using MLflow and Streamlit. This project implements a complete pipeline for predicting car prices with an interactive web interface and real-time visualization.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Real-time car price predictions",
+        "Interactive data visualization with Streamlit",
+        "RESTful API with FastAPI",
+        "ML model versioning and tracking with MLflow",
+        "Beautiful charts with Plotly",
+        "Scalable architecture",
+        "API documentation with Swagger UI"
+      ],
+      "features_source": "documentation",
+      "architecture": "- Frontend : Streamlit application for data visualization and interaction - Backend : FastAPI REST API for data management - ML Pipeline : MLflow for model management and serving - Storage : PostgreSQL for data storage, MinIO for model artifacts mermaid graph TB UI[Streamlit UI:8501] -- API[FastAPI:8000] API -- DB[(PostgreSQL:5432)] DB -- DEB[Debezium:8083] DEB -- KAFKA[Kafka:9092] KAFKA -- ML[ML Service] ML -- MLFLOW[MLflow:5000] MLFLOW -- MINIO[(MinIO:9000)] ML -- KAFKA KAFKA -- API API -- DB",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2025-11-15T03:23:49Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Project demo",
+          "url": "https://youtu.be/_bjaJZPFovM",
+          "source": "portfolio"
+        },
+        {
+          "label": "Project preview",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743899570/Screenshot_2025-04-05_at_8.19.11_PM_ypiwbv.png",
+          "source": "portfolio"
+        },
+        {
+          "label": "Source and implementation",
+          "url": "https://github.com/VaibhavBansal26/Car-Price-Prediction",
+          "source": "repository"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "slug": "movie-recommendation-using-cosine-similarity-and-collaborative-filtering",
+      "title": "Movie Recommendation using Cosine Similarity & Collaborative Filtering",
+      "category": "Machine Learning",
+      "description": "Movie Recommendation using Cosine Similarity & Collaborative Filtering is a Machine Learning project by Vaibhav Bansal built with AWS EC2, AWS S3, Python, Flask, Machine Learning, Collaborative Filtering, Cosine Similarity, Streamlit.",
+      "technologies": [
+        "AWS EC2",
+        "AWS S3",
+        "Python",
+        "Flask",
+        "Machine Learning",
+        "Collaborative Filtering",
+        "Cosine Similarity",
+        "Streamlit"
+      ],
+      "url": "https://vaibhavbansal.in/projects/movie-recommendation-using-cosine-similarity-and-collaborative-filtering",
+      "repository": "https://github.com/VaibhavBansal26/Movie-Recommendation-Project",
+      "demo": null,
+      "live_url": "http://54.211.221.57:8501/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Movie-Recommendation-Project/blob/main/README.md",
+      "readme_overview": "Deployed in AWS EC2, Frontend in Streamlit, Cosine Similarity, Fast Api, Postgres",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Movie-Recommendation-Project"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-03-19T20:37:47Z"
+      },
+      "demo_assets": [
+        {
+          "label": "1",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742416573/Screenshot_2025-03-19_at_4.35.52_PM_jwcpzu.png",
+          "source": "documentation"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "realtime-logs-processing-using-apache-airflow-kafka-and-elatisearch-data-engineering",
+      "title": "Realtime Logs Processing using Apache Airflow, Kafka & Elatisearch (Data Engineering)",
+      "category": "Data Engineering",
+      "description": "Realtime Logs Processing using Apache Airflow, Kafka & Elatisearch (Data Engineering) is a Data Engineering project by Vaibhav Bansal built with Elastisearch, Apache Airflow, Kafka, Python, Data Engineering.",
+      "technologies": [
+        "Elastisearch",
+        "Apache Airflow",
+        "Kafka",
+        "Python",
+        "Data Engineering"
+      ],
+      "url": "https://vaibhavbansal.in/projects/realtime-logs-processing-using-apache-airflow-kafka-and-elatisearch-data-engineering",
+      "repository": "https://github.com/VaibhavBansal26/Realtime-Logs-Processing",
+      "demo": "https://www.youtube.com/watch?v=ZcIbqeIAC0Y",
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Realtime-Logs-Processing/blob/main/README.md",
+      "readme_overview": "Realtime Logs Processing With Apache Airflow, Kafka &amp; Elastisearch",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Realtime-Logs-Processing",
+        "System Architecture",
+        "Demo Video",
+        "Screenshots"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [
+          "airflow",
+          "aws",
+          "aws-secrets-manager",
+          "elasticsearch",
+          "kafka",
+          "mwaa",
+          "python"
+        ],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-03-18T18:20:41Z"
+      },
+      "demo_assets": [
+        {
+          "label": "![demo",
+          "url": "http://img.youtube.com/vi/ZcIbqeIAC0Y/0.jpg",
+          "source": "documentation"
+        },
+        {
+          "label": "2",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742321981/Screenshot_2025-03-18_at_2.15.20_PM_vefnzk.png",
+          "source": "documentation"
+        },
+        {
+          "label": "3",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742321980/Screenshot_2025-03-18_at_2.15.28_PM_oej9fh.png",
+          "source": "documentation"
+        },
+        {
+          "label": "4",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742321979/Screenshot_2025-03-18_at_2.16.07_PM_qtza3x.png",
+          "source": "documentation"
+        },
+        {
+          "label": "5",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742321978/Screenshot_2025-03-18_at_2.17.09_PM_easzch.png",
+          "source": "documentation"
+        },
+        {
+          "label": "6",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742321978/Screenshot_2025-03-18_at_2.16.21_PM_r9n6ii.png",
+          "source": "documentation"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "medallion-architecture-design-using-azure-data-engineering",
+      "title": "Medallion Architecture Design using Azure (Data Engineering)",
+      "category": "Data Engineering",
+      "description": "Medallion Architecture Design using Azure (Data Engineering) is a Data Engineering project by Vaibhav Bansal built with Azure, Azure Databricks, DBT, Azure SQL Database, Azure Data Factory, Azure DataLake Gen 2.",
+      "technologies": [
+        "Azure",
+        "Azure Databricks",
+        "DBT",
+        "Azure SQL Database",
+        "Azure Data Factory",
+        "Azure DataLake Gen 2"
+      ],
+      "url": "https://vaibhavbansal.in/projects/medallion-architecture-design-using-azure-data-engineering",
+      "repository": "https://github.com/VaibhavBansal26/Design-Medallion-Architecture-Azure#",
+      "demo": "https://www.youtube.com/watch?v=VKSf1NfdjTU",
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Design-Medallion-Architecture-Azure/blob/main/README.md",
+      "readme_overview": "Medallion Architetcure Layers 1. Bronze Layer - Raw Data 2. Silver - Fine Tuned Data 3. Gold - Refined Data",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Design-Medallion-Architecture-Azure",
+        "Medallion Architecture",
+        "Demo",
+        "Workflow Instructions",
+        "Create Azure Databricks workspace",
+        "Base Databricks Notebook",
+        "Set up DBT"
+      ],
+      "features_source": "documentation",
+      "architecture": "Medallion Architetcure Layers 1. Bronze Layer - Raw Data 2. Silver - Fine Tuned Data 3. Gold - Refined Data",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": null,
+        "topics": [
+          "azure",
+          "azuredatafactory",
+          "databricks",
+          "dbt"
+        ],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-03-17T21:13:50Z"
+      },
+      "demo_assets": [
+        {
+          "label": "1",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742224140/Screenshot_2025-03-17_at_11.06.26_AM_roukan.png",
+          "source": "documentation"
+        },
+        {
+          "label": "2",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742224141/Screenshot_2025-03-17_at_11.07.26_AM_jzifio.png",
+          "source": "documentation"
+        },
+        {
+          "label": "3",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742224140/Screenshot_2025-03-17_at_11.07.03_AM_d3cqct.png",
+          "source": "documentation"
+        },
+        {
+          "label": "4",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742224142/Screenshot_2025-03-17_at_11.06.08_AM_vcj06c.png",
+          "source": "documentation"
+        },
+        {
+          "label": "6",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742225243/Screenshot_2025-03-17_at_11.27.06_AM_jwerr7.png",
+          "source": "documentation"
+        },
+        {
+          "label": "5",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742224141/Screenshot_2025-03-17_at_11.08.10_AM_h0zob3.png",
+          "source": "documentation"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "devsecops-movie-booking-2-stage-deplyement-pipeline-using-terraform-jenkins-and-kubernetes",
+      "title": "DevSecOps - Movie Booking 2 Stage Deplyement Pipeline using Terraform, Jenkins & Kubernetes",
+      "category": "DevOps",
+      "description": "DevSecOps - Movie Booking 2 Stage Deplyement Pipeline using Terraform, Jenkins & Kubernetes is a DevOps project by Vaibhav Bansal built with Jenkins, Docker, Terraform, AWS, DevSecOps, SonarQube, Owasp, Trivy, AWS EC2, Amazon EKS, Kubernetes, Prometheus, Grafana, Helm, Email Notification.",
+      "technologies": [
+        "Jenkins",
+        "Docker",
+        "Terraform",
+        "AWS",
+        "DevSecOps",
+        "SonarQube",
+        "Owasp",
+        "Trivy",
+        "AWS EC2",
+        "Amazon EKS",
+        "Kubernetes",
+        "Prometheus",
+        "Grafana",
+        "Helm",
+        "Email Notification"
+      ],
+      "url": "https://vaibhavbansal.in/projects/devsecops-movie-booking-2-stage-deplyement-pipeline-using-terraform-jenkins-and-kubernetes",
+      "repository": "https://github.com/VaibhavBansal26/DevSecOps-MovieBooking",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/DevSecOps-MovieBooking/blob/main/README.md",
+      "readme_overview": "Full Deployment Pipe - Terraform, EC2, Amazon EKS, Docker, Jenkins, SonarQube, Owasp, Trivy, AgroCD, Kubernetes",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Book Tickets Page",
+        "Home Page",
+        "Login Page",
+        "Payments Page",
+        "See All",
+        "Summery Page",
+        "Movie Page"
+      ],
+      "features_source": "documentation",
+      "architecture": "Configure Infrastructure in AWS using Terraform brew install terraform which terraform source /.zshrc",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [
+          "agrocd",
+          "docker",
+          "ec2",
+          "eks",
+          "jenkins",
+          "kubernetes",
+          "reactjs",
+          "sonarqube",
+          "terraform",
+          "trivy"
+        ],
+        "stars": 2,
+        "forks": 1,
+        "updated_at": "2026-01-16T01:30:57Z"
+      },
+      "demo_assets": [
+        {
+          "label": "jenkins",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742055376/Screenshot_2025-03-15_at_12.12.30_PM_l0u2ek.png",
+          "source": "documentation"
+        },
+        {
+          "label": "sonar",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742055374/Screenshot_2025-03-15_at_12.12.40_PM_kwue2x.png",
+          "source": "documentation"
+        },
+        {
+          "label": "prom1",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742055477/Screenshot_2025-03-15_at_12.17.37_PM_dktbyr.png",
+          "source": "documentation"
+        },
+        {
+          "label": "prom2",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742055377/Screenshot_2025-03-15_at_12.12.15_PM_tfvo9s.png",
+          "source": "documentation"
+        },
+        {
+          "label": "grafa",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742055375/Screenshot_2025-03-15_at_12.12.01_PM_oukdbn.png",
+          "source": "documentation"
+        },
+        {
+          "label": "EKS",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1742055374/Screenshot_2025-03-15_at_12.15.16_PM_uf3smc.png",
+          "source": "documentation"
+        },
+        {
+          "label": "Empty Preview",
+          "url": "https://github.com/VaibhavBansal26/DevSecOps-MovieBooking/blob/main/frontend/public/empty-preview.png",
+          "source": "repository-file"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "slug": "music-streaming-3-tier-application-with-react-node-js-mongodb-aws-eks-postgresql-docker-jenkins",
+      "title": "Music Streaming 3-Tier Application with React, Node JS, MongoDB, AWS EKS, PostgresQL, Docker, Jenkins",
+      "category": "MERN",
+      "description": "Music Streaming 3-Tier Application with React, Node JS, MongoDB, AWS EKS, PostgresQL, Docker, Jenkins is a MERN project by Vaibhav Bansal built with AWS EC2, AWS S3, React, Node Js, Express, MongoDB, PostgreSQL, Docker, Nginx, Redis, Kubernetes, AWS EKS, Docker, Docker Compose, Jenkins, Sonarqube, Neon db.",
+      "technologies": [
+        "AWS EC2",
+        "AWS S3",
+        "React",
+        "Node Js",
+        "Express",
+        "MongoDB",
+        "PostgreSQL",
+        "Docker",
+        "Nginx",
+        "Redis",
+        "Kubernetes",
+        "AWS EKS",
+        "Docker",
+        "Docker Compose",
+        "Jenkins",
+        "Sonarqube",
+        "Neon db"
+      ],
+      "url": "https://vaibhavbansal.in/projects/music-streaming-3-tier-application-with-react-node-js-mongodb-aws-eks-postgresql-docker-jenkins",
+      "repository": "https://github.com/VaibhavBansal26/Music-Streaming-Appl",
+      "demo": "https://youtu.be/Z1XzofG0cNE",
+      "live_url": "http://54.86.20.192/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Music-Streaming-Appl/blob/main/README.md",
+      "readme_overview": "A microservice-based music streaming app: a React frontend plus three Node/TypeScript services, containerised with Docker and deployed to AWS EKS through a Jenkins pipeline.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Admin",
+        "Album",
+        "Home",
+        "Login",
+        "Play List",
+        "Register",
+        "Music Streaming Application"
+      ],
+      "features_source": "documentation",
+      "architecture": "Service Port Responsibility Storage --- --- --- --- userService 5001 Register / login (JWT), profile, playlist toggle MongoDB songService 5003 Read-only albums and songs, Redis-cached PostgreSQL (Neon), Redis adminService 5002 Admin-only album/song upload and delete, cache invalidation PostgreSQL (Neon), Redis, Cloudinary frontend 80 React + Vite + Tailwind SPA served by nginx none adminService authenticates requests by calling userService GET /api/v1/user/getUserProfile with the caller's token header.",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "TypeScript",
+        "topics": [
+          "axios",
+          "cloudinary",
+          "context-api",
+          "docker",
+          "docker-compose",
+          "ec2",
+          "eks",
+          "jenkins",
+          "kubernetes",
+          "mongodb",
+          "neondb",
+          "node-js",
+          "owasp",
+          "postgresql",
+          "react",
+          "redis",
+          "sonarqube",
+          "trivy"
+        ],
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2026-11-02T12:35:54Z"
+      },
+      "demo_assets": [
+        {
+          "label": "1",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743290088/Screenshot_2025-03-29_at_6.14.21_PM_v0nh0i.png",
+          "source": "documentation"
+        },
+        {
+          "label": "2",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743290090/Screenshot_2025-03-29_at_6.14.39_PM_ahwaub.png",
+          "source": "documentation"
+        },
+        {
+          "label": "3",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743290091/Screenshot_2025-03-29_at_7.10.24_PM_mfs6kv.png",
+          "source": "documentation"
+        },
+        {
+          "label": "4",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743290092/Screenshot_2025-03-29_at_7.12.28_PM_bz8gx6.png",
+          "source": "documentation"
+        },
+        {
+          "label": "5",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743290093/Screenshot_2025-03-29_at_7.12.50_PM_dbpmy0.png",
+          "source": "documentation"
+        },
+        {
+          "label": "5.1",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743290093/Screenshot_2025-03-29_at_7.13.02_PM_whq3fv.png",
+          "source": "documentation"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "slug": "nyc-taxi-ride-data-engineering-data-analysis-and-visualization-using-power-bi",
+      "title": "NYC Taxi Ride Data Engineering , Data Analysis & Visualization using Power BI",
+      "category": "Data Analytics",
+      "description": "NYC Taxi Ride Data Engineering , Data Analysis & Visualization using Power BI is a Data Analytics project by Vaibhav Bansal built with AWS Glue, AWS Event Bridge, AWS S3, AWS Athena, AWS Quicksight, Power BI.",
+      "technologies": [
+        "AWS Glue",
+        "AWS Event Bridge",
+        "AWS S3",
+        "AWS Athena",
+        "AWS Quicksight",
+        "Power BI"
+      ],
+      "url": "https://vaibhavbansal.in/projects/nyc-taxi-ride-data-engineering-data-analysis-and-visualization-using-power-bi",
+      "repository": "https://github.com/VaibhavBansal26/Taxi-Data-PowerBi-Project",
+      "demo": null,
+      "live_url": "https://drive.google.com/file/d/1TrdBe-yA4fHNoq0-Y8MU3AYU6vMaHnRc/view?usp=sharing",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Taxi-Data-PowerBi-Project/blob/main/README.md",
+      "readme_overview": "AWS Lambda, Power BI, AWS Athena, AWS Glue, Glue Studio, Data Cataloging, Event Bridge",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Taxi-Data-PowerBi-Project"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": null,
+        "topics": [
+          "aws-athena",
+          "aws-glue",
+          "aws-lambda",
+          "event-bridge",
+          "powerbi",
+          "python"
+        ],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-03-17T21:26:16Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 95,
+      "slug": "taxi-data-prediction-dashboard-using-snowflake-streamlit-snowpark",
+      "title": "Taxi Data Prediction Dashboard using Snowflake, Streamlit, SnowPark",
+      "category": "Machine Learning",
+      "description": "Taxi Data Prediction Dashboard using Snowflake, Streamlit, SnowPark is a Machine Learning project by Vaibhav Bansal built with Streamlit, Mlflow, Snowflake, Snowpark, Python.",
+      "technologies": [
+        "Streamlit",
+        "Mlflow",
+        "Snowflake",
+        "Snowpark",
+        "Python"
+      ],
+      "url": "https://vaibhavbansal.in/projects/taxi-data-prediction-dashboard-using-snowflake-streamlit-snowpark",
+      "repository": "https://github.com/VaibhavBansal26/snowflake-taxi-data-project",
+      "demo": null,
+      "live_url": "https://app-taxi-data-snowflak-project-vb.streamlit.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/snowflake-taxi-data-project/blob/main/README.md",
+      "readme_overview": "https://app-taxi-data-snowflak-project-vb.streamlit.app/",
+      "overview_source": "documentation",
+      "verified_features": [
+        "snowflake-taxi-data-project"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "Jupyter Notebook",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-05-14T12:40:00Z"
+      },
+      "demo_assets": [
+        {
+          "label": "1",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1747202557/Screenshot_2025-05-14_at_2.01.52_AM_d1kenq.png",
+          "source": "documentation"
+        },
+        {
+          "label": "2",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1747202556/Screenshot_2025-05-14_at_2.02.05_AM_zdhvk2.png",
+          "source": "documentation"
+        },
+        {
+          "label": "3",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1747202556/Screenshot_2025-05-14_at_2.02.13_AM_ftm2sg.png",
+          "source": "documentation"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "devsecops-food-app-deployment-full-pipeline-using-terraform-and-jenkins",
+      "title": "DevSecOps - Food App Deployment Full Pipeline using Terraform & Jenkins",
+      "category": "DevOps",
+      "description": "DevSecOps - Food App Deployment Full Pipeline using Terraform & Jenkins is a DevOps project by Vaibhav Bansal built with Jenkins, Docker, Terraform, AWS, DevSecOps, SonarQube, Owasp, Trivy, AWS EC2.",
+      "technologies": [
+        "Jenkins",
+        "Docker",
+        "Terraform",
+        "AWS",
+        "DevSecOps",
+        "SonarQube",
+        "Owasp",
+        "Trivy",
+        "AWS EC2"
+      ],
+      "url": "https://vaibhavbansal.in/projects/devsecops-food-app-deployment-full-pipeline-using-terraform-and-jenkins",
+      "repository": "https://github.com/VaibhavBansal26/DevSecOps-FoodApp",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/DevSecOps-FoodApp/blob/main/README.md",
+      "readme_overview": "Deploying Food Delivery App - Terraform, Jenkins, SonarQube, Trivy, Docker, Prometheus, Grafana, Helm, React Js App is down as of now becuase running EC2 instance is expensive!",
+      "overview_source": "documentation",
+      "verified_features": [
+        "DevSecOps-FoodApp",
+        "Jenkins",
+        "SonarQube",
+        "App"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [
+          "docker",
+          "grafana",
+          "helm",
+          "jenkins",
+          "prometheus",
+          "reactjs",
+          "sonarqube",
+          "terrraform",
+          "trivy"
+        ],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-03-13T22:27:20Z"
+      },
+      "demo_assets": [
+        {
+          "label": "jenkins",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741897012/Screenshot_2025-03-13_at_3.52.24_PM_ejwjun.png",
+          "source": "documentation"
+        },
+        {
+          "label": "sonarqube",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741897013/Screenshot_2025-03-13_at_3.59.07_PM_tgfg9h.png",
+          "source": "documentation"
+        },
+        {
+          "label": "app",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741897011/Screenshot_2025-03-13_at_3.52.36_PM_b1lp4q.png",
+          "source": "documentation"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "devsecops-app-deployment-full-pipeline",
+      "title": "DevSecOps - App Deployment Full Pipeline",
+      "category": "DevOps",
+      "description": "DevSecOps - App Deployment Full Pipeline is a DevOps project by Vaibhav Bansal built with Amazon EKS,Prometheus, Grafana, Helm, Jenkins, Docker, Kubernetes, AWS, DevSecOps, SonarQube, Owasp, Trivy.",
+      "technologies": [
+        "Amazon EKS",
+        "Prometheus",
+        "Grafana",
+        "Helm",
+        "Jenkins",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "DevSecOps",
+        "SonarQube",
+        "Owasp",
+        "Trivy"
+      ],
+      "url": "https://vaibhavbansal.in/projects/devsecops-app-deployment-full-pipeline",
+      "repository": "https://github.com/VaibhavBansal26/DevSecOps-Bms",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/DevSecOps-Bms/blob/main/README.md",
+      "readme_overview": "1. GitHub → Jenkins → SonarQube → Docker Build : Code is pulled from GitHub, built by Jenkins, analyzed by SonarQube, and containerized via Docker. 2. Argo CD, Helm, and EKS : Argo CD (GitOps) or Helm charts are used to deploy and manage your application on Amazon EKS.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "DevSecOps-Bms",
+        "Jenkins",
+        "Sonar Qube",
+        "Amazon EKS Dashboard",
+        "Prometheus",
+        "Grafana",
+        "Agro CD"
+      ],
+      "features_source": "documentation",
+      "architecture": "pipeline { agent any tools { jdk 'jdk17' nodejs 'node-16' } environment { SCANNER HOME=tool 'sonar-scanner' } stages { stage (\"clean workspace\") { steps { cleanWs() } } stage (\"Git checkout\") { steps { git branch: 'main', url: 'https://github.com/VaibhavBansal26/DevSecOps-Bms.git' } } stage(\"Sonarqube Analysis \"){ steps{ withSonarQubeEnv('sonar-server') { sh ''' $SCANNER HOME/bin/sonar-scanner -Dsonar.projectName=bms-prime \\ -Dsonar.projectKey=bms-prime ''' } } } stage(\"quality gate\"){ steps { script { waitForQualityGate abortPipeline: false, credentialsId: 'Sonar-token' } } } stage(\"Install NPM Dependencies\") { steps { sh \"npm install\" } } stage(\"OWASP FS Scan\") { steps { script { dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit --format XML --out dependency-check-report', odcInstallation: 'DP-Check' } dependencyCheckPublisher pattern: ' /dependency-check-report/dependency-check-report.xml' } } stage(\"Verify Dependency Check Report\") { steps { sh 'ls -R $WORKSPACE' } } stage (\"Trivy File Scan\") { steps { sh \"trivy fs . trivy.txt\" } } stage (\"Build Docker Image\") { steps { sh \"docker build -t bms-prime .\" } } stage (\"Tag & Push to DockerHub\") { steps { script { withDockerRegistry(credentialsId: 'docker-cred') { sh \"docker tag bms-prime vaibhavbansal26/bms-prime:latest \" sh \"docker push vaibhavbansal26/bms-prime:latest \" } } } } stage('Docker Scout Image') { steps { script{ withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker'){ sh 'docker-scout quickview vaibhavbansal26/bms-prime:latest' sh 'docker-scout cves vaibhavbansal2",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "CSS",
+        "topics": [
+          "agrocd",
+          "amazon",
+          "docker",
+          "eks",
+          "grafana",
+          "jenkins",
+          "owasp",
+          "prometheus",
+          "react",
+          "sonarqube",
+          "trivy-scan"
+        ],
+        "stars": 0,
+        "forks": 1,
+        "updated_at": "2025-03-13T00:28:38Z"
+      },
+      "demo_assets": [
+        {
+          "label": "dEVOPs",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741824030/Screenshot_2025-03-12_at_7.57.18_PM_uiktvg.png",
+          "source": "documentation"
+        },
+        {
+          "label": "Jenkins",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741820659/Screenshot_2025-03-12_at_3.30.17_PM_rnphpr.png",
+          "source": "documentation"
+        },
+        {
+          "label": "Jenkins 1",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741820659/Screenshot_2025-03-12_at_3.30.28_PM_oefslg.png",
+          "source": "documentation"
+        },
+        {
+          "label": "Sonar Qube",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741820661/Screenshot_2025-03-12_at_3.31.25_PM_elf0u3.png",
+          "source": "documentation"
+        },
+        {
+          "label": "Amazon EKS Dashboard",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741820659/Screenshot_2025-03-12_at_3.32.32_PM_u4us9u.png",
+          "source": "documentation"
+        },
+        {
+          "label": "eks cluster",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1741820659/Screenshot_2025-03-12_at_3.32.14_PM_tm78fo.png",
+          "source": "documentation"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "nyc-taxi-ride-time-series-prediction",
+      "title": "NYC Taxi Ride Time Series Prediction",
+      "category": "Machine Learning",
+      "description": "NYC Taxi Ride Time Series Prediction is a Machine Learning project by Vaibhav Bansal built with Python, Hopsworks, DagsHub Integration, MLflow, Batch Processing, Machine Learning, Time Series, Streamlit.",
+      "technologies": [
+        "Python",
+        "Hopsworks",
+        "DagsHub Integration",
+        "MLflow",
+        "Batch Processing",
+        "Machine Learning",
+        "Time Series",
+        "Streamlit"
+      ],
+      "url": "https://vaibhavbansal.in/projects/nyc-taxi-ride-time-series-prediction",
+      "repository": "https://github.com/VaibhavBansal26/Nyc-Taxi-Ride-TimeSeries-Prediction",
+      "demo": null,
+      "live_url": "https://nyc-taxi-ride-v3-sdzj76dkug3gzjic6obgul.streamlit.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Nyc-Taxi-Ride-TimeSeries-Prediction/blob/main/README.md",
+      "readme_overview": "https://nyc-taxi-ride-timeseries-prediction-monitoring-vb.streamlit.app https://nyc-taxi-ride-timeseries-prediction-vb.streamlit.app",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "Jupyter Notebook",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-03-04T05:31:13Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 8,
+      "slug": "data-science-salary-prediction",
+      "title": "Data Science Salary Prediction",
+      "category": "Machine Learning",
+      "description": "Data Science Salary Prediction is a Machine Learning project by Vaibhav Bansal built with Python, Snowflake, Pyspark, React.js, Apache Kafka, Redis, Flask, Airflow, Zookeeper, AWS EC2, AWS S3, Machine Learning, Docker, PostgreSQL, Firebase.",
+      "technologies": [
+        "Python",
+        "Snowflake",
+        "Pyspark",
+        "React.js",
+        "Apache Kafka",
+        "Redis",
+        "Flask",
+        "Airflow",
+        "Zookeeper",
+        "AWS EC2",
+        "AWS S3",
+        "Machine Learning",
+        "Docker",
+        "PostgreSQL",
+        "Firebase"
+      ],
+      "url": "https://vaibhavbansal.in/projects/data-science-salary-prediction",
+      "repository": "https://github.com/VaibhavBansal26/data_science_salary_prediction_v2",
+      "demo": "https://youtu.be/1Ca0Y4s37ls",
+      "live_url": "https://datascience-salary-vb.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/data_science_salary_prediction_v2/blob/main/README.md",
+      "readme_overview": "Front End Deployment On Firebase ============================== https://datascience-salary-vb.web.app/ Tech Stack ================ 1. Apache Spark 2. Kafka 3. Postgresql 4. Python 5. Snowflake 6. Firebase 7. Linear Regression 8. Machine Learning 9. Redis 10. S3 11. Airflow 12. ZOOKEEPER 13. Flask 14. React JS 15. AWS EC2 16. Github CI/CD 17. Docker 18. Docker Compose 19. mlflow",
+      "overview_source": "documentation",
+      "verified_features": [
+        "About",
+        "Error Boundary",
+        "Home Page",
+        "Prediction Page",
+        "Project Demo",
+        "Visualization",
+        "Data Science Salary Prediction"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [
+          "airflow",
+          "cronjob",
+          "docker",
+          "docker-compose",
+          "ec2",
+          "firebase",
+          "flask",
+          "kafka",
+          "postgresql",
+          "python",
+          "react",
+          "redis",
+          "s3",
+          "snowflake",
+          "spark"
+        ],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-03-13T02:40:02Z"
+      },
+      "demo_assets": [
+        {
+          "label": "![Watch the video",
+          "url": "http://img.youtube.com/vi/1Ca0Y4s37ls/0.jpg",
+          "source": "documentation"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "slug": "heart-disease-prediction",
+      "title": "Heart Disease Prediction",
+      "category": "Machine Learning",
+      "description": "Heart Disease Prediction is a Machine Learning project by Vaibhav Bansal built with Python, Mlflow, DagsHub Integration, Streamlit, Digital Ocean, Machine Learning, Docker, SQLite3.",
+      "technologies": [
+        "Python",
+        "Mlflow",
+        "DagsHub Integration",
+        "Streamlit",
+        "Digital Ocean",
+        "Machine Learning",
+        "Docker",
+        "SQLite3"
+      ],
+      "url": "https://vaibhavbansal.in/projects/heart-disease-prediction",
+      "repository": "https://github.com/VaibhavBansal26/heart_disease_prediction_version2",
+      "demo": null,
+      "live_url": "https://heart-disease-prediction-grp-14.streamlit.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/heart_disease_prediction_version2/blob/main/README.md",
+      "readme_overview": "Deployed Link https://heart-disease-prediction-grp-14.streamlit.app/",
+      "overview_source": "documentation",
+      "verified_features": [
+        "heart disease prediction version2"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "Jupyter Notebook",
+        "topics": [
+          "docker",
+          "machine-learning",
+          "mlflow",
+          "python",
+          "streamlit"
+        ],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-06-09T21:04:11Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 10,
+      "slug": "customer-segmentation-and-sales-analysis-with-product-recommendation",
+      "title": "Customer Segmentation And Sales Analysis with Product Recommendation",
+      "category": "Machine Learning",
+      "description": "Customer Segmentation And Sales Analysis with Product Recommendation is a Machine Learning project by Vaibhav Bansal built with R, ShinyR, SQLite3, Machine Learning.",
+      "technologies": [
+        "R",
+        "ShinyR",
+        "SQLite3",
+        "Machine Learning"
+      ],
+      "url": "https://vaibhavbansal.in/projects/customer-segmentation-and-sales-analysis-with-product-recommendation",
+      "repository": "https://github.com/VaibhavBansal26/sdm-project",
+      "demo": "https://youtu.be/Q2NP7hlKeo0",
+      "live_url": "https://vaibhavbansal.shinyapps.io/sdmproject/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/sdm-project/blob/main/README.md",
+      "readme_overview": "Greatest Project Demo Link: https://vaibhavbansal.shinyapps.io/sdmproject/",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "HTML",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2024-05-24T16:11:36Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 11,
+      "slug": "grapesjs-advance-components",
+      "title": "Grapesjs Advance Components",
+      "category": "Package & Extension",
+      "description": "Grapesjs Advance Components is a Package & Extension project by Vaibhav Bansal built with Npm package using react js , grapesjs.",
+      "technologies": [
+        "Npm package using react js",
+        "grapesjs"
+      ],
+      "url": "https://vaibhavbansal.in/projects/grapesjs-advance-components",
+      "repository": "https://github.com/VaibhavBansal26/grapesjs-advance-components",
+      "demo": null,
+      "live_url": "https://www.npmjs.com/package/grapesjs-advance-components",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/grapesjs-advance-components/blob/main/README.md",
+      "readme_overview": "- promptsite , a command line tool. It writes a multi-page site from one sentence with your own model, lets you polish it in a visual editor, audits it for leaked secrets , and deploys it to Cloudflare Pages or Netlify. - grapesjs-advance-components , a GrapesJS plugin with 41 accessible, themeable blocks (pricing, testimonials, team, tabs, forms that submit, Stripe checkout and more), defineComponent for your own blocks, and multi-page export. A real recording using the offline --provider mock , so no API key is needed. With a key, your model writes the copy.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Export",
+        "Zip",
+        "Can I rely on it?",
+        "Will it clash with my design?",
+        "How it fits with other GrapesJS plugins",
+        "Repository layout",
+        "Development"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "TypeScript",
+        "topics": [
+          "ai",
+          "cli",
+          "grapesjs",
+          "grapesjs-plugin",
+          "page-builder",
+          "static-site-generator",
+          "typescript",
+          "website-builder"
+        ],
+        "stars": 5,
+        "forks": 1,
+        "updated_at": "2026-10-27T05:27:54Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Generate a site from one sentence, edit it visually, publish it",
+          "url": "https://raw.githubusercontent.com/VaibhavBansal26/grapesjs-advance-components/main/docs/assets/demo.gif",
+          "source": "documentation"
+        },
+        {
+          "label": "Demo",
+          "url": "https://github.com/VaibhavBansal26/grapesjs-advance-components/blob/main/docs/assets/demo.gif",
+          "source": "repository-file"
+        },
+        {
+          "label": "Social Preview",
+          "url": "https://github.com/VaibhavBansal26/grapesjs-advance-components/blob/main/docs/assets/social-preview.png",
+          "source": "repository-file"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "slug": "vscode-extension",
+      "title": "VSCode Extension",
+      "category": "Package & Extension",
+      "description": "VSCode Extension is a Package & Extension project by Vaibhav Bansal built with VSCode extension to search blogs.",
+      "technologies": [
+        "VSCode extension to search blogs"
+      ],
+      "url": "https://vaibhavbansal.in/projects/vscode-extension",
+      "repository": "https://github.com/VaibhavBansal26/search-blog-vscode-extension",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/search-blog-vscode-extension/blob/main/README.md",
+      "readme_overview": "This is the README for the \"vb-search-blog\" extension. It allows users to access the latest Tech Blogs.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Provides access to the latest Tech Blogs."
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-07-29T10:06:50Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 13,
+      "slug": "funnel-website-builder-for-dashclicks-india-ltd",
+      "title": "Funnel/Website Builder for Dashclicks India Ltd",
+      "category": "React",
+      "description": "Funnel/Website Builder for Dashclicks India Ltd is a React project by Vaibhav Bansal built with Funnel/Website Builder using React, Grapesjs.",
+      "technologies": [
+        "Funnel/Website Builder using React",
+        "Grapesjs"
+      ],
+      "url": "https://vaibhavbansal.in/projects/funnel-website-builder-for-dashclicks-india-ltd",
+      "repository": null,
+      "demo": "https://www.youtube.com/watch?v=ckAm_f78Byc",
+      "live_url": null,
+      "featured": false,
+      "readme": null,
+      "readme_overview": null,
+      "overview_source": null,
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": null,
+      "demo_assets": []
+    },
+    {
+      "id": 14,
+      "slug": "disney-plus-ui",
+      "title": "Disney Plus UI",
+      "category": "React",
+      "description": "Disney Plus UI is a React project by Vaibhav Bansal built with React, Redux, Styled Components, Firebase.",
+      "technologies": [
+        "React",
+        "Redux",
+        "Styled Components",
+        "Firebase"
+      ],
+      "url": "https://vaibhavbansal.in/projects/disney-plus-ui",
+      "repository": "https://github.com/VaibhavBansal26/React-Disney-Plus-UI",
+      "demo": null,
+      "live_url": "https://react-disney-vb.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Disney-Plus-UI/blob/main/README.md",
+      "readme_overview": "React Disney Plus Clone using React, Firebase",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Counter",
+        "Counter API",
+        "Counter Slice",
+        "Counter Slice.Spec",
+        "Movie Slice",
+        "User Slice"
+      ],
+      "features_source": "repository-structure",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-19T10:11:20Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Demo asset",
+          "url": "https://github.com/VaibhavBansal26/React-Amazon-Prime/assets/31563651/583c0e6b-7397-4387-8e03-a03aeb0c8c4c",
+          "source": "documentation"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "slug": "react-youtube-ui",
+      "title": "React Youtube UI",
+      "category": "React",
+      "description": "React Youtube UI is a React project by Vaibhav Bansal built with React.",
+      "technologies": [
+        "React"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-youtube-ui",
+      "repository": "https://github.com/VaibhavBansal26/React-Youtube-UI",
+      "demo": null,
+      "live_url": "https://vb-2dab4.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Youtube-UI/blob/main/README.md",
+      "readme_overview": "React Youtube UI",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-02-09T03:11:41Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 16,
+      "slug": "react-airbnb-ui",
+      "title": "React Airbnb UI",
+      "category": "React",
+      "description": "React Airbnb UI is a React project by Vaibhav Bansal built with React.",
+      "technologies": [
+        "React"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-airbnb-ui",
+      "repository": "https://github.com/VaibhavBansal26/React-Airbnb-vb",
+      "demo": null,
+      "live_url": "https://react-airbnb-vb.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Airbnb-vb/blob/main/README.md",
+      "readme_overview": "Airbnb UI clone using React",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-28T21:52:33Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 161,
+      "slug": "react-estate-app",
+      "title": "React Estate App",
+      "category": "React Native",
+      "description": "React Estate App is a React Native project by Vaibhav Bansal built with React Native- Real Estate App.",
+      "technologies": [
+        "React Native- Real Estate App"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-estate-app",
+      "repository": "https://github.com/VaibhavBansal26/Real-Estate-App",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Real-Estate-App/blob/main/README.md",
+      "readme_overview": "In the output, you'll find options to open the app in a",
+      "overview_source": "documentation",
+      "verified_features": [
+        "App Screenshots",
+        "Get started",
+        "Get a fresh project"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "TypeScript",
+        "topics": [
+          "appwrite",
+          "authentication",
+          "nativewind",
+          "react-native",
+          "tailwindcss",
+          "typescript"
+        ],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-04-04T05:51:01Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Demo asset",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743745205/IMG_0653_oxbatd.png",
+          "source": "documentation"
+        },
+        {
+          "label": "Demo asset",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743745205/IMG_0650_oe5x9b.png",
+          "source": "documentation"
+        },
+        {
+          "label": "Demo asset",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743745205/IMG_0651_d3jmsa.png",
+          "source": "documentation"
+        },
+        {
+          "label": "Demo asset",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743745203/IMG_0652_nvf2dd.png",
+          "source": "documentation"
+        },
+        {
+          "label": "Demo asset",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743745202/IMG_0649_f8vq9o.png",
+          "source": "documentation"
+        },
+        {
+          "label": "Demo asset",
+          "url": "https://res.cloudinary.com/vaibhav-codexpress/image/upload/v1743745201/IMG_0648_l5svcq.png",
+          "source": "documentation"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "slug": "react-netflix",
+      "title": "React Netflix",
+      "category": "React",
+      "description": "React Netflix is a React project by Vaibhav Bansal built with React, Firebase, Stripe Payment.",
+      "technologies": [
+        "React",
+        "Firebase",
+        "Stripe Payment"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-netflix",
+      "repository": "https://github.com/VaibhavBansal26/React-Netflix-App",
+      "demo": null,
+      "live_url": "https://react-netflix-vb.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Netflix-App/blob/main/README.md",
+      "readme_overview": "Netflix app using react",
+      "overview_source": "documentation",
+      "verified_features": [
+        "User Slice",
+        "Home Screen",
+        "Login Screen",
+        "Plans Screen",
+        "Profile Screen",
+        "Sign In Screen"
+      ],
+      "features_source": "repository-structure",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-30T11:14:13Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 18,
+      "slug": "pizza-delivery-and-realtime-order-tracking",
+      "title": "Pizza Delivery & Realtime Order Tracking",
+      "category": "Node JS",
+      "description": "Pizza Delivery & Realtime Order Tracking is a Node JS project by Vaibhav Bansal built with Node JS, Socket IO, Stripe Payment, EJS Template.",
+      "technologies": [
+        "Node JS",
+        "Socket IO",
+        "Stripe Payment",
+        "EJS Template"
+      ],
+      "url": "https://vaibhavbansal.in/projects/pizza-delivery-and-realtime-order-tracking",
+      "repository": "https://github.com/VaibhavBansal26/Realtime-pizza-order",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Realtime-pizza-order/blob/main/README.md",
+      "readme_overview": "Realtime pizza order using node js, ejs,socket",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Api",
+        "Web",
+        "Realtime-pizza-order"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-30T00:20:51Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 19,
+      "slug": "react-amazon",
+      "title": "React Amazon",
+      "category": "React",
+      "description": "React Amazon is a React project by Vaibhav Bansal built with React, NEXT JS, Redux, Tailwind CSS, Firebase, Stripe Payment.",
+      "technologies": [
+        "React",
+        "NEXT JS",
+        "Redux",
+        "Tailwind CSS",
+        "Firebase",
+        "Stripe Payment"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-amazon",
+      "repository": "https://github.com/VaibhavBansal26/amazon-clone-stripe",
+      "demo": null,
+      "live_url": "https://amazon-vaibhav-lj8enz821-vaibhavbansal26.vercel.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/amazon-clone-stripe/blob/main/README.md",
+      "readme_overview": "Amazon Clone - React, firebase, Next JS, Tailwind CSS, Stripe Payment",
+      "overview_source": "documentation",
+      "verified_features": [
+        " App",
+        "[...Nextauth]",
+        "Create Checkout Session",
+        "Webhook",
+        "Checkout",
+        "Orders",
+        "Success"
+      ],
+      "features_source": "repository-structure",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2021-07-12T10:44:10Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Template Screenshot",
+          "url": "https://github.com/VaibhavBansal26/amazon-clone-stripe/blob/main/TemplateScreenshot.jpg",
+          "source": "repository-file"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "slug": "react-pizza-shop",
+      "title": "React  Pizza Shop",
+      "category": "React",
+      "description": "React  Pizza Shop is a React project by Vaibhav Bansal built with React, Styled Components.",
+      "technologies": [
+        "React",
+        "Styled Components"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-pizza-shop",
+      "repository": "https://github.com/VaibhavBansal26/Sliceline-pizza-order",
+      "demo": null,
+      "live_url": "https://react-pizza-5ed50.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Sliceline-pizza-order/blob/main/README.md",
+      "readme_overview": "Pizza order app using React, Styled Components, Firebase",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-28T21:35:45Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 21,
+      "slug": "react-chat-app",
+      "title": "React Chat App",
+      "category": "React",
+      "description": "React Chat App is a React project by Vaibhav Bansal built with React, Redux and Firebase.",
+      "technologies": [
+        "React",
+        "Redux and Firebase"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-chat-app",
+      "repository": "https://github.com/VaibhavBansal26/React-Chat-App",
+      "demo": null,
+      "live_url": "https://react-chat-24cb1.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Chat-App/blob/main/README.md",
+      "readme_overview": "Chat app using React,Redux,firebase",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-30T11:21:00Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 22,
+      "slug": "react-ecommerce-clothing-app",
+      "title": "React Ecommerce Clothing App",
+      "category": "React",
+      "description": "React Ecommerce Clothing App is a React project by Vaibhav Bansal built with React, Redux, Hooks, Firebase & Stripe Payment.",
+      "technologies": [
+        "React",
+        "Redux",
+        "Hooks",
+        "Firebase & Stripe Payment"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-ecommerce-clothing-app",
+      "repository": "https://github.com/VaibhavBansal26/react_ecommerce_app",
+      "demo": null,
+      "live_url": "https://vb-clothing-store.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/react_ecommerce_app/blob/master/README.md",
+      "readme_overview": "Deployment Link: https://www.vb-clothing-store.web.app",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Checkout.Component",
+        "Collection.Component",
+        "Homepage.Component",
+        "Shop.Component",
+        "Sign In And Sign Up.Component"
+      ],
+      "features_source": "repository-structure",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2025-02-09T03:36:32Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 23,
+      "slug": "react-amazon-prime",
+      "title": "React Amazon Prime",
+      "category": "React",
+      "description": "React Amazon Prime is a React project by Vaibhav Bansal built with React, Redux, Styled Components, Rapid API, Firebase.",
+      "technologies": [
+        "React",
+        "Redux",
+        "Styled Components",
+        "Rapid API",
+        "Firebase"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-amazon-prime",
+      "repository": "https://github.com/VaibhavBansal26/React-Amazon-Prime",
+      "demo": null,
+      "live_url": "https://react-prime-vb.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Amazon-Prime/blob/main/README.md",
+      "readme_overview": "Tech stack: React, Firebase, Styled Components",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Counter",
+        "Counter API",
+        "Counter Slice",
+        "Counter Slice.Spec",
+        "Movie Slice",
+        "User Slice"
+      ],
+      "features_source": "repository-structure",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-19T08:16:02Z"
+      },
+      "demo_assets": [
+        {
+          "label": "Demo asset",
+          "url": "https://github.com/VaibhavBansal26/React-Amazon-Prime/assets/31563651/d6b7b693-e2fb-4d17-9a2d-700986c33138",
+          "source": "documentation"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "slug": "mern-instagram-application-photo-sharing-app",
+      "title": "MERN Instagram Application (Photo Sharing App)",
+      "category": "MERN",
+      "description": "MERN Instagram Application (Photo Sharing App) is a MERN project by Vaibhav Bansal built with Mongo DB, Express JS, React JS, Node JS .",
+      "technologies": [
+        "Mongo DB",
+        "Express JS",
+        "React JS",
+        "Node JS"
+      ],
+      "url": "https://vaibhavbansal.in/projects/mern-instagram-application-photo-sharing-app",
+      "repository": "https://github.com/VaibhavBansal26/MERN-INSTAGRAM-VB",
+      "demo": null,
+      "live_url": "https://gleeful-chaja-8dcc5b.netlify.app",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/MERN-INSTAGRAM-VB/blob/main/README.md",
+      "readme_overview": "Instagram clone using MERN",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Auth Route",
+        "Post Route",
+        "User Route",
+        "MERN-INSTAGRAM-VB"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-27T10:54:09Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 25,
+      "slug": "react-linkedin-ui-app",
+      "title": "React Linkedin UI App",
+      "category": "React",
+      "description": "React Linkedin UI App is a React project by Vaibhav Bansal built with React, Redux, Styled Components, Firebase.",
+      "technologies": [
+        "React",
+        "Redux",
+        "Styled Components",
+        "Firebase"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-linkedin-ui-app",
+      "repository": "https://github.com/VaibhavBansal26/Reacrt-linkedin-vb",
+      "demo": null,
+      "live_url": "https://react-linkedin-vb.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Reacrt-linkedin-vb/blob/main/README.md",
+      "readme_overview": "Linkedin clone using React , Firebase",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-28T09:26:36Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 26,
+      "slug": "react-movie-app",
+      "title": "React Movie App",
+      "category": "React",
+      "description": "React Movie App is a React project by Vaibhav Bansal built with React and Tmdb API.",
+      "technologies": [
+        "React and Tmdb API"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-movie-app",
+      "repository": "https://github.com/VaibhavBansal26/react-movie-app",
+      "demo": null,
+      "live_url": "https://react-movie-app-proj.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/react-movie-app/blob/master/README.md",
+      "readme_overview": "This project was bootstrapped with Create React App.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Available Scripts",
+        "yarn start",
+        "yarn build",
+        "yarn eject",
+        "Learn More",
+        "Code Splitting",
+        "Analyzing the Bundle Size"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2021-07-12T10:44:13Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 27,
+      "slug": "react-tinder-ui-clone",
+      "title": "React Tinder UI clone",
+      "category": "React",
+      "description": "React Tinder UI clone is a React project by Vaibhav Bansal built with React with Swipe Functionality.",
+      "technologies": [
+        "React with Swipe Functionality"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-tinder-ui-clone",
+      "repository": "https://github.com/VaibhavBansal26/React-tinder-UI",
+      "demo": null,
+      "live_url": "https://tinder-match.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-tinder-UI/blob/main/README.md",
+      "readme_overview": "React tinder UI clone",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-29T22:11:58Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 28,
+      "slug": "video-conferencing-app",
+      "title": "Video Conferencing App",
+      "category": "React",
+      "description": "Video Conferencing App is a React project by Vaibhav Bansal built with React, Node JS and Socket IO.",
+      "technologies": [
+        "React",
+        "Node JS and Socket IO"
+      ],
+      "url": "https://vaibhavbansal.in/projects/video-conferencing-app",
+      "repository": "https://github.com/VaibhavBansal26/Nodejs-Video-Conferencing",
+      "demo": null,
+      "live_url": "https://video-conferencing-app-vb.onrender.com/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Nodejs-Video-Conferencing/blob/main/README.md",
+      "readme_overview": "Video conferencing using nodejs, socket io https://video-conferencing-app-vb.onrender.com",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Nodejs-Video-Conferencing"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-28T22:05:57Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 29,
+      "slug": "react-twitter-ui-clone",
+      "title": "React Twitter UI Clone",
+      "category": "React",
+      "description": "React Twitter UI Clone is a React project by Vaibhav Bansal built with React and Firebase.",
+      "technologies": [
+        "React and Firebase"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-twitter-ui-clone",
+      "repository": "https://github.com/VaibhavBansal26/React-Twitter-vb",
+      "demo": null,
+      "live_url": "https://react-twitter-apl.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Twitter-vb/blob/main/README.md",
+      "readme_overview": "Twitter clone using react firebase",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-28T21:06:43Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 30,
+      "slug": "react-slack-ui",
+      "title": "React Slack UI",
+      "category": "React",
+      "description": "React Slack UI is a React project by Vaibhav Bansal built with React and Firebase.",
+      "technologies": [
+        "React and Firebase"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-slack-ui",
+      "repository": "https://github.com/VaibhavBansal26/React-Slack-vb",
+      "demo": null,
+      "live_url": "https://react-slack-apl.web.app/,        ",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Slack-vb/blob/main/README.md",
+      "readme_overview": "React Slack application using React and firebase",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-27T19:13:54Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 31,
+      "slug": "react-whatsapp-ui-and-messaging",
+      "title": "React Whatsapp UI & Messaging",
+      "category": "React",
+      "description": "React Whatsapp UI & Messaging is a React project by Vaibhav Bansal built with React and Firebase.",
+      "technologies": [
+        "React and Firebase"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-whatsapp-ui-and-messaging",
+      "repository": "https://github.com/VaibhavBansal26/React-Whatsapp-UI",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Whatsapp-UI/blob/main/README.md",
+      "readme_overview": "For Node version - 20 export NODE OPTIONS=--openssl-legacy-provider npm start echo 'export NODE OPTIONS=--openssl-legacy-provider' /.zshrc source /.zshrc",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2025-02-09T03:58:51Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 32,
+      "slug": "react-spotify-clone",
+      "title": "React Spotify Clone",
+      "category": "React",
+      "description": "React Spotify Clone is a React project by Vaibhav Bansal built with React and Firebase.",
+      "technologies": [
+        "React and Firebase"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-spotify-clone",
+      "repository": "https://github.com/VaibhavBansal26/React-spotify-vb",
+      "demo": null,
+      "live_url": "https://react-spotify-apl.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-spotify-vb/blob/main/README.md",
+      "readme_overview": "spotify clone using firebase react",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-27T18:56:01Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 33,
+      "slug": "react-covid-19-tracker",
+      "title": "React Covid 19 Tracker",
+      "category": "React",
+      "description": "React Covid 19 Tracker is a React project by Vaibhav Bansal built with React, Context API.",
+      "technologies": [
+        "React",
+        "Context API"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-covid-19-tracker",
+      "repository": "https://github.com/VaibhavBansal26/React-Covid-Tracker",
+      "demo": null,
+      "live_url": "https://react-covid-vb.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Covid-Tracker/blob/main/README.md",
+      "readme_overview": "Covid tracker using react",
+      "overview_source": "documentation",
+      "verified_features": [
+        "React COVID Tracker"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-28T19:44:05Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 34,
+      "slug": "mern-youtube-application",
+      "title": "MERN Youtube Application",
+      "category": "MERN",
+      "description": "MERN Youtube Application is a MERN project by Vaibhav Bansal built with Mongo DB, Express JS, React JS, Node JS - Register & Login to use Features .",
+      "technologies": [
+        "Mongo DB",
+        "Express JS",
+        "React JS",
+        "Node JS - Register & Login to use Features"
+      ],
+      "url": "https://vaibhavbansal.in/projects/mern-youtube-application",
+      "repository": "https://github.com/VaibhavBansal26/React-Mern-Youtube",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Mern-Youtube/blob/main/README.md",
+      "readme_overview": "Youtube clone (video sharing app using node js, react js)",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Comment",
+        "Like",
+        "Subscribe",
+        "Users",
+        "Video"
+      ],
+      "features_source": "repository-structure",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-29T21:29:45Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 35,
+      "slug": "travelling-and-adventrous-tour-app-with-stripe",
+      "title": "Travelling and Adventrous Tour App with Stripe",
+      "category": "Node JS",
+      "description": "Travelling and Adventrous Tour App with Stripe is a Node JS project by Vaibhav Bansal built with Server Side Rendering - Node JS, PUG Templates, Stripe Integration.",
+      "technologies": [
+        "Server Side Rendering - Node JS",
+        "PUG Templates",
+        "Stripe Integration"
+      ],
+      "url": "https://vaibhavbansal.in/projects/travelling-and-adventrous-tour-app-with-stripe",
+      "repository": "https://github.com/VaibhavBansal26/node-natours-travel-app",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/node-natours-travel-app/blob/master/README.md",
+      "readme_overview": "Built using modern technologies node.js ,express, mongoDB, mongoose.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Booking Routes",
+        "Review Routes",
+        "Tour Routes",
+        "User Routes",
+        "View Routes",
+        "Natours Travel Booking Applications"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2021-06-12T04:41:25Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 36,
+      "slug": "natural-disaster-prediction-and-management",
+      "title": "Natural Disaster Prediction & Management ",
+      "category": "Machine Learning",
+      "description": "Natural Disaster Prediction & Management  is a Machine Learning project by Vaibhav Bansal built with Python, Flask, Google API,Machine Learning Algorithms, Deep Learning Methods.",
+      "technologies": [
+        "Python",
+        "Flask",
+        "Google API",
+        "Machine Learning Algorithms",
+        "Deep Learning Methods"
+      ],
+      "url": "https://vaibhavbansal.in/projects/natural-disaster-prediction-and-management",
+      "repository": "https://github.com/VaibhavBansal26/Capstone-2020-Natural-Disaster-Prediction",
+      "demo": "https://www.youtube.com/watch?v=Gad5vz1Pkcc",
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/Natural-Disaster-Prediction/blob/master/README.md",
+      "readme_overview": "Estimates, live data and alerting for earthquakes, tsunamis, floods, hurricanes and storms. Started as a VIT University capstone in 2020 (Flask 1, TensorFlow 1) and rebuilt in 2026 on FastAPI, scikit-learn, HTMX, Tailwind and Leaflet, with live feeds and a Claude-powered assistant. Outputs are statistical estimates and other organisations' live data. They are not operational forecasts or warnings. Earthquakes cannot be predicted: the earthquake page reports a historical hazard rate, and real-time alerts come from the USGS feed, not from a model.",
+      "overview_source": "documentation",
+      "verified_features": [
+        "Home: A live 3D globe of this week's USGS earthquakes, with module cards",
+        "Earthquake: Historical hazard for any place (rate and probability of M 6, 7, 8), the live USGS map, the week's strongest real earthquakes with one-click \"Nearby help\"",
+        "Flood: River level 1, 3 and 6 hours ahead for one gauge, shown next to \"no change\"",
+        "Tsunami, Hurricane, Storm: Small models with their held-out skill shown on the page",
+        "Live: GDACS global alerts, a weather outlook for any place, and the real-event alert watcher",
+        "Assistant: Plain-language questions answered with live tools and cited guidance (Claude key needed)",
+        "Alerts: Hospitals and police near a place or epicentre, then alert your contacts by email or SMS, optionally in other languages"
+      ],
+      "features_source": "documentation",
+      "architecture": "This is the short map. Detail lives in code-walkthrough.md (backend), frontend.md (browser side), models.md (every model) and statistics.md (generated numbers). A FastAPI application that renders server-side Jinja2 pages, enhanced with HTMX. Models are trained once from the command line and loaded from disk at request time. Nothing trains, downloads or writes files inside a web request.",
+      "architecture_source": "documentation",
+      "repository_snapshot": {
+        "primary_language": "Python",
+        "topics": [],
+        "stars": 4,
+        "forks": 0,
+        "updated_at": "2026-11-05T23:45:05Z"
+      },
+      "demo_assets": [
+        {
+          "label": "2020 demo video",
+          "url": "https://www.youtube.com/embed/Gad5vz1Pkcc",
+          "source": "documentation"
+        },
+        {
+          "label": "Code walkthrough",
+          "url": "https://github.com/VaibhavBansal26/Capstone-2020-Natural-Disaster-Prediction/blob/master/docs/code-walkthrough.md",
+          "source": "documentation"
+        },
+        {
+          "label": "code-walkthrough.md",
+          "url": "https://github.com/VaibhavBansal26/Capstone-2020-Natural-Disaster-Prediction/blob/master/code-walkthrough.md",
+          "source": "documentation"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "slug": "react-hulu-clone",
+      "title": "React Hulu Clone",
+      "category": "React",
+      "description": "React Hulu Clone is a React project by Vaibhav Bansal built with React.",
+      "technologies": [
+        "React"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-hulu-clone",
+      "repository": "https://github.com/VaibhavBansal26/React-Hulu",
+      "demo": null,
+      "live_url": "https://react-hulu-vb.web.app/",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Hulu/blob/main/README.md",
+      "readme_overview": "Hulu clone using react",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-28T20:24:33Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 38,
+      "slug": "react-trello-ui",
+      "title": "React Trello UI",
+      "category": "React",
+      "description": "React Trello UI is a React project by Vaibhav Bansal built with React.",
+      "technologies": [
+        "React"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-trello-ui",
+      "repository": "https://github.com/VaibhavBansal26/React-trello",
+      "demo": null,
+      "live_url": "https://react-trello-vb.web.app",
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-trello/blob/main/README.md",
+      "readme_overview": "Trello clone",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-28T20:46:54Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 39,
+      "slug": "react-tiktok-ui",
+      "title": "React Tiktok UI",
+      "category": "React",
+      "description": "React Tiktok UI is a React project by Vaibhav Bansal built with React.",
+      "technologies": [
+        "React"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-tiktok-ui",
+      "repository": "https://github.com/VaibhavBansal26/React-tiktok-UI",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-tiktok-UI/blob/main/README.md",
+      "readme_overview": "Titkok basic UI",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-29T23:28:51Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 40,
+      "slug": "react-newz-app",
+      "title": "React NEWZ App",
+      "category": "React",
+      "description": "React NEWZ App is a React project by Vaibhav Bansal built with React and API.",
+      "technologies": [
+        "React and API"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-newz-app",
+      "repository": "https://github.com/VaibhavBansal26/React-news-app-ui",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-news-app-ui/blob/main/README.md",
+      "readme_overview": "React news app ui",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-30T00:35:58Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 41,
+      "slug": "react-nba-app",
+      "title": "React NBA App",
+      "category": "React",
+      "description": "React NBA App is a React project by Vaibhav Bansal built with React.",
+      "technologies": [
+        "React"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-nba-app",
+      "repository": "https://github.com/VaibhavBansal26/React-Nba-app",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Nba-app/blob/main/README.md",
+      "readme_overview": "Basic react app example",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-30T00:28:11Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 42,
+      "slug": "react-facebook-ui",
+      "title": "React Facebook UI",
+      "category": "React",
+      "description": "React Facebook UI is a React project by Vaibhav Bansal built with React, Next JS, Tailwind CSS.",
+      "technologies": [
+        "React",
+        "Next JS",
+        "Tailwind CSS"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-facebook-ui",
+      "repository": "https://github.com/VaibhavBansal26/next-facebook-vb",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/next-facebook-vb/blob/main/README.md",
+      "readme_overview": "This is a Next.js project bootstrapped with create-next-app .",
+      "overview_source": "documentation",
+      "verified_features": [
+        " App",
+        "[...Nextauth]",
+        "Hello",
+        "Getting Started",
+        "or",
+        "Learn More"
+      ],
+      "features_source": "documentation",
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 1,
+        "forks": 0,
+        "updated_at": "2025-02-09T04:10:20Z"
+      },
+      "demo_assets": []
+    },
+    {
+      "id": 43,
+      "slug": "react-music-artist-app",
+      "title": "React Music Artist App",
+      "category": "React",
+      "description": "React Music Artist App is a React project by Vaibhav Bansal built with React.",
+      "technologies": [
+        "React"
+      ],
+      "url": "https://vaibhavbansal.in/projects/react-music-artist-app",
+      "repository": "https://github.com/VaibhavBansal26/React-Artist-vb",
+      "demo": null,
+      "live_url": null,
+      "featured": false,
+      "readme": "https://github.com/VaibhavBansal26/React-Artist-vb/blob/main/README.md",
+      "readme_overview": "Basic react artist app ",
+      "overview_source": "documentation",
+      "verified_features": [],
+      "features_source": null,
+      "architecture": null,
+      "architecture_source": null,
+      "repository_snapshot": {
+        "primary_language": "JavaScript",
+        "topics": [],
+        "stars": 0,
+        "forks": 0,
+        "updated_at": "2023-08-30T00:31:40Z"
+      },
+      "demo_assets": []
+    }
+  ]
+}

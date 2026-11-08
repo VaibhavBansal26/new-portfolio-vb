@@ -1,0 +1,30 @@
+# Vaibhav Bansal
+
+> AI software engineer with 5+ years building full-stack products, data platforms, machine-learning systems and open-source developer tools.
+
+This is Vaibhav Bansal's interactive technical portfolio. The related professional profile is https://www.thevaibhavbansal.com/. Both sites describe the same person.
+
+## Core pages
+- [Home](https://vaibhavbansal.in/)
+- [About](https://vaibhavbansal.in/about)
+- [Experience](https://vaibhavbansal.in/resume)
+- [Projects](https://vaibhavbansal.in/portfolios)
+- [Writing and videos](https://vaibhavbansal.in/blogs)
+- [Credentials](https://vaibhavbansal.in/certification)
+- [Contact](https://vaibhavbansal.in/contact)
+- [Project data](https://vaibhavbansal.in/projects.json)
+- [JSON feed](https://vaibhavbansal.in/feed.json)
+- [RSS feed](https://vaibhavbansal.in/feed.xml)
+
+## Identity
+- GitHub: https://github.com/VaibhavBansal26
+- LinkedIn: https://www.linkedin.com/in/vaibhavbansal-profile/
+- ORCID: https://orcid.org/0000-0002-5433-0385
+- Medium: https://medium.com/@vaibhav.bansal945
+- YouTube: https://www.youtube.com/@VaibhavBansalCode
+
+## Highlights
+- 70 projects across AI, data engineering, full stack and developer tooling
+- Four npm packages: grapesjs-advance-components, promptsite, captra, create-captra
+- Springer Nature research: Obstacle Avoidance Using Stereo Vision and Depth Maps for Visual Aid Devices
+- M.S. Data Science, University at Buffalo, SUNY
