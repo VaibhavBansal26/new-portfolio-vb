@@ -3,6 +3,15 @@ import siteMeta from '../seo/siteMeta.json';
 
 const SITE_URL = 'https://vaibhavbansal.in';
 const SOCIAL_IMAGE = `${SITE_URL}/og-vaibhav-bansal.jpg`;
+const PROFILE_MAIN_ENTITY = {
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#person`,
+    name: 'Vaibhav Bansal',
+    alternateName: 'VaibhavBansal26',
+    description: 'AI software engineer and full-stack developer building practical AI, data and web products.',
+    url: `${SITE_URL}/`,
+    image: `${SITE_URL}/avatar-light3.jpeg`
+};
 
 const normalizePath = pathname => {
     if (!pathname || pathname === '/') return '/';
@@ -63,7 +72,8 @@ export default function usePageTitle(page, override = null) {
                 url: canonicalUrl,
                 isPartOf: { '@id': `${SITE_URL}/#website` },
                 about: { '@id': `${SITE_URL}/#person` },
-                inLanguage: 'en-US'
+                inLanguage: 'en-US',
+                ...(meta.type === 'ProfilePage' ? { mainEntity: PROFILE_MAIN_ENTITY } : {})
             });
             document.head.appendChild(schema);
         }

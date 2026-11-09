@@ -117,10 +117,21 @@ const replaceMeta = (html, selector, value) => {
   return html.replace(pattern, match => match.replace(/content="[^"]*"/i, `content="${escaped}"`));
 };
 
+const profileMainEntity = {
+  '@type': 'Person',
+  '@id': `${siteUrl}/#person`,
+  name: 'Vaibhav Bansal',
+  alternateName: 'VaibhavBansal26',
+  description: 'AI software engineer and full-stack developer building practical AI, data and web products.',
+  url: `${siteUrl}/`,
+  image: `${siteUrl}/avatar-light3.jpeg`,
+};
+
 const basePageSchema = (info, canonical) => ({
   '@context': 'https://schema.org', '@type': info.type, name: info.title,
   description: info.description, url: canonical,
   isPartOf: { '@id': `${siteUrl}/#website` }, about: { '@id': `${siteUrl}/#person` }, inLanguage: 'en-US',
+  ...(info.type === 'ProfilePage' ? { mainEntity: profileMainEntity } : {}),
 });
 
 const schemaForRoute = (routeKey, info, canonical) => {
@@ -128,7 +139,7 @@ const schemaForRoute = (routeKey, info, canonical) => {
   if (routeKey === '/') return {
     '@context': 'https://schema.org',
     '@graph': [
-      { ...page, '@context': undefined, mainEntity: { '@id': `${siteUrl}/#person` } },
+      { ...page, '@context': undefined },
       { '@type': 'ScholarlyArticle', headline: research.title, description: research.description, url: research.url, datePublished: research.datePublished, author: { '@id': `${siteUrl}/#person` }, publisher: { '@type': 'Organization', name: 'Springer Nature' } },
       ...packages.map(item => ({ '@type': 'SoftwareApplication', name: item.name, description: item.description, url: item.url, applicationCategory: 'DeveloperApplication', author: { '@id': `${siteUrl}/#person` } })),
     ],
