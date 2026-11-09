@@ -53,13 +53,13 @@ function PortfolioPage() {
         {visible.map((project, index) => (
           <motion.article className="project-card" layout key={`${project.title}-${project.link1 || index}`} custom={index} variants={reduceMotion ? undefined : archiveCardMotion} initial={reduceMotion ? false : 'hidden'} animate={reduceMotion ? undefined : 'show'} exit={reduceMotion ? undefined : 'exit'} whileHover={reduceMotion ? undefined : 'hover'}>
             <motion.div className="image-frame" variants={reduceMotion ? undefined : { hover: { scale: .985 } }}>
-              <Link to={`/projects/${projectSlug(project)}`} aria-label={`Read ${project.title} project details`}>
+              <Link to={`/projects/${projectSlug(project)}/`} aria-label={`Read ${project.title} project details`}>
               <motion.img src={project.image} alt={`${project.title} project`} loading="lazy" decoding="async" variants={reduceMotion ? undefined : { hover: { scale: 1.065 } }} />
               <span className="project-index mono">{String(index + 1).padStart(2, '0')}</span>
               </Link>
             </motion.div>
             <div className="project-meta"><span className="mono">{project.category}</span></div>
-            <h2><Link to={`/projects/${projectSlug(project)}`}>{project.title}</Link></h2>
+            <h2><Link to={`/projects/${projectSlug(project)}/`}>{project.title}</Link></h2>
             <p>{project.text}</p>
             <div className="project-links">
               {project.link1 && <a className="text-link" href={project.link1} target="_blank" rel="noreferrer">Source <ArrowOutwardRoundedIcon /></a>}

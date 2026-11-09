@@ -10,7 +10,7 @@ function Footer() {
         <p className="mono">Have a useful problem to solve?</p>
         <h2>Let’s build something that matters.</h2>
       </div>
-      <Link to="/contact">Start a conversation <ArrowOutwardRoundedIcon /></Link>
+      <Link to="/contact/">Start a conversation <ArrowOutwardRoundedIcon /></Link>
       <p className="copyright mono">© {new Date().getFullYear()} Vaibhav Bansal</p>
     </FooterStyled>
   );

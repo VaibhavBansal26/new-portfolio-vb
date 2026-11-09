@@ -10,6 +10,7 @@ const templatePath = path.join(buildDir, 'index.html');
 const siteUrl = 'https://vaibhavbansal.in';
 const socialImage = `${siteUrl}/og-vaibhav-bansal.jpg`;
 const buildDate = new Date().toISOString().slice(0, 10);
+const canonicalPath = route => route === '/' ? '/' : `${route.replace(/\/+$/, '')}/`;
 
 if (!fs.existsSync(templatePath)) throw new Error('build/index.html was not found. Run this after react-scripts build.');
 
@@ -96,7 +97,8 @@ const repositoryDetails = project => projectDetails[projectSlug(project)] || nul
 const duplicateSlugs = portfolios.map(projectSlug).filter((slug, index, all) => all.indexOf(slug) !== index);
 if (duplicateSlugs.length) throw new Error(`Duplicate project slugs: ${[...new Set(duplicateSlugs)].join(', ')}`);
 
-const renderProjectList = items => `<ol>${items.map(project => `<li><article><h3><a href="/projects/${projectSlug(project)}">${escapeHtml(project.title)}</a></h3><p><strong>${escapeHtml(project.category)}</strong> — ${escapeHtml(projectDescription(project))}</p><p>${escapeHtml(projectTechnologies(project).join(' · '))}</p>${project.link1 ? `<a href="${escapeHtml(project.link1)}">Source repository</a>` : ''}</article></li>`).join('')}</ol>`;
+const canonicalizeInternalLinks = html => html.replace(/href="(\/[^"?#]*)([?#][^"]*)?"/g, (_, pathname, suffix = '') => `href="${canonicalPath(pathname)}${suffix}"`);
+const renderProjectList = items => `<ol>${items.map(project => `<li><article><h3><a href="/projects/${projectSlug(project)}/">${escapeHtml(project.title)}</a></h3><p><strong>${escapeHtml(project.category)}</strong> — ${escapeHtml(projectDescription(project))}</p><p>${escapeHtml(projectTechnologies(project).join(' · '))}</p>${project.link1 ? `<a href="${escapeHtml(project.link1)}">Source repository</a>` : ''}</article></li>`).join('')}</ol>`;
 
 const routeContent = {
   '/': `<main data-seo-shell><header><h1>Vaibhav Bansal — AI Software Engineer</h1><p>AI software engineer with 5+ years building scalable full-stack, data and machine-learning products with Python, React and AWS.</p></header><section><h2>Top 18 projects</h2>${renderProjectList(portfolios.filter(project => project.featured).slice(0, 18))}</section><section><h2>Open-source npm packages</h2><ul>${packages.map(item => `<li><a href="${item.url}"><strong>${item.name}</strong></a> — ${escapeHtml(item.description)}</li>`).join('')}</ul></section><section><h2>Published research</h2><p><a href="${research.url}"><strong>${research.title}</strong></a> — ${research.description} ${research.publisher}.</p></section><nav aria-label="Portfolio pages"><a href="/about">About</a> · <a href="/resume">Experience</a> · <a href="/portfolios">All ${portfolios.length} projects</a> · <a href="/blogs">Writing and videos</a> · <a href="/certification">Credentials</a> · <a href="/contact">Contact</a></nav></main>`,
@@ -148,7 +150,7 @@ const schemaForRoute = (routeKey, info, canonical) => {
     '@context': 'https://schema.org',
     '@graph': [
       { ...page, '@context': undefined, mainEntity: { '@id': `${canonical}#projects` } },
-      { '@type': 'ItemList', '@id': `${canonical}#projects`, name: 'Projects by Vaibhav Bansal', numberOfItems: portfolios.length, itemListElement: portfolios.map((project, index) => ({ '@type': 'ListItem', position: index + 1, url: `${siteUrl}/projects/${projectSlug(project)}`, name: project.title })) },
+      { '@type': 'ItemList', '@id': `${canonical}#projects`, name: 'Projects by Vaibhav Bansal', numberOfItems: portfolios.length, itemListElement: portfolios.map((project, index) => ({ '@type': 'ListItem', position: index + 1, url: `${siteUrl}/projects/${projectSlug(project)}/`, name: project.title })) },
     ],
   };
   if (routeKey === '/blogs') return {
@@ -164,11 +166,11 @@ const schemaForRoute = (routeKey, info, canonical) => {
 
 const renderRoute = (baseHtml, routeKey, info, content = routeContent[routeKey], schema = null) => {
   const pathname = routeKey === '404' ? '/404' : routeKey;
-  const canonical = `${siteUrl}${pathname === '/' ? '/' : pathname}`;
+  const canonical = `${siteUrl}${canonicalPath(pathname)}`;
   let html = baseHtml
     .replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(info.title)}</title>`)
     .replace(/<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/i, `<link rel="canonical" href="${canonical}">`)
-    .replace(/<div id="root">[\s\S]*?<\/div>/i, `<div id="root">${content}</div>`);
+    .replace(/<div id="root">[\s\S]*?<\/div>/i, `<div id="root">${canonicalizeInternalLinks(content)}</div>`);
   html = replaceMeta(html, 'name:description', info.description);
   html = replaceMeta(html, 'name:robots', info.noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large');
   html = replaceMeta(html, 'property:og:title', info.title);
@@ -204,7 +206,7 @@ portfolios.forEach(project => {
   const info = { title: `${project.title} — Vaibhav Bansal`, description, type: 'WebPage' };
   const architectureLabel = repository?.architectureSource === 'documentation' ? 'Documented architecture and workflow' : 'Architecture inferred from repository structure';
   const content = `<main data-seo-shell><p><a href="/portfolios">← All projects</a></p><article><h1>${escapeHtml(project.title)}</h1><p><strong>${escapeHtml(project.category)}</strong></p><p>${escapeHtml(description)}</p>${readmeOverview ? `<h2>Repository overview</h2><p>${escapeHtml(readmeOverview)}</p>` : ''}${features.length ? `<h2>Project features</h2><ul>${features.map(feature => `<li>${escapeHtml(feature)}</li>`).join('')}</ul>` : ''}${repository?.architecture ? `<h2>${escapeHtml(architectureLabel)}</h2><p>${escapeHtml(repository.architecture)}</p>` : ''}<h2>Technology</h2><p>${escapeHtml(projectTechnologies(project).join(' · '))}</p>${repository ? `<h2>Repository snapshot</h2><p>${repository.primaryLanguage ? `${escapeHtml(repository.primaryLanguage)} · ` : ''}${repository.stars} stars · ${repository.forks} forks · updated ${escapeHtml(repository.updatedAt || '')}</p>` : ''}${demoAssets.length ? `<h2>Demos and evidence</h2><ul>${demoAssets.map(asset => `<li><a href="${escapeHtml(asset.url)}">${escapeHtml(asset.label)}</a>${asset.source ? ` — ${escapeHtml(asset.source)}` : ''}</li>`).join('')}</ul>` : ''}<h2>Project links</h2><ul>${project.link1 ? `<li><a href="${escapeHtml(project.link1)}">Source repository</a></li>` : ''}${repository?.readmeUrl ? `<li><a href="${escapeHtml(repository.readmeUrl)}">Source README</a></li>` : ''}${project.link2 ? `<li><a href="${escapeHtml(project.link2)}">Project demo</a></li>` : ''}${project.link3 ? `<li><a href="${escapeHtml(project.link3)}">Live project</a></li>` : ''}</ul></article></main>`;
-  const schema = { '@context': 'https://schema.org', '@type': 'SoftwareSourceCode', name: project.title, description, url: `${siteUrl}${route}`, codeRepository: project.link1 || undefined, programmingLanguage: [...new Set([...projectTechnologies(project), repository?.primaryLanguage].filter(Boolean))], keywords: repository?.topics?.length ? repository.topics : projectTechnologies(project), dateModified: repository?.updatedAt, sameAs: demoAssets.map(asset => asset.url), author: { '@id': `${siteUrl}/#person` }, isPartOf: { '@id': `${siteUrl}/#website` } };
+  const schema = { '@context': 'https://schema.org', '@type': 'SoftwareSourceCode', name: project.title, description, url: `${siteUrl}${canonicalPath(route)}`, codeRepository: project.link1 || undefined, programmingLanguage: [...new Set([...projectTechnologies(project), repository?.primaryLanguage].filter(Boolean))], keywords: repository?.topics?.length ? repository.topics : projectTechnologies(project), dateModified: repository?.updatedAt, sameAs: demoAssets.map(asset => asset.url), author: { '@id': `${siteUrl}/#person` }, isPartOf: { '@id': `${siteUrl}/#website` } };
   const routeDir = path.join(buildDir, 'projects', slug);
   fs.mkdirSync(routeDir, { recursive: true });
   fs.writeFileSync(path.join(routeDir, 'index.html'), renderRoute(baseHtml, route, info, content, schema));
@@ -213,7 +215,7 @@ portfolios.forEach(project => {
 const projectIndex = portfolios.map(project => ({
   id: project.id, slug: projectSlug(project), title: project.title, category: project.category,
   description: projectDescription(project), technologies: projectTechnologies(project),
-  url: `${siteUrl}/projects/${projectSlug(project)}`, repository: project.link1 || null,
+  url: `${siteUrl}/projects/${projectSlug(project)}/`, repository: project.link1 || null,
   demo: project.link2 || null, live_url: project.link3 || null, featured: Boolean(project.featured),
   readme: repositoryDetails(project)?.readmeUrl || null,
   readme_overview: repositoryDetails(project)?.overview || null,
@@ -232,25 +234,25 @@ const projectIndex = portfolios.map(project => ({
   demo_assets: repositoryDetails(project)?.demoAssets || [],
 }));
 
-fs.writeFileSync(path.join(buildDir, 'projects.json'), JSON.stringify({ name: 'Projects by Vaibhav Bansal', url: `${siteUrl}/portfolios`, generated_at: new Date().toISOString(), count: projectIndex.length, projects: projectIndex }, null, 2));
+fs.writeFileSync(path.join(buildDir, 'projects.json'), JSON.stringify({ name: 'Projects by Vaibhav Bansal', url: `${siteUrl}/portfolios/`, generated_at: new Date().toISOString(), count: projectIndex.length, projects: projectIndex }, null, 2));
 
 const feedItems = [
   ...articles.map((article, index) => ({ id: article.url, url: article.url, title: article.title, summary: article.description, date_published: article.datePublished, tags: ['article', 'medium', index === 0 ? 'latest' : 'archive'] })),
   ...longVideos.map(video => ({ id: video.url, url: video.url, title: video.title, summary: video.description, tags: ['video', 'youtube', 'long-form'] })),
   ...shorts.map(video => ({ id: video.url, url: video.url, title: video.title, summary: video.description, tags: ['video', 'youtube', 'short'] })),
 ];
-fs.writeFileSync(path.join(buildDir, 'feed.json'), JSON.stringify({ version: 'https://jsonfeed.org/version/1.1', title: 'Vaibhav Bansal — Writing, videos and engineering updates', home_page_url: siteUrl, feed_url: `${siteUrl}/feed.json`, authors: [{ name: 'Vaibhav Bansal', url: siteUrl }], items: feedItems }, null, 2));
+fs.writeFileSync(path.join(buildDir, 'feed.json'), JSON.stringify({ version: 'https://jsonfeed.org/version/1.1', title: 'Vaibhav Bansal — Writing, videos and engineering updates', home_page_url: `${siteUrl}/`, feed_url: `${siteUrl}/feed.json`, authors: [{ name: 'Vaibhav Bansal', url: `${siteUrl}/` }], items: feedItems }, null, 2));
 const rssItems = feedItems.map(item => `<item><title>${escapeHtml(item.title)}</title><link>${escapeHtml(item.url)}</link><guid>${escapeHtml(item.id)}</guid><description>${escapeHtml(item.summary)}</description></item>`).join('');
-fs.writeFileSync(path.join(buildDir, 'feed.xml'), `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Vaibhav Bansal — Writing and videos</title><link>${siteUrl}</link><description>AI systems, developer tools, architecture and data engineering.</description>${rssItems}</channel></rss>`);
+fs.writeFileSync(path.join(buildDir, 'feed.xml'), `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Vaibhav Bansal — Writing and videos</title><link>${siteUrl}/</link><description>AI systems, developer tools, architecture and data engineering.</description>${rssItems}</channel></rss>`);
 
-const coreLinks = [['Home', `${siteUrl}/`], ['About', `${siteUrl}/about`], ['Experience', `${siteUrl}/resume`], ['Projects', `${siteUrl}/portfolios`], ['Writing and videos', `${siteUrl}/blogs`], ['Credentials', `${siteUrl}/certification`], ['Contact', `${siteUrl}/contact`], ['Project data', `${siteUrl}/projects.json`], ['JSON feed', `${siteUrl}/feed.json`], ['RSS feed', `${siteUrl}/feed.xml`]];
+const coreLinks = [['Home', `${siteUrl}/`], ['About', `${siteUrl}/about/`], ['Experience', `${siteUrl}/resume/`], ['Projects', `${siteUrl}/portfolios/`], ['Writing and videos', `${siteUrl}/blogs/`], ['Credentials', `${siteUrl}/certification/`], ['Contact', `${siteUrl}/contact/`], ['Project data', `${siteUrl}/projects.json`], ['JSON feed', `${siteUrl}/feed.json`], ['RSS feed', `${siteUrl}/feed.xml`]];
 const llms = `# Vaibhav Bansal\n\n> AI software engineer with 5+ years building full-stack products, data platforms, machine-learning systems and open-source developer tools.\n\nThis is Vaibhav Bansal's interactive technical portfolio. The related professional profile is https://www.thevaibhavbansal.com/. Both sites describe the same person.\n\n## Core pages\n${coreLinks.map(([label, url]) => `- [${label}](${url})`).join('\n')}\n\n## Identity\n- GitHub: https://github.com/VaibhavBansal26\n- LinkedIn: https://www.linkedin.com/in/vaibhavbansal-profile/\n- ORCID: https://orcid.org/0000-0002-5433-0385\n- Medium: https://medium.com/@vaibhav.bansal945\n- YouTube: https://www.youtube.com/@VaibhavBansalCode\n\n## Highlights\n- ${portfolios.length} projects across AI, data engineering, full stack and developer tooling\n- Four npm packages: ${packages.map(item => item.name).join(', ')}\n- Springer Nature research: ${research.title}\n- M.S. Data Science, University at Buffalo, SUNY\n`;
 fs.writeFileSync(path.join(buildDir, 'llms.txt'), llms);
 const llmsFull = `${llms}\n## Experience\n${roles.map(role => `### ${role.title} — ${role.organization}\n${role.dates}. ${role.description}\nTechnologies: ${role.technologies.join(', ')}.`).join('\n\n')}\n\n## Projects\n${projectIndex.map(project => `### ${project.title}\nCategory: ${project.category}\n${project.description}${project.readme_overview ? `\nREADME overview: ${project.readme_overview}` : ''}${project.verified_features.length ? `\nVerified features:\n${project.verified_features.map(feature => `- ${feature}`).join('\n')}` : ''}${project.architecture ? `\nArchitecture: ${project.architecture}` : ''}\nTechnologies: ${project.technologies.join(', ')}\nPage: ${project.url}${project.repository ? `\nRepository: ${project.repository}` : ''}${project.readme ? `\nREADME: ${project.readme}` : ''}`).join('\n\n')}\n\n## npm packages\n${packages.map(item => `### ${item.name}\n${item.description}\n${item.url}`).join('\n\n')}\n\n## Research\n### ${research.title}\n${research.description}\nPublished by ${research.publisher}.\n${research.url}\n\n## Writing\n${articles.map(article => `- [${article.title}](${article.url}) — ${article.description}`).join('\n')}\n\n## Long-form videos\n${longVideos.map(video => `- [${video.title}](${video.url}) — ${video.description}`).join('\n')}\n\n## YouTube Shorts\n${shorts.map(video => `- [${video.title}](${video.url}) — ${video.description}`).join('\n')}\n`;
 fs.writeFileSync(path.join(buildDir, 'llms-full.txt'), llmsFull);
 
 const sitemapRoutes = [...Object.keys(meta).filter(route => route !== '404'), ...portfolios.map(project => `/projects/${projectSlug(project)}`)];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapRoutes.map(route => `  <url><loc>${siteUrl}${route === '/' ? '/' : route}</loc><lastmod>${buildDate}</lastmod></url>`).join('\n')}\n</urlset>\n`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapRoutes.map(route => `  <url><loc>${siteUrl}${canonicalPath(route)}</loc><lastmod>${buildDate}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(buildDir, 'sitemap.xml'), sitemap);
 
 console.log(`Generated crawler HTML for ${Object.keys(meta).length - 1} main pages and ${portfolios.length} project pages.`);

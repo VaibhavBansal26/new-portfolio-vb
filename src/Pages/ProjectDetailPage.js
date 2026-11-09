@@ -41,7 +41,7 @@ function ProjectDetailPage() {
       '@type': 'SoftwareSourceCode',
       name: project.title,
       description,
-      url: `${SITE_URL}/projects/${slug}`,
+      url: `${SITE_URL}/projects/${slug}/`,
       codeRepository: project.link1 || undefined,
       programmingLanguage: technologies,
       keywords: repository?.topics?.length ? repository.topics : technologies,
@@ -52,11 +52,11 @@ function ProjectDetailPage() {
     },
   } : null);
 
-  if (!project) return <Navigate to="/portfolios" replace />;
+  if (!project) return <Navigate to="/portfolios/" replace />;
 
   return (
     <ProjectStyled className="page-shell compact">
-      <Link className="back-link mono" to="/portfolios"><ArrowBackRoundedIcon /> All projects</Link>
+      <Link className="back-link mono" to="/portfolios/"><ArrowBackRoundedIcon /> All projects</Link>
       <header className="project-hero">
         <div>
           <p className="kicker">Project / {project.category}</p>
@@ -116,7 +116,7 @@ function ProjectDetailPage() {
 
       {related.length > 0 && <section className="related-projects">
         <p className="section-index">04 / related work</p>
-        <div>{related.map(item => <Link key={item.id} to={`/projects/${projectSlug(item)}`}><span className="mono">{item.category}</span><strong>{item.title}</strong><ArrowOutwardRoundedIcon /></Link>)}</div>
+        <div>{related.map(item => <Link key={item.id} to={`/projects/${projectSlug(item)}/`}><span className="mono">{item.category}</span><strong>{item.title}</strong><ArrowOutwardRoundedIcon /></Link>)}</div>
       </section>}
     </ProjectStyled>
   );

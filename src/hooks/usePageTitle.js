@@ -18,6 +18,8 @@ const normalizePath = pathname => {
     return pathname.replace(/\/+$/, '');
 };
 
+const canonicalPath = pathname => pathname === '/' ? '/' : `${pathname.replace(/\/+$/, '')}/`;
+
 const upsertMeta = (selector, attributes) => {
     let element = document.head.querySelector(selector);
     if (!element) {
@@ -43,7 +45,7 @@ export default function usePageTitle(page, override = null) {
         const isNotFound = !override && (page === '404' || !siteMeta[pathname]);
         const meta = override || (isNotFound ? siteMeta['404'] : siteMeta[pathname]);
         const metaPath = override?.path || pathname;
-        const canonicalUrl = `${SITE_URL}${metaPath === '/' ? '/' : metaPath}`;
+        const canonicalUrl = `${SITE_URL}${canonicalPath(metaPath)}`;
 
         document.title = meta.title;
         upsertMeta('meta[name="description"]', { name: 'description', content: meta.description });

@@ -11,12 +11,12 @@ import ArrowOutwardRoundedIcon from '@mui/icons-material/ArrowOutwardRounded';
 
 const links = [
   ['/', 'Work', '01'],
-  ['/about', 'About', '02'],
-  ['/resume', 'Experience', '03'],
-  ['/portfolios', 'Projects', '04'],
-  ['/blogs', 'Writing', '05'],
-  ['/certification', 'Credentials', '06'],
-  ['/contact', 'Contact', '07'],
+  ['/about/', 'About', '02'],
+  ['/resume/', 'Experience', '03'],
+  ['/portfolios/', 'Projects', '04'],
+  ['/blogs/', 'Writing', '05'],
+  ['/certification/', 'Credentials', '06'],
+  ['/contact/', 'Contact', '07'],
 ];
 
 const themes = [

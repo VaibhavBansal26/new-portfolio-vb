@@ -34,7 +34,7 @@ const projects = portfolios
     copy: project.featured.copy,
     tags: project.featured.tags,
     signals: project.featured.signals,
-    href: `/projects/${projectSlug(project)}`,
+    href: `/projects/${projectSlug(project)}/`,
   }));
 
 const packageItems = [
@@ -165,7 +165,7 @@ function HomePage({ theme }) {
             <div><b>M.S.</b><span>Data Science · SUNY Buffalo</span></div>
           </div>
           <div className="actions">
-            <Link to="/portfolios" className="btn primary">See the work <ArrowForwardRoundedIcon /></Link>
+            <Link to="/portfolios/" className="btn primary">See the work <ArrowForwardRoundedIcon /></Link>
             <a className="btn" href="https://drive.google.com/file/d/16RVmz7PSKI6z7hhHtsfgoH-s3QkNuDU2/view?usp=sharing" target="_blank" rel="noreferrer"><DownloadRoundedIcon /> Download résumé</a>
           </div>
         </div>
@@ -388,7 +388,7 @@ function HomePage({ theme }) {
                 <h2>My top <AnimatedNumber value={projects.length} />.</h2>
                 <p className="work-summary"><strong><AnimatedNumber value={projects.length} pad={2} /> selected</strong> from <AnimatedNumber value={portfolios.length} /> projects in the archive.</p>
               </div>
-              <Link className="text-link mono" to="/portfolios">View all projects <ArrowForwardRoundedIcon /></Link>
+              <Link className="text-link mono" to="/portfolios/">View all projects <ArrowForwardRoundedIcon /></Link>
             </div>
             <motion.div className="project-grid" variants={projectGridMotion} initial={reduceMotion ? false : 'hidden'} whileInView={reduceMotion ? undefined : 'show'} viewport={{ once: true, amount: .08 }}>
               {projects.map((project, index) => <InteractiveProjectCard key={project.title} project={project} index={index} total={projects.length} />)}
