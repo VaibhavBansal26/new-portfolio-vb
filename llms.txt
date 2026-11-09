@@ -6,12 +6,12 @@ This is Vaibhav Bansal's interactive technical portfolio. The related profession
 
 ## Core pages
 - [Home](https://vaibhavbansal.in/)
-- [About](https://vaibhavbansal.in/about)
-- [Experience](https://vaibhavbansal.in/resume)
-- [Projects](https://vaibhavbansal.in/portfolios)
-- [Writing and videos](https://vaibhavbansal.in/blogs)
-- [Credentials](https://vaibhavbansal.in/certification)
-- [Contact](https://vaibhavbansal.in/contact)
+- [About](https://vaibhavbansal.in/about/)
+- [Experience](https://vaibhavbansal.in/resume/)
+- [Projects](https://vaibhavbansal.in/portfolios/)
+- [Writing and videos](https://vaibhavbansal.in/blogs/)
+- [Credentials](https://vaibhavbansal.in/certification/)
+- [Contact](https://vaibhavbansal.in/contact/)
 - [Project data](https://vaibhavbansal.in/projects.json)
 - [JSON feed](https://vaibhavbansal.in/feed.json)
 - [RSS feed](https://vaibhavbansal.in/feed.xml)

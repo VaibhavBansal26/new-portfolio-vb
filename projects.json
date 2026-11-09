@@ -1,7 +1,7 @@
 {
   "name": "Projects by Vaibhav Bansal",
-  "url": "https://vaibhavbansal.in/portfolios",
-  "generated_at": "2026-11-09T04:15:09.094Z",
+  "url": "https://vaibhavbansal.in/portfolios/",
+  "generated_at": "2026-11-09T15:06:25.472Z",
   "count": 70,
   "projects": [
     {
@@ -16,7 +16,7 @@
         "pgvector",
         "Hybrid search"
       ],
-      "url": "https://vaibhavbansal.in/projects/grantlens-research-funding-discovery",
+      "url": "https://vaibhavbansal.in/projects/grantlens-research-funding-discovery/",
       "repository": "https://github.com/VaibhavBansal26/grantlens",
       "demo": "https://github.com/VaibhavBansal26/grantlens/raw/master/demo/grantlens_demo.mp4",
       "live_url": null,
@@ -88,7 +88,7 @@
         "SQLite",
         "A/B Testing"
       ],
-      "url": "https://vaibhavbansal.in/projects/memorank-long-horizon-agent-memory",
+      "url": "https://vaibhavbansal.in/projects/memorank-long-horizon-agent-memory/",
       "repository": "https://github.com/VaibhavBansal26/memorank",
       "demo": null,
       "live_url": null,
@@ -135,7 +135,7 @@
         "RAG Incident Memory",
         "MCP Tools"
       ],
-      "url": "https://vaibhavbansal.in/projects/ai-powered-self-healing-data-pipeline",
+      "url": "https://vaibhavbansal.in/projects/ai-powered-self-healing-data-pipeline/",
       "repository": "https://github.com/VaibhavBansal26/Self-Healing-Data-Pipeline",
       "demo": null,
       "live_url": null,
@@ -191,7 +191,7 @@
         "React",
         "OpenAI"
       ],
-      "url": "https://vaibhavbansal.in/projects/captra-capability-first-ai-framework",
+      "url": "https://vaibhavbansal.in/projects/captra-capability-first-ai-framework/",
       "repository": "https://github.com/VaibhavBansal26/captra",
       "demo": null,
       "live_url": "https://www.npmjs.com/package/captra",
@@ -238,7 +238,7 @@
         "Healthcare Security",
         "Explainable AI"
       ],
-      "url": "https://vaibhavbansal.in/projects/smart-health-assistant-secure-ai-care-platform",
+      "url": "https://vaibhavbansal.in/projects/smart-health-assistant-secure-ai-care-platform/",
       "repository": "https://github.com/VaibhavBansal26/smart-health-assistant",
       "demo": "https://github.com/VaibhavBansal26/smart-health-assistant/raw/main/docs/demo/demo.mp4",
       "live_url": null,
@@ -320,7 +320,7 @@
         "Python",
         "Kafka"
       ],
-      "url": "https://vaibhavbansal.in/projects/aether-cinema-considered",
+      "url": "https://vaibhavbansal.in/projects/aether-cinema-considered/",
       "repository": "https://github.com/VaibhavBansal26/aether-cinema",
       "demo": null,
       "live_url": "https://aether-api-demo.onrender.com",
@@ -402,7 +402,7 @@
         "GrapesJS",
         "Hono"
       ],
-      "url": "https://vaibhavbansal.in/projects/funnels-build-publish-and-measure",
+      "url": "https://vaibhavbansal.in/projects/funnels-build-publish-and-measure/",
       "repository": "https://github.com/VaibhavBansal26/funnels",
       "demo": null,
       "live_url": null,
@@ -464,7 +464,7 @@
         "WebSockets",
         "Cloudflare"
       ],
-      "url": "https://vaibhavbansal.in/projects/forge-living-games",
+      "url": "https://vaibhavbansal.in/projects/forge-living-games/",
       "repository": "https://github.com/VaibhavBansal26/forge-living-games",
       "demo": null,
       "live_url": "https://forge-living-games.vaibhavbansal024.workers.dev/",
@@ -521,7 +521,7 @@
         "Voice AI",
         "n8n"
       ],
-      "url": "https://vaibhavbansal.in/projects/recall-voice-first-learning-companion",
+      "url": "https://vaibhavbansal.in/projects/recall-voice-first-learning-companion/",
       "repository": "https://github.com/VaibhavBansal26/recall",
       "demo": "https://github.com/VaibhavBansal26/recall/raw/main/docs/demo/recall-demo.mp4",
       "live_url": null,
@@ -593,7 +593,7 @@
         "FastAPI",
         "Realtime AI"
       ],
-      "url": "https://vaibhavbansal.in/projects/friday-ai-assistant",
+      "url": "https://vaibhavbansal.in/projects/friday-ai-assistant/",
       "repository": "https://github.com/VaibhavBansal26/friday-ai-assistant",
       "demo": null,
       "live_url": null,
@@ -645,7 +645,7 @@
         "BM25",
         "RRF"
       ],
-      "url": "https://vaibhavbansal.in/projects/fidelitymem-adaptive-hybrid-memory",
+      "url": "https://vaibhavbansal.in/projects/fidelitymem-adaptive-hybrid-memory/",
       "repository": "https://github.com/VaibhavBansal26/FidelityMem",
       "demo": null,
       "live_url": null,
@@ -692,7 +692,7 @@
         "FFmpeg",
         "YouTube API"
       ],
-      "url": "https://vaibhavbansal.in/projects/shorts-factory-ai-video-production-studio",
+      "url": "https://vaibhavbansal.in/projects/shorts-factory-ai-video-production-studio/",
       "repository": "https://github.com/VaibhavBansal26/shorts-factory",
       "demo": null,
       "live_url": null,
@@ -739,7 +739,7 @@
         "PostgreSQL",
         "Redis"
       ],
-      "url": "https://vaibhavbansal.in/projects/conversations-unified-customer-inbox",
+      "url": "https://vaibhavbansal.in/projects/conversations-unified-customer-inbox/",
       "repository": "https://github.com/VaibhavBansal26/conversations",
       "demo": null,
       "live_url": null,
@@ -786,7 +786,7 @@
         "PostgreSQL",
         "Socket.IO"
       ],
-      "url": "https://vaibhavbansal.in/projects/shopflow-realtime-ecommerce-platform",
+      "url": "https://vaibhavbansal.in/projects/shopflow-realtime-ecommerce-platform/",
       "repository": "https://github.com/VaibhavBansal26/shopflow-ecommerce",
       "demo": null,
       "live_url": null,
@@ -833,7 +833,7 @@
         "WebRTC",
         "Express"
       ],
-      "url": "https://vaibhavbansal.in/projects/interview-suite-ai-mock-interview-workspace",
+      "url": "https://vaibhavbansal.in/projects/interview-suite-ai-mock-interview-workspace/",
       "repository": "https://github.com/VaibhavBansal26/interivew-suite",
       "demo": null,
       "live_url": null,
@@ -880,7 +880,7 @@
         "WebSockets",
         "Stripe Connect"
       ],
-      "url": "https://vaibhavbansal.in/projects/ridehail-realtime-mobility-platform",
+      "url": "https://vaibhavbansal.in/projects/ridehail-realtime-mobility-platform/",
       "repository": "https://github.com/VaibhavBansal26/ridehail-platform",
       "demo": null,
       "live_url": null,
@@ -952,7 +952,7 @@
         "Claude Agents",
         "Semgrep"
       ],
-      "url": "https://vaibhavbansal.in/projects/macrv-multi-agent-code-review-system",
+      "url": "https://vaibhavbansal.in/projects/macrv-multi-agent-code-review-system/",
       "repository": "https://github.com/VaibhavBansal26/multi-agent-code-review",
       "demo": null,
       "live_url": null,
@@ -999,7 +999,7 @@
         "PostgreSQL",
         "Socket.IO"
       ],
-      "url": "https://vaibhavbansal.in/projects/spotlight-talent-community-platform",
+      "url": "https://vaibhavbansal.in/projects/spotlight-talent-community-platform/",
       "repository": "https://github.com/VaibhavBansal26/spotlight-talent-platform",
       "demo": null,
       "live_url": null,
@@ -1046,7 +1046,7 @@
         "BGE embeddings",
         "pgvector"
       ],
-      "url": "https://vaibhavbansal.in/projects/health-semantic-search-cited-medical-retrieval",
+      "url": "https://vaibhavbansal.in/projects/health-semantic-search-cited-medical-retrieval/",
       "repository": "https://github.com/VaibhavBansal26/health-semantic-search",
       "demo": "https://huggingface.co/spaces/Vaibhavbansal26/health-semantic-search-app",
       "live_url": "https://health-semantic-search.onrender.com",
@@ -1108,7 +1108,7 @@
         "Azure OpenAI",
         "AI Agent"
       ],
-      "url": "https://vaibhavbansal.in/projects/disaster-response-ai-copilot",
+      "url": "https://vaibhavbansal.in/projects/disaster-response-ai-copilot/",
       "repository": "https://github.com/VaibhavBansal26/Disaster-Response-AI-Copilot",
       "demo": null,
       "live_url": "https://disaster-response-ai-copilot-vb1.streamlit.app/",
@@ -1165,7 +1165,7 @@
         "Docker",
         "DuckDB"
       ],
-      "url": "https://vaibhavbansal.in/projects/crypto-trade-prediction",
+      "url": "https://vaibhavbansal.in/projects/crypto-trade-prediction/",
       "repository": "https://github.com/VaibhavBansal26/crypto-trade-project",
       "demo": null,
       "live_url": "http://164.92.96.19:8501/",
@@ -1237,7 +1237,7 @@
         "OpenAI",
         "Docker"
       ],
-      "url": "https://vaibhavbansal.in/projects/heart-disease-prediction-using-generative-ai-streamlit-openai",
+      "url": "https://vaibhavbansal.in/projects/heart-disease-prediction-using-generative-ai-streamlit-openai/",
       "repository": "https://github.com/VaibhavBansal26/medical-app",
       "demo": null,
       "live_url": "https://medical-app-vb.streamlit.app/",
@@ -1309,7 +1309,7 @@
         "MinIO",
         "Debezium"
       ],
-      "url": "https://vaibhavbansal.in/projects/car-price-prediction-using-streamlit-mlflow-docker-kakfka-postgresql-minio-debezium",
+      "url": "https://vaibhavbansal.in/projects/car-price-prediction-using-streamlit-mlflow-docker-kakfka-postgresql-minio-debezium/",
       "repository": "https://github.com/VaibhavBansal26/Car-Price-Prediction",
       "demo": "https://youtu.be/_bjaJZPFovM",
       "live_url": null,
@@ -1370,7 +1370,7 @@
         "Cosine Similarity",
         "Streamlit"
       ],
-      "url": "https://vaibhavbansal.in/projects/movie-recommendation-using-cosine-similarity-and-collaborative-filtering",
+      "url": "https://vaibhavbansal.in/projects/movie-recommendation-using-cosine-similarity-and-collaborative-filtering/",
       "repository": "https://github.com/VaibhavBansal26/Movie-Recommendation-Project",
       "demo": null,
       "live_url": "http://54.211.221.57:8501/",
@@ -1412,7 +1412,7 @@
         "Python",
         "Data Engineering"
       ],
-      "url": "https://vaibhavbansal.in/projects/realtime-logs-processing-using-apache-airflow-kafka-and-elatisearch-data-engineering",
+      "url": "https://vaibhavbansal.in/projects/realtime-logs-processing-using-apache-airflow-kafka-and-elatisearch-data-engineering/",
       "repository": "https://github.com/VaibhavBansal26/Realtime-Logs-Processing",
       "demo": "https://www.youtube.com/watch?v=ZcIbqeIAC0Y",
       "live_url": null,
@@ -1491,7 +1491,7 @@
         "Azure Data Factory",
         "Azure DataLake Gen 2"
       ],
-      "url": "https://vaibhavbansal.in/projects/medallion-architecture-design-using-azure-data-engineering",
+      "url": "https://vaibhavbansal.in/projects/medallion-architecture-design-using-azure-data-engineering/",
       "repository": "https://github.com/VaibhavBansal26/Design-Medallion-Architecture-Azure#",
       "demo": "https://www.youtube.com/watch?v=VKSf1NfdjTU",
       "live_url": null,
@@ -1579,7 +1579,7 @@
         "Helm",
         "Email Notification"
       ],
-      "url": "https://vaibhavbansal.in/projects/devsecops-movie-booking-2-stage-deplyement-pipeline-using-terraform-jenkins-and-kubernetes",
+      "url": "https://vaibhavbansal.in/projects/devsecops-movie-booking-2-stage-deplyement-pipeline-using-terraform-jenkins-and-kubernetes/",
       "repository": "https://github.com/VaibhavBansal26/DevSecOps-MovieBooking",
       "demo": null,
       "live_url": null,
@@ -1680,7 +1680,7 @@
         "Sonarqube",
         "Neon db"
       ],
-      "url": "https://vaibhavbansal.in/projects/music-streaming-3-tier-application-with-react-node-js-mongodb-aws-eks-postgresql-docker-jenkins",
+      "url": "https://vaibhavbansal.in/projects/music-streaming-3-tier-application-with-react-node-js-mongodb-aws-eks-postgresql-docker-jenkins/",
       "repository": "https://github.com/VaibhavBansal26/Music-Streaming-Appl",
       "demo": "https://youtu.be/Z1XzofG0cNE",
       "live_url": "http://54.86.20.192/",
@@ -1773,7 +1773,7 @@
         "AWS Quicksight",
         "Power BI"
       ],
-      "url": "https://vaibhavbansal.in/projects/nyc-taxi-ride-data-engineering-data-analysis-and-visualization-using-power-bi",
+      "url": "https://vaibhavbansal.in/projects/nyc-taxi-ride-data-engineering-data-analysis-and-visualization-using-power-bi/",
       "repository": "https://github.com/VaibhavBansal26/Taxi-Data-PowerBi-Project",
       "demo": null,
       "live_url": "https://drive.google.com/file/d/1TrdBe-yA4fHNoq0-Y8MU3AYU6vMaHnRc/view?usp=sharing",
@@ -1816,7 +1816,7 @@
         "Snowpark",
         "Python"
       ],
-      "url": "https://vaibhavbansal.in/projects/taxi-data-prediction-dashboard-using-snowflake-streamlit-snowpark",
+      "url": "https://vaibhavbansal.in/projects/taxi-data-prediction-dashboard-using-snowflake-streamlit-snowpark/",
       "repository": "https://github.com/VaibhavBansal26/snowflake-taxi-data-project",
       "demo": null,
       "live_url": "https://app-taxi-data-snowflak-project-vb.streamlit.app/",
@@ -1872,7 +1872,7 @@
         "Trivy",
         "AWS EC2"
       ],
-      "url": "https://vaibhavbansal.in/projects/devsecops-food-app-deployment-full-pipeline-using-terraform-and-jenkins",
+      "url": "https://vaibhavbansal.in/projects/devsecops-food-app-deployment-full-pipeline-using-terraform-and-jenkins/",
       "repository": "https://github.com/VaibhavBansal26/DevSecOps-FoodApp",
       "demo": null,
       "live_url": null,
@@ -1944,7 +1944,7 @@
         "Owasp",
         "Trivy"
       ],
-      "url": "https://vaibhavbansal.in/projects/devsecops-app-deployment-full-pipeline",
+      "url": "https://vaibhavbansal.in/projects/devsecops-app-deployment-full-pipeline/",
       "repository": "https://github.com/VaibhavBansal26/DevSecOps-Bms",
       "demo": null,
       "live_url": null,
@@ -2032,7 +2032,7 @@
         "Time Series",
         "Streamlit"
       ],
-      "url": "https://vaibhavbansal.in/projects/nyc-taxi-ride-time-series-prediction",
+      "url": "https://vaibhavbansal.in/projects/nyc-taxi-ride-time-series-prediction/",
       "repository": "https://github.com/VaibhavBansal26/Nyc-Taxi-Ride-TimeSeries-Prediction",
       "demo": null,
       "live_url": "https://nyc-taxi-ride-v3-sdzj76dkug3gzjic6obgul.streamlit.app/",
@@ -2076,7 +2076,7 @@
         "PostgreSQL",
         "Firebase"
       ],
-      "url": "https://vaibhavbansal.in/projects/data-science-salary-prediction",
+      "url": "https://vaibhavbansal.in/projects/data-science-salary-prediction/",
       "repository": "https://github.com/VaibhavBansal26/data_science_salary_prediction_v2",
       "demo": "https://youtu.be/1Ca0Y4s37ls",
       "live_url": "https://datascience-salary-vb.web.app/",
@@ -2143,7 +2143,7 @@
         "Docker",
         "SQLite3"
       ],
-      "url": "https://vaibhavbansal.in/projects/heart-disease-prediction",
+      "url": "https://vaibhavbansal.in/projects/heart-disease-prediction/",
       "repository": "https://github.com/VaibhavBansal26/heart_disease_prediction_version2",
       "demo": null,
       "live_url": "https://heart-disease-prediction-grp-14.streamlit.app/",
@@ -2184,7 +2184,7 @@
         "SQLite3",
         "Machine Learning"
       ],
-      "url": "https://vaibhavbansal.in/projects/customer-segmentation-and-sales-analysis-with-product-recommendation",
+      "url": "https://vaibhavbansal.in/projects/customer-segmentation-and-sales-analysis-with-product-recommendation/",
       "repository": "https://github.com/VaibhavBansal26/sdm-project",
       "demo": "https://youtu.be/Q2NP7hlKeo0",
       "live_url": "https://vaibhavbansal.shinyapps.io/sdmproject/",
@@ -2215,7 +2215,7 @@
         "Npm package using react js",
         "grapesjs"
       ],
-      "url": "https://vaibhavbansal.in/projects/grapesjs-advance-components",
+      "url": "https://vaibhavbansal.in/projects/grapesjs-advance-components/",
       "repository": "https://github.com/VaibhavBansal26/grapesjs-advance-components",
       "demo": null,
       "live_url": "https://www.npmjs.com/package/grapesjs-advance-components",
@@ -2278,7 +2278,7 @@
       "technologies": [
         "VSCode extension to search blogs"
       ],
-      "url": "https://vaibhavbansal.in/projects/vscode-extension",
+      "url": "https://vaibhavbansal.in/projects/vscode-extension/",
       "repository": "https://github.com/VaibhavBansal26/search-blog-vscode-extension",
       "demo": null,
       "live_url": null,
@@ -2311,7 +2311,7 @@
         "Funnel/Website Builder using React",
         "Grapesjs"
       ],
-      "url": "https://vaibhavbansal.in/projects/funnel-website-builder-for-dashclicks-india-ltd",
+      "url": "https://vaibhavbansal.in/projects/funnel-website-builder-for-dashclicks-india-ltd/",
       "repository": null,
       "demo": "https://www.youtube.com/watch?v=ckAm_f78Byc",
       "live_url": null,
@@ -2338,7 +2338,7 @@
         "Styled Components",
         "Firebase"
       ],
-      "url": "https://vaibhavbansal.in/projects/disney-plus-ui",
+      "url": "https://vaibhavbansal.in/projects/disney-plus-ui/",
       "repository": "https://github.com/VaibhavBansal26/React-Disney-Plus-UI",
       "demo": null,
       "live_url": "https://react-disney-vb.web.app/",
@@ -2381,7 +2381,7 @@
       "technologies": [
         "React"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-youtube-ui",
+      "url": "https://vaibhavbansal.in/projects/react-youtube-ui/",
       "repository": "https://github.com/VaibhavBansal26/React-Youtube-UI",
       "demo": null,
       "live_url": "https://vb-2dab4.web.app/",
@@ -2411,7 +2411,7 @@
       "technologies": [
         "React"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-airbnb-ui",
+      "url": "https://vaibhavbansal.in/projects/react-airbnb-ui/",
       "repository": "https://github.com/VaibhavBansal26/React-Airbnb-vb",
       "demo": null,
       "live_url": "https://react-airbnb-vb.web.app/",
@@ -2441,7 +2441,7 @@
       "technologies": [
         "React Native- Real Estate App"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-estate-app",
+      "url": "https://vaibhavbansal.in/projects/react-estate-app/",
       "repository": "https://github.com/VaibhavBansal26/Real-Estate-App",
       "demo": null,
       "live_url": null,
@@ -2515,7 +2515,7 @@
         "Firebase",
         "Stripe Payment"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-netflix",
+      "url": "https://vaibhavbansal.in/projects/react-netflix/",
       "repository": "https://github.com/VaibhavBansal26/React-Netflix-App",
       "demo": null,
       "live_url": "https://react-netflix-vb.web.app/",
@@ -2555,7 +2555,7 @@
         "Stripe Payment",
         "EJS Template"
       ],
-      "url": "https://vaibhavbansal.in/projects/pizza-delivery-and-realtime-order-tracking",
+      "url": "https://vaibhavbansal.in/projects/pizza-delivery-and-realtime-order-tracking/",
       "repository": "https://github.com/VaibhavBansal26/Realtime-pizza-order",
       "demo": null,
       "live_url": null,
@@ -2594,7 +2594,7 @@
         "Firebase",
         "Stripe Payment"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-amazon",
+      "url": "https://vaibhavbansal.in/projects/react-amazon/",
       "repository": "https://github.com/VaibhavBansal26/amazon-clone-stripe",
       "demo": null,
       "live_url": "https://amazon-vaibhav-lj8enz821-vaibhavbansal26.vercel.app/",
@@ -2639,7 +2639,7 @@
         "React",
         "Styled Components"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-pizza-shop",
+      "url": "https://vaibhavbansal.in/projects/react-pizza-shop/",
       "repository": "https://github.com/VaibhavBansal26/Sliceline-pizza-order",
       "demo": null,
       "live_url": "https://react-pizza-5ed50.web.app/",
@@ -2670,7 +2670,7 @@
         "React",
         "Redux and Firebase"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-chat-app",
+      "url": "https://vaibhavbansal.in/projects/react-chat-app/",
       "repository": "https://github.com/VaibhavBansal26/React-Chat-App",
       "demo": null,
       "live_url": "https://react-chat-24cb1.web.app/",
@@ -2703,7 +2703,7 @@
         "Hooks",
         "Firebase & Stripe Payment"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-ecommerce-clothing-app",
+      "url": "https://vaibhavbansal.in/projects/react-ecommerce-clothing-app/",
       "repository": "https://github.com/VaibhavBansal26/react_ecommerce_app",
       "demo": null,
       "live_url": "https://vb-clothing-store.web.app/",
@@ -2743,7 +2743,7 @@
         "Rapid API",
         "Firebase"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-amazon-prime",
+      "url": "https://vaibhavbansal.in/projects/react-amazon-prime/",
       "repository": "https://github.com/VaibhavBansal26/React-Amazon-Prime",
       "demo": null,
       "live_url": "https://react-prime-vb.web.app/",
@@ -2789,7 +2789,7 @@
         "React JS",
         "Node JS"
       ],
-      "url": "https://vaibhavbansal.in/projects/mern-instagram-application-photo-sharing-app",
+      "url": "https://vaibhavbansal.in/projects/mern-instagram-application-photo-sharing-app/",
       "repository": "https://github.com/VaibhavBansal26/MERN-INSTAGRAM-VB",
       "demo": null,
       "live_url": "https://gleeful-chaja-8dcc5b.netlify.app",
@@ -2827,7 +2827,7 @@
         "Styled Components",
         "Firebase"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-linkedin-ui-app",
+      "url": "https://vaibhavbansal.in/projects/react-linkedin-ui-app/",
       "repository": "https://github.com/VaibhavBansal26/Reacrt-linkedin-vb",
       "demo": null,
       "live_url": "https://react-linkedin-vb.web.app/",
@@ -2857,7 +2857,7 @@
       "technologies": [
         "React and Tmdb API"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-movie-app",
+      "url": "https://vaibhavbansal.in/projects/react-movie-app/",
       "repository": "https://github.com/VaibhavBansal26/react-movie-app",
       "demo": null,
       "live_url": "https://react-movie-app-proj.web.app/",
@@ -2895,7 +2895,7 @@
       "technologies": [
         "React with Swipe Functionality"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-tinder-ui-clone",
+      "url": "https://vaibhavbansal.in/projects/react-tinder-ui-clone/",
       "repository": "https://github.com/VaibhavBansal26/React-tinder-UI",
       "demo": null,
       "live_url": "https://tinder-match.web.app/",
@@ -2926,7 +2926,7 @@
         "React",
         "Node JS and Socket IO"
       ],
-      "url": "https://vaibhavbansal.in/projects/video-conferencing-app",
+      "url": "https://vaibhavbansal.in/projects/video-conferencing-app/",
       "repository": "https://github.com/VaibhavBansal26/Nodejs-Video-Conferencing",
       "demo": null,
       "live_url": "https://video-conferencing-app-vb.onrender.com/",
@@ -2958,7 +2958,7 @@
       "technologies": [
         "React and Firebase"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-twitter-ui-clone",
+      "url": "https://vaibhavbansal.in/projects/react-twitter-ui-clone/",
       "repository": "https://github.com/VaibhavBansal26/React-Twitter-vb",
       "demo": null,
       "live_url": "https://react-twitter-apl.web.app/",
@@ -2988,7 +2988,7 @@
       "technologies": [
         "React and Firebase"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-slack-ui",
+      "url": "https://vaibhavbansal.in/projects/react-slack-ui/",
       "repository": "https://github.com/VaibhavBansal26/React-Slack-vb",
       "demo": null,
       "live_url": "https://react-slack-apl.web.app/,        ",
@@ -3018,7 +3018,7 @@
       "technologies": [
         "React and Firebase"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-whatsapp-ui-and-messaging",
+      "url": "https://vaibhavbansal.in/projects/react-whatsapp-ui-and-messaging/",
       "repository": "https://github.com/VaibhavBansal26/React-Whatsapp-UI",
       "demo": null,
       "live_url": null,
@@ -3048,7 +3048,7 @@
       "technologies": [
         "React and Firebase"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-spotify-clone",
+      "url": "https://vaibhavbansal.in/projects/react-spotify-clone/",
       "repository": "https://github.com/VaibhavBansal26/React-spotify-vb",
       "demo": null,
       "live_url": "https://react-spotify-apl.web.app/",
@@ -3079,7 +3079,7 @@
         "React",
         "Context API"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-covid-19-tracker",
+      "url": "https://vaibhavbansal.in/projects/react-covid-19-tracker/",
       "repository": "https://github.com/VaibhavBansal26/React-Covid-Tracker",
       "demo": null,
       "live_url": "https://react-covid-vb.web.app/",
@@ -3114,7 +3114,7 @@
         "React JS",
         "Node JS - Register & Login to use Features"
       ],
-      "url": "https://vaibhavbansal.in/projects/mern-youtube-application",
+      "url": "https://vaibhavbansal.in/projects/mern-youtube-application/",
       "repository": "https://github.com/VaibhavBansal26/React-Mern-Youtube",
       "demo": null,
       "live_url": null,
@@ -3152,7 +3152,7 @@
         "PUG Templates",
         "Stripe Integration"
       ],
-      "url": "https://vaibhavbansal.in/projects/travelling-and-adventrous-tour-app-with-stripe",
+      "url": "https://vaibhavbansal.in/projects/travelling-and-adventrous-tour-app-with-stripe/",
       "repository": "https://github.com/VaibhavBansal26/node-natours-travel-app",
       "demo": null,
       "live_url": null,
@@ -3193,7 +3193,7 @@
         "Machine Learning Algorithms",
         "Deep Learning Methods"
       ],
-      "url": "https://vaibhavbansal.in/projects/natural-disaster-prediction-and-management",
+      "url": "https://vaibhavbansal.in/projects/natural-disaster-prediction-and-management/",
       "repository": "https://github.com/VaibhavBansal26/Capstone-2020-Natural-Disaster-Prediction",
       "demo": "https://www.youtube.com/watch?v=Gad5vz1Pkcc",
       "live_url": null,
@@ -3247,7 +3247,7 @@
       "technologies": [
         "React"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-hulu-clone",
+      "url": "https://vaibhavbansal.in/projects/react-hulu-clone/",
       "repository": "https://github.com/VaibhavBansal26/React-Hulu",
       "demo": null,
       "live_url": "https://react-hulu-vb.web.app/",
@@ -3277,7 +3277,7 @@
       "technologies": [
         "React"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-trello-ui",
+      "url": "https://vaibhavbansal.in/projects/react-trello-ui/",
       "repository": "https://github.com/VaibhavBansal26/React-trello",
       "demo": null,
       "live_url": "https://react-trello-vb.web.app",
@@ -3307,7 +3307,7 @@
       "technologies": [
         "React"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-tiktok-ui",
+      "url": "https://vaibhavbansal.in/projects/react-tiktok-ui/",
       "repository": "https://github.com/VaibhavBansal26/React-tiktok-UI",
       "demo": null,
       "live_url": null,
@@ -3337,7 +3337,7 @@
       "technologies": [
         "React and API"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-newz-app",
+      "url": "https://vaibhavbansal.in/projects/react-newz-app/",
       "repository": "https://github.com/VaibhavBansal26/React-news-app-ui",
       "demo": null,
       "live_url": null,
@@ -3367,7 +3367,7 @@
       "technologies": [
         "React"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-nba-app",
+      "url": "https://vaibhavbansal.in/projects/react-nba-app/",
       "repository": "https://github.com/VaibhavBansal26/React-Nba-app",
       "demo": null,
       "live_url": null,
@@ -3399,7 +3399,7 @@
         "Next JS",
         "Tailwind CSS"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-facebook-ui",
+      "url": "https://vaibhavbansal.in/projects/react-facebook-ui/",
       "repository": "https://github.com/VaibhavBansal26/next-facebook-vb",
       "demo": null,
       "live_url": null,
@@ -3436,7 +3436,7 @@
       "technologies": [
         "React"
       ],
-      "url": "https://vaibhavbansal.in/projects/react-music-artist-app",
+      "url": "https://vaibhavbansal.in/projects/react-music-artist-app/",
       "repository": "https://github.com/VaibhavBansal26/React-Artist-vb",
       "demo": null,
       "live_url": null,

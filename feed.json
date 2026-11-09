@@ -1,12 +1,12 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
   "title": "Vaibhav Bansal — Writing, videos and engineering updates",
-  "home_page_url": "https://vaibhavbansal.in",
+  "home_page_url": "https://vaibhavbansal.in/",
   "feed_url": "https://vaibhavbansal.in/feed.json",
   "authors": [
     {
       "name": "Vaibhav Bansal",
-      "url": "https://vaibhavbansal.in"
+      "url": "https://vaibhavbansal.in/"
     }
   ],
   "items": [
@@ -132,6 +132,17 @@
         "video",
         "youtube",
         "long-form"
+      ]
+    },
+    {
+      "id": "https://www.youtube.com/shorts/Zda2KABJZ_0",
+      "url": "https://www.youtube.com/shorts/Zda2KABJZ_0",
+      "title": "Bigger Context Windows Won't Fix Your AI Agent",
+      "summary": "Bigger Context Windows Won't Fix Your AI Agent, a YouTube Short by Vaibhav Bansal.",
+      "tags": [
+        "video",
+        "youtube",
+        "short"
       ]
     },
     {

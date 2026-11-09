@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/static/js/main.e5278f51.js",
+    "main.js": "/static/js/main.68415649.js",
     "static/js/5.20d3a1bb.chunk.js": "/static/js/5.20d3a1bb.chunk.js",
     "static/js/290.38779b35.chunk.js": "/static/js/290.38779b35.chunk.js",
-    "static/js/780.a3426c83.chunk.js": "/static/js/780.a3426c83.chunk.js",
-    "static/js/273.4bb7f676.chunk.js": "/static/js/273.4bb7f676.chunk.js",
+    "static/js/780.4d22bf46.chunk.js": "/static/js/780.4d22bf46.chunk.js",
+    "static/js/273.b1485a63.chunk.js": "/static/js/273.b1485a63.chunk.js",
     "static/js/656.39c9ab74.chunk.js": "/static/js/656.39c9ab74.chunk.js",
     "static/js/99.98b98824.chunk.js": "/static/js/99.98b98824.chunk.js",
     "static/js/308.5ca26bb1.chunk.js": "/static/js/308.5ca26bb1.chunk.js",
@@ -85,11 +85,11 @@
     "static/media/conversations-inbox.svg": "/static/media/conversations-inbox.2ffecad358e764a7ef63814f6023fe37.svg",
     "static/media/spotlight-talent.svg": "/static/media/spotlight-talent.e41e3152efc8bc7bbe7009cace9b4661.svg",
     "static/media/ridehail-operations.svg": "/static/media/ridehail-operations.70d0334f84346e24a9d471db8b94d23e.svg",
-    "main.e5278f51.js.map": "/static/js/main.e5278f51.js.map",
+    "main.68415649.js.map": "/static/js/main.68415649.js.map",
     "5.20d3a1bb.chunk.js.map": "/static/js/5.20d3a1bb.chunk.js.map",
     "290.38779b35.chunk.js.map": "/static/js/290.38779b35.chunk.js.map",
-    "780.a3426c83.chunk.js.map": "/static/js/780.a3426c83.chunk.js.map",
-    "273.4bb7f676.chunk.js.map": "/static/js/273.4bb7f676.chunk.js.map",
+    "780.4d22bf46.chunk.js.map": "/static/js/780.4d22bf46.chunk.js.map",
+    "273.b1485a63.chunk.js.map": "/static/js/273.b1485a63.chunk.js.map",
     "656.39c9ab74.chunk.js.map": "/static/js/656.39c9ab74.chunk.js.map",
     "99.98b98824.chunk.js.map": "/static/js/99.98b98824.chunk.js.map",
     "308.5ca26bb1.chunk.js.map": "/static/js/308.5ca26bb1.chunk.js.map",
@@ -97,6 +97,6 @@
     "787.8dc771c0.chunk.js.map": "/static/js/787.8dc771c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.e5278f51.js"
+    "static/js/main.68415649.js"
   ]
 }
